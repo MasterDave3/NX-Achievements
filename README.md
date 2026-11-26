@@ -10,6 +10,7 @@ unlock or lock an achievement.
 ```
 NX-Achievements/        Overlay source, Makefile, achievement data, generator
 libtesla/               Vendored libtesla (GPLv2, see libtesla/LICENSE)
+SUPPORTED_GAMES.md      Full list of supported games and their achievement counts
 ```
 
 ## Features
