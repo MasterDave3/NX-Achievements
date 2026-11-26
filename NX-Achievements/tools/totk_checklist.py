@@ -8,6 +8,11 @@ Counts come from IGN's TOTK 100% Completion Checklist:
 https://www.ign.com/wikis/the-legend-of-zelda-tears-of-the-kingdom/100_Percent_Completion_Checklist
 """
 
+TOTK_SOURCE = (
+    'https://www.ign.com/wikis/the-legend-of-zelda-tears-of-the-kingdom/'
+    '100_Percent_Completion_Checklist'
+)
+
 TOTK_GOALS = [
     # Story / opening
     ('TOTK_SKY', 'Skyward Beginning', 'Complete the Great Sky Island opening', 0),

@@ -3,34 +3,36 @@
 Every game below has at least 20 achievements in `NX-Achievements/data/achievements.txt`.
 Switch title IDs come from [blawar/titledb](https://github.com/blawar/titledb);
 Steam achievement names/descriptions are mirrored from public Steam community pages.
+Non-Steam games use IGN-style checklist goals; sources are listed in `CHECKLIST_SOURCES.md`.
 
-**227 games · 9,541 achievements** (plus one global `FIRST_BOOT` goal)
+**227 games · 9,839 achievements** (plus one global `FIRST_BOOT` goal)
 
-Tears of the Kingdom uses IGN-style 100% checklist goals; 38 goals across the
-catalog are countable (`current/target`) and advance with A on the overlay.
+IGN-style checklist goals cover all 133 non-Steam games, using IGN where available
+and other reputable checklists otherwise. 670 goals across the catalog are countable
+(`current/target`) and advance with A/X/Y on the overlay.
 
 | # | Game | Title ID | Achievements |
-|---:|---|---|---:|
-| 1 | The Legend of Zelda: Breath of the Wild | `01007EF00011E000` | 20 |
+|---|---|---|---|
+| 1 | The Legend of Zelda: Breath of the Wild | `01007EF00011E000` | 22 |
 | 2 | The Legend of Zelda: Tears of the Kingdom | `0100F2C0115B6000` | 45 |
-| 3 | Mario Kart 8 Deluxe | `0100152000022000` | 20 |
-| 4 | Super Mario Odyssey | `0100000000010000` | 20 |
-| 5 | Super Smash Bros. Ultimate | `01006A800016E000` | 20 |
-| 6 | Pokemon Legends Z-A | `0100F43008C44000` | 20 |
-| 7 | Pokemon Scarlet | `0100A3D008C5C000` | 20 |
-| 8 | Pokemon Violet | `01008F6008C5E000` | 20 |
-| 9 | Pokemon Legends Arceus | `01001F5010DFA000` | 20 |
-| 10 | Pokemon Sword | `0100ABF008968000` | 20 |
-| 11 | Pokemon Shield | `01008DB008C2C000` | 20 |
-| 12 | Pokemon Lets Go Pikachu | `010003F003A34000` | 20 |
-| 13 | Pokemon Lets Go Eevee | `0100187003A36000` | 20 |
-| 14 | Animal Crossing New Horizons | `01006F8002326000` | 20 |
-| 15 | Splatoon 3 | `0100C2500FC20000` | 20 |
-| 16 | Splatoon 2 | `01003BC0000A0000` | 20 |
-| 17 | Super Mario Party | `010036B0034E4000` | 20 |
-| 18 | Mario Party Superstars | `01006FE013472000` | 20 |
-| 19 | Mario + Rabbids Sparks of Hope | `0100317013770000` | 20 |
-| 20 | Mario + Rabbids Kingdom Battle | `010067300059A000` | 20 |
+| 3 | Mario Kart 8 Deluxe | `0100152000022000` | 34 |
+| 4 | Super Mario Odyssey | `0100000000010000` | 24 |
+| 5 | Super Smash Bros. Ultimate | `01006A800016E000` | 26 |
+| 6 | Pokemon Legends Z-A | `0100F43008C44000` | 24 |
+| 7 | Pokemon Scarlet | `0100A3D008C5C000` | 24 |
+| 8 | Pokemon Violet | `01008F6008C5E000` | 24 |
+| 9 | Pokemon Legends Arceus | `01001F5010DFA000` | 25 |
+| 10 | Pokemon Sword | `0100ABF008968000` | 24 |
+| 11 | Pokemon Shield | `01008DB008C2C000` | 24 |
+| 12 | Pokemon Lets Go Pikachu | `010003F003A34000` | 22 |
+| 13 | Pokemon Lets Go Eevee | `0100187003A36000` | 22 |
+| 14 | Animal Crossing New Horizons | `01006F8002326000` | 25 |
+| 15 | Splatoon 3 | `0100C2500FC20000` | 24 |
+| 16 | Splatoon 2 | `01003BC0000A0000` | 24 |
+| 17 | Super Mario Party | `010036B0034E4000` | 24 |
+| 18 | Mario Party Superstars | `01006FE013472000` | 24 |
+| 19 | Mario + Rabbids Sparks of Hope | `0100317013770000` | 24 |
+| 20 | Mario + Rabbids Kingdom Battle | `010067300059A000` | 24 |
 | 21 | Luigis Mansion 3 | `0100DCA0064A6000` | 20 |
 | 22 | Super Mario Maker 2 | `01009B90006DC000` | 20 |
 | 23 | Mario Tennis Aces | `0100BDE00862A000` | 20 |
@@ -51,23 +53,23 @@ catalog are countable (`current/target`) and advance with A on the overlay.
 | 38 | Kirby and the Forgotten Land | `01004D300C5AE000` | 20 |
 | 39 | Kirby Star Allies | `01007E3006DDA000` | 20 |
 | 40 | Kirby Return to Dream Land Deluxe | `01006B601380E000` | 20 |
-| 41 | Yoshis Crafted World | `01006000040C2000` | 20 |
-| 42 | Pikmin 3 Deluxe | `0100F4C009322000` | 20 |
-| 43 | Pikmin 4 | `0100B7C00933A000` | 20 |
-| 44 | Warioware Get it Together | `0100563010E0C000` | 20 |
-| 45 | 1-2-Switch | `01000320000CC000` | 20 |
-| 46 | ARMS | `01009B500007C000` | 20 |
-| 47 | Ring Fit Adventure | `01002FF008C24000` | 20 |
-| 48 | Nintendo Switch Sports | `0100D2F00D5C0000` | 20 |
-| 49 | Mario Strikers Battle League | `010019401051C000` | 20 |
-| 50 | Advance Wars 1+2 Re-Boot Camp | `0100300012F2A000` | 20 |
-| 51 | Pokemon UNITE | `0100939011ED4000` | 20 |
-| 52 | Super Mario Bros Wonder | `010015100B514000` | 20 |
-| 53 | Minecraft | `0100D71004694000` | 20 |
-| 54 | Diablo III Eternal Collection | `01001B300B9BE000` | 20 |
-| 55 | Undertale | `010080B00AD66000` | 20 |
-| 56 | Deltarune | `0100A0D022A68000` | 20 |
-| 57 | Mario Kart Live Home Circuit | `0100ED100BA3A000` | 20 |
+| 41 | Yoshis Crafted World | `01006000040C2000` | 22 |
+| 42 | Pikmin 3 Deluxe | `0100F4C009322000` | 22 |
+| 43 | Pikmin 4 | `0100B7C00933A000` | 22 |
+| 44 | Warioware Get it Together | `0100563010E0C000` | 22 |
+| 45 | 1-2-Switch | `01000320000CC000` | 29 |
+| 46 | ARMS | `01009B500007C000` | 22 |
+| 47 | Ring Fit Adventure | `01002FF008C24000` | 22 |
+| 48 | Nintendo Switch Sports | `0100D2F00D5C0000` | 22 |
+| 49 | Mario Strikers Battle League | `010019401051C000` | 22 |
+| 50 | Advance Wars 1+2 Re-Boot Camp | `0100300012F2A000` | 22 |
+| 51 | Pokemon UNITE | `0100939011ED4000` | 22 |
+| 52 | Super Mario Bros Wonder | `010015100B514000` | 24 |
+| 53 | Minecraft | `0100D71004694000` | 22 |
+| 54 | Diablo III Eternal Collection | `01001B300B9BE000` | 22 |
+| 55 | Undertale | `010080B00AD66000` | 22 |
+| 56 | Deltarune | `0100A0D022A68000` | 22 |
+| 57 | Mario Kart Live Home Circuit | `0100ED100BA3A000` | 22 |
 | 58 | Terraria | `0100E46006708000` | 137 |
 | 59 | Stardew Valley | `0100E65002BB8000` | 49 |
 | 60 | Hollow Knight | `0100633007D48000` | 63 |
@@ -102,9 +104,9 @@ catalog are countable (`current/target`) and advance with A on the overlay.
 | 89 | Disco Elysium The Final Cut | `01006C5015E84000` | 45 |
 | 90 | Divinity Original Sin 2 | `010027400CDC6000` | 97 |
 | 91 | Overcooked All You Can Eat | `0100F28011892000` | 42 |
-| 92 | The Legend of Zelda: Skyward Sword HD | `01002DA013484000` | 20 |
-| 93 | The Legend of Zelda: Echoes of Wisdom | `01008CF01BAAC000` | 20 |
-| 94 | Detective Pikachu Returns | `010007500F27C000` | 20 |
+| 92 | The Legend of Zelda: Skyward Sword HD | `01002DA013484000` | 22 |
+| 93 | The Legend of Zelda: Echoes of Wisdom | `01008CF01BAAC000` | 22 |
+| 94 | Detective Pikachu Returns | `010007500F27C000` | 22 |
 | 95 | Fire Emblem Warriors | `0100F15003E64000` | 20 |
 | 96 | Fire Emblem Warriors: Three Hopes | `010071F0143EA000` | 20 |
 | 97 | Xenoblade Chronicles X: Definitive Edition | `0100453019AA8000` | 20 |
@@ -127,7 +129,7 @@ catalog are countable (`current/target`) and advance with A on the overlay.
 | 114 | Go Vacation | `0100C1800A9B6000` | 20 |
 | 115 | Just Dance 2020 | `0100DDB00DB38000` | 20 |
 | 116 | Octopath Traveler | `010057D006492000` | 20 |
-| 117 | Octopath Traveler II | `0100A3501946E000` | 20 |
+| 117 | Octopath Traveler II | `0100A3501946E000` | 21 |
 | 118 | LIVE A LIVE | `0100CF801776C000` | 20 |
 | 119 | Bravely Default II | `01006DC010326000` | 20 |
 | 120 | Dragon Quest XI S: Echoes of an Elusive Age | `01006C300E9F0000` | 20 |
@@ -145,45 +147,45 @@ catalog are countable (`current/target`) and advance with A on the overlay.
 | 132 | Final Fantasy X/X-2 HD Remaster | `0100BC300CB48000` | 20 |
 | 133 | Final Fantasy XII: The Zodiac Age | `0100EB100AB42000` | 20 |
 | 134 | Final Fantasy XV Pocket Edition HD | `010068F00AA78000` | 20 |
-| 135 | Bayonetta | `010076F0049A2000` | 20 |
-| 136 | Bayonetta 2 | `01007960049A0000` | 20 |
-| 137 | Bayonetta 3 | `01004A4010FEA000` | 20 |
-| 138 | Bayonetta Origins: Cereza and the Lost Demon | `0100CF5010FEC000` | 20 |
-| 139 | The Wonderful 101: Remastered | `0100B1300FF08000` | 20 |
-| 140 | NBA 2K20 | `010026000E466000` | 20 |
-| 141 | MLB The Show 23 | `0100913019170000` | 20 |
-| 142 | EA SPORTS FC 24 | `0100BDB01A0E6000` | 20 |
-| 143 | Tony Hawk's Pro Skater 1 + 2 | `0100CC00102B4000` | 20 |
+| 135 | Bayonetta | `010076F0049A2000` | 22 |
+| 136 | Bayonetta 2 | `01007960049A0000` | 22 |
+| 137 | Bayonetta 3 | `01004A4010FEA000` | 24 |
+| 138 | Bayonetta Origins: Cereza and the Lost Demon | `0100CF5010FEC000` | 22 |
+| 139 | The Wonderful 101: Remastered | `0100B1300FF08000` | 24 |
+| 140 | NBA 2K20 | `010026000E466000` | 22 |
+| 141 | MLB The Show 23 | `0100913019170000` | 22 |
+| 142 | EA SPORTS FC 24 | `0100BDB01A0E6000` | 22 |
+| 143 | Tony Hawk's Pro Skater 1 + 2 | `0100CC00102B4000` | 24 |
 | 144 | LEGO Star Wars: The Skywalker Saga | `010042D00D900000` | 20 |
 | 145 | LEGO Marvel Super Heroes 2 | `0100D3A00409E000` | 75 |
 | 146 | LEGO Jurassic World | `01001C100E772000` | 49 |
 | 147 | LEGO Harry Potter Collection | `010052A00B5D2000` | 20 |
-| 148 | LEGO CITY Undercover | `01003A30012C0000` | 20 |
+| 148 | LEGO CITY Undercover | `01003A30012C0000` | 27 |
 | 149 | Mortal Kombat 11 | `0100F2200C984000` | 58 |
 | 150 | Sid Meier’s Civilization VI | `010044500C182000` | 320 |
 | 151 | Cities: Skylines - Nintendo Switch Edition | `0100D8800B87C000` | 135 |
 | 152 | Tropico 6 | `0100FBE0113CC000` | 40 |
 | 153 | Need for Speed Hot Pursuit Remastered | `010029B0118E8000` | 20 |
-| 154 | Burnout Paradise Remastered | `0100DBF01000A000` | 20 |
-| 155 | GRID Autosport | `0100DC800A602000` | 20 |
+| 154 | Burnout Paradise Remastered | `0100DBF01000A000` | 22 |
+| 155 | GRID Autosport | `0100DC800A602000` | 22 |
 | 156 | WRC 8 FIA World Rally Championship | `010087800DCEA000` | 100 |
-| 157 | MotoGP 24 | `010040401D564000` | 20 |
-| 158 | Assassin's Creed III Remastered | `01007F600B134000` | 20 |
-| 159 | Assassin's Creed: The Rebel Collection | `010044700DEB0000` | 20 |
-| 160 | Crash Team Racing Nitro-Fueled | `0100F9F00C696000` | 20 |
+| 157 | MotoGP 24 | `010040401D564000` | 22 |
+| 158 | Assassin's Creed III Remastered | `01007F600B134000` | 24 |
+| 159 | Assassin's Creed: The Rebel Collection | `010044700DEB0000` | 22 |
+| 160 | Crash Team Racing Nitro-Fueled | `0100F9F00C696000` | 25 |
 | 161 | Crash Bandicoot N. Sane Trilogy | `0100D1B006744000` | 74 |
 | 162 | Sonic Colors: Ultimate | `010040E0116B8000` | 47 |
 | 163 | Sonic Superstars | `01008F701C074000` | 38 |
-| 164 | Demon Slayer: The Hinokami Chronicles | `0100309016E7A000` | 20 |
-| 165 | Jujutsu Kaisen Cursed Clash | `010000B01A452000` | 20 |
-| 166 | Naruto Shippuden: Ultimate Ninja Storm 4 | `010084D00CF5E000` | 20 |
-| 167 | My Hero One's Justice 2 | `01007E700DBF6000` | 20 |
-| 168 | One Piece Odyssey | `0100D9601A994000` | 20 |
+| 164 | Demon Slayer: The Hinokami Chronicles | `0100309016E7A000` | 24 |
+| 165 | Jujutsu Kaisen Cursed Clash | `010000B01A452000` | 24 |
+| 166 | Naruto Shippuden: Ultimate Ninja Storm 4 | `010084D00CF5E000` | 22 |
+| 167 | My Hero One's Justice 2 | `01007E700DBF6000` | 22 |
+| 168 | One Piece Odyssey | `0100D9601A994000` | 27 |
 | 169 | Guilty Gear -Strive- | `0100AB401F136000` | 39 |
 | 170 | Samurai Shodown | `01002DF00F76C000` | 45 |
-| 171 | Power Rangers: Battle for the Grid | `0100E1E00CF1A000` | 20 |
-| 172 | Transformers: Battlegrounds | `01005E500E528000` | 20 |
-| 173 | Hello Kitty Island Adventure | `010027901C89C000` | 20 |
+| 171 | Power Rangers: Battle for the Grid | `0100E1E00CF1A000` | 24 |
+| 172 | Transformers: Battlegrounds | `01005E500E528000` | 30 |
+| 173 | Hello Kitty Island Adventure | `010027901C89C000` | 32 |
 | 174 | Moving Out | `0100C4C00E73E000` | 38 |
 | 175 | Moving Out 2 | `010065D018172000` | 28 |
 | 176 | Untitled Goose Game | `010082400BCC6000` | 25 |
@@ -195,14 +197,14 @@ catalog are countable (`current/target`) and advance with A on the overlay.
 | 182 | Balatro | `0100CD801CE5E000` | 31 |
 | 183 | Dave the Diver | `010097F018538000` | 56 |
 | 184 | Katana ZERO | `010029600D56A000` | 22 |
-| 185 | Bloodstained: Ritual of the Night | `0100BF500207C000` | 20 |
-| 186 | Castlevania Advance Collection | `0100B33014710000` | 20 |
-| 187 | River City Girls 2 | `0100026016320000` | 20 |
-| 188 | Scott Pilgrim vs. The World: The Game - Complete Edition | `0100394011C30000` | 20 |
-| 189 | Okami HD | `0100276009872000` | 20 |
+| 185 | Bloodstained: Ritual of the Night | `0100BF500207C000` | 30 |
+| 186 | Castlevania Advance Collection | `0100B33014710000` | 33 |
+| 187 | River City Girls 2 | `0100026016320000` | 28 |
+| 188 | Scott Pilgrim vs. The World: The Game - Complete Edition | `0100394011C30000` | 27 |
+| 189 | Okami HD | `0100276009872000` | 30 |
 | 190 | Red Dead Redemption | `01007820196A6000` | 51 |
 | 191 | Tomb Raider I-III Remastered | `010024601BB16000` | 284 |
-| 192 | Borderlands: Game of the Year Edition | `010064800F66A000` | 20 |
+| 192 | Borderlands: Game of the Year Edition | `010064800F66A000` | 31 |
 | 193 | Wolfenstein II: The New Colossus | `01009040091E0000` | 80 |
 | 194 | Metro 2033 Redux | `0100D4900E82C000` | 49 |
 | 195 | Metro: Last Light Redux | `0100F0400E850000` | 49 |
@@ -211,9 +213,9 @@ catalog are countable (`current/target`) and advance with A on the overlay.
 | 198 | Bridge Constructor Portal | `010016E004796000` | 20 |
 | 199 | House Flipper | `0100CAE00EB02000` | 96 |
 | 200 | PowerWash Simulator | `0100926016012000` | 100 |
-| 201 | PICO PARK | `01004EA00DF70000` | 20 |
+| 201 | PICO PARK | `01004EA00DF70000` | 21 |
 | 202 | Duck Game | `0100750001C70000` | 38 |
-| 203 | Don't Starve Together | `010090100E334000` | 20 |
+| 203 | Don't Starve Together | `010090100E334000` | 29 |
 | 204 | Grounded | `01006F301AE9C000` | 45 |
 | 205 | Subnautica | `0100429011144000` | 20 |
 | 206 | Astroneer | `0100E63013E60000` | 116 |
@@ -226,7 +228,7 @@ catalog are countable (`current/target`) and advance with A on the overlay.
 | 213 | INSIDE | `0100D2D009028000` | 20 |
 | 214 | LIMBO | `01009C8009026000` | 20 |
 | 215 | Firewatch | `0100AC300919A000` | 20 |
-| 216 | Life is Strange Remastered | `0100DC301186A000` | 20 |
+| 216 | Life is Strange Remastered | `0100DC301186A000` | 22 |
 | 217 | Life is Strange: True Colors | `0100500012AB4000` | 40 |
 | 218 | Cat Quest III | `010088501B8F2000` | 30 |
 | 219 | Minecraft Dungeons | `01006C100EC08000` | 104 |

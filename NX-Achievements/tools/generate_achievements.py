@@ -5,6 +5,7 @@ Nintendo Switch title IDs come from blawar/titledb (US.en.json).
 Steam achievement names/descriptions are mirrored from the Steam community
 achievement pages for PC games that were ported to Switch.
 """
+import importlib.util
 import json
 import re
 import subprocess
@@ -13,10 +14,27 @@ from pathlib import Path
 
 from games_extra import EXTRA_GAMES, STEAM_APPIDS, STEAM_EXTRA
 from goals_extra import expand_goals
-from totk_checklist import TOTK_GOALS
+from totk_checklist import TOTK_GOALS, TOTK_SOURCE
 
 TITLEDB = Path(sys.argv[1] if len(sys.argv) > 1 else '/tmp/titledb-US.json')
 OUTPUT = Path(__file__).resolve().parent.parent / 'data' / 'achievements.txt'
+SOURCE_OUTPUT = Path(__file__).resolve().parent.parent.parent / 'CHECKLIST_SOURCES.md'
+CHECKLIST_DIR = Path(__file__).resolve().parent / 'checklists'
+
+
+def load_checklists():
+    """Load generated IGN-style goal batches keyed by game slug."""
+    games = {}
+    sources = {}
+    if not CHECKLIST_DIR.is_dir():
+        return games, sources
+    for path in sorted(CHECKLIST_DIR.glob('batch*.py')):
+        spec = importlib.util.spec_from_file_location(f'checklists.{path.stem}', path)
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        games.update(getattr(module, 'GAMES', {}))
+        sources.update(getattr(module, 'SOURCES', {}))
+    return games, sources
 
 # slug, display name, Switch title ID, Steam appid (0 = no Steam mirror), goals
 GAMES = [
@@ -379,6 +397,16 @@ def main():
         '',
     ]
 
+    checklists, sources = load_checklists()
+    sources['TOTK'] = TOTK_SOURCE
+    seen_checklist_ids = set()
+    for slug, goals in checklists.items():
+        for goal in goals:
+            aid = goal[0]
+            if aid in seen_checklist_ids:
+                raise SystemExit(f'duplicate checklist ID: {aid} ({slug})')
+            seen_checklist_ids.add(aid)
+
     all_games = list(GAMES)
     for slug, name, title_id, goals in EXTRA_GAMES:
         all_games.append((slug, name, title_id, STEAM_APPIDS.get(slug, 0), goals))
@@ -404,7 +432,7 @@ def main():
                       file=sys.stderr)
                 entries = goals
         else:
-            entries = goals
+            entries = checklists.get(slug, goals)
         entries = expand_goals(slug, name, entries)
         seen = set()
         for entry in entries:
@@ -425,7 +453,24 @@ def main():
 
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text('\n'.join(lines).rstrip() + '\n')
+
+    source_lines = [
+        '# Checklist sources',
+        '',
+        'Sources used for the non-Steam IGN-style checklist goals. Steam ports',
+        'are deliberately omitted because they mirror real Steam achievements.',
+        '',
+        '| Game | Slug | Source |',
+        '|---|---|---|',
+    ]
+    names = {slug: name for slug, name, _, _, _ in all_games}
+    for slug in sorted(sources, key=lambda s: names.get(s, s)):
+        url = sources[slug] or 'No source found'
+        source_lines.append(f'| {names.get(slug, slug)} | `{slug}` | {url} |')
+    SOURCE_OUTPUT.write_text('\n'.join(source_lines).rstrip() + '\n')
+
     print(f'Wrote {total} achievements for {len(all_games)} games -> {OUTPUT}')
+    print(f'Wrote {len(sources)} checklist sources -> {SOURCE_OUTPUT}')
 
 
 if __name__ == '__main__':

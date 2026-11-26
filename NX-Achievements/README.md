@@ -42,9 +42,10 @@ TitleID|AchievementID|Name|Description[|Target]
 
 ## Achievement data
 
-`data/achievements.txt` currently contains **9,541 achievements for 227 games**:
+`data/achievements.txt` currently contains **9,839 achievements for 227 games**:
 
-- Famous first-party and third-party Switch games use hand-written goals.
+- All 133 non-Steam games use IGN-style checklist goals (IGN where available,
+  other reputable checklists otherwise). Sources are in `CHECKLIST_SOURCES.md`.
 - PC games ported to Switch mirror their Steam achievement names and descriptions
   (for example Stardew Valley, Terraria, Hollow Knight, Hades, Skyrim, DOOM,
   Balatro, Vampire Survivors, Dead by Daylight, Civilization VI, and 20 Minutes
@@ -55,7 +56,7 @@ TitleID|AchievementID|Name|Description[|Target]
 Every game has at least 20 goals. Games with short Steam lists are padded with
 manual goals so nothing is left thin.
 
-Game definitions live in four files:
+Game definitions live in five places:
 
 - `tools/generate_achievements.py` — the original curated set.
 - `tools/games_extra.py` — the expanded catalog plus verified Steam appid mappings.
@@ -64,16 +65,21 @@ Game definitions live in four files:
   Koroks, Zonai abilities).
 - `tools/totk_checklist.py` — Tears of the Kingdom 100% checklist with countable
   targets from IGN's guide.
+- `tools/checklists/` — IGN-style checklist goals for the other non-Steam games.
+  Sources are listed in `CHECKLIST_SOURCES.md`.
 
 Regenerate the file after editing any of the tools files:
 
 ```bash
 python3 tools/generate_achievements.py /tmp/titledb-US.json
+python3 tools/validate_achievements.py
+python3 tools/generate_supported_games.py
 ```
 
 ## Current limitations
 
-- Achievements are tracked manually with A (Tesla overlays cannot draw automatic popups over arbitrary games).
+- Achievements are tracked manually: A toggles or counts up, X counts down, Y resets.
+  Tesla overlays cannot draw automatic popups over arbitrary games.
 - Steam achievements are mirrored names/descriptions only; the Switch overlay cannot
   read a Steam account or unlock Steam achievements automatically.
 - Save-data-based automatic checks can be added later with per-game parsers.
