@@ -1,0 +1,19 @@
+# Build artifacts
+build/
+*.o
+*.d
+*.elf
+*.nacp
+*.nro
+*.ovl
+*.map
+*.lst
+
+# Python
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+._*
+.AppleDouble
