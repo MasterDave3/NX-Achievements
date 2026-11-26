@@ -11,6 +11,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+from games_extra import EXTRA_GAMES, STEAM_APPIDS, STEAM_EXTRA
+
 TITLEDB = Path(sys.argv[1] if len(sys.argv) > 1 else '/tmp/titledb-US.json')
 OUTPUT = Path(__file__).resolve().parent.parent / 'data' / 'achievements.txt'
 
@@ -378,19 +380,30 @@ def main():
         '',
     ]
 
+    all_games = list(GAMES)
+    for slug, name, title_id, goals in EXTRA_GAMES:
+        all_games.append((slug, name, title_id, STEAM_APPIDS.get(slug, 0), goals))
+    for slug, name, title_id, appid in STEAM_EXTRA:
+        all_games.append((slug, name, title_id, appid, []))
+
     total = 0
-    for slug, name, title_id, appid, goals in GAMES:
+    for slug, name, title_id, appid, goals in all_games:
         if title_id not in ids:
             raise SystemExit(f'title ID not found in titledb: {name} {title_id}')
         lines.append(f'# {name} ({title_id})')
         entries = []
         if appid:
-            for achievement in steam_achievements(appid):
-                api = re.sub(r'[^A-Za-z0-9_]', '_', achievement.get('api_name', ''))[:40]
-                aid = f'S{appid}_{api}'
-                title = clean(achievement.get('name')) or f'Steam achievement {api}'
-                desc = clean(achievement.get('description')) or 'Mirrored from Steam'
-                entries.append((aid, title, desc))
+            try:
+                for achievement in steam_achievements(appid):
+                    api = re.sub(r'[^A-Za-z0-9_]', '_', achievement.get('api_name', ''))[:40]
+                    aid = f'S{appid}_{api}'
+                    title = clean(achievement.get('name')) or f'Steam achievement {api}'
+                    desc = clean(achievement.get('description')) or 'Mirrored from Steam'
+                    entries.append((aid, title, desc))
+            except Exception as exc:
+                print(f'warning: Steam {appid} ({name}) failed: {exc}; using local goals',
+                      file=sys.stderr)
+                entries = goals
         else:
             entries = goals
         seen = set()
@@ -404,7 +417,7 @@ def main():
 
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text('\n'.join(lines).rstrip() + '\n')
-    print(f'Wrote {total} achievements for {len(GAMES)} games -> {OUTPUT}')
+    print(f'Wrote {total} achievements for {len(all_games)} games -> {OUTPUT}')
 
 
 if __name__ == '__main__':

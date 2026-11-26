@@ -38,15 +38,21 @@ TitleID|AchievementID|Name|Description
 
 ## Achievement data
 
-`data/achievements.txt` currently contains **2,776 achievements for 91 games**:
+`data/achievements.txt` currently contains **7,083 achievements for 226 games**:
 
 - Famous first-party and third-party Switch games use hand-written goals.
 - PC games ported to Switch mirror their Steam achievement names and descriptions
-  (for example Stardew Valley, Terraria, Hollow Knight, Hades, Skyrim, DOOM).
-- Switch title IDs come from `blawar/titledb` (`US.en.json`).
+  (for example Stardew Valley, Terraria, Hollow Knight, Hades, Skyrim, DOOM,
+  Balatro, Vampire Survivors, Dead by Daylight, and Civilization VI).
+- Switch title IDs come from `blawar/titledb` (`US.en.json`); none are guessed.
 - Steam data comes from the public Steam community achievement pages.
 
-Regenerate the file after editing `tools/generate_achievements.py`:
+Game definitions live in two files:
+
+- `tools/generate_achievements.py` — the original curated set.
+- `tools/games_extra.py` — the expanded catalog plus verified Steam appid mappings.
+
+Regenerate the file after editing either tools file:
 
 ```bash
 python3 tools/generate_achievements.py /tmp/titledb-US.json

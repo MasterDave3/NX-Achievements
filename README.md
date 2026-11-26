@@ -19,7 +19,7 @@ libtesla/               Vendored libtesla (GPLv2, see libtesla/LICENSE)
 - Data-driven: adding games needs no rebuild of the `.ovl`.
 - Saves unlock state to `sdmc:/switch/achievements/progress.txt`.
 - Shows an unlock popup when an achievement is toggled on.
-- 2,776 achievements across 91 games, including mirrored Steam achievement
+- 7,083 achievements across 226 games, including mirrored Steam achievement
   names/descriptions for PC games ported to Switch.
 
 ## Build
