@@ -1,7 +1,7 @@
 # NX-Achievements definitions
-# Format: TitleID|AchievementID|Name|Description
+# Format: TitleID|AchievementID|Name|Description[|Target]
 # Use * as TitleID to show for every game.
-# A toggles the achievement on/off in the overlay.
+# A toggles, or with a Target counts up (+1); X counts down; Y resets.
 # Steam achievements are mirrored by name and description only;
 # the overlay cannot read or unlock Steam achievements automatically.
 
@@ -11,45 +11,70 @@
 01007EF00011E000|BOTW_FIRST|Great Plateau|Leave the Great Plateau in Breath of the Wild
 01007EF00011E000|BOTW_BEASTS|Divine Beast Tamer|Free all four Divine Beasts
 01007EF00011E000|BOTW_GANON|Calamity Slayer|Defeat Calamity Ganon
-01007EF00011E000|GBOTW_01|First Steps|Complete your first area
-01007EF00011E000|GBOTW_02|Getting Started|Complete 5 areas
-01007EF00011E000|GBOTW_03|Warming Up|Complete 10 areas
-01007EF00011E000|GBOTW_04|Halfway There|Complete 25 areas
-01007EF00011E000|GBOTW_05|Veteran|Complete 50 areas
-01007EF00011E000|GBOTW_06|Story Complete|Finish every area in the main story
-01007EF00011E000|GBOTW_07|Collector|Collect 100 items
-01007EF00011E000|GBOTW_08|Treasure Hunter|Collect 500 items
-01007EF00011E000|GBOTW_09|Sharp Eyes|Find every collectible in one area
-01007EF00011E000|GBOTW_10|Perfectionist|Earn a perfect score in 5 areas
-01007EF00011E000|GBOTW_11|Speedrunner|Complete a area under the target time
-01007EF00011E000|GBOTW_12|No Continues|Complete a area without continuing
-01007EF00011E000|GBOTW_13|Challenge Accepted|Complete a hard-difficulty area
-01007EF00011E000|GBOTW_14|Full Roster|Unlock every playable abilities
-01007EF00011E000|GBOTW_15|Mastery|Max out one ability
-01007EF00011E000|GBOTW_16|Side Objectives|Complete 10 side objectives
-01007EF00011E000|GBOTW_17|Secret Finder|Discover every secret area
+01007EF00011E000|GBOTW_01|Shrine Seeker|Complete your first shrine
+01007EF00011E000|GBOTW_02|Shrine Runner|Complete 10 shrines
+01007EF00011E000|GBOTW_03|Shrine Master|Complete 50 shrines
+01007EF00011E000|GBOTW_04|Tower Surveyor|Activate all Sheikah Towers
+01007EF00011E000|GBOTW_05|Beast Pilot|Enter your first Divine Beast
+01007EF00011E000|GBOTW_06|Beast Liberator|Free all four Divine Beasts
+01007EF00011E000|GBOTW_07|Korok Collector|Collect 100 Korok seeds
+01007EF00011E000|GBOTW_08|Recipe Hunter|Cook 50 recipes
+01007EF00011E000|GBOTW_09|Weapon Breaker|Break 100 weapons
+01007EF00011E000|GBOTW_10|Armor Collector|Collect 10 armor sets
+01007EF00011E000|GBOTW_11|Side Quest Runner|Complete 20 side quests
+01007EF00011E000|GBOTW_12|Horse Whisperer|Tame and register a horse
+01007EF00011E000|GBOTW_13|Great Fairy Friend|Unlock all Great Fairies
+01007EF00011E000|GBOTW_14|Trial Survivor|Complete a Trial of the Sword
+01007EF00011E000|GBOTW_15|Master Sword Wielder|Draw the Master Sword
+01007EF00011E000|GBOTW_16|Secret Finder|Discover every secret spring
+01007EF00011E000|GBOTW_17|Hyrule Champion|Defeat Calamity Ganon and restore Hyrule
 
 # The Legend of Zelda: Tears of the Kingdom (0100F2C0115B6000)
 0100F2C0115B6000|TOTK_SKY|Skyward Beginning|Complete the Great Sky Island opening
 0100F2C0115B6000|TOTK_REGIONS|Regional Hero|Solve all four regional phenomena
 0100F2C0115B6000|TOTK_GANON|Dragon Tamer|Defeat Ganondorf
-0100F2C0115B6000|GTOTK_01|First Steps|Complete your first area
-0100F2C0115B6000|GTOTK_02|Getting Started|Complete 5 areas
-0100F2C0115B6000|GTOTK_03|Warming Up|Complete 10 areas
-0100F2C0115B6000|GTOTK_04|Halfway There|Complete 25 areas
-0100F2C0115B6000|GTOTK_05|Veteran|Complete 50 areas
-0100F2C0115B6000|GTOTK_06|Story Complete|Finish every area in the main story
-0100F2C0115B6000|GTOTK_07|Collector|Collect 100 items
-0100F2C0115B6000|GTOTK_08|Treasure Hunter|Collect 500 items
-0100F2C0115B6000|GTOTK_09|Sharp Eyes|Find every collectible in one area
-0100F2C0115B6000|GTOTK_10|Perfectionist|Earn a perfect score in 5 areas
-0100F2C0115B6000|GTOTK_11|Speedrunner|Complete a area under the target time
-0100F2C0115B6000|GTOTK_12|No Continues|Complete a area without continuing
-0100F2C0115B6000|GTOTK_13|Challenge Accepted|Complete a hard-difficulty area
-0100F2C0115B6000|GTOTK_14|Full Roster|Unlock every playable abilities
-0100F2C0115B6000|GTOTK_15|Mastery|Max out one ability
-0100F2C0115B6000|GTOTK_16|Side Objectives|Complete 10 side objectives
-0100F2C0115B6000|GTOTK_17|Secret Finder|Discover every secret area
+0100F2C0115B6000|TOTK_STAR_SAVE|Completed Save Star|Beat the game and load the pre-boss save with a star
+0100F2C0115B6000|TOTK_KOROK|Korok Seeds|Find all 1,000 Korok Seeds (900 map points)|1000
+0100F2C0115B6000|TOTK_NAMED|Named Locations|Discover all ~700 named map locations|700
+0100F2C0115B6000|TOTK_CAVES|Cave Entrances|Find all 194 cave entrances|194
+0100F2C0115B6000|TOTK_SHRINES|Shrines|Complete all 152 shrines|152
+0100F2C0115B6000|TOTK_LIGHTROOTS|Lightroots|Activate all 120 Lightroots in the Depths|120
+0100F2C0115B6000|TOTK_WELLS|Wells|Find all 58 wells|58
+0100F2C0115B6000|TOTK_CHASMS|Chasm Entrances|Find all 35 chasm entrances|35
+0100F2C0115B6000|TOTK_TOWNS|Towns, Settlements, and Stables|Register all ~35 towns, settlements, and stables|35
+0100F2C0115B6000|TOTK_SHOPS|Specialty Shops|Find all ~43 specialty shops, including 7 Bargainer Statues|43
+0100F2C0115B6000|TOTK_DISPENSERS|Zonai Device Dispensers|Activate all 30 Zonai Device Dispensers|30
+0100F2C0115B6000|TOTK_SKYVIEW|Skyview Towers|Activate all 15 Skyview Towers|15
+0100F2C0115B6000|TOTK_FORGES|Forge/Weapon Constructs and Refineries|Find all 14 Forge/Weapon Constructs and Refineries|14
+0100F2C0115B6000|TOTK_DRAGON_TEARS|Tears of the Dragon|Collect all 12 Dragon Tears|12
+0100F2C0115B6000|TOTK_TABLETS|Ancient Tablets|Decipher all 12 Ancient Tablets|12
+0100F2C0115B6000|TOTK_FAIRIES|Great Fairy Fountains|Unlock all 5 Great Fairy Fountains, including Malanya|5
+0100F2C0115B6000|TOTK_MAP_100|Map Completion|Reach 100% on the Purah Pad map|100
+0100F2C0115B6000|TOTK_MAIN_QUESTS|Main Quests|Complete all 23 Main Quests|23
+0100F2C0115B6000|TOTK_SIDE_ADVENTURES|Side Adventures|Complete all 60 Side Adventures|60
+0100F2C0115B6000|TOTK_SHRINE_QUESTS|Shrine Quests|Complete all 31 Shrine Quests|31
+0100F2C0115B6000|TOTK_SIDE_QUESTS|Side Quests|Complete all 139 Side Quests|139
+0100F2C0115B6000|TOTK_MEMORIES|Memories|Find all 18 Memories, including 12 Dragon Tears|18
+0100F2C0115B6000|TOTK_COMPENDIUM|Hyrule Compendium|Complete all 509 Compendium entries|509
+0100F2C0115B6000|TOTK_RECIPES|Recipes|Register all 228 recipes|228
+0100F2C0115B6000|TOTK_ARMOR_SETS|Armor Sets|Collect all 36 armor sets|36
+0100F2C0115B6000|TOTK_ARMOR_PIECES|Armor Pieces|Collect all 105 armor set pieces|105
+0100F2C0115B6000|TOTK_UNIQUE_ARMOR|Unique Armor Pieces|Collect all 30 unique armor pieces|30
+0100F2C0115B6000|TOTK_ENERGY_CELLS|Energy Cells|Unlock 21 Energy Cells for 8 full batteries|21
+0100F2C0115B6000|TOTK_OVERCHARGED|Overcharged Energy Cells|Collect all 24 overcharged Blue Energy Cells|24
+0100F2C0115B6000|TOTK_ZONAI_DEVICES|Zonai Devices|Unlock all 27 Zonai device types|27
+0100F2C0115B6000|TOTK_PARAGLIDER|Paraglider Fabrics|Collect all 29 quest-reward paraglider fabrics|29
+0100F2C0115B6000|TOTK_AMIIBO_FABRIC|Amiibo Paraglider Fabrics|Collect all 22 Amiibo-exclusive paraglider fabrics|22
+0100F2C0115B6000|TOTK_SCHEMA_STONES|Schema Stones|Find all 12 Schema Stones|12
+0100F2C0115B6000|TOTK_YIGA_SCHEMATICS|Yiga Schematics|Collect all 34 Yiga Schematics|34
+0100F2C0115B6000|TOTK_OLD_MAPS|Old Maps|Find all 31 Old Maps|31
+0100F2C0115B6000|TOTK_BUBBUL_GEMS|Bubbul Gems|Give all 147 Bubbul Gems to Koltin|147
+0100F2C0115B6000|TOTK_TACKLE|Horse Tackle|Collect all 11 towing harnesses, saddles, and bridles|11
+0100F2C0115B6000|TOTK_MEDALS|Medals of Honor|Earn all 6 Medals of Honor|6
+0100F2C0115B6000|TOTK_ADDISON_SIGNS|Addison Signs|Put up all 81 Addison Signs|81
+0100F2C0115B6000|TOTK_ALLS_WELL|All's Well|Get the key item for finding all wells
+0100F2C0115B6000|TOTK_DISPELLING_DARKNESS|Dispelling Darkness Medal|Light all Lightroots and get the medal
+0100F2C0115B6000|TOTK_HESTU_GIFT|Hestu's Gift|Find all 1,000 Koroks and get Hestu's Gift
 
 # Mario Kart 8 Deluxe (0100152000022000)
 0100152000022000|MK8D_FIRST|First Grand Prix|Finish a Grand Prix in Mario Kart 8 Deluxe
@@ -65,10 +90,10 @@
 0100152000022000|GMK8D_08|Treasure Hunter|Collect 500 trophies
 0100152000022000|GMK8D_09|Sharp Eyes|Find every collectible in one race
 0100152000022000|GMK8D_10|Perfectionist|Earn a perfect score in 5 races
-0100152000022000|GMK8D_11|Speedrunner|Complete a race under the target time
-0100152000022000|GMK8D_12|No Continues|Complete a race without continuing
-0100152000022000|GMK8D_13|Challenge Accepted|Complete a hard-difficulty race
-0100152000022000|GMK8D_14|Full Roster|Unlock every playable racers
+0100152000022000|GMK8D_11|Speedrunner|Complete one race under the target time
+0100152000022000|GMK8D_12|No Continues|Complete one race without continuing
+0100152000022000|GMK8D_13|Challenge Accepted|Complete one hard-difficulty race
+0100152000022000|GMK8D_14|Full Roster|Unlock all playable racers
 0100152000022000|GMK8D_15|Mastery|Max out one racer
 0100152000022000|GMK8D_16|Side Objectives|Complete 10 side objectives
 0100152000022000|GMK8D_17|Secret Finder|Discover every secret area
@@ -87,10 +112,10 @@
 0100000000010000|GODYSSEY_08|Treasure Hunter|Collect 500 coins
 0100000000010000|GODYSSEY_09|Sharp Eyes|Find every collectible in one level
 0100000000010000|GODYSSEY_10|Perfectionist|Earn a perfect score in 5 levels
-0100000000010000|GODYSSEY_11|Speedrunner|Complete a level under the target time
-0100000000010000|GODYSSEY_12|No Continues|Complete a level without continuing
-0100000000010000|GODYSSEY_13|Challenge Accepted|Complete a hard-difficulty level
-0100000000010000|GODYSSEY_14|Full Roster|Unlock every playable characters
+0100000000010000|GODYSSEY_11|Speedrunner|Complete one level under the target time
+0100000000010000|GODYSSEY_12|No Continues|Complete one level without continuing
+0100000000010000|GODYSSEY_13|Challenge Accepted|Complete one hard-difficulty level
+0100000000010000|GODYSSEY_14|Full Roster|Unlock all playable characters
 0100000000010000|GODYSSEY_15|Mastery|Max out one character
 0100000000010000|GODYSSEY_16|Side Objectives|Complete 10 side objectives
 0100000000010000|GODYSSEY_17|Secret Finder|Discover every secret area
@@ -109,10 +134,10 @@
 01006A800016E000|GSSBU_08|Treasure Hunter|Collect 500 victories
 01006A800016E000|GSSBU_09|Sharp Eyes|Find every collectible in one match
 01006A800016E000|GSSBU_10|Perfectionist|Earn a perfect score in 5 matches
-01006A800016E000|GSSBU_11|Speedrunner|Complete a match under the target time
-01006A800016E000|GSSBU_12|No Continues|Complete a match without continuing
-01006A800016E000|GSSBU_13|Challenge Accepted|Complete a hard-difficulty match
-01006A800016E000|GSSBU_14|Full Roster|Unlock every playable fighters
+01006A800016E000|GSSBU_11|Speedrunner|Complete one match under the target time
+01006A800016E000|GSSBU_12|No Continues|Complete one match without continuing
+01006A800016E000|GSSBU_13|Challenge Accepted|Complete one hard-difficulty match
+01006A800016E000|GSSBU_14|Full Roster|Unlock all playable fighters
 01006A800016E000|GSSBU_15|Mastery|Max out one fighter
 01006A800016E000|GSSBU_16|Side Objectives|Complete 10 side objectives
 01006A800016E000|GSSBU_17|Secret Finder|Discover every secret area
@@ -132,10 +157,10 @@
 0100F43008C44000|GZA_08|Treasure Hunter|Collect 500 items
 0100F43008C44000|GZA_09|Sharp Eyes|Find every collectible in one chapter
 0100F43008C44000|GZA_10|Perfectionist|Earn a perfect score in 5 chapters
-0100F43008C44000|GZA_11|Speedrunner|Complete a chapter under the target time
-0100F43008C44000|GZA_12|No Continues|Complete a chapter without continuing
-0100F43008C44000|GZA_13|Challenge Accepted|Complete a hard-difficulty chapter
-0100F43008C44000|GZA_14|Full Roster|Unlock every playable party members
+0100F43008C44000|GZA_11|Speedrunner|Complete one chapter under the target time
+0100F43008C44000|GZA_12|No Continues|Complete one chapter without continuing
+0100F43008C44000|GZA_13|Challenge Accepted|Complete one hard-difficulty chapter
+0100F43008C44000|GZA_14|Full Roster|Unlock all playable party members
 0100F43008C44000|GZA_15|Mastery|Max out one party member
 0100F43008C44000|GZA_16|Side Objectives|Complete 10 side objectives
 
@@ -153,10 +178,10 @@
 0100A3D008C5C000|GSCARLET_08|Treasure Hunter|Collect 500 items
 0100A3D008C5C000|GSCARLET_09|Sharp Eyes|Find every collectible in one chapter
 0100A3D008C5C000|GSCARLET_10|Perfectionist|Earn a perfect score in 5 chapters
-0100A3D008C5C000|GSCARLET_11|Speedrunner|Complete a chapter under the target time
-0100A3D008C5C000|GSCARLET_12|No Continues|Complete a chapter without continuing
-0100A3D008C5C000|GSCARLET_13|Challenge Accepted|Complete a hard-difficulty chapter
-0100A3D008C5C000|GSCARLET_14|Full Roster|Unlock every playable party members
+0100A3D008C5C000|GSCARLET_11|Speedrunner|Complete one chapter under the target time
+0100A3D008C5C000|GSCARLET_12|No Continues|Complete one chapter without continuing
+0100A3D008C5C000|GSCARLET_13|Challenge Accepted|Complete one hard-difficulty chapter
+0100A3D008C5C000|GSCARLET_14|Full Roster|Unlock all playable party members
 0100A3D008C5C000|GSCARLET_15|Mastery|Max out one party member
 0100A3D008C5C000|GSCARLET_16|Side Objectives|Complete 10 side objectives
 0100A3D008C5C000|GSCARLET_17|Secret Finder|Discover every secret area
@@ -175,10 +200,10 @@
 01008F6008C5E000|GVIOLET_08|Treasure Hunter|Collect 500 items
 01008F6008C5E000|GVIOLET_09|Sharp Eyes|Find every collectible in one chapter
 01008F6008C5E000|GVIOLET_10|Perfectionist|Earn a perfect score in 5 chapters
-01008F6008C5E000|GVIOLET_11|Speedrunner|Complete a chapter under the target time
-01008F6008C5E000|GVIOLET_12|No Continues|Complete a chapter without continuing
-01008F6008C5E000|GVIOLET_13|Challenge Accepted|Complete a hard-difficulty chapter
-01008F6008C5E000|GVIOLET_14|Full Roster|Unlock every playable party members
+01008F6008C5E000|GVIOLET_11|Speedrunner|Complete one chapter under the target time
+01008F6008C5E000|GVIOLET_12|No Continues|Complete one chapter without continuing
+01008F6008C5E000|GVIOLET_13|Challenge Accepted|Complete one hard-difficulty chapter
+01008F6008C5E000|GVIOLET_14|Full Roster|Unlock all playable party members
 01008F6008C5E000|GVIOLET_15|Mastery|Max out one party member
 01008F6008C5E000|GVIOLET_16|Side Objectives|Complete 10 side objectives
 01008F6008C5E000|GVIOLET_17|Secret Finder|Discover every secret area
@@ -197,10 +222,10 @@
 01001F5010DFA000|GARCEUS_08|Treasure Hunter|Collect 500 items
 01001F5010DFA000|GARCEUS_09|Sharp Eyes|Find every collectible in one chapter
 01001F5010DFA000|GARCEUS_10|Perfectionist|Earn a perfect score in 5 chapters
-01001F5010DFA000|GARCEUS_11|Speedrunner|Complete a chapter under the target time
-01001F5010DFA000|GARCEUS_12|No Continues|Complete a chapter without continuing
-01001F5010DFA000|GARCEUS_13|Challenge Accepted|Complete a hard-difficulty chapter
-01001F5010DFA000|GARCEUS_14|Full Roster|Unlock every playable party members
+01001F5010DFA000|GARCEUS_11|Speedrunner|Complete one chapter under the target time
+01001F5010DFA000|GARCEUS_12|No Continues|Complete one chapter without continuing
+01001F5010DFA000|GARCEUS_13|Challenge Accepted|Complete one hard-difficulty chapter
+01001F5010DFA000|GARCEUS_14|Full Roster|Unlock all playable party members
 01001F5010DFA000|GARCEUS_15|Mastery|Max out one party member
 01001F5010DFA000|GARCEUS_16|Side Objectives|Complete 10 side objectives
 01001F5010DFA000|GARCEUS_17|Secret Finder|Discover every secret area
@@ -219,10 +244,10 @@
 0100ABF008968000|GSWORD_08|Treasure Hunter|Collect 500 items
 0100ABF008968000|GSWORD_09|Sharp Eyes|Find every collectible in one chapter
 0100ABF008968000|GSWORD_10|Perfectionist|Earn a perfect score in 5 chapters
-0100ABF008968000|GSWORD_11|Speedrunner|Complete a chapter under the target time
-0100ABF008968000|GSWORD_12|No Continues|Complete a chapter without continuing
-0100ABF008968000|GSWORD_13|Challenge Accepted|Complete a hard-difficulty chapter
-0100ABF008968000|GSWORD_14|Full Roster|Unlock every playable party members
+0100ABF008968000|GSWORD_11|Speedrunner|Complete one chapter under the target time
+0100ABF008968000|GSWORD_12|No Continues|Complete one chapter without continuing
+0100ABF008968000|GSWORD_13|Challenge Accepted|Complete one hard-difficulty chapter
+0100ABF008968000|GSWORD_14|Full Roster|Unlock all playable party members
 0100ABF008968000|GSWORD_15|Mastery|Max out one party member
 0100ABF008968000|GSWORD_16|Side Objectives|Complete 10 side objectives
 0100ABF008968000|GSWORD_17|Secret Finder|Discover every secret area
@@ -241,10 +266,10 @@
 01008DB008C2C000|GSHIELD_08|Treasure Hunter|Collect 500 items
 01008DB008C2C000|GSHIELD_09|Sharp Eyes|Find every collectible in one chapter
 01008DB008C2C000|GSHIELD_10|Perfectionist|Earn a perfect score in 5 chapters
-01008DB008C2C000|GSHIELD_11|Speedrunner|Complete a chapter under the target time
-01008DB008C2C000|GSHIELD_12|No Continues|Complete a chapter without continuing
-01008DB008C2C000|GSHIELD_13|Challenge Accepted|Complete a hard-difficulty chapter
-01008DB008C2C000|GSHIELD_14|Full Roster|Unlock every playable party members
+01008DB008C2C000|GSHIELD_11|Speedrunner|Complete one chapter under the target time
+01008DB008C2C000|GSHIELD_12|No Continues|Complete one chapter without continuing
+01008DB008C2C000|GSHIELD_13|Challenge Accepted|Complete one hard-difficulty chapter
+01008DB008C2C000|GSHIELD_14|Full Roster|Unlock all playable party members
 01008DB008C2C000|GSHIELD_15|Mastery|Max out one party member
 01008DB008C2C000|GSHIELD_16|Side Objectives|Complete 10 side objectives
 01008DB008C2C000|GSHIELD_17|Secret Finder|Discover every secret area
@@ -263,10 +288,10 @@
 010003F003A34000|GLETSGO_P_08|Treasure Hunter|Collect 500 items
 010003F003A34000|GLETSGO_P_09|Sharp Eyes|Find every collectible in one chapter
 010003F003A34000|GLETSGO_P_10|Perfectionist|Earn a perfect score in 5 chapters
-010003F003A34000|GLETSGO_P_11|Speedrunner|Complete a chapter under the target time
-010003F003A34000|GLETSGO_P_12|No Continues|Complete a chapter without continuing
-010003F003A34000|GLETSGO_P_13|Challenge Accepted|Complete a hard-difficulty chapter
-010003F003A34000|GLETSGO_P_14|Full Roster|Unlock every playable party members
+010003F003A34000|GLETSGO_P_11|Speedrunner|Complete one chapter under the target time
+010003F003A34000|GLETSGO_P_12|No Continues|Complete one chapter without continuing
+010003F003A34000|GLETSGO_P_13|Challenge Accepted|Complete one hard-difficulty chapter
+010003F003A34000|GLETSGO_P_14|Full Roster|Unlock all playable party members
 010003F003A34000|GLETSGO_P_15|Mastery|Max out one party member
 010003F003A34000|GLETSGO_P_16|Side Objectives|Complete 10 side objectives
 010003F003A34000|GLETSGO_P_17|Secret Finder|Discover every secret area
@@ -285,10 +310,10 @@
 0100187003A36000|GLETSGO_E_08|Treasure Hunter|Collect 500 items
 0100187003A36000|GLETSGO_E_09|Sharp Eyes|Find every collectible in one chapter
 0100187003A36000|GLETSGO_E_10|Perfectionist|Earn a perfect score in 5 chapters
-0100187003A36000|GLETSGO_E_11|Speedrunner|Complete a chapter under the target time
-0100187003A36000|GLETSGO_E_12|No Continues|Complete a chapter without continuing
-0100187003A36000|GLETSGO_E_13|Challenge Accepted|Complete a hard-difficulty chapter
-0100187003A36000|GLETSGO_E_14|Full Roster|Unlock every playable party members
+0100187003A36000|GLETSGO_E_11|Speedrunner|Complete one chapter under the target time
+0100187003A36000|GLETSGO_E_12|No Continues|Complete one chapter without continuing
+0100187003A36000|GLETSGO_E_13|Challenge Accepted|Complete one hard-difficulty chapter
+0100187003A36000|GLETSGO_E_14|Full Roster|Unlock all playable party members
 0100187003A36000|GLETSGO_E_15|Mastery|Max out one party member
 0100187003A36000|GLETSGO_E_16|Side Objectives|Complete 10 side objectives
 0100187003A36000|GLETSGO_E_17|Secret Finder|Discover every secret area
@@ -307,10 +332,10 @@
 01006F8002326000|GACNH_08|Treasure Hunter|Collect 500 resources
 01006F8002326000|GACNH_09|Sharp Eyes|Find every collectible in one day
 01006F8002326000|GACNH_10|Perfectionist|Earn a perfect score in 5 days
-01006F8002326000|GACNH_11|Speedrunner|Complete a day under the target time
-01006F8002326000|GACNH_12|No Continues|Complete a day without continuing
-01006F8002326000|GACNH_13|Challenge Accepted|Complete a hard-difficulty day
-01006F8002326000|GACNH_14|Full Roster|Unlock every playable friends
+01006F8002326000|GACNH_11|Speedrunner|Complete one day under the target time
+01006F8002326000|GACNH_12|No Continues|Complete one day without continuing
+01006F8002326000|GACNH_13|Challenge Accepted|Complete one hard-difficulty day
+01006F8002326000|GACNH_14|Full Roster|Unlock all playable friends
 01006F8002326000|GACNH_15|Mastery|Max out one friend
 01006F8002326000|GACNH_16|Side Objectives|Complete 10 side objectives
 01006F8002326000|GACNH_17|Secret Finder|Discover every secret area
@@ -329,10 +354,10 @@
 0100C2500FC20000|GSPLATOON3_08|Treasure Hunter|Collect 500 supplies
 0100C2500FC20000|GSPLATOON3_09|Sharp Eyes|Find every collectible in one mission
 0100C2500FC20000|GSPLATOON3_10|Perfectionist|Earn a perfect score in 5 missions
-0100C2500FC20000|GSPLATOON3_11|Speedrunner|Complete a mission under the target time
-0100C2500FC20000|GSPLATOON3_12|No Continues|Complete a mission without continuing
-0100C2500FC20000|GSPLATOON3_13|Challenge Accepted|Complete a hard-difficulty mission
-0100C2500FC20000|GSPLATOON3_14|Full Roster|Unlock every playable weapons
+0100C2500FC20000|GSPLATOON3_11|Speedrunner|Complete one mission under the target time
+0100C2500FC20000|GSPLATOON3_12|No Continues|Complete one mission without continuing
+0100C2500FC20000|GSPLATOON3_13|Challenge Accepted|Complete one hard-difficulty mission
+0100C2500FC20000|GSPLATOON3_14|Full Roster|Unlock all playable weapons
 0100C2500FC20000|GSPLATOON3_15|Mastery|Max out one weapon
 0100C2500FC20000|GSPLATOON3_16|Side Objectives|Complete 10 side objectives
 0100C2500FC20000|GSPLATOON3_17|Secret Finder|Discover every secret area
@@ -351,10 +376,10 @@
 01003BC0000A0000|GSPLATOON2_08|Treasure Hunter|Collect 500 supplies
 01003BC0000A0000|GSPLATOON2_09|Sharp Eyes|Find every collectible in one mission
 01003BC0000A0000|GSPLATOON2_10|Perfectionist|Earn a perfect score in 5 missions
-01003BC0000A0000|GSPLATOON2_11|Speedrunner|Complete a mission under the target time
-01003BC0000A0000|GSPLATOON2_12|No Continues|Complete a mission without continuing
-01003BC0000A0000|GSPLATOON2_13|Challenge Accepted|Complete a hard-difficulty mission
-01003BC0000A0000|GSPLATOON2_14|Full Roster|Unlock every playable weapons
+01003BC0000A0000|GSPLATOON2_11|Speedrunner|Complete one mission under the target time
+01003BC0000A0000|GSPLATOON2_12|No Continues|Complete one mission without continuing
+01003BC0000A0000|GSPLATOON2_13|Challenge Accepted|Complete one hard-difficulty mission
+01003BC0000A0000|GSPLATOON2_14|Full Roster|Unlock all playable weapons
 01003BC0000A0000|GSPLATOON2_15|Mastery|Max out one weapon
 01003BC0000A0000|GSPLATOON2_16|Side Objectives|Complete 10 side objectives
 01003BC0000A0000|GSPLATOON2_17|Secret Finder|Discover every secret area
@@ -372,10 +397,10 @@
 010036B0034E4000|GSMP_08|Treasure Hunter|Collect 500 points
 010036B0034E4000|GSMP_09|Sharp Eyes|Find every collectible in one match
 010036B0034E4000|GSMP_10|Perfectionist|Earn a perfect score in 5 matches
-010036B0034E4000|GSMP_11|Speedrunner|Complete a match under the target time
-010036B0034E4000|GSMP_12|No Continues|Complete a match without continuing
-010036B0034E4000|GSMP_13|Challenge Accepted|Complete a hard-difficulty match
-010036B0034E4000|GSMP_14|Full Roster|Unlock every playable athletes
+010036B0034E4000|GSMP_11|Speedrunner|Complete one match under the target time
+010036B0034E4000|GSMP_12|No Continues|Complete one match without continuing
+010036B0034E4000|GSMP_13|Challenge Accepted|Complete one hard-difficulty match
+010036B0034E4000|GSMP_14|Full Roster|Unlock all playable athletes
 010036B0034E4000|GSMP_15|Mastery|Max out one athlete
 010036B0034E4000|GSMP_16|Side Objectives|Complete 10 side objectives
 010036B0034E4000|GSMP_17|Secret Finder|Discover every secret area
@@ -394,10 +419,10 @@
 01006FE013472000|GMPSS_08|Treasure Hunter|Collect 500 points
 01006FE013472000|GMPSS_09|Sharp Eyes|Find every collectible in one match
 01006FE013472000|GMPSS_10|Perfectionist|Earn a perfect score in 5 matches
-01006FE013472000|GMPSS_11|Speedrunner|Complete a match under the target time
-01006FE013472000|GMPSS_12|No Continues|Complete a match without continuing
-01006FE013472000|GMPSS_13|Challenge Accepted|Complete a hard-difficulty match
-01006FE013472000|GMPSS_14|Full Roster|Unlock every playable athletes
+01006FE013472000|GMPSS_11|Speedrunner|Complete one match under the target time
+01006FE013472000|GMPSS_12|No Continues|Complete one match without continuing
+01006FE013472000|GMPSS_13|Challenge Accepted|Complete one hard-difficulty match
+01006FE013472000|GMPSS_14|Full Roster|Unlock all playable athletes
 01006FE013472000|GMPSS_15|Mastery|Max out one athlete
 01006FE013472000|GMPSS_16|Side Objectives|Complete 10 side objectives
 01006FE013472000|GMPSS_17|Secret Finder|Discover every secret area
@@ -417,10 +442,10 @@
 0100317013770000|GRABBIDS_H_08|Treasure Hunter|Collect 500 souls
 0100317013770000|GRABBIDS_H_09|Sharp Eyes|Find every collectible in one stage
 0100317013770000|GRABBIDS_H_10|Perfectionist|Earn a perfect score in 5 stages
-0100317013770000|GRABBIDS_H_11|Speedrunner|Complete a stage under the target time
-0100317013770000|GRABBIDS_H_12|No Continues|Complete a stage without continuing
-0100317013770000|GRABBIDS_H_13|Challenge Accepted|Complete a hard-difficulty stage
-0100317013770000|GRABBIDS_H_14|Full Roster|Unlock every playable weapons
+0100317013770000|GRABBIDS_H_11|Speedrunner|Complete one stage under the target time
+0100317013770000|GRABBIDS_H_12|No Continues|Complete one stage without continuing
+0100317013770000|GRABBIDS_H_13|Challenge Accepted|Complete one hard-difficulty stage
+0100317013770000|GRABBIDS_H_14|Full Roster|Unlock all playable weapons
 0100317013770000|GRABBIDS_H_15|Mastery|Max out one weapon
 0100317013770000|GRABBIDS_H_16|Side Objectives|Complete 10 side objectives
 0100317013770000|GRABBIDS_H_17|Secret Finder|Discover every secret area
@@ -439,10 +464,10 @@
 010067300059A000|GRABBIDS_KB_08|Treasure Hunter|Collect 500 souls
 010067300059A000|GRABBIDS_KB_09|Sharp Eyes|Find every collectible in one stage
 010067300059A000|GRABBIDS_KB_10|Perfectionist|Earn a perfect score in 5 stages
-010067300059A000|GRABBIDS_KB_11|Speedrunner|Complete a stage under the target time
-010067300059A000|GRABBIDS_KB_12|No Continues|Complete a stage without continuing
-010067300059A000|GRABBIDS_KB_13|Challenge Accepted|Complete a hard-difficulty stage
-010067300059A000|GRABBIDS_KB_14|Full Roster|Unlock every playable weapons
+010067300059A000|GRABBIDS_KB_11|Speedrunner|Complete one stage under the target time
+010067300059A000|GRABBIDS_KB_12|No Continues|Complete one stage without continuing
+010067300059A000|GRABBIDS_KB_13|Challenge Accepted|Complete one hard-difficulty stage
+010067300059A000|GRABBIDS_KB_14|Full Roster|Unlock all playable weapons
 010067300059A000|GRABBIDS_KB_15|Mastery|Max out one weapon
 010067300059A000|GRABBIDS_KB_16|Side Objectives|Complete 10 side objectives
 010067300059A000|GRABBIDS_KB_17|Secret Finder|Discover every secret area
@@ -461,10 +486,10 @@
 0100DCA0064A6000|GLM3_08|Treasure Hunter|Collect 500 items
 0100DCA0064A6000|GLM3_09|Sharp Eyes|Find every collectible in one area
 0100DCA0064A6000|GLM3_10|Perfectionist|Earn a perfect score in 5 areas
-0100DCA0064A6000|GLM3_11|Speedrunner|Complete a area under the target time
-0100DCA0064A6000|GLM3_12|No Continues|Complete a area without continuing
-0100DCA0064A6000|GLM3_13|Challenge Accepted|Complete a hard-difficulty area
-0100DCA0064A6000|GLM3_14|Full Roster|Unlock every playable abilities
+0100DCA0064A6000|GLM3_11|Speedrunner|Complete one area under the target time
+0100DCA0064A6000|GLM3_12|No Continues|Complete one area without continuing
+0100DCA0064A6000|GLM3_13|Challenge Accepted|Complete one hard-difficulty area
+0100DCA0064A6000|GLM3_14|Full Roster|Unlock all playable abilities
 0100DCA0064A6000|GLM3_15|Mastery|Max out one ability
 0100DCA0064A6000|GLM3_16|Side Objectives|Complete 10 side objectives
 0100DCA0064A6000|GLM3_17|Secret Finder|Discover every secret area
@@ -483,10 +508,10 @@
 01009B90006DC000|GSMM2_08|Treasure Hunter|Collect 500 coins
 01009B90006DC000|GSMM2_09|Sharp Eyes|Find every collectible in one level
 01009B90006DC000|GSMM2_10|Perfectionist|Earn a perfect score in 5 levels
-01009B90006DC000|GSMM2_11|Speedrunner|Complete a level under the target time
-01009B90006DC000|GSMM2_12|No Continues|Complete a level without continuing
-01009B90006DC000|GSMM2_13|Challenge Accepted|Complete a hard-difficulty level
-01009B90006DC000|GSMM2_14|Full Roster|Unlock every playable characters
+01009B90006DC000|GSMM2_11|Speedrunner|Complete one level under the target time
+01009B90006DC000|GSMM2_12|No Continues|Complete one level without continuing
+01009B90006DC000|GSMM2_13|Challenge Accepted|Complete one hard-difficulty level
+01009B90006DC000|GSMM2_14|Full Roster|Unlock all playable characters
 01009B90006DC000|GSMM2_15|Mastery|Max out one character
 01009B90006DC000|GSMM2_16|Side Objectives|Complete 10 side objectives
 01009B90006DC000|GSMM2_17|Secret Finder|Discover every secret area
@@ -505,10 +530,10 @@
 0100BDE00862A000|GMTENNIS_08|Treasure Hunter|Collect 500 points
 0100BDE00862A000|GMTENNIS_09|Sharp Eyes|Find every collectible in one match
 0100BDE00862A000|GMTENNIS_10|Perfectionist|Earn a perfect score in 5 matches
-0100BDE00862A000|GMTENNIS_11|Speedrunner|Complete a match under the target time
-0100BDE00862A000|GMTENNIS_12|No Continues|Complete a match without continuing
-0100BDE00862A000|GMTENNIS_13|Challenge Accepted|Complete a hard-difficulty match
-0100BDE00862A000|GMTENNIS_14|Full Roster|Unlock every playable athletes
+0100BDE00862A000|GMTENNIS_11|Speedrunner|Complete one match under the target time
+0100BDE00862A000|GMTENNIS_12|No Continues|Complete one match without continuing
+0100BDE00862A000|GMTENNIS_13|Challenge Accepted|Complete one hard-difficulty match
+0100BDE00862A000|GMTENNIS_14|Full Roster|Unlock all playable athletes
 0100BDE00862A000|GMTENNIS_15|Mastery|Max out one athlete
 0100BDE00862A000|GMTENNIS_16|Side Objectives|Complete 10 side objectives
 0100BDE00862A000|GMTENNIS_17|Secret Finder|Discover every secret area
@@ -527,10 +552,10 @@
 0100C9C00E25C000|GMGOLF_08|Treasure Hunter|Collect 500 points
 0100C9C00E25C000|GMGOLF_09|Sharp Eyes|Find every collectible in one match
 0100C9C00E25C000|GMGOLF_10|Perfectionist|Earn a perfect score in 5 matches
-0100C9C00E25C000|GMGOLF_11|Speedrunner|Complete a match under the target time
-0100C9C00E25C000|GMGOLF_12|No Continues|Complete a match without continuing
-0100C9C00E25C000|GMGOLF_13|Challenge Accepted|Complete a hard-difficulty match
-0100C9C00E25C000|GMGOLF_14|Full Roster|Unlock every playable athletes
+0100C9C00E25C000|GMGOLF_11|Speedrunner|Complete one match under the target time
+0100C9C00E25C000|GMGOLF_12|No Continues|Complete one match without continuing
+0100C9C00E25C000|GMGOLF_13|Challenge Accepted|Complete one hard-difficulty match
+0100C9C00E25C000|GMGOLF_14|Full Roster|Unlock all playable athletes
 0100C9C00E25C000|GMGOLF_15|Mastery|Max out one athlete
 0100C9C00E25C000|GMGOLF_16|Side Objectives|Complete 10 side objectives
 0100C9C00E25C000|GMGOLF_17|Secret Finder|Discover every secret area
@@ -549,10 +574,10 @@
 010055D009F78000|GFE3H_08|Treasure Hunter|Collect 500 items
 010055D009F78000|GFE3H_09|Sharp Eyes|Find every collectible in one chapter
 010055D009F78000|GFE3H_10|Perfectionist|Earn a perfect score in 5 chapters
-010055D009F78000|GFE3H_11|Speedrunner|Complete a chapter under the target time
-010055D009F78000|GFE3H_12|No Continues|Complete a chapter without continuing
-010055D009F78000|GFE3H_13|Challenge Accepted|Complete a hard-difficulty chapter
-010055D009F78000|GFE3H_14|Full Roster|Unlock every playable party members
+010055D009F78000|GFE3H_11|Speedrunner|Complete one chapter under the target time
+010055D009F78000|GFE3H_12|No Continues|Complete one chapter without continuing
+010055D009F78000|GFE3H_13|Challenge Accepted|Complete one hard-difficulty chapter
+010055D009F78000|GFE3H_14|Full Roster|Unlock all playable party members
 010055D009F78000|GFE3H_15|Mastery|Max out one party member
 010055D009F78000|GFE3H_16|Side Objectives|Complete 10 side objectives
 010055D009F78000|GFE3H_17|Secret Finder|Discover every secret area
@@ -571,10 +596,10 @@
 0100A6301214E000|GFE_ENGAGE_08|Treasure Hunter|Collect 500 items
 0100A6301214E000|GFE_ENGAGE_09|Sharp Eyes|Find every collectible in one chapter
 0100A6301214E000|GFE_ENGAGE_10|Perfectionist|Earn a perfect score in 5 chapters
-0100A6301214E000|GFE_ENGAGE_11|Speedrunner|Complete a chapter under the target time
-0100A6301214E000|GFE_ENGAGE_12|No Continues|Complete a chapter without continuing
-0100A6301214E000|GFE_ENGAGE_13|Challenge Accepted|Complete a hard-difficulty chapter
-0100A6301214E000|GFE_ENGAGE_14|Full Roster|Unlock every playable party members
+0100A6301214E000|GFE_ENGAGE_11|Speedrunner|Complete one chapter under the target time
+0100A6301214E000|GFE_ENGAGE_12|No Continues|Complete one chapter without continuing
+0100A6301214E000|GFE_ENGAGE_13|Challenge Accepted|Complete one hard-difficulty chapter
+0100A6301214E000|GFE_ENGAGE_14|Full Roster|Unlock all playable party members
 0100A6301214E000|GFE_ENGAGE_15|Mastery|Max out one party member
 0100A6301214E000|GFE_ENGAGE_16|Side Objectives|Complete 10 side objectives
 0100A6301214E000|GFE_ENGAGE_17|Secret Finder|Discover every secret area
@@ -593,10 +618,10 @@
 0100E95004038000|GXC2_08|Treasure Hunter|Collect 500 items
 0100E95004038000|GXC2_09|Sharp Eyes|Find every collectible in one chapter
 0100E95004038000|GXC2_10|Perfectionist|Earn a perfect score in 5 chapters
-0100E95004038000|GXC2_11|Speedrunner|Complete a chapter under the target time
-0100E95004038000|GXC2_12|No Continues|Complete a chapter without continuing
-0100E95004038000|GXC2_13|Challenge Accepted|Complete a hard-difficulty chapter
-0100E95004038000|GXC2_14|Full Roster|Unlock every playable party members
+0100E95004038000|GXC2_11|Speedrunner|Complete one chapter under the target time
+0100E95004038000|GXC2_12|No Continues|Complete one chapter without continuing
+0100E95004038000|GXC2_13|Challenge Accepted|Complete one hard-difficulty chapter
+0100E95004038000|GXC2_14|Full Roster|Unlock all playable party members
 0100E95004038000|GXC2_15|Mastery|Max out one party member
 0100E95004038000|GXC2_16|Side Objectives|Complete 10 side objectives
 0100E95004038000|GXC2_17|Secret Finder|Discover every secret area
@@ -615,10 +640,10 @@
 010074F013262000|GXC3_08|Treasure Hunter|Collect 500 items
 010074F013262000|GXC3_09|Sharp Eyes|Find every collectible in one chapter
 010074F013262000|GXC3_10|Perfectionist|Earn a perfect score in 5 chapters
-010074F013262000|GXC3_11|Speedrunner|Complete a chapter under the target time
-010074F013262000|GXC3_12|No Continues|Complete a chapter without continuing
-010074F013262000|GXC3_13|Challenge Accepted|Complete a hard-difficulty chapter
-010074F013262000|GXC3_14|Full Roster|Unlock every playable party members
+010074F013262000|GXC3_11|Speedrunner|Complete one chapter under the target time
+010074F013262000|GXC3_12|No Continues|Complete one chapter without continuing
+010074F013262000|GXC3_13|Challenge Accepted|Complete one hard-difficulty chapter
+010074F013262000|GXC3_14|Full Roster|Unlock all playable party members
 010074F013262000|GXC3_15|Mastery|Max out one party member
 010074F013262000|GXC3_16|Side Objectives|Complete 10 side objectives
 010074F013262000|GXC3_17|Secret Finder|Discover every secret area
@@ -637,10 +662,10 @@
 0100FF500E34A000|GXC1_08|Treasure Hunter|Collect 500 items
 0100FF500E34A000|GXC1_09|Sharp Eyes|Find every collectible in one chapter
 0100FF500E34A000|GXC1_10|Perfectionist|Earn a perfect score in 5 chapters
-0100FF500E34A000|GXC1_11|Speedrunner|Complete a chapter under the target time
-0100FF500E34A000|GXC1_12|No Continues|Complete a chapter without continuing
-0100FF500E34A000|GXC1_13|Challenge Accepted|Complete a hard-difficulty chapter
-0100FF500E34A000|GXC1_14|Full Roster|Unlock every playable party members
+0100FF500E34A000|GXC1_11|Speedrunner|Complete one chapter under the target time
+0100FF500E34A000|GXC1_12|No Continues|Complete one chapter without continuing
+0100FF500E34A000|GXC1_13|Challenge Accepted|Complete one hard-difficulty chapter
+0100FF500E34A000|GXC1_14|Full Roster|Unlock all playable party members
 0100FF500E34A000|GXC1_15|Mastery|Max out one party member
 0100FF500E34A000|GXC1_16|Side Objectives|Complete 10 side objectives
 0100FF500E34A000|GXC1_17|Secret Finder|Discover every secret area
@@ -659,10 +684,10 @@
 010093801237C000|GDREAD_08|Treasure Hunter|Collect 500 items
 010093801237C000|GDREAD_09|Sharp Eyes|Find every collectible in one area
 010093801237C000|GDREAD_10|Perfectionist|Earn a perfect score in 5 areas
-010093801237C000|GDREAD_11|Speedrunner|Complete a area under the target time
-010093801237C000|GDREAD_12|No Continues|Complete a area without continuing
-010093801237C000|GDREAD_13|Challenge Accepted|Complete a hard-difficulty area
-010093801237C000|GDREAD_14|Full Roster|Unlock every playable abilities
+010093801237C000|GDREAD_11|Speedrunner|Complete one area under the target time
+010093801237C000|GDREAD_12|No Continues|Complete one area without continuing
+010093801237C000|GDREAD_13|Challenge Accepted|Complete one hard-difficulty area
+010093801237C000|GDREAD_14|Full Roster|Unlock all playable abilities
 010093801237C000|GDREAD_15|Mastery|Max out one ability
 010093801237C000|GDREAD_16|Side Objectives|Complete 10 side objectives
 010093801237C000|GDREAD_17|Secret Finder|Discover every secret area
@@ -681,10 +706,10 @@
 010012101468C000|GPRIME_08|Treasure Hunter|Collect 500 items
 010012101468C000|GPRIME_09|Sharp Eyes|Find every collectible in one area
 010012101468C000|GPRIME_10|Perfectionist|Earn a perfect score in 5 areas
-010012101468C000|GPRIME_11|Speedrunner|Complete a area under the target time
-010012101468C000|GPRIME_12|No Continues|Complete a area without continuing
-010012101468C000|GPRIME_13|Challenge Accepted|Complete a hard-difficulty area
-010012101468C000|GPRIME_14|Full Roster|Unlock every playable abilities
+010012101468C000|GPRIME_11|Speedrunner|Complete one area under the target time
+010012101468C000|GPRIME_12|No Continues|Complete one area without continuing
+010012101468C000|GPRIME_13|Challenge Accepted|Complete one hard-difficulty area
+010012101468C000|GPRIME_14|Full Roster|Unlock all playable abilities
 010012101468C000|GPRIME_15|Mastery|Max out one ability
 010012101468C000|GPRIME_16|Side Objectives|Complete 10 side objectives
 010012101468C000|GPRIME_17|Secret Finder|Discover every secret area
@@ -703,10 +728,10 @@
 01002B00111A2000|GAOC_08|Treasure Hunter|Collect 500 souls
 01002B00111A2000|GAOC_09|Sharp Eyes|Find every collectible in one stage
 01002B00111A2000|GAOC_10|Perfectionist|Earn a perfect score in 5 stages
-01002B00111A2000|GAOC_11|Speedrunner|Complete a stage under the target time
-01002B00111A2000|GAOC_12|No Continues|Complete a stage without continuing
-01002B00111A2000|GAOC_13|Challenge Accepted|Complete a hard-difficulty stage
-01002B00111A2000|GAOC_14|Full Roster|Unlock every playable weapons
+01002B00111A2000|GAOC_11|Speedrunner|Complete one stage under the target time
+01002B00111A2000|GAOC_12|No Continues|Complete one stage without continuing
+01002B00111A2000|GAOC_13|Challenge Accepted|Complete one hard-difficulty stage
+01002B00111A2000|GAOC_14|Full Roster|Unlock all playable weapons
 01002B00111A2000|GAOC_15|Mastery|Max out one weapon
 01002B00111A2000|GAOC_16|Side Objectives|Complete 10 side objectives
 01002B00111A2000|GAOC_17|Secret Finder|Discover every secret area
@@ -725,10 +750,10 @@
 01006BB00C6F0000|GLA_08|Treasure Hunter|Collect 500 items
 01006BB00C6F0000|GLA_09|Sharp Eyes|Find every collectible in one area
 01006BB00C6F0000|GLA_10|Perfectionist|Earn a perfect score in 5 areas
-01006BB00C6F0000|GLA_11|Speedrunner|Complete a area under the target time
-01006BB00C6F0000|GLA_12|No Continues|Complete a area without continuing
-01006BB00C6F0000|GLA_13|Challenge Accepted|Complete a hard-difficulty area
-01006BB00C6F0000|GLA_14|Full Roster|Unlock every playable abilities
+01006BB00C6F0000|GLA_11|Speedrunner|Complete one area under the target time
+01006BB00C6F0000|GLA_12|No Continues|Complete one area without continuing
+01006BB00C6F0000|GLA_13|Challenge Accepted|Complete one hard-difficulty area
+01006BB00C6F0000|GLA_14|Full Roster|Unlock all playable abilities
 01006BB00C6F0000|GLA_15|Mastery|Max out one ability
 01006BB00C6F0000|GLA_16|Side Objectives|Complete 10 side objectives
 01006BB00C6F0000|GLA_17|Secret Finder|Discover every secret area
@@ -747,10 +772,10 @@
 010028600EBDA000|GS3DW_08|Treasure Hunter|Collect 500 coins
 010028600EBDA000|GS3DW_09|Sharp Eyes|Find every collectible in one level
 010028600EBDA000|GS3DW_10|Perfectionist|Earn a perfect score in 5 levels
-010028600EBDA000|GS3DW_11|Speedrunner|Complete a level under the target time
-010028600EBDA000|GS3DW_12|No Continues|Complete a level without continuing
-010028600EBDA000|GS3DW_13|Challenge Accepted|Complete a hard-difficulty level
-010028600EBDA000|GS3DW_14|Full Roster|Unlock every playable characters
+010028600EBDA000|GS3DW_11|Speedrunner|Complete one level under the target time
+010028600EBDA000|GS3DW_12|No Continues|Complete one level without continuing
+010028600EBDA000|GS3DW_13|Challenge Accepted|Complete one hard-difficulty level
+010028600EBDA000|GS3DW_14|Full Roster|Unlock all playable characters
 010028600EBDA000|GS3DW_15|Mastery|Max out one character
 010028600EBDA000|GS3DW_16|Side Objectives|Complete 10 side objectives
 010028600EBDA000|GS3DW_17|Secret Finder|Discover every secret area
@@ -769,10 +794,10 @@
 0100EA80032EA000|GNSMBU_08|Treasure Hunter|Collect 500 coins
 0100EA80032EA000|GNSMBU_09|Sharp Eyes|Find every collectible in one level
 0100EA80032EA000|GNSMBU_10|Perfectionist|Earn a perfect score in 5 levels
-0100EA80032EA000|GNSMBU_11|Speedrunner|Complete a level under the target time
-0100EA80032EA000|GNSMBU_12|No Continues|Complete a level without continuing
-0100EA80032EA000|GNSMBU_13|Challenge Accepted|Complete a hard-difficulty level
-0100EA80032EA000|GNSMBU_14|Full Roster|Unlock every playable characters
+0100EA80032EA000|GNSMBU_11|Speedrunner|Complete one level under the target time
+0100EA80032EA000|GNSMBU_12|No Continues|Complete one level without continuing
+0100EA80032EA000|GNSMBU_13|Challenge Accepted|Complete one hard-difficulty level
+0100EA80032EA000|GNSMBU_14|Full Roster|Unlock all playable characters
 0100EA80032EA000|GNSMBU_15|Mastery|Max out one character
 0100EA80032EA000|GNSMBU_16|Side Objectives|Complete 10 side objectives
 0100EA80032EA000|GNSMBU_17|Secret Finder|Discover every secret area
@@ -791,10 +816,10 @@
 0100C1F0051B6000|GDKC_08|Treasure Hunter|Collect 500 coins
 0100C1F0051B6000|GDKC_09|Sharp Eyes|Find every collectible in one level
 0100C1F0051B6000|GDKC_10|Perfectionist|Earn a perfect score in 5 levels
-0100C1F0051B6000|GDKC_11|Speedrunner|Complete a level under the target time
-0100C1F0051B6000|GDKC_12|No Continues|Complete a level without continuing
-0100C1F0051B6000|GDKC_13|Challenge Accepted|Complete a hard-difficulty level
-0100C1F0051B6000|GDKC_14|Full Roster|Unlock every playable characters
+0100C1F0051B6000|GDKC_11|Speedrunner|Complete one level under the target time
+0100C1F0051B6000|GDKC_12|No Continues|Complete one level without continuing
+0100C1F0051B6000|GDKC_13|Challenge Accepted|Complete one hard-difficulty level
+0100C1F0051B6000|GDKC_14|Full Roster|Unlock all playable characters
 0100C1F0051B6000|GDKC_15|Mastery|Max out one character
 0100C1F0051B6000|GDKC_16|Side Objectives|Complete 10 side objectives
 0100C1F0051B6000|GDKC_17|Secret Finder|Discover every secret area
@@ -813,10 +838,10 @@
 01009BF0072D4000|GTOAD_08|Treasure Hunter|Collect 500 stars
 01009BF0072D4000|GTOAD_09|Sharp Eyes|Find every collectible in one puzzle
 01009BF0072D4000|GTOAD_10|Perfectionist|Earn a perfect score in 5 puzzles
-01009BF0072D4000|GTOAD_11|Speedrunner|Complete a puzzle under the target time
-01009BF0072D4000|GTOAD_12|No Continues|Complete a puzzle without continuing
-01009BF0072D4000|GTOAD_13|Challenge Accepted|Complete a hard-difficulty puzzle
-01009BF0072D4000|GTOAD_14|Full Roster|Unlock every playable hints
+01009BF0072D4000|GTOAD_11|Speedrunner|Complete one puzzle under the target time
+01009BF0072D4000|GTOAD_12|No Continues|Complete one puzzle without continuing
+01009BF0072D4000|GTOAD_13|Challenge Accepted|Complete one hard-difficulty puzzle
+01009BF0072D4000|GTOAD_14|Full Roster|Unlock all playable hints
 01009BF0072D4000|GTOAD_15|Mastery|Max out one hint
 01009BF0072D4000|GTOAD_16|Side Objectives|Complete 10 side objectives
 01009BF0072D4000|GTOAD_17|Secret Finder|Discover every secret area
@@ -835,10 +860,10 @@
 01004D300C5AE000|GKIRBY_FL_08|Treasure Hunter|Collect 500 coins
 01004D300C5AE000|GKIRBY_FL_09|Sharp Eyes|Find every collectible in one level
 01004D300C5AE000|GKIRBY_FL_10|Perfectionist|Earn a perfect score in 5 levels
-01004D300C5AE000|GKIRBY_FL_11|Speedrunner|Complete a level under the target time
-01004D300C5AE000|GKIRBY_FL_12|No Continues|Complete a level without continuing
-01004D300C5AE000|GKIRBY_FL_13|Challenge Accepted|Complete a hard-difficulty level
-01004D300C5AE000|GKIRBY_FL_14|Full Roster|Unlock every playable characters
+01004D300C5AE000|GKIRBY_FL_11|Speedrunner|Complete one level under the target time
+01004D300C5AE000|GKIRBY_FL_12|No Continues|Complete one level without continuing
+01004D300C5AE000|GKIRBY_FL_13|Challenge Accepted|Complete one hard-difficulty level
+01004D300C5AE000|GKIRBY_FL_14|Full Roster|Unlock all playable characters
 01004D300C5AE000|GKIRBY_FL_15|Mastery|Max out one character
 01004D300C5AE000|GKIRBY_FL_16|Side Objectives|Complete 10 side objectives
 01004D300C5AE000|GKIRBY_FL_17|Secret Finder|Discover every secret area
@@ -857,10 +882,10 @@
 01007E3006DDA000|GKIRBY_SA_08|Treasure Hunter|Collect 500 coins
 01007E3006DDA000|GKIRBY_SA_09|Sharp Eyes|Find every collectible in one level
 01007E3006DDA000|GKIRBY_SA_10|Perfectionist|Earn a perfect score in 5 levels
-01007E3006DDA000|GKIRBY_SA_11|Speedrunner|Complete a level under the target time
-01007E3006DDA000|GKIRBY_SA_12|No Continues|Complete a level without continuing
-01007E3006DDA000|GKIRBY_SA_13|Challenge Accepted|Complete a hard-difficulty level
-01007E3006DDA000|GKIRBY_SA_14|Full Roster|Unlock every playable characters
+01007E3006DDA000|GKIRBY_SA_11|Speedrunner|Complete one level under the target time
+01007E3006DDA000|GKIRBY_SA_12|No Continues|Complete one level without continuing
+01007E3006DDA000|GKIRBY_SA_13|Challenge Accepted|Complete one hard-difficulty level
+01007E3006DDA000|GKIRBY_SA_14|Full Roster|Unlock all playable characters
 01007E3006DDA000|GKIRBY_SA_15|Mastery|Max out one character
 01007E3006DDA000|GKIRBY_SA_16|Side Objectives|Complete 10 side objectives
 01007E3006DDA000|GKIRBY_SA_17|Secret Finder|Discover every secret area
@@ -879,10 +904,10 @@
 01006B601380E000|GKIRBY_RTDL_08|Treasure Hunter|Collect 500 coins
 01006B601380E000|GKIRBY_RTDL_09|Sharp Eyes|Find every collectible in one level
 01006B601380E000|GKIRBY_RTDL_10|Perfectionist|Earn a perfect score in 5 levels
-01006B601380E000|GKIRBY_RTDL_11|Speedrunner|Complete a level under the target time
-01006B601380E000|GKIRBY_RTDL_12|No Continues|Complete a level without continuing
-01006B601380E000|GKIRBY_RTDL_13|Challenge Accepted|Complete a hard-difficulty level
-01006B601380E000|GKIRBY_RTDL_14|Full Roster|Unlock every playable characters
+01006B601380E000|GKIRBY_RTDL_11|Speedrunner|Complete one level under the target time
+01006B601380E000|GKIRBY_RTDL_12|No Continues|Complete one level without continuing
+01006B601380E000|GKIRBY_RTDL_13|Challenge Accepted|Complete one hard-difficulty level
+01006B601380E000|GKIRBY_RTDL_14|Full Roster|Unlock all playable characters
 01006B601380E000|GKIRBY_RTDL_15|Mastery|Max out one character
 01006B601380E000|GKIRBY_RTDL_16|Side Objectives|Complete 10 side objectives
 01006B601380E000|GKIRBY_RTDL_17|Secret Finder|Discover every secret area
@@ -901,10 +926,10 @@
 01006000040C2000|GYOSHI_08|Treasure Hunter|Collect 500 coins
 01006000040C2000|GYOSHI_09|Sharp Eyes|Find every collectible in one level
 01006000040C2000|GYOSHI_10|Perfectionist|Earn a perfect score in 5 levels
-01006000040C2000|GYOSHI_11|Speedrunner|Complete a level under the target time
-01006000040C2000|GYOSHI_12|No Continues|Complete a level without continuing
-01006000040C2000|GYOSHI_13|Challenge Accepted|Complete a hard-difficulty level
-01006000040C2000|GYOSHI_14|Full Roster|Unlock every playable characters
+01006000040C2000|GYOSHI_11|Speedrunner|Complete one level under the target time
+01006000040C2000|GYOSHI_12|No Continues|Complete one level without continuing
+01006000040C2000|GYOSHI_13|Challenge Accepted|Complete one hard-difficulty level
+01006000040C2000|GYOSHI_14|Full Roster|Unlock all playable characters
 01006000040C2000|GYOSHI_15|Mastery|Max out one character
 01006000040C2000|GYOSHI_16|Side Objectives|Complete 10 side objectives
 01006000040C2000|GYOSHI_17|Secret Finder|Discover every secret area
@@ -923,10 +948,10 @@
 0100F4C009322000|GPIKMIN3_08|Treasure Hunter|Collect 500 stars
 0100F4C009322000|GPIKMIN3_09|Sharp Eyes|Find every collectible in one puzzle
 0100F4C009322000|GPIKMIN3_10|Perfectionist|Earn a perfect score in 5 puzzles
-0100F4C009322000|GPIKMIN3_11|Speedrunner|Complete a puzzle under the target time
-0100F4C009322000|GPIKMIN3_12|No Continues|Complete a puzzle without continuing
-0100F4C009322000|GPIKMIN3_13|Challenge Accepted|Complete a hard-difficulty puzzle
-0100F4C009322000|GPIKMIN3_14|Full Roster|Unlock every playable hints
+0100F4C009322000|GPIKMIN3_11|Speedrunner|Complete one puzzle under the target time
+0100F4C009322000|GPIKMIN3_12|No Continues|Complete one puzzle without continuing
+0100F4C009322000|GPIKMIN3_13|Challenge Accepted|Complete one hard-difficulty puzzle
+0100F4C009322000|GPIKMIN3_14|Full Roster|Unlock all playable hints
 0100F4C009322000|GPIKMIN3_15|Mastery|Max out one hint
 0100F4C009322000|GPIKMIN3_16|Side Objectives|Complete 10 side objectives
 0100F4C009322000|GPIKMIN3_17|Secret Finder|Discover every secret area
@@ -945,10 +970,10 @@
 0100B7C00933A000|GPIKMIN4_08|Treasure Hunter|Collect 500 stars
 0100B7C00933A000|GPIKMIN4_09|Sharp Eyes|Find every collectible in one puzzle
 0100B7C00933A000|GPIKMIN4_10|Perfectionist|Earn a perfect score in 5 puzzles
-0100B7C00933A000|GPIKMIN4_11|Speedrunner|Complete a puzzle under the target time
-0100B7C00933A000|GPIKMIN4_12|No Continues|Complete a puzzle without continuing
-0100B7C00933A000|GPIKMIN4_13|Challenge Accepted|Complete a hard-difficulty puzzle
-0100B7C00933A000|GPIKMIN4_14|Full Roster|Unlock every playable hints
+0100B7C00933A000|GPIKMIN4_11|Speedrunner|Complete one puzzle under the target time
+0100B7C00933A000|GPIKMIN4_12|No Continues|Complete one puzzle without continuing
+0100B7C00933A000|GPIKMIN4_13|Challenge Accepted|Complete one hard-difficulty puzzle
+0100B7C00933A000|GPIKMIN4_14|Full Roster|Unlock all playable hints
 0100B7C00933A000|GPIKMIN4_15|Mastery|Max out one hint
 0100B7C00933A000|GPIKMIN4_16|Side Objectives|Complete 10 side objectives
 0100B7C00933A000|GPIKMIN4_17|Secret Finder|Discover every secret area
@@ -966,10 +991,10 @@
 0100563010E0C000|GWARIOWARE_08|Treasure Hunter|Collect 500 points
 0100563010E0C000|GWARIOWARE_09|Sharp Eyes|Find every collectible in one minigame
 0100563010E0C000|GWARIOWARE_10|Perfectionist|Earn a perfect score in 5 minigames
-0100563010E0C000|GWARIOWARE_11|Speedrunner|Complete a minigame under the target time
-0100563010E0C000|GWARIOWARE_12|No Continues|Complete a minigame without continuing
-0100563010E0C000|GWARIOWARE_13|Challenge Accepted|Complete a hard-difficulty minigame
-0100563010E0C000|GWARIOWARE_14|Full Roster|Unlock every playable activities
+0100563010E0C000|GWARIOWARE_11|Speedrunner|Complete one minigame under the target time
+0100563010E0C000|GWARIOWARE_12|No Continues|Complete one minigame without continuing
+0100563010E0C000|GWARIOWARE_13|Challenge Accepted|Complete one hard-difficulty minigame
+0100563010E0C000|GWARIOWARE_14|Full Roster|Unlock all playable activities
 0100563010E0C000|GWARIOWARE_15|Mastery|Max out one activity
 0100563010E0C000|GWARIOWARE_16|Side Objectives|Complete 10 side objectives
 0100563010E0C000|GWARIOWARE_17|Secret Finder|Discover every secret area
@@ -988,10 +1013,10 @@
 01000320000CC000|G12SWITCH_08|Treasure Hunter|Collect 500 points
 01000320000CC000|G12SWITCH_09|Sharp Eyes|Find every collectible in one minigame
 01000320000CC000|G12SWITCH_10|Perfectionist|Earn a perfect score in 5 minigames
-01000320000CC000|G12SWITCH_11|Speedrunner|Complete a minigame under the target time
-01000320000CC000|G12SWITCH_12|No Continues|Complete a minigame without continuing
-01000320000CC000|G12SWITCH_13|Challenge Accepted|Complete a hard-difficulty minigame
-01000320000CC000|G12SWITCH_14|Full Roster|Unlock every playable activities
+01000320000CC000|G12SWITCH_11|Speedrunner|Complete one minigame under the target time
+01000320000CC000|G12SWITCH_12|No Continues|Complete one minigame without continuing
+01000320000CC000|G12SWITCH_13|Challenge Accepted|Complete one hard-difficulty minigame
+01000320000CC000|G12SWITCH_14|Full Roster|Unlock all playable activities
 01000320000CC000|G12SWITCH_15|Mastery|Max out one activity
 01000320000CC000|G12SWITCH_16|Side Objectives|Complete 10 side objectives
 01000320000CC000|G12SWITCH_17|Secret Finder|Discover every secret area
@@ -1011,10 +1036,10 @@
 01009B500007C000|GARMS_08|Treasure Hunter|Collect 500 victories
 01009B500007C000|GARMS_09|Sharp Eyes|Find every collectible in one match
 01009B500007C000|GARMS_10|Perfectionist|Earn a perfect score in 5 matches
-01009B500007C000|GARMS_11|Speedrunner|Complete a match under the target time
-01009B500007C000|GARMS_12|No Continues|Complete a match without continuing
-01009B500007C000|GARMS_13|Challenge Accepted|Complete a hard-difficulty match
-01009B500007C000|GARMS_14|Full Roster|Unlock every playable fighters
+01009B500007C000|GARMS_11|Speedrunner|Complete one match under the target time
+01009B500007C000|GARMS_12|No Continues|Complete one match without continuing
+01009B500007C000|GARMS_13|Challenge Accepted|Complete one hard-difficulty match
+01009B500007C000|GARMS_14|Full Roster|Unlock all playable fighters
 01009B500007C000|GARMS_15|Mastery|Max out one fighter
 01009B500007C000|GARMS_16|Side Objectives|Complete 10 side objectives
 01009B500007C000|GARMS_17|Secret Finder|Discover every secret area
@@ -1033,10 +1058,10 @@
 01002FF008C24000|GRINGFIT_08|Treasure Hunter|Collect 500 points
 01002FF008C24000|GRINGFIT_09|Sharp Eyes|Find every collectible in one minigame
 01002FF008C24000|GRINGFIT_10|Perfectionist|Earn a perfect score in 5 minigames
-01002FF008C24000|GRINGFIT_11|Speedrunner|Complete a minigame under the target time
-01002FF008C24000|GRINGFIT_12|No Continues|Complete a minigame without continuing
-01002FF008C24000|GRINGFIT_13|Challenge Accepted|Complete a hard-difficulty minigame
-01002FF008C24000|GRINGFIT_14|Full Roster|Unlock every playable activities
+01002FF008C24000|GRINGFIT_11|Speedrunner|Complete one minigame under the target time
+01002FF008C24000|GRINGFIT_12|No Continues|Complete one minigame without continuing
+01002FF008C24000|GRINGFIT_13|Challenge Accepted|Complete one hard-difficulty minigame
+01002FF008C24000|GRINGFIT_14|Full Roster|Unlock all playable activities
 01002FF008C24000|GRINGFIT_15|Mastery|Max out one activity
 01002FF008C24000|GRINGFIT_16|Side Objectives|Complete 10 side objectives
 01002FF008C24000|GRINGFIT_17|Secret Finder|Discover every secret area
@@ -1055,10 +1080,10 @@
 0100D2F00D5C0000|GNSSPORTS_08|Treasure Hunter|Collect 500 points
 0100D2F00D5C0000|GNSSPORTS_09|Sharp Eyes|Find every collectible in one match
 0100D2F00D5C0000|GNSSPORTS_10|Perfectionist|Earn a perfect score in 5 matches
-0100D2F00D5C0000|GNSSPORTS_11|Speedrunner|Complete a match under the target time
-0100D2F00D5C0000|GNSSPORTS_12|No Continues|Complete a match without continuing
-0100D2F00D5C0000|GNSSPORTS_13|Challenge Accepted|Complete a hard-difficulty match
-0100D2F00D5C0000|GNSSPORTS_14|Full Roster|Unlock every playable athletes
+0100D2F00D5C0000|GNSSPORTS_11|Speedrunner|Complete one match under the target time
+0100D2F00D5C0000|GNSSPORTS_12|No Continues|Complete one match without continuing
+0100D2F00D5C0000|GNSSPORTS_13|Challenge Accepted|Complete one hard-difficulty match
+0100D2F00D5C0000|GNSSPORTS_14|Full Roster|Unlock all playable athletes
 0100D2F00D5C0000|GNSSPORTS_15|Mastery|Max out one athlete
 0100D2F00D5C0000|GNSSPORTS_16|Side Objectives|Complete 10 side objectives
 0100D2F00D5C0000|GNSSPORTS_17|Secret Finder|Discover every secret area
@@ -1076,10 +1101,10 @@
 010019401051C000|GSTRIKERS_08|Treasure Hunter|Collect 500 points
 010019401051C000|GSTRIKERS_09|Sharp Eyes|Find every collectible in one match
 010019401051C000|GSTRIKERS_10|Perfectionist|Earn a perfect score in 5 matches
-010019401051C000|GSTRIKERS_11|Speedrunner|Complete a match under the target time
-010019401051C000|GSTRIKERS_12|No Continues|Complete a match without continuing
-010019401051C000|GSTRIKERS_13|Challenge Accepted|Complete a hard-difficulty match
-010019401051C000|GSTRIKERS_14|Full Roster|Unlock every playable athletes
+010019401051C000|GSTRIKERS_11|Speedrunner|Complete one match under the target time
+010019401051C000|GSTRIKERS_12|No Continues|Complete one match without continuing
+010019401051C000|GSTRIKERS_13|Challenge Accepted|Complete one hard-difficulty match
+010019401051C000|GSTRIKERS_14|Full Roster|Unlock all playable athletes
 010019401051C000|GSTRIKERS_15|Mastery|Max out one athlete
 010019401051C000|GSTRIKERS_16|Side Objectives|Complete 10 side objectives
 010019401051C000|GSTRIKERS_17|Secret Finder|Discover every secret area
@@ -1098,10 +1123,10 @@
 0100300012F2A000|GADVANCEWARS_08|Treasure Hunter|Collect 500 coins
 0100300012F2A000|GADVANCEWARS_09|Sharp Eyes|Find every collectible in one level
 0100300012F2A000|GADVANCEWARS_10|Perfectionist|Earn a perfect score in 5 levels
-0100300012F2A000|GADVANCEWARS_11|Speedrunner|Complete a level under the target time
-0100300012F2A000|GADVANCEWARS_12|No Continues|Complete a level without continuing
-0100300012F2A000|GADVANCEWARS_13|Challenge Accepted|Complete a hard-difficulty level
-0100300012F2A000|GADVANCEWARS_14|Full Roster|Unlock every playable characters
+0100300012F2A000|GADVANCEWARS_11|Speedrunner|Complete one level under the target time
+0100300012F2A000|GADVANCEWARS_12|No Continues|Complete one level without continuing
+0100300012F2A000|GADVANCEWARS_13|Challenge Accepted|Complete one hard-difficulty level
+0100300012F2A000|GADVANCEWARS_14|Full Roster|Unlock all playable characters
 0100300012F2A000|GADVANCEWARS_15|Mastery|Max out one character
 0100300012F2A000|GADVANCEWARS_16|Side Objectives|Complete 10 side objectives
 0100300012F2A000|GADVANCEWARS_17|Secret Finder|Discover every secret area
@@ -1120,10 +1145,10 @@
 0100939011ED4000|GUNITE_08|Treasure Hunter|Collect 500 points
 0100939011ED4000|GUNITE_09|Sharp Eyes|Find every collectible in one match
 0100939011ED4000|GUNITE_10|Perfectionist|Earn a perfect score in 5 matches
-0100939011ED4000|GUNITE_11|Speedrunner|Complete a match under the target time
-0100939011ED4000|GUNITE_12|No Continues|Complete a match without continuing
-0100939011ED4000|GUNITE_13|Challenge Accepted|Complete a hard-difficulty match
-0100939011ED4000|GUNITE_14|Full Roster|Unlock every playable athletes
+0100939011ED4000|GUNITE_11|Speedrunner|Complete one match under the target time
+0100939011ED4000|GUNITE_12|No Continues|Complete one match without continuing
+0100939011ED4000|GUNITE_13|Challenge Accepted|Complete one hard-difficulty match
+0100939011ED4000|GUNITE_14|Full Roster|Unlock all playable athletes
 0100939011ED4000|GUNITE_15|Mastery|Max out one athlete
 0100939011ED4000|GUNITE_16|Side Objectives|Complete 10 side objectives
 0100939011ED4000|GUNITE_17|Secret Finder|Discover every secret area
@@ -1143,10 +1168,10 @@
 010015100B514000|GWONDER_08|Treasure Hunter|Collect 500 coins
 010015100B514000|GWONDER_09|Sharp Eyes|Find every collectible in one level
 010015100B514000|GWONDER_10|Perfectionist|Earn a perfect score in 5 levels
-010015100B514000|GWONDER_11|Speedrunner|Complete a level under the target time
-010015100B514000|GWONDER_12|No Continues|Complete a level without continuing
-010015100B514000|GWONDER_13|Challenge Accepted|Complete a hard-difficulty level
-010015100B514000|GWONDER_14|Full Roster|Unlock every playable characters
+010015100B514000|GWONDER_11|Speedrunner|Complete one level under the target time
+010015100B514000|GWONDER_12|No Continues|Complete one level without continuing
+010015100B514000|GWONDER_13|Challenge Accepted|Complete one hard-difficulty level
+010015100B514000|GWONDER_14|Full Roster|Unlock all playable characters
 010015100B514000|GWONDER_15|Mastery|Max out one character
 010015100B514000|GWONDER_16|Side Objectives|Complete 10 side objectives
 010015100B514000|GWONDER_17|Secret Finder|Discover every secret area
@@ -1165,10 +1190,10 @@
 0100D71004694000|GMINECRAFT_08|Treasure Hunter|Collect 500 resources
 0100D71004694000|GMINECRAFT_09|Sharp Eyes|Find every collectible in one day
 0100D71004694000|GMINECRAFT_10|Perfectionist|Earn a perfect score in 5 days
-0100D71004694000|GMINECRAFT_11|Speedrunner|Complete a day under the target time
-0100D71004694000|GMINECRAFT_12|No Continues|Complete a day without continuing
-0100D71004694000|GMINECRAFT_13|Challenge Accepted|Complete a hard-difficulty day
-0100D71004694000|GMINECRAFT_14|Full Roster|Unlock every playable friends
+0100D71004694000|GMINECRAFT_11|Speedrunner|Complete one day under the target time
+0100D71004694000|GMINECRAFT_12|No Continues|Complete one day without continuing
+0100D71004694000|GMINECRAFT_13|Challenge Accepted|Complete one hard-difficulty day
+0100D71004694000|GMINECRAFT_14|Full Roster|Unlock all playable friends
 0100D71004694000|GMINECRAFT_15|Mastery|Max out one friend
 0100D71004694000|GMINECRAFT_16|Side Objectives|Complete 10 side objectives
 0100D71004694000|GMINECRAFT_17|Secret Finder|Discover every secret area
@@ -1187,10 +1212,10 @@
 01001B300B9BE000|GDIABLO3_08|Treasure Hunter|Collect 500 supplies
 01001B300B9BE000|GDIABLO3_09|Sharp Eyes|Find every collectible in one mission
 01001B300B9BE000|GDIABLO3_10|Perfectionist|Earn a perfect score in 5 missions
-01001B300B9BE000|GDIABLO3_11|Speedrunner|Complete a mission under the target time
-01001B300B9BE000|GDIABLO3_12|No Continues|Complete a mission without continuing
-01001B300B9BE000|GDIABLO3_13|Challenge Accepted|Complete a hard-difficulty mission
-01001B300B9BE000|GDIABLO3_14|Full Roster|Unlock every playable weapons
+01001B300B9BE000|GDIABLO3_11|Speedrunner|Complete one mission under the target time
+01001B300B9BE000|GDIABLO3_12|No Continues|Complete one mission without continuing
+01001B300B9BE000|GDIABLO3_13|Challenge Accepted|Complete one hard-difficulty mission
+01001B300B9BE000|GDIABLO3_14|Full Roster|Unlock all playable weapons
 01001B300B9BE000|GDIABLO3_15|Mastery|Max out one weapon
 01001B300B9BE000|GDIABLO3_16|Side Objectives|Complete 10 side objectives
 01001B300B9BE000|GDIABLO3_17|Secret Finder|Discover every secret area
@@ -1209,10 +1234,10 @@
 010080B00AD66000|GUNDERTALE_08|Treasure Hunter|Collect 500 items
 010080B00AD66000|GUNDERTALE_09|Sharp Eyes|Find every collectible in one chapter
 010080B00AD66000|GUNDERTALE_10|Perfectionist|Earn a perfect score in 5 chapters
-010080B00AD66000|GUNDERTALE_11|Speedrunner|Complete a chapter under the target time
-010080B00AD66000|GUNDERTALE_12|No Continues|Complete a chapter without continuing
-010080B00AD66000|GUNDERTALE_13|Challenge Accepted|Complete a hard-difficulty chapter
-010080B00AD66000|GUNDERTALE_14|Full Roster|Unlock every playable party members
+010080B00AD66000|GUNDERTALE_11|Speedrunner|Complete one chapter under the target time
+010080B00AD66000|GUNDERTALE_12|No Continues|Complete one chapter without continuing
+010080B00AD66000|GUNDERTALE_13|Challenge Accepted|Complete one hard-difficulty chapter
+010080B00AD66000|GUNDERTALE_14|Full Roster|Unlock all playable party members
 010080B00AD66000|GUNDERTALE_15|Mastery|Max out one party member
 010080B00AD66000|GUNDERTALE_16|Side Objectives|Complete 10 side objectives
 010080B00AD66000|GUNDERTALE_17|Secret Finder|Discover every secret area
@@ -1231,10 +1256,10 @@
 0100A0D022A68000|GDELTARUNE_08|Treasure Hunter|Collect 500 items
 0100A0D022A68000|GDELTARUNE_09|Sharp Eyes|Find every collectible in one chapter
 0100A0D022A68000|GDELTARUNE_10|Perfectionist|Earn a perfect score in 5 chapters
-0100A0D022A68000|GDELTARUNE_11|Speedrunner|Complete a chapter under the target time
-0100A0D022A68000|GDELTARUNE_12|No Continues|Complete a chapter without continuing
-0100A0D022A68000|GDELTARUNE_13|Challenge Accepted|Complete a hard-difficulty chapter
-0100A0D022A68000|GDELTARUNE_14|Full Roster|Unlock every playable party members
+0100A0D022A68000|GDELTARUNE_11|Speedrunner|Complete one chapter under the target time
+0100A0D022A68000|GDELTARUNE_12|No Continues|Complete one chapter without continuing
+0100A0D022A68000|GDELTARUNE_13|Challenge Accepted|Complete one hard-difficulty chapter
+0100A0D022A68000|GDELTARUNE_14|Full Roster|Unlock all playable party members
 0100A0D022A68000|GDELTARUNE_15|Mastery|Max out one party member
 0100A0D022A68000|GDELTARUNE_16|Side Objectives|Complete 10 side objectives
 0100A0D022A68000|GDELTARUNE_17|Secret Finder|Discover every secret area
@@ -1252,10 +1277,10 @@
 0100ED100BA3A000|GMKLIVE_08|Treasure Hunter|Collect 500 trophies
 0100ED100BA3A000|GMKLIVE_09|Sharp Eyes|Find every collectible in one race
 0100ED100BA3A000|GMKLIVE_10|Perfectionist|Earn a perfect score in 5 races
-0100ED100BA3A000|GMKLIVE_11|Speedrunner|Complete a race under the target time
-0100ED100BA3A000|GMKLIVE_12|No Continues|Complete a race without continuing
-0100ED100BA3A000|GMKLIVE_13|Challenge Accepted|Complete a hard-difficulty race
-0100ED100BA3A000|GMKLIVE_14|Full Roster|Unlock every playable racers
+0100ED100BA3A000|GMKLIVE_11|Speedrunner|Complete one race under the target time
+0100ED100BA3A000|GMKLIVE_12|No Continues|Complete one race without continuing
+0100ED100BA3A000|GMKLIVE_13|Challenge Accepted|Complete one hard-difficulty race
+0100ED100BA3A000|GMKLIVE_14|Full Roster|Unlock all playable racers
 0100ED100BA3A000|GMKLIVE_15|Mastery|Max out one racer
 0100ED100BA3A000|GMKLIVE_16|Side Objectives|Complete 10 side objectives
 0100ED100BA3A000|GMKLIVE_17|Secret Finder|Discover every secret area
@@ -3965,10 +3990,10 @@
 01002DA013484000|GSKYSWORD_08|Treasure Hunter|Collect 500 items
 01002DA013484000|GSKYSWORD_09|Sharp Eyes|Find every collectible in one area
 01002DA013484000|GSKYSWORD_10|Perfectionist|Earn a perfect score in 5 areas
-01002DA013484000|GSKYSWORD_11|Speedrunner|Complete a area under the target time
-01002DA013484000|GSKYSWORD_12|No Continues|Complete a area without continuing
-01002DA013484000|GSKYSWORD_13|Challenge Accepted|Complete a hard-difficulty area
-01002DA013484000|GSKYSWORD_14|Full Roster|Unlock every playable abilities
+01002DA013484000|GSKYSWORD_11|Speedrunner|Complete one area under the target time
+01002DA013484000|GSKYSWORD_12|No Continues|Complete one area without continuing
+01002DA013484000|GSKYSWORD_13|Challenge Accepted|Complete one hard-difficulty area
+01002DA013484000|GSKYSWORD_14|Full Roster|Unlock all playable abilities
 01002DA013484000|GSKYSWORD_15|Mastery|Max out one ability
 01002DA013484000|GSKYSWORD_16|Side Objectives|Complete 10 side objectives
 01002DA013484000|GSKYSWORD_17|Secret Finder|Discover every secret area
@@ -3987,10 +4012,10 @@
 01008CF01BAAC000|GECHOES_08|Treasure Hunter|Collect 500 items
 01008CF01BAAC000|GECHOES_09|Sharp Eyes|Find every collectible in one area
 01008CF01BAAC000|GECHOES_10|Perfectionist|Earn a perfect score in 5 areas
-01008CF01BAAC000|GECHOES_11|Speedrunner|Complete a area under the target time
-01008CF01BAAC000|GECHOES_12|No Continues|Complete a area without continuing
-01008CF01BAAC000|GECHOES_13|Challenge Accepted|Complete a hard-difficulty area
-01008CF01BAAC000|GECHOES_14|Full Roster|Unlock every playable abilities
+01008CF01BAAC000|GECHOES_11|Speedrunner|Complete one area under the target time
+01008CF01BAAC000|GECHOES_12|No Continues|Complete one area without continuing
+01008CF01BAAC000|GECHOES_13|Challenge Accepted|Complete one hard-difficulty area
+01008CF01BAAC000|GECHOES_14|Full Roster|Unlock all playable abilities
 01008CF01BAAC000|GECHOES_15|Mastery|Max out one ability
 01008CF01BAAC000|GECHOES_16|Side Objectives|Complete 10 side objectives
 01008CF01BAAC000|GECHOES_17|Secret Finder|Discover every secret area
@@ -4008,10 +4033,10 @@
 010007500F27C000|GDETECTIVE_08|Treasure Hunter|Collect 500 items
 010007500F27C000|GDETECTIVE_09|Sharp Eyes|Find every collectible in one area
 010007500F27C000|GDETECTIVE_10|Perfectionist|Earn a perfect score in 5 areas
-010007500F27C000|GDETECTIVE_11|Speedrunner|Complete a area under the target time
-010007500F27C000|GDETECTIVE_12|No Continues|Complete a area without continuing
-010007500F27C000|GDETECTIVE_13|Challenge Accepted|Complete a hard-difficulty area
-010007500F27C000|GDETECTIVE_14|Full Roster|Unlock every playable abilities
+010007500F27C000|GDETECTIVE_11|Speedrunner|Complete one area under the target time
+010007500F27C000|GDETECTIVE_12|No Continues|Complete one area without continuing
+010007500F27C000|GDETECTIVE_13|Challenge Accepted|Complete one hard-difficulty area
+010007500F27C000|GDETECTIVE_14|Full Roster|Unlock all playable abilities
 010007500F27C000|GDETECTIVE_15|Mastery|Max out one ability
 010007500F27C000|GDETECTIVE_16|Side Objectives|Complete 10 side objectives
 010007500F27C000|GDETECTIVE_17|Secret Finder|Discover every secret area
@@ -4030,10 +4055,10 @@
 0100F15003E64000|GFEW_08|Treasure Hunter|Collect 500 items
 0100F15003E64000|GFEW_09|Sharp Eyes|Find every collectible in one chapter
 0100F15003E64000|GFEW_10|Perfectionist|Earn a perfect score in 5 chapters
-0100F15003E64000|GFEW_11|Speedrunner|Complete a chapter under the target time
-0100F15003E64000|GFEW_12|No Continues|Complete a chapter without continuing
-0100F15003E64000|GFEW_13|Challenge Accepted|Complete a hard-difficulty chapter
-0100F15003E64000|GFEW_14|Full Roster|Unlock every playable party members
+0100F15003E64000|GFEW_11|Speedrunner|Complete one chapter under the target time
+0100F15003E64000|GFEW_12|No Continues|Complete one chapter without continuing
+0100F15003E64000|GFEW_13|Challenge Accepted|Complete one hard-difficulty chapter
+0100F15003E64000|GFEW_14|Full Roster|Unlock all playable party members
 0100F15003E64000|GFEW_15|Mastery|Max out one party member
 0100F15003E64000|GFEW_16|Side Objectives|Complete 10 side objectives
 0100F15003E64000|GFEW_17|Secret Finder|Discover every secret area
@@ -4052,10 +4077,10 @@
 010071F0143EA000|GFE3HOPES_08|Treasure Hunter|Collect 500 items
 010071F0143EA000|GFE3HOPES_09|Sharp Eyes|Find every collectible in one chapter
 010071F0143EA000|GFE3HOPES_10|Perfectionist|Earn a perfect score in 5 chapters
-010071F0143EA000|GFE3HOPES_11|Speedrunner|Complete a chapter under the target time
-010071F0143EA000|GFE3HOPES_12|No Continues|Complete a chapter without continuing
-010071F0143EA000|GFE3HOPES_13|Challenge Accepted|Complete a hard-difficulty chapter
-010071F0143EA000|GFE3HOPES_14|Full Roster|Unlock every playable party members
+010071F0143EA000|GFE3HOPES_11|Speedrunner|Complete one chapter under the target time
+010071F0143EA000|GFE3HOPES_12|No Continues|Complete one chapter without continuing
+010071F0143EA000|GFE3HOPES_13|Challenge Accepted|Complete one hard-difficulty chapter
+010071F0143EA000|GFE3HOPES_14|Full Roster|Unlock all playable party members
 010071F0143EA000|GFE3HOPES_15|Mastery|Max out one party member
 010071F0143EA000|GFE3HOPES_16|Side Objectives|Complete 10 side objectives
 010071F0143EA000|GFE3HOPES_17|Secret Finder|Discover every secret area
@@ -4075,10 +4100,10 @@
 0100453019AA8000|GXCX_08|Treasure Hunter|Collect 500 items
 0100453019AA8000|GXCX_09|Sharp Eyes|Find every collectible in one chapter
 0100453019AA8000|GXCX_10|Perfectionist|Earn a perfect score in 5 chapters
-0100453019AA8000|GXCX_11|Speedrunner|Complete a chapter under the target time
-0100453019AA8000|GXCX_12|No Continues|Complete a chapter without continuing
-0100453019AA8000|GXCX_13|Challenge Accepted|Complete a hard-difficulty chapter
-0100453019AA8000|GXCX_14|Full Roster|Unlock every playable party members
+0100453019AA8000|GXCX_11|Speedrunner|Complete one chapter under the target time
+0100453019AA8000|GXCX_12|No Continues|Complete one chapter without continuing
+0100453019AA8000|GXCX_13|Challenge Accepted|Complete one hard-difficulty chapter
+0100453019AA8000|GXCX_14|Full Roster|Unlock all playable party members
 0100453019AA8000|GXCX_15|Mastery|Max out one party member
 0100453019AA8000|GXCX_16|Side Objectives|Complete 10 side objectives
 0100453019AA8000|GXCX_17|Secret Finder|Discover every secret area
@@ -4097,10 +4122,10 @@
 010019A01E2F2000|GMETROID4_08|Treasure Hunter|Collect 500 items
 010019A01E2F2000|GMETROID4_09|Sharp Eyes|Find every collectible in one area
 010019A01E2F2000|GMETROID4_10|Perfectionist|Earn a perfect score in 5 areas
-010019A01E2F2000|GMETROID4_11|Speedrunner|Complete a area under the target time
-010019A01E2F2000|GMETROID4_12|No Continues|Complete a area without continuing
-010019A01E2F2000|GMETROID4_13|Challenge Accepted|Complete a hard-difficulty area
-010019A01E2F2000|GMETROID4_14|Full Roster|Unlock every playable abilities
+010019A01E2F2000|GMETROID4_11|Speedrunner|Complete one area under the target time
+010019A01E2F2000|GMETROID4_12|No Continues|Complete one area without continuing
+010019A01E2F2000|GMETROID4_13|Challenge Accepted|Complete one hard-difficulty area
+010019A01E2F2000|GMETROID4_14|Full Roster|Unlock all playable abilities
 010019A01E2F2000|GMETROID4_15|Mastery|Max out one ability
 010019A01E2F2000|GMETROID4_16|Side Objectives|Complete 10 side objectives
 010019A01E2F2000|GMETROID4_17|Secret Finder|Discover every secret area
@@ -4119,10 +4144,10 @@
 010048701995E000|GLM2HD_08|Treasure Hunter|Collect 500 items
 010048701995E000|GLM2HD_09|Sharp Eyes|Find every collectible in one area
 010048701995E000|GLM2HD_10|Perfectionist|Earn a perfect score in 5 areas
-010048701995E000|GLM2HD_11|Speedrunner|Complete a area under the target time
-010048701995E000|GLM2HD_12|No Continues|Complete a area without continuing
-010048701995E000|GLM2HD_13|Challenge Accepted|Complete a hard-difficulty area
-010048701995E000|GLM2HD_14|Full Roster|Unlock every playable abilities
+010048701995E000|GLM2HD_11|Speedrunner|Complete one area under the target time
+010048701995E000|GLM2HD_12|No Continues|Complete one area without continuing
+010048701995E000|GLM2HD_13|Challenge Accepted|Complete one hard-difficulty area
+010048701995E000|GLM2HD_14|Full Roster|Unlock all playable abilities
 010048701995E000|GLM2HD_15|Mastery|Max out one ability
 010048701995E000|GLM2HD_16|Side Objectives|Complete 10 side objectives
 010048701995E000|GLM2HD_17|Secret Finder|Discover every secret area
@@ -4140,10 +4165,10 @@
 0100AA80194B0000|GPIKMIN1_08|Treasure Hunter|Collect 500 stars
 0100AA80194B0000|GPIKMIN1_09|Sharp Eyes|Find every collectible in one puzzle
 0100AA80194B0000|GPIKMIN1_10|Perfectionist|Earn a perfect score in 5 puzzles
-0100AA80194B0000|GPIKMIN1_11|Speedrunner|Complete a puzzle under the target time
-0100AA80194B0000|GPIKMIN1_12|No Continues|Complete a puzzle without continuing
-0100AA80194B0000|GPIKMIN1_13|Challenge Accepted|Complete a hard-difficulty puzzle
-0100AA80194B0000|GPIKMIN1_14|Full Roster|Unlock every playable hints
+0100AA80194B0000|GPIKMIN1_11|Speedrunner|Complete one puzzle under the target time
+0100AA80194B0000|GPIKMIN1_12|No Continues|Complete one puzzle without continuing
+0100AA80194B0000|GPIKMIN1_13|Challenge Accepted|Complete one hard-difficulty puzzle
+0100AA80194B0000|GPIKMIN1_14|Full Roster|Unlock all playable hints
 0100AA80194B0000|GPIKMIN1_15|Mastery|Max out one hint
 0100AA80194B0000|GPIKMIN1_16|Side Objectives|Complete 10 side objectives
 0100AA80194B0000|GPIKMIN1_17|Secret Finder|Discover every secret area
@@ -4162,10 +4187,10 @@
 0100D680194B2000|GPIKMIN2_08|Treasure Hunter|Collect 500 stars
 0100D680194B2000|GPIKMIN2_09|Sharp Eyes|Find every collectible in one puzzle
 0100D680194B2000|GPIKMIN2_10|Perfectionist|Earn a perfect score in 5 puzzles
-0100D680194B2000|GPIKMIN2_11|Speedrunner|Complete a puzzle under the target time
-0100D680194B2000|GPIKMIN2_12|No Continues|Complete a puzzle without continuing
-0100D680194B2000|GPIKMIN2_13|Challenge Accepted|Complete a hard-difficulty puzzle
-0100D680194B2000|GPIKMIN2_14|Full Roster|Unlock every playable hints
+0100D680194B2000|GPIKMIN2_11|Speedrunner|Complete one puzzle under the target time
+0100D680194B2000|GPIKMIN2_12|No Continues|Complete one puzzle without continuing
+0100D680194B2000|GPIKMIN2_13|Challenge Accepted|Complete one hard-difficulty puzzle
+0100D680194B2000|GPIKMIN2_14|Full Roster|Unlock all playable hints
 0100D680194B2000|GPIKMIN2_15|Mastery|Max out one hint
 0100D680194B2000|GPIKMIN2_16|Side Objectives|Complete 10 side objectives
 0100D680194B2000|GPIKMIN2_17|Secret Finder|Discover every secret area
@@ -4184,10 +4209,10 @@
 0100227010460000|GKIRBYFIGHT_08|Treasure Hunter|Collect 500 victories
 0100227010460000|GKIRBYFIGHT_09|Sharp Eyes|Find every collectible in one match
 0100227010460000|GKIRBYFIGHT_10|Perfectionist|Earn a perfect score in 5 matches
-0100227010460000|GKIRBYFIGHT_11|Speedrunner|Complete a match under the target time
-0100227010460000|GKIRBYFIGHT_12|No Continues|Complete a match without continuing
-0100227010460000|GKIRBYFIGHT_13|Challenge Accepted|Complete a hard-difficulty match
-0100227010460000|GKIRBYFIGHT_14|Full Roster|Unlock every playable fighters
+0100227010460000|GKIRBYFIGHT_11|Speedrunner|Complete one match under the target time
+0100227010460000|GKIRBYFIGHT_12|No Continues|Complete one match without continuing
+0100227010460000|GKIRBYFIGHT_13|Challenge Accepted|Complete one hard-difficulty match
+0100227010460000|GKIRBYFIGHT_14|Full Roster|Unlock all playable fighters
 0100227010460000|GKIRBYFIGHT_15|Mastery|Max out one fighter
 0100227010460000|GKIRBYFIGHT_16|Side Objectives|Complete 10 side objectives
 0100227010460000|GKIRBYFIGHT_17|Secret Finder|Discover every secret area
@@ -4206,10 +4231,10 @@
 0100AE00096EA000|GHRW_08|Treasure Hunter|Collect 500 souls
 0100AE00096EA000|GHRW_09|Sharp Eyes|Find every collectible in one stage
 0100AE00096EA000|GHRW_10|Perfectionist|Earn a perfect score in 5 stages
-0100AE00096EA000|GHRW_11|Speedrunner|Complete a stage under the target time
-0100AE00096EA000|GHRW_12|No Continues|Complete a stage without continuing
-0100AE00096EA000|GHRW_13|Challenge Accepted|Complete a hard-difficulty stage
-0100AE00096EA000|GHRW_14|Full Roster|Unlock every playable weapons
+0100AE00096EA000|GHRW_11|Speedrunner|Complete one stage under the target time
+0100AE00096EA000|GHRW_12|No Continues|Complete one stage without continuing
+0100AE00096EA000|GHRW_13|Challenge Accepted|Complete one hard-difficulty stage
+0100AE00096EA000|GHRW_14|Full Roster|Unlock all playable weapons
 0100AE00096EA000|GHRW_15|Mastery|Max out one weapon
 0100AE00096EA000|GHRW_16|Side Objectives|Complete 10 side objectives
 0100AE00096EA000|GHRW_17|Secret Finder|Discover every secret area
@@ -4228,10 +4253,10 @@
 010045B018EC2000|GWARIOWARE_MOVE_08|Treasure Hunter|Collect 500 points
 010045B018EC2000|GWARIOWARE_MOVE_09|Sharp Eyes|Find every collectible in one minigame
 010045B018EC2000|GWARIOWARE_MOVE_10|Perfectionist|Earn a perfect score in 5 minigames
-010045B018EC2000|GWARIOWARE_MOVE_11|Speedrunner|Complete a minigame under the target time
-010045B018EC2000|GWARIOWARE_MOVE_12|No Continues|Complete a minigame without continuing
-010045B018EC2000|GWARIOWARE_MOVE_13|Challenge Accepted|Complete a hard-difficulty minigame
-010045B018EC2000|GWARIOWARE_MOVE_14|Full Roster|Unlock every playable activities
+010045B018EC2000|GWARIOWARE_MOVE_11|Speedrunner|Complete one minigame under the target time
+010045B018EC2000|GWARIOWARE_MOVE_12|No Continues|Complete one minigame without continuing
+010045B018EC2000|GWARIOWARE_MOVE_13|Challenge Accepted|Complete one hard-difficulty minigame
+010045B018EC2000|GWARIOWARE_MOVE_14|Full Roster|Unlock all playable activities
 010045B018EC2000|GWARIOWARE_MOVE_15|Mastery|Max out one activity
 010045B018EC2000|GWARIOWARE_MOVE_16|Side Objectives|Complete 10 side objectives
 010045B018EC2000|GWARIOWARE_MOVE_17|Secret Finder|Discover every secret area
@@ -4251,10 +4276,10 @@
 0100965017338000|GJAMBOREE_08|Treasure Hunter|Collect 500 points
 0100965017338000|GJAMBOREE_09|Sharp Eyes|Find every collectible in one match
 0100965017338000|GJAMBOREE_10|Perfectionist|Earn a perfect score in 5 matches
-0100965017338000|GJAMBOREE_11|Speedrunner|Complete a match under the target time
-0100965017338000|GJAMBOREE_12|No Continues|Complete a match without continuing
-0100965017338000|GJAMBOREE_13|Challenge Accepted|Complete a hard-difficulty match
-0100965017338000|GJAMBOREE_14|Full Roster|Unlock every playable athletes
+0100965017338000|GJAMBOREE_11|Speedrunner|Complete one match under the target time
+0100965017338000|GJAMBOREE_12|No Continues|Complete one match without continuing
+0100965017338000|GJAMBOREE_13|Challenge Accepted|Complete one hard-difficulty match
+0100965017338000|GJAMBOREE_14|Full Roster|Unlock all playable athletes
 0100965017338000|GJAMBOREE_15|Mastery|Max out one athlete
 0100965017338000|GJAMBOREE_16|Side Objectives|Complete 10 side objectives
 0100965017338000|GJAMBOREE_17|Secret Finder|Discover every secret area
@@ -4272,10 +4297,10 @@
 010003000E146000|GMARIOSONIC_08|Treasure Hunter|Collect 500 points
 010003000E146000|GMARIOSONIC_09|Sharp Eyes|Find every collectible in one match
 010003000E146000|GMARIOSONIC_10|Perfectionist|Earn a perfect score in 5 matches
-010003000E146000|GMARIOSONIC_11|Speedrunner|Complete a match under the target time
-010003000E146000|GMARIOSONIC_12|No Continues|Complete a match without continuing
-010003000E146000|GMARIOSONIC_13|Challenge Accepted|Complete a hard-difficulty match
-010003000E146000|GMARIOSONIC_14|Full Roster|Unlock every playable athletes
+010003000E146000|GMARIOSONIC_11|Speedrunner|Complete one match under the target time
+010003000E146000|GMARIOSONIC_12|No Continues|Complete one match without continuing
+010003000E146000|GMARIOSONIC_13|Challenge Accepted|Complete one hard-difficulty match
+010003000E146000|GMARIOSONIC_14|Full Roster|Unlock all playable athletes
 010003000E146000|GMARIOSONIC_15|Mastery|Max out one athlete
 010003000E146000|GMARIOSONIC_16|Side Objectives|Complete 10 side objectives
 010003000E146000|GMARIOSONIC_17|Secret Finder|Discover every secret area
@@ -4294,10 +4319,10 @@
 0100B99019412000|GMVS_08|Treasure Hunter|Collect 500 coins
 0100B99019412000|GMVS_09|Sharp Eyes|Find every collectible in one level
 0100B99019412000|GMVS_10|Perfectionist|Earn a perfect score in 5 levels
-0100B99019412000|GMVS_11|Speedrunner|Complete a level under the target time
-0100B99019412000|GMVS_12|No Continues|Complete a level without continuing
-0100B99019412000|GMVS_13|Challenge Accepted|Complete a hard-difficulty level
-0100B99019412000|GMVS_14|Full Roster|Unlock every playable characters
+0100B99019412000|GMVS_11|Speedrunner|Complete one level under the target time
+0100B99019412000|GMVS_12|No Continues|Complete one level without continuing
+0100B99019412000|GMVS_13|Challenge Accepted|Complete one hard-difficulty level
+0100B99019412000|GMVS_14|Full Roster|Unlock all playable characters
 0100B99019412000|GMVS_15|Mastery|Max out one character
 0100B99019412000|GMVS_16|Side Objectives|Complete 10 side objectives
 0100B99019412000|GMVS_17|Secret Finder|Discover every secret area
@@ -4317,10 +4342,10 @@
 01009D901BC56000|GDKCR_08|Treasure Hunter|Collect 500 coins
 01009D901BC56000|GDKCR_09|Sharp Eyes|Find every collectible in one level
 01009D901BC56000|GDKCR_10|Perfectionist|Earn a perfect score in 5 levels
-01009D901BC56000|GDKCR_11|Speedrunner|Complete a level under the target time
-01009D901BC56000|GDKCR_12|No Continues|Complete a level without continuing
-01009D901BC56000|GDKCR_13|Challenge Accepted|Complete a hard-difficulty level
-01009D901BC56000|GDKCR_14|Full Roster|Unlock every playable characters
+01009D901BC56000|GDKCR_11|Speedrunner|Complete one level under the target time
+01009D901BC56000|GDKCR_12|No Continues|Complete one level without continuing
+01009D901BC56000|GDKCR_13|Challenge Accepted|Complete one hard-difficulty level
+01009D901BC56000|GDKCR_14|Full Roster|Unlock all playable characters
 01009D901BC56000|GDKCR_15|Mastery|Max out one character
 01009D901BC56000|GDKCR_16|Side Objectives|Complete 10 side objectives
 01009D901BC56000|GDKCR_17|Secret Finder|Discover every secret area
@@ -4338,10 +4363,10 @@
 0100E7300AAD4000|GFITBOX_08|Treasure Hunter|Collect 500 points
 0100E7300AAD4000|GFITBOX_09|Sharp Eyes|Find every collectible in one minigame
 0100E7300AAD4000|GFITBOX_10|Perfectionist|Earn a perfect score in 5 minigames
-0100E7300AAD4000|GFITBOX_11|Speedrunner|Complete a minigame under the target time
-0100E7300AAD4000|GFITBOX_12|No Continues|Complete a minigame without continuing
-0100E7300AAD4000|GFITBOX_13|Challenge Accepted|Complete a hard-difficulty minigame
-0100E7300AAD4000|GFITBOX_14|Full Roster|Unlock every playable activities
+0100E7300AAD4000|GFITBOX_11|Speedrunner|Complete one minigame under the target time
+0100E7300AAD4000|GFITBOX_12|No Continues|Complete one minigame without continuing
+0100E7300AAD4000|GFITBOX_13|Challenge Accepted|Complete one hard-difficulty minigame
+0100E7300AAD4000|GFITBOX_14|Full Roster|Unlock all playable activities
 0100E7300AAD4000|GFITBOX_15|Mastery|Max out one activity
 0100E7300AAD4000|GFITBOX_16|Side Objectives|Complete 10 side objectives
 0100E7300AAD4000|GFITBOX_17|Secret Finder|Discover every secret area
@@ -4360,10 +4385,10 @@
 0100073011382000|GFITBOX2_08|Treasure Hunter|Collect 500 points
 0100073011382000|GFITBOX2_09|Sharp Eyes|Find every collectible in one minigame
 0100073011382000|GFITBOX2_10|Perfectionist|Earn a perfect score in 5 minigames
-0100073011382000|GFITBOX2_11|Speedrunner|Complete a minigame under the target time
-0100073011382000|GFITBOX2_12|No Continues|Complete a minigame without continuing
-0100073011382000|GFITBOX2_13|Challenge Accepted|Complete a hard-difficulty minigame
-0100073011382000|GFITBOX2_14|Full Roster|Unlock every playable activities
+0100073011382000|GFITBOX2_11|Speedrunner|Complete one minigame under the target time
+0100073011382000|GFITBOX2_12|No Continues|Complete one minigame without continuing
+0100073011382000|GFITBOX2_13|Challenge Accepted|Complete one hard-difficulty minigame
+0100073011382000|GFITBOX2_14|Full Roster|Unlock all playable activities
 0100073011382000|GFITBOX2_15|Mastery|Max out one activity
 0100073011382000|GFITBOX2_16|Side Objectives|Complete 10 side objectives
 0100073011382000|GFITBOX2_17|Secret Finder|Discover every secret area
@@ -4382,10 +4407,10 @@
 010047700D540000|GCLUBHOUSE_08|Treasure Hunter|Collect 500 points
 010047700D540000|GCLUBHOUSE_09|Sharp Eyes|Find every collectible in one minigame
 010047700D540000|GCLUBHOUSE_10|Perfectionist|Earn a perfect score in 5 minigames
-010047700D540000|GCLUBHOUSE_11|Speedrunner|Complete a minigame under the target time
-010047700D540000|GCLUBHOUSE_12|No Continues|Complete a minigame without continuing
-010047700D540000|GCLUBHOUSE_13|Challenge Accepted|Complete a hard-difficulty minigame
-010047700D540000|GCLUBHOUSE_14|Full Roster|Unlock every playable activities
+010047700D540000|GCLUBHOUSE_11|Speedrunner|Complete one minigame under the target time
+010047700D540000|GCLUBHOUSE_12|No Continues|Complete one minigame without continuing
+010047700D540000|GCLUBHOUSE_13|Challenge Accepted|Complete one hard-difficulty minigame
+010047700D540000|GCLUBHOUSE_14|Full Roster|Unlock all playable activities
 010047700D540000|GCLUBHOUSE_15|Mastery|Max out one activity
 010047700D540000|GCLUBHOUSE_16|Side Objectives|Complete 10 side objectives
 010047700D540000|GCLUBHOUSE_17|Secret Finder|Discover every secret area
@@ -4404,10 +4429,10 @@
 0100FA5010788000|GGBG_08|Treasure Hunter|Collect 500 resources
 0100FA5010788000|GGBG_09|Sharp Eyes|Find every collectible in one day
 0100FA5010788000|GGBG_10|Perfectionist|Earn a perfect score in 5 days
-0100FA5010788000|GGBG_11|Speedrunner|Complete a day under the target time
-0100FA5010788000|GGBG_12|No Continues|Complete a day without continuing
-0100FA5010788000|GGBG_13|Challenge Accepted|Complete a hard-difficulty day
-0100FA5010788000|GGBG_14|Full Roster|Unlock every playable friends
+0100FA5010788000|GGBG_11|Speedrunner|Complete one day under the target time
+0100FA5010788000|GGBG_12|No Continues|Complete one day without continuing
+0100FA5010788000|GGBG_13|Challenge Accepted|Complete one hard-difficulty day
+0100FA5010788000|GGBG_14|Full Roster|Unlock all playable friends
 0100FA5010788000|GGBG_15|Mastery|Max out one friend
 0100FA5010788000|GGBG_16|Side Objectives|Complete 10 side objectives
 0100FA5010788000|GGBG_17|Secret Finder|Discover every secret area
@@ -4426,10 +4451,10 @@
 0100620012D6E000|GBRAIN_08|Treasure Hunter|Collect 500 points
 0100620012D6E000|GBRAIN_09|Sharp Eyes|Find every collectible in one minigame
 0100620012D6E000|GBRAIN_10|Perfectionist|Earn a perfect score in 5 minigames
-0100620012D6E000|GBRAIN_11|Speedrunner|Complete a minigame under the target time
-0100620012D6E000|GBRAIN_12|No Continues|Complete a minigame without continuing
-0100620012D6E000|GBRAIN_13|Challenge Accepted|Complete a hard-difficulty minigame
-0100620012D6E000|GBRAIN_14|Full Roster|Unlock every playable activities
+0100620012D6E000|GBRAIN_11|Speedrunner|Complete one minigame under the target time
+0100620012D6E000|GBRAIN_12|No Continues|Complete one minigame without continuing
+0100620012D6E000|GBRAIN_13|Challenge Accepted|Complete one hard-difficulty minigame
+0100620012D6E000|GBRAIN_14|Full Roster|Unlock all playable activities
 0100620012D6E000|GBRAIN_15|Mastery|Max out one activity
 0100620012D6E000|GBRAIN_16|Side Objectives|Complete 10 side objectives
 0100620012D6E000|GBRAIN_17|Secret Finder|Discover every secret area
@@ -4448,10 +4473,10 @@
 0100C1800A9B6000|GGOVACATION_08|Treasure Hunter|Collect 500 resources
 0100C1800A9B6000|GGOVACATION_09|Sharp Eyes|Find every collectible in one day
 0100C1800A9B6000|GGOVACATION_10|Perfectionist|Earn a perfect score in 5 days
-0100C1800A9B6000|GGOVACATION_11|Speedrunner|Complete a day under the target time
-0100C1800A9B6000|GGOVACATION_12|No Continues|Complete a day without continuing
-0100C1800A9B6000|GGOVACATION_13|Challenge Accepted|Complete a hard-difficulty day
-0100C1800A9B6000|GGOVACATION_14|Full Roster|Unlock every playable friends
+0100C1800A9B6000|GGOVACATION_11|Speedrunner|Complete one day under the target time
+0100C1800A9B6000|GGOVACATION_12|No Continues|Complete one day without continuing
+0100C1800A9B6000|GGOVACATION_13|Challenge Accepted|Complete one hard-difficulty day
+0100C1800A9B6000|GGOVACATION_14|Full Roster|Unlock all playable friends
 0100C1800A9B6000|GGOVACATION_15|Mastery|Max out one friend
 0100C1800A9B6000|GGOVACATION_16|Side Objectives|Complete 10 side objectives
 0100C1800A9B6000|GGOVACATION_17|Secret Finder|Discover every secret area
@@ -4470,10 +4495,10 @@
 0100DDB00DB38000|GJUSTDANCE_08|Treasure Hunter|Collect 500 points
 0100DDB00DB38000|GJUSTDANCE_09|Sharp Eyes|Find every collectible in one minigame
 0100DDB00DB38000|GJUSTDANCE_10|Perfectionist|Earn a perfect score in 5 minigames
-0100DDB00DB38000|GJUSTDANCE_11|Speedrunner|Complete a minigame under the target time
-0100DDB00DB38000|GJUSTDANCE_12|No Continues|Complete a minigame without continuing
-0100DDB00DB38000|GJUSTDANCE_13|Challenge Accepted|Complete a hard-difficulty minigame
-0100DDB00DB38000|GJUSTDANCE_14|Full Roster|Unlock every playable activities
+0100DDB00DB38000|GJUSTDANCE_11|Speedrunner|Complete one minigame under the target time
+0100DDB00DB38000|GJUSTDANCE_12|No Continues|Complete one minigame without continuing
+0100DDB00DB38000|GJUSTDANCE_13|Challenge Accepted|Complete one hard-difficulty minigame
+0100DDB00DB38000|GJUSTDANCE_14|Full Roster|Unlock all playable activities
 0100DDB00DB38000|GJUSTDANCE_15|Mastery|Max out one activity
 0100DDB00DB38000|GJUSTDANCE_16|Side Objectives|Complete 10 side objectives
 0100DDB00DB38000|GJUSTDANCE_17|Secret Finder|Discover every secret area
@@ -4492,10 +4517,10 @@
 010057D006492000|GOCTOPATH_08|Treasure Hunter|Collect 500 items
 010057D006492000|GOCTOPATH_09|Sharp Eyes|Find every collectible in one chapter
 010057D006492000|GOCTOPATH_10|Perfectionist|Earn a perfect score in 5 chapters
-010057D006492000|GOCTOPATH_11|Speedrunner|Complete a chapter under the target time
-010057D006492000|GOCTOPATH_12|No Continues|Complete a chapter without continuing
-010057D006492000|GOCTOPATH_13|Challenge Accepted|Complete a hard-difficulty chapter
-010057D006492000|GOCTOPATH_14|Full Roster|Unlock every playable party members
+010057D006492000|GOCTOPATH_11|Speedrunner|Complete one chapter under the target time
+010057D006492000|GOCTOPATH_12|No Continues|Complete one chapter without continuing
+010057D006492000|GOCTOPATH_13|Challenge Accepted|Complete one hard-difficulty chapter
+010057D006492000|GOCTOPATH_14|Full Roster|Unlock all playable party members
 010057D006492000|GOCTOPATH_15|Mastery|Max out one party member
 010057D006492000|GOCTOPATH_16|Side Objectives|Complete 10 side objectives
 010057D006492000|GOCTOPATH_17|Secret Finder|Discover every secret area
@@ -4514,10 +4539,10 @@
 0100A3501946E000|GOCTOPATH2_08|Treasure Hunter|Collect 500 items
 0100A3501946E000|GOCTOPATH2_09|Sharp Eyes|Find every collectible in one chapter
 0100A3501946E000|GOCTOPATH2_10|Perfectionist|Earn a perfect score in 5 chapters
-0100A3501946E000|GOCTOPATH2_11|Speedrunner|Complete a chapter under the target time
-0100A3501946E000|GOCTOPATH2_12|No Continues|Complete a chapter without continuing
-0100A3501946E000|GOCTOPATH2_13|Challenge Accepted|Complete a hard-difficulty chapter
-0100A3501946E000|GOCTOPATH2_14|Full Roster|Unlock every playable party members
+0100A3501946E000|GOCTOPATH2_11|Speedrunner|Complete one chapter under the target time
+0100A3501946E000|GOCTOPATH2_12|No Continues|Complete one chapter without continuing
+0100A3501946E000|GOCTOPATH2_13|Challenge Accepted|Complete one hard-difficulty chapter
+0100A3501946E000|GOCTOPATH2_14|Full Roster|Unlock all playable party members
 0100A3501946E000|GOCTOPATH2_15|Mastery|Max out one party member
 0100A3501946E000|GOCTOPATH2_16|Side Objectives|Complete 10 side objectives
 0100A3501946E000|GOCTOPATH2_17|Secret Finder|Discover every secret area
@@ -4537,10 +4562,10 @@
 0100CF801776C000|GLIVEALIVE_08|Treasure Hunter|Collect 500 coins
 0100CF801776C000|GLIVEALIVE_09|Sharp Eyes|Find every collectible in one level
 0100CF801776C000|GLIVEALIVE_10|Perfectionist|Earn a perfect score in 5 levels
-0100CF801776C000|GLIVEALIVE_11|Speedrunner|Complete a level under the target time
-0100CF801776C000|GLIVEALIVE_12|No Continues|Complete a level without continuing
-0100CF801776C000|GLIVEALIVE_13|Challenge Accepted|Complete a hard-difficulty level
-0100CF801776C000|GLIVEALIVE_14|Full Roster|Unlock every playable characters
+0100CF801776C000|GLIVEALIVE_11|Speedrunner|Complete one level under the target time
+0100CF801776C000|GLIVEALIVE_12|No Continues|Complete one level without continuing
+0100CF801776C000|GLIVEALIVE_13|Challenge Accepted|Complete one hard-difficulty level
+0100CF801776C000|GLIVEALIVE_14|Full Roster|Unlock all playable characters
 0100CF801776C000|GLIVEALIVE_15|Mastery|Max out one character
 0100CF801776C000|GLIVEALIVE_16|Side Objectives|Complete 10 side objectives
 0100CF801776C000|GLIVEALIVE_17|Secret Finder|Discover every secret area
@@ -4558,10 +4583,10 @@
 01006DC010326000|GBRAVELY_08|Treasure Hunter|Collect 500 items
 01006DC010326000|GBRAVELY_09|Sharp Eyes|Find every collectible in one chapter
 01006DC010326000|GBRAVELY_10|Perfectionist|Earn a perfect score in 5 chapters
-01006DC010326000|GBRAVELY_11|Speedrunner|Complete a chapter under the target time
-01006DC010326000|GBRAVELY_12|No Continues|Complete a chapter without continuing
-01006DC010326000|GBRAVELY_13|Challenge Accepted|Complete a hard-difficulty chapter
-01006DC010326000|GBRAVELY_14|Full Roster|Unlock every playable party members
+01006DC010326000|GBRAVELY_11|Speedrunner|Complete one chapter under the target time
+01006DC010326000|GBRAVELY_12|No Continues|Complete one chapter without continuing
+01006DC010326000|GBRAVELY_13|Challenge Accepted|Complete one hard-difficulty chapter
+01006DC010326000|GBRAVELY_14|Full Roster|Unlock all playable party members
 01006DC010326000|GBRAVELY_15|Mastery|Max out one party member
 01006DC010326000|GBRAVELY_16|Side Objectives|Complete 10 side objectives
 01006DC010326000|GBRAVELY_17|Secret Finder|Discover every secret area
@@ -4580,10 +4605,10 @@
 01006C300E9F0000|GDQ11S_08|Treasure Hunter|Collect 500 items
 01006C300E9F0000|GDQ11S_09|Sharp Eyes|Find every collectible in one chapter
 01006C300E9F0000|GDQ11S_10|Perfectionist|Earn a perfect score in 5 chapters
-01006C300E9F0000|GDQ11S_11|Speedrunner|Complete a chapter under the target time
-01006C300E9F0000|GDQ11S_12|No Continues|Complete a chapter without continuing
-01006C300E9F0000|GDQ11S_13|Challenge Accepted|Complete a hard-difficulty chapter
-01006C300E9F0000|GDQ11S_14|Full Roster|Unlock every playable party members
+01006C300E9F0000|GDQ11S_11|Speedrunner|Complete one chapter under the target time
+01006C300E9F0000|GDQ11S_12|No Continues|Complete one chapter without continuing
+01006C300E9F0000|GDQ11S_13|Challenge Accepted|Complete one hard-difficulty chapter
+01006C300E9F0000|GDQ11S_14|Full Roster|Unlock all playable party members
 01006C300E9F0000|GDQ11S_15|Mastery|Max out one party member
 01006C300E9F0000|GDQ11S_16|Side Objectives|Complete 10 side objectives
 01006C300E9F0000|GDQ11S_17|Secret Finder|Discover every secret area
@@ -4602,10 +4627,10 @@
 010042000A986000|GDQB2_08|Treasure Hunter|Collect 500 items
 010042000A986000|GDQB2_09|Sharp Eyes|Find every collectible in one chapter
 010042000A986000|GDQB2_10|Perfectionist|Earn a perfect score in 5 chapters
-010042000A986000|GDQB2_11|Speedrunner|Complete a chapter under the target time
-010042000A986000|GDQB2_12|No Continues|Complete a chapter without continuing
-010042000A986000|GDQB2_13|Challenge Accepted|Complete a hard-difficulty chapter
-010042000A986000|GDQB2_14|Full Roster|Unlock every playable party members
+010042000A986000|GDQB2_11|Speedrunner|Complete one chapter under the target time
+010042000A986000|GDQB2_12|No Continues|Complete one chapter without continuing
+010042000A986000|GDQB2_13|Challenge Accepted|Complete one hard-difficulty chapter
+010042000A986000|GDQB2_14|Full Roster|Unlock all playable party members
 010042000A986000|GDQB2_15|Mastery|Max out one party member
 010042000A986000|GDQB2_16|Side Objectives|Complete 10 side objectives
 010042000A986000|GDQB2_17|Secret Finder|Discover every secret area
@@ -4624,10 +4649,10 @@
 0100E5600D446000|GNINO1_08|Treasure Hunter|Collect 500 items
 0100E5600D446000|GNINO1_09|Sharp Eyes|Find every collectible in one chapter
 0100E5600D446000|GNINO1_10|Perfectionist|Earn a perfect score in 5 chapters
-0100E5600D446000|GNINO1_11|Speedrunner|Complete a chapter under the target time
-0100E5600D446000|GNINO1_12|No Continues|Complete a chapter without continuing
-0100E5600D446000|GNINO1_13|Challenge Accepted|Complete a hard-difficulty chapter
-0100E5600D446000|GNINO1_14|Full Roster|Unlock every playable party members
+0100E5600D446000|GNINO1_11|Speedrunner|Complete one chapter under the target time
+0100E5600D446000|GNINO1_12|No Continues|Complete one chapter without continuing
+0100E5600D446000|GNINO1_13|Challenge Accepted|Complete one hard-difficulty chapter
+0100E5600D446000|GNINO1_14|Full Roster|Unlock all playable party members
 0100E5600D446000|GNINO1_15|Mastery|Max out one party member
 0100E5600D446000|GNINO1_16|Side Objectives|Complete 10 side objectives
 0100E5600D446000|GNINO1_17|Secret Finder|Discover every secret area
@@ -4646,10 +4671,10 @@
 0100BE7013E06000|GNINO2_08|Treasure Hunter|Collect 500 items
 0100BE7013E06000|GNINO2_09|Sharp Eyes|Find every collectible in one chapter
 0100BE7013E06000|GNINO2_10|Perfectionist|Earn a perfect score in 5 chapters
-0100BE7013E06000|GNINO2_11|Speedrunner|Complete a chapter under the target time
-0100BE7013E06000|GNINO2_12|No Continues|Complete a chapter without continuing
-0100BE7013E06000|GNINO2_13|Challenge Accepted|Complete a hard-difficulty chapter
-0100BE7013E06000|GNINO2_14|Full Roster|Unlock every playable party members
+0100BE7013E06000|GNINO2_11|Speedrunner|Complete one chapter under the target time
+0100BE7013E06000|GNINO2_12|No Continues|Complete one chapter without continuing
+0100BE7013E06000|GNINO2_13|Challenge Accepted|Complete one hard-difficulty chapter
+0100BE7013E06000|GNINO2_14|Full Roster|Unlock all playable party members
 0100BE7013E06000|GNINO2_15|Mastery|Max out one party member
 0100BE7013E06000|GNINO2_16|Side Objectives|Complete 10 side objectives
 0100BE7013E06000|GNINO2_17|Secret Finder|Discover every secret area
@@ -4668,10 +4693,10 @@
 010062B01525C000|GP4G_08|Treasure Hunter|Collect 500 items
 010062B01525C000|GP4G_09|Sharp Eyes|Find every collectible in one chapter
 010062B01525C000|GP4G_10|Perfectionist|Earn a perfect score in 5 chapters
-010062B01525C000|GP4G_11|Speedrunner|Complete a chapter under the target time
-010062B01525C000|GP4G_12|No Continues|Complete a chapter without continuing
-010062B01525C000|GP4G_13|Challenge Accepted|Complete a hard-difficulty chapter
-010062B01525C000|GP4G_14|Full Roster|Unlock every playable party members
+010062B01525C000|GP4G_11|Speedrunner|Complete one chapter under the target time
+010062B01525C000|GP4G_12|No Continues|Complete one chapter without continuing
+010062B01525C000|GP4G_13|Challenge Accepted|Complete one hard-difficulty chapter
+010062B01525C000|GP4G_14|Full Roster|Unlock all playable party members
 010062B01525C000|GP4G_15|Mastery|Max out one party member
 010062B01525C000|GP4G_16|Side Objectives|Complete 10 side objectives
 010062B01525C000|GP4G_17|Secret Finder|Discover every secret area
@@ -4690,10 +4715,10 @@
 0100DCD01525A000|GP3P_08|Treasure Hunter|Collect 500 items
 0100DCD01525A000|GP3P_09|Sharp Eyes|Find every collectible in one chapter
 0100DCD01525A000|GP3P_10|Perfectionist|Earn a perfect score in 5 chapters
-0100DCD01525A000|GP3P_11|Speedrunner|Complete a chapter under the target time
-0100DCD01525A000|GP3P_12|No Continues|Complete a chapter without continuing
-0100DCD01525A000|GP3P_13|Challenge Accepted|Complete a hard-difficulty chapter
-0100DCD01525A000|GP3P_14|Full Roster|Unlock every playable party members
+0100DCD01525A000|GP3P_11|Speedrunner|Complete one chapter under the target time
+0100DCD01525A000|GP3P_12|No Continues|Complete one chapter without continuing
+0100DCD01525A000|GP3P_13|Challenge Accepted|Complete one hard-difficulty chapter
+0100DCD01525A000|GP3P_14|Full Roster|Unlock all playable party members
 0100DCD01525A000|GP3P_15|Mastery|Max out one party member
 0100DCD01525A000|GP3P_16|Side Objectives|Complete 10 side objectives
 0100DCD01525A000|GP3P_17|Secret Finder|Discover every secret area
@@ -4712,10 +4737,10 @@
 010063B012DC6000|GSMTV_08|Treasure Hunter|Collect 500 items
 010063B012DC6000|GSMTV_09|Sharp Eyes|Find every collectible in one chapter
 010063B012DC6000|GSMTV_10|Perfectionist|Earn a perfect score in 5 chapters
-010063B012DC6000|GSMTV_11|Speedrunner|Complete a chapter under the target time
-010063B012DC6000|GSMTV_12|No Continues|Complete a chapter without continuing
-010063B012DC6000|GSMTV_13|Challenge Accepted|Complete a hard-difficulty chapter
-010063B012DC6000|GSMTV_14|Full Roster|Unlock every playable party members
+010063B012DC6000|GSMTV_11|Speedrunner|Complete one chapter under the target time
+010063B012DC6000|GSMTV_12|No Continues|Complete one chapter without continuing
+010063B012DC6000|GSMTV_13|Challenge Accepted|Complete one hard-difficulty chapter
+010063B012DC6000|GSMTV_14|Full Roster|Unlock all playable party members
 010063B012DC6000|GSMTV_15|Mastery|Max out one party member
 010063B012DC6000|GSMTV_16|Side Objectives|Complete 10 side objectives
 010063B012DC6000|GSMTV_17|Secret Finder|Discover every secret area
@@ -4734,10 +4759,10 @@
 010069C01AB82000|GSMTVV_08|Treasure Hunter|Collect 500 items
 010069C01AB82000|GSMTVV_09|Sharp Eyes|Find every collectible in one chapter
 010069C01AB82000|GSMTVV_10|Perfectionist|Earn a perfect score in 5 chapters
-010069C01AB82000|GSMTVV_11|Speedrunner|Complete a chapter under the target time
-010069C01AB82000|GSMTVV_12|No Continues|Complete a chapter without continuing
-010069C01AB82000|GSMTVV_13|Challenge Accepted|Complete a hard-difficulty chapter
-010069C01AB82000|GSMTVV_14|Full Roster|Unlock every playable party members
+010069C01AB82000|GSMTVV_11|Speedrunner|Complete one chapter under the target time
+010069C01AB82000|GSMTVV_12|No Continues|Complete one chapter without continuing
+010069C01AB82000|GSMTVV_13|Challenge Accepted|Complete one hard-difficulty chapter
+010069C01AB82000|GSMTVV_14|Full Roster|Unlock all playable party members
 010069C01AB82000|GSMTVV_15|Mastery|Max out one party member
 010069C01AB82000|GSMTVV_16|Side Objectives|Complete 10 side objectives
 010069C01AB82000|GSMTVV_17|Secret Finder|Discover every secret area
@@ -4756,10 +4781,10 @@
 01003B0012DC2000|GSMT3_08|Treasure Hunter|Collect 500 items
 01003B0012DC2000|GSMT3_09|Sharp Eyes|Find every collectible in one chapter
 01003B0012DC2000|GSMT3_10|Perfectionist|Earn a perfect score in 5 chapters
-01003B0012DC2000|GSMT3_11|Speedrunner|Complete a chapter under the target time
-01003B0012DC2000|GSMT3_12|No Continues|Complete a chapter without continuing
-01003B0012DC2000|GSMT3_13|Challenge Accepted|Complete a hard-difficulty chapter
-01003B0012DC2000|GSMT3_14|Full Roster|Unlock every playable party members
+01003B0012DC2000|GSMT3_11|Speedrunner|Complete one chapter under the target time
+01003B0012DC2000|GSMT3_12|No Continues|Complete one chapter without continuing
+01003B0012DC2000|GSMT3_13|Challenge Accepted|Complete one hard-difficulty chapter
+01003B0012DC2000|GSMT3_14|Full Roster|Unlock all playable party members
 01003B0012DC2000|GSMT3_15|Mastery|Max out one party member
 01003B0012DC2000|GSMT3_16|Side Objectives|Complete 10 side objectives
 01003B0012DC2000|GSMT3_17|Secret Finder|Discover every secret area
@@ -4778,10 +4803,10 @@
 0100A9400C9C2000|GTMS_08|Treasure Hunter|Collect 500 items
 0100A9400C9C2000|GTMS_09|Sharp Eyes|Find every collectible in one chapter
 0100A9400C9C2000|GTMS_10|Perfectionist|Earn a perfect score in 5 chapters
-0100A9400C9C2000|GTMS_11|Speedrunner|Complete a chapter under the target time
-0100A9400C9C2000|GTMS_12|No Continues|Complete a chapter without continuing
-0100A9400C9C2000|GTMS_13|Challenge Accepted|Complete a hard-difficulty chapter
-0100A9400C9C2000|GTMS_14|Full Roster|Unlock every playable party members
+0100A9400C9C2000|GTMS_11|Speedrunner|Complete one chapter under the target time
+0100A9400C9C2000|GTMS_12|No Continues|Complete one chapter without continuing
+0100A9400C9C2000|GTMS_13|Challenge Accepted|Complete one hard-difficulty chapter
+0100A9400C9C2000|GTMS_14|Full Roster|Unlock all playable party members
 0100A9400C9C2000|GTMS_15|Mastery|Max out one party member
 0100A9400C9C2000|GTMS_16|Side Objectives|Complete 10 side objectives
 0100A9400C9C2000|GTMS_17|Secret Finder|Discover every secret area
@@ -4800,10 +4825,10 @@
 0100A5B00BDC6000|GFF7_08|Treasure Hunter|Collect 500 items
 0100A5B00BDC6000|GFF7_09|Sharp Eyes|Find every collectible in one chapter
 0100A5B00BDC6000|GFF7_10|Perfectionist|Earn a perfect score in 5 chapters
-0100A5B00BDC6000|GFF7_11|Speedrunner|Complete a chapter under the target time
-0100A5B00BDC6000|GFF7_12|No Continues|Complete a chapter without continuing
-0100A5B00BDC6000|GFF7_13|Challenge Accepted|Complete a hard-difficulty chapter
-0100A5B00BDC6000|GFF7_14|Full Roster|Unlock every playable party members
+0100A5B00BDC6000|GFF7_11|Speedrunner|Complete one chapter under the target time
+0100A5B00BDC6000|GFF7_12|No Continues|Complete one chapter without continuing
+0100A5B00BDC6000|GFF7_13|Challenge Accepted|Complete one hard-difficulty chapter
+0100A5B00BDC6000|GFF7_14|Full Roster|Unlock all playable party members
 0100A5B00BDC6000|GFF7_15|Mastery|Max out one party member
 0100A5B00BDC6000|GFF7_16|Side Objectives|Complete 10 side objectives
 0100A5B00BDC6000|GFF7_17|Secret Finder|Discover every secret area
@@ -4822,10 +4847,10 @@
 01004BC0166CC000|GCRISISCORE_08|Treasure Hunter|Collect 500 items
 01004BC0166CC000|GCRISISCORE_09|Sharp Eyes|Find every collectible in one chapter
 01004BC0166CC000|GCRISISCORE_10|Perfectionist|Earn a perfect score in 5 chapters
-01004BC0166CC000|GCRISISCORE_11|Speedrunner|Complete a chapter under the target time
-01004BC0166CC000|GCRISISCORE_12|No Continues|Complete a chapter without continuing
-01004BC0166CC000|GCRISISCORE_13|Challenge Accepted|Complete a hard-difficulty chapter
-01004BC0166CC000|GCRISISCORE_14|Full Roster|Unlock every playable party members
+01004BC0166CC000|GCRISISCORE_11|Speedrunner|Complete one chapter under the target time
+01004BC0166CC000|GCRISISCORE_12|No Continues|Complete one chapter without continuing
+01004BC0166CC000|GCRISISCORE_13|Challenge Accepted|Complete one hard-difficulty chapter
+01004BC0166CC000|GCRISISCORE_14|Full Roster|Unlock all playable party members
 01004BC0166CC000|GCRISISCORE_15|Mastery|Max out one party member
 01004BC0166CC000|GCRISISCORE_16|Side Objectives|Complete 10 side objectives
 01004BC0166CC000|GCRISISCORE_17|Secret Finder|Discover every secret area
@@ -4844,10 +4869,10 @@
 0100BC300CB48000|GFFX_08|Treasure Hunter|Collect 500 items
 0100BC300CB48000|GFFX_09|Sharp Eyes|Find every collectible in one chapter
 0100BC300CB48000|GFFX_10|Perfectionist|Earn a perfect score in 5 chapters
-0100BC300CB48000|GFFX_11|Speedrunner|Complete a chapter under the target time
-0100BC300CB48000|GFFX_12|No Continues|Complete a chapter without continuing
-0100BC300CB48000|GFFX_13|Challenge Accepted|Complete a hard-difficulty chapter
-0100BC300CB48000|GFFX_14|Full Roster|Unlock every playable party members
+0100BC300CB48000|GFFX_11|Speedrunner|Complete one chapter under the target time
+0100BC300CB48000|GFFX_12|No Continues|Complete one chapter without continuing
+0100BC300CB48000|GFFX_13|Challenge Accepted|Complete one hard-difficulty chapter
+0100BC300CB48000|GFFX_14|Full Roster|Unlock all playable party members
 0100BC300CB48000|GFFX_15|Mastery|Max out one party member
 0100BC300CB48000|GFFX_16|Side Objectives|Complete 10 side objectives
 0100BC300CB48000|GFFX_17|Secret Finder|Discover every secret area
@@ -4866,10 +4891,10 @@
 0100EB100AB42000|GFF12_08|Treasure Hunter|Collect 500 items
 0100EB100AB42000|GFF12_09|Sharp Eyes|Find every collectible in one chapter
 0100EB100AB42000|GFF12_10|Perfectionist|Earn a perfect score in 5 chapters
-0100EB100AB42000|GFF12_11|Speedrunner|Complete a chapter under the target time
-0100EB100AB42000|GFF12_12|No Continues|Complete a chapter without continuing
-0100EB100AB42000|GFF12_13|Challenge Accepted|Complete a hard-difficulty chapter
-0100EB100AB42000|GFF12_14|Full Roster|Unlock every playable party members
+0100EB100AB42000|GFF12_11|Speedrunner|Complete one chapter under the target time
+0100EB100AB42000|GFF12_12|No Continues|Complete one chapter without continuing
+0100EB100AB42000|GFF12_13|Challenge Accepted|Complete one hard-difficulty chapter
+0100EB100AB42000|GFF12_14|Full Roster|Unlock all playable party members
 0100EB100AB42000|GFF12_15|Mastery|Max out one party member
 0100EB100AB42000|GFF12_16|Side Objectives|Complete 10 side objectives
 0100EB100AB42000|GFF12_17|Secret Finder|Discover every secret area
@@ -4888,10 +4913,10 @@
 010068F00AA78000|GFF15P_08|Treasure Hunter|Collect 500 items
 010068F00AA78000|GFF15P_09|Sharp Eyes|Find every collectible in one chapter
 010068F00AA78000|GFF15P_10|Perfectionist|Earn a perfect score in 5 chapters
-010068F00AA78000|GFF15P_11|Speedrunner|Complete a chapter under the target time
-010068F00AA78000|GFF15P_12|No Continues|Complete a chapter without continuing
-010068F00AA78000|GFF15P_13|Challenge Accepted|Complete a hard-difficulty chapter
-010068F00AA78000|GFF15P_14|Full Roster|Unlock every playable party members
+010068F00AA78000|GFF15P_11|Speedrunner|Complete one chapter under the target time
+010068F00AA78000|GFF15P_12|No Continues|Complete one chapter without continuing
+010068F00AA78000|GFF15P_13|Challenge Accepted|Complete one hard-difficulty chapter
+010068F00AA78000|GFF15P_14|Full Roster|Unlock all playable party members
 010068F00AA78000|GFF15P_15|Mastery|Max out one party member
 010068F00AA78000|GFF15P_16|Side Objectives|Complete 10 side objectives
 010068F00AA78000|GFF15P_17|Secret Finder|Discover every secret area
@@ -4910,10 +4935,10 @@
 010076F0049A2000|GBAYONETTA_08|Treasure Hunter|Collect 500 victories
 010076F0049A2000|GBAYONETTA_09|Sharp Eyes|Find every collectible in one match
 010076F0049A2000|GBAYONETTA_10|Perfectionist|Earn a perfect score in 5 matches
-010076F0049A2000|GBAYONETTA_11|Speedrunner|Complete a match under the target time
-010076F0049A2000|GBAYONETTA_12|No Continues|Complete a match without continuing
-010076F0049A2000|GBAYONETTA_13|Challenge Accepted|Complete a hard-difficulty match
-010076F0049A2000|GBAYONETTA_14|Full Roster|Unlock every playable fighters
+010076F0049A2000|GBAYONETTA_11|Speedrunner|Complete one match under the target time
+010076F0049A2000|GBAYONETTA_12|No Continues|Complete one match without continuing
+010076F0049A2000|GBAYONETTA_13|Challenge Accepted|Complete one hard-difficulty match
+010076F0049A2000|GBAYONETTA_14|Full Roster|Unlock all playable fighters
 010076F0049A2000|GBAYONETTA_15|Mastery|Max out one fighter
 010076F0049A2000|GBAYONETTA_16|Side Objectives|Complete 10 side objectives
 010076F0049A2000|GBAYONETTA_17|Secret Finder|Discover every secret area
@@ -4932,10 +4957,10 @@
 01007960049A0000|GBAYONETTA2_08|Treasure Hunter|Collect 500 victories
 01007960049A0000|GBAYONETTA2_09|Sharp Eyes|Find every collectible in one match
 01007960049A0000|GBAYONETTA2_10|Perfectionist|Earn a perfect score in 5 matches
-01007960049A0000|GBAYONETTA2_11|Speedrunner|Complete a match under the target time
-01007960049A0000|GBAYONETTA2_12|No Continues|Complete a match without continuing
-01007960049A0000|GBAYONETTA2_13|Challenge Accepted|Complete a hard-difficulty match
-01007960049A0000|GBAYONETTA2_14|Full Roster|Unlock every playable fighters
+01007960049A0000|GBAYONETTA2_11|Speedrunner|Complete one match under the target time
+01007960049A0000|GBAYONETTA2_12|No Continues|Complete one match without continuing
+01007960049A0000|GBAYONETTA2_13|Challenge Accepted|Complete one hard-difficulty match
+01007960049A0000|GBAYONETTA2_14|Full Roster|Unlock all playable fighters
 01007960049A0000|GBAYONETTA2_15|Mastery|Max out one fighter
 01007960049A0000|GBAYONETTA2_16|Side Objectives|Complete 10 side objectives
 01007960049A0000|GBAYONETTA2_17|Secret Finder|Discover every secret area
@@ -4954,10 +4979,10 @@
 01004A4010FEA000|GBAYONETTA3_08|Treasure Hunter|Collect 500 victories
 01004A4010FEA000|GBAYONETTA3_09|Sharp Eyes|Find every collectible in one match
 01004A4010FEA000|GBAYONETTA3_10|Perfectionist|Earn a perfect score in 5 matches
-01004A4010FEA000|GBAYONETTA3_11|Speedrunner|Complete a match under the target time
-01004A4010FEA000|GBAYONETTA3_12|No Continues|Complete a match without continuing
-01004A4010FEA000|GBAYONETTA3_13|Challenge Accepted|Complete a hard-difficulty match
-01004A4010FEA000|GBAYONETTA3_14|Full Roster|Unlock every playable fighters
+01004A4010FEA000|GBAYONETTA3_11|Speedrunner|Complete one match under the target time
+01004A4010FEA000|GBAYONETTA3_12|No Continues|Complete one match without continuing
+01004A4010FEA000|GBAYONETTA3_13|Challenge Accepted|Complete one hard-difficulty match
+01004A4010FEA000|GBAYONETTA3_14|Full Roster|Unlock all playable fighters
 01004A4010FEA000|GBAYONETTA3_15|Mastery|Max out one fighter
 01004A4010FEA000|GBAYONETTA3_16|Side Objectives|Complete 10 side objectives
 01004A4010FEA000|GBAYONETTA3_17|Secret Finder|Discover every secret area
@@ -4976,10 +5001,10 @@
 0100CF5010FEC000|GBAYORIGINS_08|Treasure Hunter|Collect 500 victories
 0100CF5010FEC000|GBAYORIGINS_09|Sharp Eyes|Find every collectible in one match
 0100CF5010FEC000|GBAYORIGINS_10|Perfectionist|Earn a perfect score in 5 matches
-0100CF5010FEC000|GBAYORIGINS_11|Speedrunner|Complete a match under the target time
-0100CF5010FEC000|GBAYORIGINS_12|No Continues|Complete a match without continuing
-0100CF5010FEC000|GBAYORIGINS_13|Challenge Accepted|Complete a hard-difficulty match
-0100CF5010FEC000|GBAYORIGINS_14|Full Roster|Unlock every playable fighters
+0100CF5010FEC000|GBAYORIGINS_11|Speedrunner|Complete one match under the target time
+0100CF5010FEC000|GBAYORIGINS_12|No Continues|Complete one match without continuing
+0100CF5010FEC000|GBAYORIGINS_13|Challenge Accepted|Complete one hard-difficulty match
+0100CF5010FEC000|GBAYORIGINS_14|Full Roster|Unlock all playable fighters
 0100CF5010FEC000|GBAYORIGINS_15|Mastery|Max out one fighter
 0100CF5010FEC000|GBAYORIGINS_16|Side Objectives|Complete 10 side objectives
 0100CF5010FEC000|GBAYORIGINS_17|Secret Finder|Discover every secret area
@@ -4998,10 +5023,10 @@
 0100B1300FF08000|GW101_08|Treasure Hunter|Collect 500 souls
 0100B1300FF08000|GW101_09|Sharp Eyes|Find every collectible in one stage
 0100B1300FF08000|GW101_10|Perfectionist|Earn a perfect score in 5 stages
-0100B1300FF08000|GW101_11|Speedrunner|Complete a stage under the target time
-0100B1300FF08000|GW101_12|No Continues|Complete a stage without continuing
-0100B1300FF08000|GW101_13|Challenge Accepted|Complete a hard-difficulty stage
-0100B1300FF08000|GW101_14|Full Roster|Unlock every playable weapons
+0100B1300FF08000|GW101_11|Speedrunner|Complete one stage under the target time
+0100B1300FF08000|GW101_12|No Continues|Complete one stage without continuing
+0100B1300FF08000|GW101_13|Challenge Accepted|Complete one hard-difficulty stage
+0100B1300FF08000|GW101_14|Full Roster|Unlock all playable weapons
 0100B1300FF08000|GW101_15|Mastery|Max out one weapon
 0100B1300FF08000|GW101_16|Side Objectives|Complete 10 side objectives
 0100B1300FF08000|GW101_17|Secret Finder|Discover every secret area
@@ -5020,10 +5045,10 @@
 010026000E466000|GNBA2K_08|Treasure Hunter|Collect 500 points
 010026000E466000|GNBA2K_09|Sharp Eyes|Find every collectible in one match
 010026000E466000|GNBA2K_10|Perfectionist|Earn a perfect score in 5 matches
-010026000E466000|GNBA2K_11|Speedrunner|Complete a match under the target time
-010026000E466000|GNBA2K_12|No Continues|Complete a match without continuing
-010026000E466000|GNBA2K_13|Challenge Accepted|Complete a hard-difficulty match
-010026000E466000|GNBA2K_14|Full Roster|Unlock every playable athletes
+010026000E466000|GNBA2K_11|Speedrunner|Complete one match under the target time
+010026000E466000|GNBA2K_12|No Continues|Complete one match without continuing
+010026000E466000|GNBA2K_13|Challenge Accepted|Complete one hard-difficulty match
+010026000E466000|GNBA2K_14|Full Roster|Unlock all playable athletes
 010026000E466000|GNBA2K_15|Mastery|Max out one athlete
 010026000E466000|GNBA2K_16|Side Objectives|Complete 10 side objectives
 010026000E466000|GNBA2K_17|Secret Finder|Discover every secret area
@@ -5042,10 +5067,10 @@
 0100913019170000|GMLB23_08|Treasure Hunter|Collect 500 points
 0100913019170000|GMLB23_09|Sharp Eyes|Find every collectible in one match
 0100913019170000|GMLB23_10|Perfectionist|Earn a perfect score in 5 matches
-0100913019170000|GMLB23_11|Speedrunner|Complete a match under the target time
-0100913019170000|GMLB23_12|No Continues|Complete a match without continuing
-0100913019170000|GMLB23_13|Challenge Accepted|Complete a hard-difficulty match
-0100913019170000|GMLB23_14|Full Roster|Unlock every playable athletes
+0100913019170000|GMLB23_11|Speedrunner|Complete one match under the target time
+0100913019170000|GMLB23_12|No Continues|Complete one match without continuing
+0100913019170000|GMLB23_13|Challenge Accepted|Complete one hard-difficulty match
+0100913019170000|GMLB23_14|Full Roster|Unlock all playable athletes
 0100913019170000|GMLB23_15|Mastery|Max out one athlete
 0100913019170000|GMLB23_16|Side Objectives|Complete 10 side objectives
 0100913019170000|GMLB23_17|Secret Finder|Discover every secret area
@@ -5064,10 +5089,10 @@
 0100BDB01A0E6000|GFC24_08|Treasure Hunter|Collect 500 points
 0100BDB01A0E6000|GFC24_09|Sharp Eyes|Find every collectible in one match
 0100BDB01A0E6000|GFC24_10|Perfectionist|Earn a perfect score in 5 matches
-0100BDB01A0E6000|GFC24_11|Speedrunner|Complete a match under the target time
-0100BDB01A0E6000|GFC24_12|No Continues|Complete a match without continuing
-0100BDB01A0E6000|GFC24_13|Challenge Accepted|Complete a hard-difficulty match
-0100BDB01A0E6000|GFC24_14|Full Roster|Unlock every playable athletes
+0100BDB01A0E6000|GFC24_11|Speedrunner|Complete one match under the target time
+0100BDB01A0E6000|GFC24_12|No Continues|Complete one match without continuing
+0100BDB01A0E6000|GFC24_13|Challenge Accepted|Complete one hard-difficulty match
+0100BDB01A0E6000|GFC24_14|Full Roster|Unlock all playable athletes
 0100BDB01A0E6000|GFC24_15|Mastery|Max out one athlete
 0100BDB01A0E6000|GFC24_16|Side Objectives|Complete 10 side objectives
 0100BDB01A0E6000|GFC24_17|Secret Finder|Discover every secret area
@@ -5086,10 +5111,10 @@
 0100CC00102B4000|GTHPS_08|Treasure Hunter|Collect 500 points
 0100CC00102B4000|GTHPS_09|Sharp Eyes|Find every collectible in one match
 0100CC00102B4000|GTHPS_10|Perfectionist|Earn a perfect score in 5 matches
-0100CC00102B4000|GTHPS_11|Speedrunner|Complete a match under the target time
-0100CC00102B4000|GTHPS_12|No Continues|Complete a match without continuing
-0100CC00102B4000|GTHPS_13|Challenge Accepted|Complete a hard-difficulty match
-0100CC00102B4000|GTHPS_14|Full Roster|Unlock every playable athletes
+0100CC00102B4000|GTHPS_11|Speedrunner|Complete one match under the target time
+0100CC00102B4000|GTHPS_12|No Continues|Complete one match without continuing
+0100CC00102B4000|GTHPS_13|Challenge Accepted|Complete one hard-difficulty match
+0100CC00102B4000|GTHPS_14|Full Roster|Unlock all playable athletes
 0100CC00102B4000|GTHPS_15|Mastery|Max out one athlete
 0100CC00102B4000|GTHPS_16|Side Objectives|Complete 10 side objectives
 0100CC00102B4000|GTHPS_17|Secret Finder|Discover every secret area
@@ -5280,10 +5305,10 @@
 01003A30012C0000|GLEGOCITY_08|Treasure Hunter|Collect 500 souls
 01003A30012C0000|GLEGOCITY_09|Sharp Eyes|Find every collectible in one stage
 01003A30012C0000|GLEGOCITY_10|Perfectionist|Earn a perfect score in 5 stages
-01003A30012C0000|GLEGOCITY_11|Speedrunner|Complete a stage under the target time
-01003A30012C0000|GLEGOCITY_12|No Continues|Complete a stage without continuing
-01003A30012C0000|GLEGOCITY_13|Challenge Accepted|Complete a hard-difficulty stage
-01003A30012C0000|GLEGOCITY_14|Full Roster|Unlock every playable weapons
+01003A30012C0000|GLEGOCITY_11|Speedrunner|Complete one stage under the target time
+01003A30012C0000|GLEGOCITY_12|No Continues|Complete one stage without continuing
+01003A30012C0000|GLEGOCITY_13|Challenge Accepted|Complete one hard-difficulty stage
+01003A30012C0000|GLEGOCITY_14|Full Roster|Unlock all playable weapons
 01003A30012C0000|GLEGOCITY_15|Mastery|Max out one weapon
 01003A30012C0000|GLEGOCITY_16|Side Objectives|Complete 10 side objectives
 01003A30012C0000|GLEGOCITY_17|Secret Finder|Discover every secret area
@@ -5885,10 +5910,10 @@
 0100DBF01000A000|GBURNOUT_08|Treasure Hunter|Collect 500 trophies
 0100DBF01000A000|GBURNOUT_09|Sharp Eyes|Find every collectible in one race
 0100DBF01000A000|GBURNOUT_10|Perfectionist|Earn a perfect score in 5 races
-0100DBF01000A000|GBURNOUT_11|Speedrunner|Complete a race under the target time
-0100DBF01000A000|GBURNOUT_12|No Continues|Complete a race without continuing
-0100DBF01000A000|GBURNOUT_13|Challenge Accepted|Complete a hard-difficulty race
-0100DBF01000A000|GBURNOUT_14|Full Roster|Unlock every playable racers
+0100DBF01000A000|GBURNOUT_11|Speedrunner|Complete one race under the target time
+0100DBF01000A000|GBURNOUT_12|No Continues|Complete one race without continuing
+0100DBF01000A000|GBURNOUT_13|Challenge Accepted|Complete one hard-difficulty race
+0100DBF01000A000|GBURNOUT_14|Full Roster|Unlock all playable racers
 0100DBF01000A000|GBURNOUT_15|Mastery|Max out one racer
 0100DBF01000A000|GBURNOUT_16|Side Objectives|Complete 10 side objectives
 0100DBF01000A000|GBURNOUT_17|Secret Finder|Discover every secret area
@@ -5907,10 +5932,10 @@
 0100DC800A602000|GGRID_08|Treasure Hunter|Collect 500 trophies
 0100DC800A602000|GGRID_09|Sharp Eyes|Find every collectible in one race
 0100DC800A602000|GGRID_10|Perfectionist|Earn a perfect score in 5 races
-0100DC800A602000|GGRID_11|Speedrunner|Complete a race under the target time
-0100DC800A602000|GGRID_12|No Continues|Complete a race without continuing
-0100DC800A602000|GGRID_13|Challenge Accepted|Complete a hard-difficulty race
-0100DC800A602000|GGRID_14|Full Roster|Unlock every playable racers
+0100DC800A602000|GGRID_11|Speedrunner|Complete one race under the target time
+0100DC800A602000|GGRID_12|No Continues|Complete one race without continuing
+0100DC800A602000|GGRID_13|Challenge Accepted|Complete one hard-difficulty race
+0100DC800A602000|GGRID_14|Full Roster|Unlock all playable racers
 0100DC800A602000|GGRID_15|Mastery|Max out one racer
 0100DC800A602000|GGRID_16|Side Objectives|Complete 10 side objectives
 0100DC800A602000|GGRID_17|Secret Finder|Discover every secret area
@@ -6031,10 +6056,10 @@
 010040401D564000|GMOTOGP24_08|Treasure Hunter|Collect 500 trophies
 010040401D564000|GMOTOGP24_09|Sharp Eyes|Find every collectible in one race
 010040401D564000|GMOTOGP24_10|Perfectionist|Earn a perfect score in 5 races
-010040401D564000|GMOTOGP24_11|Speedrunner|Complete a race under the target time
-010040401D564000|GMOTOGP24_12|No Continues|Complete a race without continuing
-010040401D564000|GMOTOGP24_13|Challenge Accepted|Complete a hard-difficulty race
-010040401D564000|GMOTOGP24_14|Full Roster|Unlock every playable racers
+010040401D564000|GMOTOGP24_11|Speedrunner|Complete one race under the target time
+010040401D564000|GMOTOGP24_12|No Continues|Complete one race without continuing
+010040401D564000|GMOTOGP24_13|Challenge Accepted|Complete one hard-difficulty race
+010040401D564000|GMOTOGP24_14|Full Roster|Unlock all playable racers
 010040401D564000|GMOTOGP24_15|Mastery|Max out one racer
 010040401D564000|GMOTOGP24_16|Side Objectives|Complete 10 side objectives
 010040401D564000|GMOTOGP24_17|Secret Finder|Discover every secret area
@@ -6053,10 +6078,10 @@
 01007F600B134000|GAC3_08|Treasure Hunter|Collect 500 souls
 01007F600B134000|GAC3_09|Sharp Eyes|Find every collectible in one stage
 01007F600B134000|GAC3_10|Perfectionist|Earn a perfect score in 5 stages
-01007F600B134000|GAC3_11|Speedrunner|Complete a stage under the target time
-01007F600B134000|GAC3_12|No Continues|Complete a stage without continuing
-01007F600B134000|GAC3_13|Challenge Accepted|Complete a hard-difficulty stage
-01007F600B134000|GAC3_14|Full Roster|Unlock every playable weapons
+01007F600B134000|GAC3_11|Speedrunner|Complete one stage under the target time
+01007F600B134000|GAC3_12|No Continues|Complete one stage without continuing
+01007F600B134000|GAC3_13|Challenge Accepted|Complete one hard-difficulty stage
+01007F600B134000|GAC3_14|Full Roster|Unlock all playable weapons
 01007F600B134000|GAC3_15|Mastery|Max out one weapon
 01007F600B134000|GAC3_16|Side Objectives|Complete 10 side objectives
 01007F600B134000|GAC3_17|Secret Finder|Discover every secret area
@@ -6075,10 +6100,10 @@
 010044700DEB0000|GACREBEL_08|Treasure Hunter|Collect 500 souls
 010044700DEB0000|GACREBEL_09|Sharp Eyes|Find every collectible in one stage
 010044700DEB0000|GACREBEL_10|Perfectionist|Earn a perfect score in 5 stages
-010044700DEB0000|GACREBEL_11|Speedrunner|Complete a stage under the target time
-010044700DEB0000|GACREBEL_12|No Continues|Complete a stage without continuing
-010044700DEB0000|GACREBEL_13|Challenge Accepted|Complete a hard-difficulty stage
-010044700DEB0000|GACREBEL_14|Full Roster|Unlock every playable weapons
+010044700DEB0000|GACREBEL_11|Speedrunner|Complete one stage under the target time
+010044700DEB0000|GACREBEL_12|No Continues|Complete one stage without continuing
+010044700DEB0000|GACREBEL_13|Challenge Accepted|Complete one hard-difficulty stage
+010044700DEB0000|GACREBEL_14|Full Roster|Unlock all playable weapons
 010044700DEB0000|GACREBEL_15|Mastery|Max out one weapon
 010044700DEB0000|GACREBEL_16|Side Objectives|Complete 10 side objectives
 010044700DEB0000|GACREBEL_17|Secret Finder|Discover every secret area
@@ -6097,10 +6122,10 @@
 0100F9F00C696000|GCTR_08|Treasure Hunter|Collect 500 trophies
 0100F9F00C696000|GCTR_09|Sharp Eyes|Find every collectible in one race
 0100F9F00C696000|GCTR_10|Perfectionist|Earn a perfect score in 5 races
-0100F9F00C696000|GCTR_11|Speedrunner|Complete a race under the target time
-0100F9F00C696000|GCTR_12|No Continues|Complete a race without continuing
-0100F9F00C696000|GCTR_13|Challenge Accepted|Complete a hard-difficulty race
-0100F9F00C696000|GCTR_14|Full Roster|Unlock every playable racers
+0100F9F00C696000|GCTR_11|Speedrunner|Complete one race under the target time
+0100F9F00C696000|GCTR_12|No Continues|Complete one race without continuing
+0100F9F00C696000|GCTR_13|Challenge Accepted|Complete one hard-difficulty race
+0100F9F00C696000|GCTR_14|Full Roster|Unlock all playable racers
 0100F9F00C696000|GCTR_15|Mastery|Max out one racer
 0100F9F00C696000|GCTR_16|Side Objectives|Complete 10 side objectives
 0100F9F00C696000|GCTR_17|Secret Finder|Discover every secret area
@@ -6284,10 +6309,10 @@
 0100309016E7A000|GDSLAYER_08|Treasure Hunter|Collect 500 items
 0100309016E7A000|GDSLAYER_09|Sharp Eyes|Find every collectible in one area
 0100309016E7A000|GDSLAYER_10|Perfectionist|Earn a perfect score in 5 areas
-0100309016E7A000|GDSLAYER_11|Speedrunner|Complete a area under the target time
-0100309016E7A000|GDSLAYER_12|No Continues|Complete a area without continuing
-0100309016E7A000|GDSLAYER_13|Challenge Accepted|Complete a hard-difficulty area
-0100309016E7A000|GDSLAYER_14|Full Roster|Unlock every playable abilities
+0100309016E7A000|GDSLAYER_11|Speedrunner|Complete one area under the target time
+0100309016E7A000|GDSLAYER_12|No Continues|Complete one area without continuing
+0100309016E7A000|GDSLAYER_13|Challenge Accepted|Complete one hard-difficulty area
+0100309016E7A000|GDSLAYER_14|Full Roster|Unlock all playable abilities
 0100309016E7A000|GDSLAYER_15|Mastery|Max out one ability
 0100309016E7A000|GDSLAYER_16|Side Objectives|Complete 10 side objectives
 0100309016E7A000|GDSLAYER_17|Secret Finder|Discover every secret area
@@ -6306,10 +6331,10 @@
 010000B01A452000|GJJK_08|Treasure Hunter|Collect 500 victories
 010000B01A452000|GJJK_09|Sharp Eyes|Find every collectible in one match
 010000B01A452000|GJJK_10|Perfectionist|Earn a perfect score in 5 matches
-010000B01A452000|GJJK_11|Speedrunner|Complete a match under the target time
-010000B01A452000|GJJK_12|No Continues|Complete a match without continuing
-010000B01A452000|GJJK_13|Challenge Accepted|Complete a hard-difficulty match
-010000B01A452000|GJJK_14|Full Roster|Unlock every playable fighters
+010000B01A452000|GJJK_11|Speedrunner|Complete one match under the target time
+010000B01A452000|GJJK_12|No Continues|Complete one match without continuing
+010000B01A452000|GJJK_13|Challenge Accepted|Complete one hard-difficulty match
+010000B01A452000|GJJK_14|Full Roster|Unlock all playable fighters
 010000B01A452000|GJJK_15|Mastery|Max out one fighter
 010000B01A452000|GJJK_16|Side Objectives|Complete 10 side objectives
 010000B01A452000|GJJK_17|Secret Finder|Discover every secret area
@@ -6328,10 +6353,10 @@
 010084D00CF5E000|GNARUTO4_08|Treasure Hunter|Collect 500 victories
 010084D00CF5E000|GNARUTO4_09|Sharp Eyes|Find every collectible in one match
 010084D00CF5E000|GNARUTO4_10|Perfectionist|Earn a perfect score in 5 matches
-010084D00CF5E000|GNARUTO4_11|Speedrunner|Complete a match under the target time
-010084D00CF5E000|GNARUTO4_12|No Continues|Complete a match without continuing
-010084D00CF5E000|GNARUTO4_13|Challenge Accepted|Complete a hard-difficulty match
-010084D00CF5E000|GNARUTO4_14|Full Roster|Unlock every playable fighters
+010084D00CF5E000|GNARUTO4_11|Speedrunner|Complete one match under the target time
+010084D00CF5E000|GNARUTO4_12|No Continues|Complete one match without continuing
+010084D00CF5E000|GNARUTO4_13|Challenge Accepted|Complete one hard-difficulty match
+010084D00CF5E000|GNARUTO4_14|Full Roster|Unlock all playable fighters
 010084D00CF5E000|GNARUTO4_15|Mastery|Max out one fighter
 010084D00CF5E000|GNARUTO4_16|Side Objectives|Complete 10 side objectives
 010084D00CF5E000|GNARUTO4_17|Secret Finder|Discover every secret area
@@ -6350,10 +6375,10 @@
 01007E700DBF6000|GMHA2_08|Treasure Hunter|Collect 500 victories
 01007E700DBF6000|GMHA2_09|Sharp Eyes|Find every collectible in one match
 01007E700DBF6000|GMHA2_10|Perfectionist|Earn a perfect score in 5 matches
-01007E700DBF6000|GMHA2_11|Speedrunner|Complete a match under the target time
-01007E700DBF6000|GMHA2_12|No Continues|Complete a match without continuing
-01007E700DBF6000|GMHA2_13|Challenge Accepted|Complete a hard-difficulty match
-01007E700DBF6000|GMHA2_14|Full Roster|Unlock every playable fighters
+01007E700DBF6000|GMHA2_11|Speedrunner|Complete one match under the target time
+01007E700DBF6000|GMHA2_12|No Continues|Complete one match without continuing
+01007E700DBF6000|GMHA2_13|Challenge Accepted|Complete one hard-difficulty match
+01007E700DBF6000|GMHA2_14|Full Roster|Unlock all playable fighters
 01007E700DBF6000|GMHA2_15|Mastery|Max out one fighter
 01007E700DBF6000|GMHA2_16|Side Objectives|Complete 10 side objectives
 01007E700DBF6000|GMHA2_17|Secret Finder|Discover every secret area
@@ -6372,10 +6397,10 @@
 0100D9601A994000|GONEPIECE_08|Treasure Hunter|Collect 500 items
 0100D9601A994000|GONEPIECE_09|Sharp Eyes|Find every collectible in one area
 0100D9601A994000|GONEPIECE_10|Perfectionist|Earn a perfect score in 5 areas
-0100D9601A994000|GONEPIECE_11|Speedrunner|Complete a area under the target time
-0100D9601A994000|GONEPIECE_12|No Continues|Complete a area without continuing
-0100D9601A994000|GONEPIECE_13|Challenge Accepted|Complete a hard-difficulty area
-0100D9601A994000|GONEPIECE_14|Full Roster|Unlock every playable abilities
+0100D9601A994000|GONEPIECE_11|Speedrunner|Complete one area under the target time
+0100D9601A994000|GONEPIECE_12|No Continues|Complete one area without continuing
+0100D9601A994000|GONEPIECE_13|Challenge Accepted|Complete one hard-difficulty area
+0100D9601A994000|GONEPIECE_14|Full Roster|Unlock all playable abilities
 0100D9601A994000|GONEPIECE_15|Mastery|Max out one ability
 0100D9601A994000|GONEPIECE_16|Side Objectives|Complete 10 side objectives
 0100D9601A994000|GONEPIECE_17|Secret Finder|Discover every secret area
@@ -6482,10 +6507,10 @@
 0100E1E00CF1A000|GPOWERR_08|Treasure Hunter|Collect 500 trophies
 0100E1E00CF1A000|GPOWERR_09|Sharp Eyes|Find every collectible in one race
 0100E1E00CF1A000|GPOWERR_10|Perfectionist|Earn a perfect score in 5 races
-0100E1E00CF1A000|GPOWERR_11|Speedrunner|Complete a race under the target time
-0100E1E00CF1A000|GPOWERR_12|No Continues|Complete a race without continuing
-0100E1E00CF1A000|GPOWERR_13|Challenge Accepted|Complete a hard-difficulty race
-0100E1E00CF1A000|GPOWERR_14|Full Roster|Unlock every playable racers
+0100E1E00CF1A000|GPOWERR_11|Speedrunner|Complete one race under the target time
+0100E1E00CF1A000|GPOWERR_12|No Continues|Complete one race without continuing
+0100E1E00CF1A000|GPOWERR_13|Challenge Accepted|Complete one hard-difficulty race
+0100E1E00CF1A000|GPOWERR_14|Full Roster|Unlock all playable racers
 0100E1E00CF1A000|GPOWERR_15|Mastery|Max out one racer
 0100E1E00CF1A000|GPOWERR_16|Side Objectives|Complete 10 side objectives
 0100E1E00CF1A000|GPOWERR_17|Secret Finder|Discover every secret area
@@ -6504,10 +6529,10 @@
 01005E500E528000|GTRANSFORMERS_08|Treasure Hunter|Collect 500 souls
 01005E500E528000|GTRANSFORMERS_09|Sharp Eyes|Find every collectible in one stage
 01005E500E528000|GTRANSFORMERS_10|Perfectionist|Earn a perfect score in 5 stages
-01005E500E528000|GTRANSFORMERS_11|Speedrunner|Complete a stage under the target time
-01005E500E528000|GTRANSFORMERS_12|No Continues|Complete a stage without continuing
-01005E500E528000|GTRANSFORMERS_13|Challenge Accepted|Complete a hard-difficulty stage
-01005E500E528000|GTRANSFORMERS_14|Full Roster|Unlock every playable weapons
+01005E500E528000|GTRANSFORMERS_11|Speedrunner|Complete one stage under the target time
+01005E500E528000|GTRANSFORMERS_12|No Continues|Complete one stage without continuing
+01005E500E528000|GTRANSFORMERS_13|Challenge Accepted|Complete one hard-difficulty stage
+01005E500E528000|GTRANSFORMERS_14|Full Roster|Unlock all playable weapons
 01005E500E528000|GTRANSFORMERS_15|Mastery|Max out one weapon
 01005E500E528000|GTRANSFORMERS_16|Side Objectives|Complete 10 side objectives
 01005E500E528000|GTRANSFORMERS_17|Secret Finder|Discover every secret area
@@ -6526,10 +6551,10 @@
 010027901C89C000|GHELLOKITTY_08|Treasure Hunter|Collect 500 resources
 010027901C89C000|GHELLOKITTY_09|Sharp Eyes|Find every collectible in one day
 010027901C89C000|GHELLOKITTY_10|Perfectionist|Earn a perfect score in 5 days
-010027901C89C000|GHELLOKITTY_11|Speedrunner|Complete a day under the target time
-010027901C89C000|GHELLOKITTY_12|No Continues|Complete a day without continuing
-010027901C89C000|GHELLOKITTY_13|Challenge Accepted|Complete a hard-difficulty day
-010027901C89C000|GHELLOKITTY_14|Full Roster|Unlock every playable friends
+010027901C89C000|GHELLOKITTY_11|Speedrunner|Complete one day under the target time
+010027901C89C000|GHELLOKITTY_12|No Continues|Complete one day without continuing
+010027901C89C000|GHELLOKITTY_13|Challenge Accepted|Complete one hard-difficulty day
+010027901C89C000|GHELLOKITTY_14|Full Roster|Unlock all playable friends
 010027901C89C000|GHELLOKITTY_15|Mastery|Max out one friend
 010027901C89C000|GHELLOKITTY_16|Side Objectives|Complete 10 side objectives
 010027901C89C000|GHELLOKITTY_17|Secret Finder|Discover every secret area
@@ -7322,10 +7347,10 @@
 0100BF500207C000|GBLOODSTAINED_08|Treasure Hunter|Collect 500 souls
 0100BF500207C000|GBLOODSTAINED_09|Sharp Eyes|Find every collectible in one stage
 0100BF500207C000|GBLOODSTAINED_10|Perfectionist|Earn a perfect score in 5 stages
-0100BF500207C000|GBLOODSTAINED_11|Speedrunner|Complete a stage under the target time
-0100BF500207C000|GBLOODSTAINED_12|No Continues|Complete a stage without continuing
-0100BF500207C000|GBLOODSTAINED_13|Challenge Accepted|Complete a hard-difficulty stage
-0100BF500207C000|GBLOODSTAINED_14|Full Roster|Unlock every playable weapons
+0100BF500207C000|GBLOODSTAINED_11|Speedrunner|Complete one stage under the target time
+0100BF500207C000|GBLOODSTAINED_12|No Continues|Complete one stage without continuing
+0100BF500207C000|GBLOODSTAINED_13|Challenge Accepted|Complete one hard-difficulty stage
+0100BF500207C000|GBLOODSTAINED_14|Full Roster|Unlock all playable weapons
 0100BF500207C000|GBLOODSTAINED_15|Mastery|Max out one weapon
 0100BF500207C000|GBLOODSTAINED_16|Side Objectives|Complete 10 side objectives
 0100BF500207C000|GBLOODSTAINED_17|Secret Finder|Discover every secret area
@@ -7344,10 +7369,10 @@
 0100B33014710000|GCASTLEVANIA_08|Treasure Hunter|Collect 500 souls
 0100B33014710000|GCASTLEVANIA_09|Sharp Eyes|Find every collectible in one stage
 0100B33014710000|GCASTLEVANIA_10|Perfectionist|Earn a perfect score in 5 stages
-0100B33014710000|GCASTLEVANIA_11|Speedrunner|Complete a stage under the target time
-0100B33014710000|GCASTLEVANIA_12|No Continues|Complete a stage without continuing
-0100B33014710000|GCASTLEVANIA_13|Challenge Accepted|Complete a hard-difficulty stage
-0100B33014710000|GCASTLEVANIA_14|Full Roster|Unlock every playable weapons
+0100B33014710000|GCASTLEVANIA_11|Speedrunner|Complete one stage under the target time
+0100B33014710000|GCASTLEVANIA_12|No Continues|Complete one stage without continuing
+0100B33014710000|GCASTLEVANIA_13|Challenge Accepted|Complete one hard-difficulty stage
+0100B33014710000|GCASTLEVANIA_14|Full Roster|Unlock all playable weapons
 0100B33014710000|GCASTLEVANIA_15|Mastery|Max out one weapon
 0100B33014710000|GCASTLEVANIA_16|Side Objectives|Complete 10 side objectives
 0100B33014710000|GCASTLEVANIA_17|Secret Finder|Discover every secret area
@@ -7366,10 +7391,10 @@
 0100026016320000|GRCG2_08|Treasure Hunter|Collect 500 souls
 0100026016320000|GRCG2_09|Sharp Eyes|Find every collectible in one stage
 0100026016320000|GRCG2_10|Perfectionist|Earn a perfect score in 5 stages
-0100026016320000|GRCG2_11|Speedrunner|Complete a stage under the target time
-0100026016320000|GRCG2_12|No Continues|Complete a stage without continuing
-0100026016320000|GRCG2_13|Challenge Accepted|Complete a hard-difficulty stage
-0100026016320000|GRCG2_14|Full Roster|Unlock every playable weapons
+0100026016320000|GRCG2_11|Speedrunner|Complete one stage under the target time
+0100026016320000|GRCG2_12|No Continues|Complete one stage without continuing
+0100026016320000|GRCG2_13|Challenge Accepted|Complete one hard-difficulty stage
+0100026016320000|GRCG2_14|Full Roster|Unlock all playable weapons
 0100026016320000|GRCG2_15|Mastery|Max out one weapon
 0100026016320000|GRCG2_16|Side Objectives|Complete 10 side objectives
 0100026016320000|GRCG2_17|Secret Finder|Discover every secret area
@@ -7388,10 +7413,10 @@
 0100394011C30000|GSCOTT_08|Treasure Hunter|Collect 500 souls
 0100394011C30000|GSCOTT_09|Sharp Eyes|Find every collectible in one stage
 0100394011C30000|GSCOTT_10|Perfectionist|Earn a perfect score in 5 stages
-0100394011C30000|GSCOTT_11|Speedrunner|Complete a stage under the target time
-0100394011C30000|GSCOTT_12|No Continues|Complete a stage without continuing
-0100394011C30000|GSCOTT_13|Challenge Accepted|Complete a hard-difficulty stage
-0100394011C30000|GSCOTT_14|Full Roster|Unlock every playable weapons
+0100394011C30000|GSCOTT_11|Speedrunner|Complete one stage under the target time
+0100394011C30000|GSCOTT_12|No Continues|Complete one stage without continuing
+0100394011C30000|GSCOTT_13|Challenge Accepted|Complete one hard-difficulty stage
+0100394011C30000|GSCOTT_14|Full Roster|Unlock all playable weapons
 0100394011C30000|GSCOTT_15|Mastery|Max out one weapon
 0100394011C30000|GSCOTT_16|Side Objectives|Complete 10 side objectives
 0100394011C30000|GSCOTT_17|Secret Finder|Discover every secret area
@@ -7410,10 +7435,10 @@
 0100276009872000|GOKAMI_08|Treasure Hunter|Collect 500 items
 0100276009872000|GOKAMI_09|Sharp Eyes|Find every collectible in one area
 0100276009872000|GOKAMI_10|Perfectionist|Earn a perfect score in 5 areas
-0100276009872000|GOKAMI_11|Speedrunner|Complete a area under the target time
-0100276009872000|GOKAMI_12|No Continues|Complete a area without continuing
-0100276009872000|GOKAMI_13|Challenge Accepted|Complete a hard-difficulty area
-0100276009872000|GOKAMI_14|Full Roster|Unlock every playable abilities
+0100276009872000|GOKAMI_11|Speedrunner|Complete one area under the target time
+0100276009872000|GOKAMI_12|No Continues|Complete one area without continuing
+0100276009872000|GOKAMI_13|Challenge Accepted|Complete one hard-difficulty area
+0100276009872000|GOKAMI_14|Full Roster|Unlock all playable abilities
 0100276009872000|GOKAMI_15|Mastery|Max out one ability
 0100276009872000|GOKAMI_16|Side Objectives|Complete 10 side objectives
 0100276009872000|GOKAMI_17|Secret Finder|Discover every secret area
@@ -7771,10 +7796,10 @@
 010064800F66A000|GBORDERLANDS_08|Treasure Hunter|Collect 500 supplies
 010064800F66A000|GBORDERLANDS_09|Sharp Eyes|Find every collectible in one mission
 010064800F66A000|GBORDERLANDS_10|Perfectionist|Earn a perfect score in 5 missions
-010064800F66A000|GBORDERLANDS_11|Speedrunner|Complete a mission under the target time
-010064800F66A000|GBORDERLANDS_12|No Continues|Complete a mission without continuing
-010064800F66A000|GBORDERLANDS_13|Challenge Accepted|Complete a hard-difficulty mission
-010064800F66A000|GBORDERLANDS_14|Full Roster|Unlock every playable weapons
+010064800F66A000|GBORDERLANDS_11|Speedrunner|Complete one mission under the target time
+010064800F66A000|GBORDERLANDS_12|No Continues|Complete one mission without continuing
+010064800F66A000|GBORDERLANDS_13|Challenge Accepted|Complete one hard-difficulty mission
+010064800F66A000|GBORDERLANDS_14|Full Roster|Unlock all playable weapons
 010064800F66A000|GBORDERLANDS_15|Mastery|Max out one weapon
 010064800F66A000|GBORDERLANDS_16|Side Objectives|Complete 10 side objectives
 010064800F66A000|GBORDERLANDS_17|Secret Finder|Discover every secret area
@@ -8093,7 +8118,7 @@
 010016E004796000|GBRIDGEPORTAL_08|Treasure Hunter|Collect 500 coins
 010016E004796000|GBRIDGEPORTAL_09|Sharp Eyes|Find every collectible in one level
 010016E004796000|GBRIDGEPORTAL_10|Perfectionist|Earn a perfect score in 5 levels
-010016E004796000|GBRIDGEPORTAL_11|Speedrunner|Complete a level under the target time
+010016E004796000|GBRIDGEPORTAL_11|Speedrunner|Complete one level under the target time
 
 # House Flipper (0100CAE00EB02000)
 0100CAE00EB02000|S613100_BigFamily|Family man|Family isn't just an important thing, it's everything.
@@ -8308,10 +8333,10 @@
 01004EA00DF70000|GPICOPARK_08|Treasure Hunter|Collect 500 stars
 01004EA00DF70000|GPICOPARK_09|Sharp Eyes|Find every collectible in one puzzle
 01004EA00DF70000|GPICOPARK_10|Perfectionist|Earn a perfect score in 5 puzzles
-01004EA00DF70000|GPICOPARK_11|Speedrunner|Complete a puzzle under the target time
-01004EA00DF70000|GPICOPARK_12|No Continues|Complete a puzzle without continuing
-01004EA00DF70000|GPICOPARK_13|Challenge Accepted|Complete a hard-difficulty puzzle
-01004EA00DF70000|GPICOPARK_14|Full Roster|Unlock every playable hints
+01004EA00DF70000|GPICOPARK_11|Speedrunner|Complete one puzzle under the target time
+01004EA00DF70000|GPICOPARK_12|No Continues|Complete one puzzle without continuing
+01004EA00DF70000|GPICOPARK_13|Challenge Accepted|Complete one hard-difficulty puzzle
+01004EA00DF70000|GPICOPARK_14|Full Roster|Unlock all playable hints
 01004EA00DF70000|GPICOPARK_15|Mastery|Max out one hint
 01004EA00DF70000|GPICOPARK_16|Side Objectives|Complete 10 side objectives
 01004EA00DF70000|GPICOPARK_17|Secret Finder|Discover every secret area
@@ -8370,10 +8395,10 @@
 010090100E334000|GDST_08|Treasure Hunter|Collect 500 resources
 010090100E334000|GDST_09|Sharp Eyes|Find every collectible in one day
 010090100E334000|GDST_10|Perfectionist|Earn a perfect score in 5 days
-010090100E334000|GDST_11|Speedrunner|Complete a day under the target time
-010090100E334000|GDST_12|No Continues|Complete a day without continuing
-010090100E334000|GDST_13|Challenge Accepted|Complete a hard-difficulty day
-010090100E334000|GDST_14|Full Roster|Unlock every playable friends
+010090100E334000|GDST_11|Speedrunner|Complete one day under the target time
+010090100E334000|GDST_12|No Continues|Complete one day without continuing
+010090100E334000|GDST_13|Challenge Accepted|Complete one hard-difficulty day
+010090100E334000|GDST_14|Full Roster|Unlock all playable friends
 010090100E334000|GDST_15|Mastery|Max out one friend
 010090100E334000|GDST_16|Side Objectives|Complete 10 side objectives
 010090100E334000|GDST_17|Secret Finder|Discover every secret area
@@ -9181,10 +9206,10 @@
 0100DC301186A000|GLIS_08|Treasure Hunter|Collect 500 items
 0100DC301186A000|GLIS_09|Sharp Eyes|Find every collectible in one area
 0100DC301186A000|GLIS_10|Perfectionist|Earn a perfect score in 5 areas
-0100DC301186A000|GLIS_11|Speedrunner|Complete a area under the target time
-0100DC301186A000|GLIS_12|No Continues|Complete a area without continuing
-0100DC301186A000|GLIS_13|Challenge Accepted|Complete a hard-difficulty area
-0100DC301186A000|GLIS_14|Full Roster|Unlock every playable abilities
+0100DC301186A000|GLIS_11|Speedrunner|Complete one area under the target time
+0100DC301186A000|GLIS_12|No Continues|Complete one area without continuing
+0100DC301186A000|GLIS_13|Challenge Accepted|Complete one hard-difficulty area
+0100DC301186A000|GLIS_14|Full Roster|Unlock all playable abilities
 0100DC301186A000|GLIS_15|Mastery|Max out one ability
 0100DC301186A000|GLIS_16|Side Objectives|Complete 10 side objectives
 0100DC301186A000|GLIS_17|Secret Finder|Discover every secret area
@@ -9940,3 +9965,39 @@
 01001E1025697001|S2172010_TRP_CARNIVAL|Carnival of Solitude|Shake the Snow Globe
 01001E1025697001|S2172010_TRP_SHINING|It’s Shining|Find all the new interactables across Blackwood Mountain
 01001E1025697001|S2172010_TRP_OMEN|An Omen?|The group found all 36 totems on the mountain
+
+# 20 Minutes Till Dawn (0100212019FB6000)
+0100212019FB6000|S1966900_ACH_SURVIVE20|Sunrise|Survive the full 20 minutes.
+0100212019FB6000|S1966900_ACH_DARKNESS1|Dark Night|Survive the night on Darkness 1.
+0100212019FB6000|S1966900_ACH_DARKNESS5|Darker Night|Survive the night on Darkness 5.
+0100212019FB6000|S1966900_ACH_DARKNESS10|Darkest Night|Survive the night on Darkness 10.
+0100212019FB6000|S1966900_ACH_DARKNESS15|Pitch Black|Survive the night on Darkness 15.
+0100212019FB6000|S1966900_ACH_REVOLVER|Revolver Mastery|Use the Revolver to survive Darkness 15.
+0100212019FB6000|S1966900_ACH_SHOTGUN|Shotgun Mastery|Use the Shotgun to survive Darkness 15.
+0100212019FB6000|S1966900_ACH_CROSSBOW|Crossbow Mastery|Use the Crossbow to survive Darkness 15.
+0100212019FB6000|S1966900_ACH_FLAME_CANNON|Flame Cannon Mastery|Use the Flame Cannon to survive Darkness 15.
+0100212019FB6000|S1966900_ACH_SMGS|SMG Mastery|Use Dual SMGs to survive Darkness 15.
+0100212019FB6000|S1966900_ACH_BATGUN|Batgun Mastery|Use the Batgun to survive Darkness 15.
+0100212019FB6000|S1966900_ACH_GRENADE_LAUNCHER|Grenade Launcher Mastery|Use the Grenade Launch to survive Darkness 15.
+0100212019FB6000|S1966900_ACH_SHANA|Fallen Angel|Survive Darkness 15 with Shana.
+0100212019FB6000|S1966900_ACH_DIAMOND|Strongwoman|Survive Darkness 15 with Diamond.
+0100212019FB6000|S1966900_ACH_SCARLETT|Pyromaniac|Survive Darkness 15 with Scarlett.
+0100212019FB6000|S1966900_ACH_HINA|Master Ninja|Survive Darkness 15 with Hina.
+0100212019FB6000|S1966900_ACH_SPARK|Thunder God|Survive Darkness 15 with Spark.
+0100212019FB6000|S1966900_ACH_LILITH|Necromastery|Survive Darkness 15 with Lilith.
+0100212019FB6000|S1966900_ACH_ABBY|Bullet Mania|Survive Darkness 15 with Abby.
+0100212019FB6000|S1966900_ACH_ON_THE_EDGE|On the Edge|Survive the night with 1 Max HP at the end.
+0100212019FB6000|S1966900_ACH_RECKLESS|Reckless|Survive the night with Abby and the Grenade Launcher, and only using Abby's special ability to fire.
+0100212019FB6000|S1966900_ACH_NIMBLE|Nimble|Survive the night without getting hit.
+0100212019FB6000|S1966900_ACH_PACIFIST|Pacifist|Survive the night without firing your gun.
+0100212019FB6000|S1966900_ACH_CATCH_THEM_ALL|Gotta Catch 'Em ALL|Survive the night with 8 summons as the end.
+0100212019FB6000|S1966900_ACH_YUKI|Yokai|Survive Darkness 15 with Yuki.
+0100212019FB6000|S1966900_ACH_MAGIC_BOW|Magic Bow Mastery|Use the Magic Bow to survive Darkness 15.
+0100212019FB6000|S1966900_ACH_LUNA|Celestial|Survive Darkness 15 with Luna.
+0100212019FB6000|S1966900_ACH_HASTUR|Elder God|Survive Darkness 15 with Hastur
+0100212019FB6000|S1966900_ACH_Raven|Witch|Survive Darkness 15 with Raven.
+0100212019FB6000|S1966900_ACH_DASHER|Reindeer|Survive Darkness 15 with Dasher.
+0100212019FB6000|S1966900_ACH_CYCLONE_SWORD|Cyclone Sword Mastery|Use the Cyclone Sword to survive Darkness 15.
+0100212019FB6000|S1966900_ACH_SALVO_KNIVES|Salvo Knives Mastery|Use the Salvo Knives to survive Darkness 15.
+0100212019FB6000|S1966900_ACH_WATERING_GUN|Watering Gun Mastery|Use the Watering Gun to survive Darkness 15.
+0100212019FB6000|S1966900_ACH_KATANA|Master of the Blade|Use Katana to survive Darkness 15.

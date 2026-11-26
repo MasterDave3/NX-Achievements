@@ -2,12 +2,14 @@
 #include <tesla.hpp>
 
 #include <algorithm>
+#include <cstdio>
+#include <cstdlib>
 #include <fstream>
 #include <sstream>
 #include <string>
+#include <unordered_map>
 #include <unordered_set>
 #include <vector>
-#include <cstdio>
 #include <sys/stat.h>
 
 namespace {
@@ -21,6 +23,17 @@ struct Achievement {
     std::string id;
     std::string name;
     std::string description;
+    int target = 0;  // 0 = normal toggle; >0 = countable goal
+};
+
+struct Progress {
+    std::unordered_set<std::string> unlocked;
+    std::unordered_map<std::string, int> counts;
+
+    int count(const std::string &id) const {
+        auto it = counts.find(id);
+        return it == counts.end() ? 0 : it->second;
+    }
 };
 
 std::string trim(const std::string &s) {
@@ -70,30 +83,47 @@ std::vector<Achievement> loadAchievements() {
         if (line.empty() || line[0] == '#') continue;
         auto parts = split(line, '|');
         if (parts.size() < 4) continue;
-        out.push_back({parts[0], parts[1], parts[2], parts[3]});
+        int target = 0;
+        if (parts.size() >= 5)
+            target = std::max(0, std::atoi(parts[4].c_str()));
+        out.push_back({parts[0], parts[1], parts[2], parts[3], target});
     }
     return out;
 }
 
-std::unordered_set<std::string> loadUnlocked() {
+Progress loadProgress() {
     ensureConfigDir();
-    std::unordered_set<std::string> out;
+    Progress progress;
     std::ifstream file(PROGRESS_FILE);
-    if (!file.is_open()) return out;
+    if (!file.is_open()) return progress;
 
     std::string line;
     while (std::getline(file, line)) {
         line = trim(line);
-        if (!line.empty() && line[0] != '#') out.insert(line);
+        if (line.empty() || line[0] == '#') continue;
+        auto parts = split(line, '|');
+        if (parts.empty()) continue;
+        if (parts.size() >= 2) {
+            int value = std::atoi(parts[1].c_str());
+            if (value > 0) progress.counts[parts[0]] = value;
+        } else {
+            progress.unlocked.insert(parts[0]);
+        }
     }
-    return out;
+    return progress;
 }
 
-void saveUnlocked(const std::unordered_set<std::string> &ids) {
+void saveProgress(const Progress &progress) {
     ensureConfigDir();
     std::ofstream file(PROGRESS_FILE, std::ios::trunc);
-    for (const auto &id : ids)
-        file << id << '\n';
+    for (const auto &entry : progress.counts) {
+        if (entry.second > 0)
+            file << entry.first << '|' << entry.second << '\n';
+    }
+    for (const auto &id : progress.unlocked) {
+        if (progress.counts.count(id) == 0)
+            file << id << '\n';
+    }
 }
 
 bool matchesGame(const Achievement &achievement, u64 titleId) {
@@ -147,11 +177,11 @@ public:
     }
 
     tsl::elm::Element *createUI() override {
-        auto *frame = new tsl::elm::OverlayFrame("NX-Achievements", "v0.1.0 - " + m_titleIdText);
+        auto *frame = new tsl::elm::OverlayFrame("NX-Achievements", "v0.2.0 - " + m_titleIdText);
         auto *list = new tsl::elm::List();
 
         const auto achievements = loadAchievements();
-        auto unlocked = loadUnlocked();
+        auto progress = loadProgress();
 
         int currentCount = 0;
         for (const auto &achievement : achievements) {
@@ -167,27 +197,76 @@ public:
             if (!matchesGame(achievement, m_titleId)) continue;
             added = true;
 
-            const bool isUnlocked = unlocked.count(achievement.id) != 0;
-            const std::string marker = isUnlocked ? "\u2714 " : "\u2610 ";
-            const std::string title = marker + achievement.name;
-            const std::string value = isUnlocked ? "Unlocked" : achievement.description;
+            const bool counted = achievement.target > 0;
+            const int current = counted ? progress.count(achievement.id) : 0;
+            const bool complete = counted
+                ? current >= achievement.target
+                : progress.unlocked.count(achievement.id) != 0;
+
+            const std::string marker = complete ? "\u2714 " : "\u2610 ";
+            std::string title = marker + achievement.name;
+            if (counted) {
+                title += "  (" + std::to_string(std::min(current, achievement.target)) +
+                         "/" + std::to_string(achievement.target) + ")";
+            }
+            const std::string value = complete ? "Unlocked" : achievement.description;
 
             auto *item = new tsl::elm::ListItem(title, value);
             const std::string id = achievement.id;
             const std::string name = achievement.name;
             const std::string description = achievement.description;
+            const int target = achievement.target;
 
-            item->setClickListener([id, name, description](u64 keys) {
+            item->setClickListener([id, name, description, target, counted](u64 keys) {
+                auto state = loadProgress();
+
+                if (counted) {
+                    int value = state.count(id);
+                    bool changed = false;
+                    bool justCompleted = false;
+
+                    if (keys & HidNpadButton_A) {
+                        if (value < target) {
+                            ++value;
+                            changed = true;
+                        }
+                        justCompleted = value >= target;
+                    } else if (keys & HidNpadButton_X) {
+                        if (value > 0) {
+                            --value;
+                            changed = true;
+                        }
+                    } else if (keys & HidNpadButton_Y) {
+                        if (value != 0) {
+                            value = 0;
+                            changed = true;
+                        }
+                    }
+
+                    if (!changed) return false;
+                    if (value > 0) state.counts[id] = value;
+                    else state.counts.erase(id);
+                    state.unlocked.erase(id);
+                    saveProgress(state);
+
+                    if (justCompleted) {
+                        tsl::changeTo<GuiUnlock>(
+                            name, description + " (" + std::to_string(target) + "/" +
+                                      std::to_string(target) + ")");
+                    } else {
+                        tsl::changeTo<GuiMain>();
+                    }
+                    return true;
+                }
+
                 if (!(keys & HidNpadButton_A)) return false;
-
-                auto ids = loadUnlocked();
-                if (ids.count(id)) {
-                    ids.erase(id);
-                    saveUnlocked(ids);
+                if (state.unlocked.count(id)) {
+                    state.unlocked.erase(id);
+                    saveProgress(state);
                     tsl::changeTo<GuiMain>();
                 } else {
-                    ids.insert(id);
-                    saveUnlocked(ids);
+                    state.unlocked.insert(id);
+                    saveProgress(state);
                     tsl::changeTo<GuiUnlock>(name, description);
                 }
                 return true;
@@ -204,7 +283,9 @@ public:
         list->addItem(new tsl::elm::CategoryHeader("Info"));
         list->addItem(new tsl::elm::ListItem("Current Title ID", m_titleIdText));
         list->addItem(new tsl::elm::ListItem("Config", CONFIG_FILE));
-        list->addItem(new tsl::elm::ListItem("A", "Unlock / lock achievement"));
+        list->addItem(new tsl::elm::ListItem("A", "Toggle unlock / +1 on counters"));
+        list->addItem(new tsl::elm::ListItem("X", "Counter -1"));
+        list->addItem(new tsl::elm::ListItem("Y", "Reset counter"));
 
         frame->setContent(list);
         return frame;

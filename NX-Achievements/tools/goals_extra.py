@@ -45,10 +45,10 @@ TEMPLATES = [
     ('08', 'Treasure Hunter', 'Collect 500 {collect}'),
     ('09', 'Sharp Eyes', 'Find every collectible in one {unit}'),
     ('10', 'Perfectionist', 'Earn a perfect score in 5 {plural}'),
-    ('11', 'Speedrunner', 'Complete a {unit} under the target time'),
-    ('12', 'No Continues', 'Complete a {unit} without continuing'),
-    ('13', 'Challenge Accepted', 'Complete a hard-difficulty {unit}'),
-    ('14', 'Full Roster', 'Unlock every playable {chars}'),
+    ('11', 'Speedrunner', 'Complete one {unit} under the target time'),
+    ('12', 'No Continues', 'Complete one {unit} without continuing'),
+    ('13', 'Challenge Accepted', 'Complete one hard-difficulty {unit}'),
+    ('14', 'Full Roster', 'Unlock all playable {chars}'),
     ('15', 'Mastery', 'Max out one {char}'),
     ('16', 'Side Objectives', 'Complete 10 side objectives'),
     ('17', 'Secret Finder', 'Discover every secret area'),
@@ -56,6 +56,50 @@ TEMPLATES = [
     ('19', 'Final Victory', 'Defeat the {boss}'),
     ('20', 'Full Clear', 'Finish the game with every main objective complete'),
 ]
+
+# Game-specific filler for Zelda titles, where generic words like "area" or
+# "level" are wrong. These keep the same G{SLUG}_NN IDs but use the game's real
+# locations and systems: shrines, towers, dungeons/temples, Koroks, Zonai, etc.
+GAME_TEMPLATES = {
+    'TOTK': [
+        ('01', 'Shrine Seeker', 'Complete your first shrine'),
+        ('02', 'Shrine Runner', 'Complete 10 shrines'),
+        ('03', 'Shrine Master', 'Complete 50 shrines'),
+        ('04', 'Skyview Surveyor', 'Activate 10 Skyview Towers'),
+        ('05', 'Phenomenon Solver', 'Solve one regional phenomenon'),
+        ('06', 'Temple Delver', 'Complete your first dungeon/temple'),
+        ('07', 'Temple Crawler', 'Complete every dungeon/temple'),
+        ('08', 'Korok Collector', 'Collect 100 Korok seeds'),
+        ('09', 'Zonai Engineer', 'Unlock 5 Zonai devices'),
+        ('10', 'Zonai Master', 'Unlock all Zonai abilities'),
+        ('11', 'Armor Collector', 'Collect 10 armor sets'),
+        ('12', 'Fusion Expert', 'Fuse 50 weapons'),
+        ('13', 'Side Quest Runner', 'Complete 20 side quests'),
+        ('14', 'Cave Explorer', 'Discover every cave on the surface'),
+        ('15', 'Sky Island Explorer', 'Visit every sky island'),
+        ('16', 'Depths Navigator', 'Activate 50 lightroots in the Depths'),
+        ('17', 'Hyrule Champion', 'Finish every main dungeon/temple and defeat Ganondorf'),
+    ],
+    'BOTW': [
+        ('01', 'Shrine Seeker', 'Complete your first shrine'),
+        ('02', 'Shrine Runner', 'Complete 10 shrines'),
+        ('03', 'Shrine Master', 'Complete 50 shrines'),
+        ('04', 'Tower Surveyor', 'Activate all Sheikah Towers'),
+        ('05', 'Beast Pilot', 'Enter your first Divine Beast'),
+        ('06', 'Beast Liberator', 'Free all four Divine Beasts'),
+        ('07', 'Korok Collector', 'Collect 100 Korok seeds'),
+        ('08', 'Recipe Hunter', 'Cook 50 recipes'),
+        ('09', 'Weapon Breaker', 'Break 100 weapons'),
+        ('10', 'Armor Collector', 'Collect 10 armor sets'),
+        ('11', 'Side Quest Runner', 'Complete 20 side quests'),
+        ('12', 'Horse Whisperer', 'Tame and register a horse'),
+        ('13', 'Great Fairy Friend', 'Unlock all Great Fairies'),
+        ('14', 'Trial Survivor', 'Complete a Trial of the Sword'),
+        ('15', 'Master Sword Wielder', 'Draw the Master Sword'),
+        ('16', 'Secret Finder', 'Discover every secret spring'),
+        ('17', 'Hyrule Champion', 'Defeat Calamity Ganon and restore Hyrule'),
+    ],
+}
 
 OVERRIDES = {
     'ARMS': 'fighter', 'MINECRAFT': 'sim', 'ACNH': 'sim', 'GBG': 'sim', 'HELLOKITTY': 'sim',
@@ -108,8 +152,9 @@ def expand_goals(slug, name, goals, minimum=20):
         return out
     category = category_for(slug, name)
     params = CATEGORY_PARAMS[category]
+    templates = GAME_TEMPLATES.get(slug, TEMPLATES)
     seen = {g[0] for g in out}
-    for suffix, title, template in TEMPLATES:
+    for suffix, title, template in templates:
         if len(out) >= minimum:
             break
         aid = f'G{slug}_{suffix}'

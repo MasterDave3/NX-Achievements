@@ -18,9 +18,10 @@ SUPPORTED_GAMES.md      Full list of supported games and their achievement count
 - Reads the current application Title ID with `pmdmnt`.
 - Loads achievements from `sdmc:/switch/achievements/achievements.txt`.
 - Data-driven: adding games needs no rebuild of the `.ovl`.
-- Saves unlock state to `sdmc:/switch/achievements/progress.txt`.
-- Shows an unlock popup when an achievement is toggled on.
-- 9,482 achievements across 226 games, including mirrored Steam achievement
+- Saves unlock state and counters to `sdmc:/switch/achievements/progress.txt`.
+- Countable goals show `current/target`; **A** adds 1, **X** subtracts 1, **Y** resets.
+- Shows an unlock popup when an achievement is completed.
+- 9,541 achievements across 227 games, including mirrored Steam achievement
   names/descriptions for PC games ported to Switch.
 
 ## Build
@@ -51,12 +52,14 @@ Boot CFW and open Tesla (default **L + D-Pad Down**).
 ## Achievement format
 
 ```
-TitleID|AchievementID|Name|Description
+TitleID|AchievementID|Name|Description[|Target]
 ```
 
 - `TitleID` is the 16-digit uppercase application ID, or `*` for every game.
 - Lines starting with `#` are comments.
-- Press **A** in the overlay to toggle unlock state.
+- Without `Target`, **A** toggles unlock/lock.
+- With `Target`, the goal is counted: **A** adds 1, **X** subtracts 1, **Y** resets.
+  For example, `...|Shrines|Complete all 152 shrines|152` displays `0/152`.
 
 ## Regenerating the achievement list
 

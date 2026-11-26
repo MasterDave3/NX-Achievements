@@ -13,6 +13,7 @@ from pathlib import Path
 
 from games_extra import EXTRA_GAMES, STEAM_APPIDS, STEAM_EXTRA
 from goals_extra import expand_goals
+from totk_checklist import TOTK_GOALS
 
 TITLEDB = Path(sys.argv[1] if len(sys.argv) > 1 else '/tmp/titledb-US.json')
 OUTPUT = Path(__file__).resolve().parent.parent / 'data' / 'achievements.txt'
@@ -24,11 +25,8 @@ GAMES = [
         ('BOTW_BEASTS', 'Divine Beast Tamer', 'Free all four Divine Beasts'),
         ('BOTW_GANON', 'Calamity Slayer', 'Defeat Calamity Ganon'),
     ]),
-    ('TOTK', 'The Legend of Zelda: Tears of the Kingdom', '0100F2C0115B6000', 0, [
-        ('TOTK_SKY', 'Skyward Beginning', 'Complete the Great Sky Island opening'),
-        ('TOTK_REGIONS', 'Regional Hero', 'Solve all four regional phenomena'),
-        ('TOTK_GANON', 'Dragon Tamer', 'Defeat Ganondorf'),
-    ]),
+    ('TOTK', 'The Legend of Zelda: Tears of the Kingdom', '0100F2C0115B6000', 0,
+     TOTK_GOALS),
     ('MK8D', 'Mario Kart 8 Deluxe', '0100152000022000', 0, [
         ('MK8D_FIRST', 'First Grand Prix', 'Finish a Grand Prix in Mario Kart 8 Deluxe'),
         ('MK8D_150', '150cc Gold', 'Win gold in every 150cc cup'),
@@ -371,9 +369,9 @@ def main():
 
     lines = [
         '# NX-Achievements definitions',
-        '# Format: TitleID|AchievementID|Name|Description',
+        '# Format: TitleID|AchievementID|Name|Description[|Target]',
         '# Use * as TitleID to show for every game.',
-        '# A toggles the achievement on/off in the overlay.',
+        '# A toggles, or with a Target counts up (+1); X counts down; Y resets.',
         '# Steam achievements are mirrored by name and description only;',
         '# the overlay cannot read or unlock Steam achievements automatically.',
         '',
@@ -409,11 +407,19 @@ def main():
             entries = goals
         entries = expand_goals(slug, name, entries)
         seen = set()
-        for aid, title, desc in entries:
+        for entry in entries:
+            if len(entry) == 4:
+                aid, title, desc, target = entry
+            else:
+                aid, title, desc = entry
+                target = 0
             if aid in seen:
                 continue
             seen.add(aid)
-            lines.append(f'{title_id}|{clean(aid)}|{clean(title)}|{clean(desc)}')
+            line = f'{title_id}|{clean(aid)}|{clean(title)}|{clean(desc)}'
+            if target:
+                line += f'|{int(target)}'
+            lines.append(line)
             total += 1
         lines.append('')
 

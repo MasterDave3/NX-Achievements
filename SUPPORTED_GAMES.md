@@ -4,12 +4,15 @@ Every game below has at least 20 achievements in `NX-Achievements/data/achieveme
 Switch title IDs come from [blawar/titledb](https://github.com/blawar/titledb);
 Steam achievement names/descriptions are mirrored from public Steam community pages.
 
-**226 games · 9,482 achievements** (plus one global `FIRST_BOOT` goal)
+**227 games · 9,541 achievements** (plus one global `FIRST_BOOT` goal)
+
+Tears of the Kingdom uses IGN-style 100% checklist goals; 38 goals across the
+catalog are countable (`current/target`) and advance with A on the overlay.
 
 | # | Game | Title ID | Achievements |
 |---:|---|---|---:|
 | 1 | The Legend of Zelda: Breath of the Wild | `01007EF00011E000` | 20 |
-| 2 | The Legend of Zelda: Tears of the Kingdom | `0100F2C0115B6000` | 20 |
+| 2 | The Legend of Zelda: Tears of the Kingdom | `0100F2C0115B6000` | 45 |
 | 3 | Mario Kart 8 Deluxe | `0100152000022000` | 20 |
 | 4 | Super Mario Odyssey | `0100000000010000` | 20 |
 | 5 | Super Smash Bros. Ultimate | `01006A800016E000` | 20 |
@@ -234,3 +237,4 @@ Steam achievement names/descriptions are mirrored from public Steam community pa
 | 224 | ARK: Survival Evolved | `0100D4A00B284000` | 32 |
 | 225 | Don't Starve: Nintendo Switch Edition | `0100751007ADA000` | 113 |
 | 226 | Until Dawn | `01001E1025697001` | 29 |
+| 227 | 20 Minutes Till Dawn | `0100212019FB6000` | 34 |
