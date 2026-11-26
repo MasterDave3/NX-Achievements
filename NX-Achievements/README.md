@@ -38,7 +38,7 @@ TitleID|AchievementID|Name|Description
 
 ## Achievement data
 
-`data/achievements.txt` currently contains **7,083 achievements for 226 games**:
+`data/achievements.txt` currently contains **9,482 achievements for 226 games**:
 
 - Famous first-party and third-party Switch games use hand-written goals.
 - PC games ported to Switch mirror their Steam achievement names and descriptions
@@ -47,12 +47,16 @@ TitleID|AchievementID|Name|Description
 - Switch title IDs come from `blawar/titledb` (`US.en.json`); none are guessed.
 - Steam data comes from the public Steam community achievement pages.
 
-Game definitions live in two files:
+Every game has at least 20 goals. Games with short Steam lists are padded with
+manual goals so nothing is left thin.
+
+Game definitions live in three files:
 
 - `tools/generate_achievements.py` — the original curated set.
 - `tools/games_extra.py` — the expanded catalog plus verified Steam appid mappings.
+- `tools/goals_extra.py` — category templates that fill thin lists to 20+.
 
-Regenerate the file after editing either tools file:
+Regenerate the file after editing any of the tools files:
 
 ```bash
 python3 tools/generate_achievements.py /tmp/titledb-US.json

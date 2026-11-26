@@ -12,6 +12,7 @@ import sys
 from pathlib import Path
 
 from games_extra import EXTRA_GAMES, STEAM_APPIDS, STEAM_EXTRA
+from goals_extra import expand_goals
 
 TITLEDB = Path(sys.argv[1] if len(sys.argv) > 1 else '/tmp/titledb-US.json')
 OUTPUT = Path(__file__).resolve().parent.parent / 'data' / 'achievements.txt'
@@ -406,6 +407,7 @@ def main():
                 entries = goals
         else:
             entries = goals
+        entries = expand_goals(slug, name, entries)
         seen = set()
         for aid, title, desc in entries:
             if aid in seen:
