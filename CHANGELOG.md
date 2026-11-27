@@ -5,6 +5,11 @@ the tags below.
 
 ## [Unreleased]
 
+- Reworked the watcher to remove the boot-time `pmdmnt`/account service race:
+  `__appInit` now opens only `sm` and `fs`, the process waits 10 seconds, then
+  account services are initialized lazily. `pmdmnt` is no longer used at all;
+  detector state is keyed by configured title ID instead of the foreground
+  process. Build is now v0.3.0.
 - Disabled the experimental watcher on the SD card after repeated Atmosphère
   crashes: both `boot2.flag` and `exefs.nsp` are renamed with `.disabled`, so the
   module cannot start automatically or manually. Automatic in-game notifications

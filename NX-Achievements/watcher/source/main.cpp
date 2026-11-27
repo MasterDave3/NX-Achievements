@@ -3,7 +3,6 @@
 #include <switch/kernel/svc.h>
 #include <switch/services/acc.h>
 #include <switch/services/fs.h>
-#include <switch/services/pm.h>
 #include <switch/services/sm.h>
 
 #include "za_save.hpp"
@@ -36,21 +35,19 @@ void __libnx_initheap(void) {
 }
 
 void __appInit(void) {
+    // Keep boot-time initialization minimal. pmdmnt/account are intentionally
+    // NOT opened here: connecting to them as a boot2 sysmodule raced system
+    // services and made dmnt abort with 0xffe. Account is initialized lazily
+    // from main() after the boot sequence has settled.
     if (R_FAILED(smInitialize())) diagAbortWithResult(MAKERESULT(Module_Libnx, LibnxError_InitFail_SM));
 
     Result rc = fsInitialize();
-    if (R_FAILED(rc)) diagAbortWithResult(rc);
-    rc = pmdmntInitialize();
-    if (R_FAILED(rc)) diagAbortWithResult(rc);
-    rc = accountInitialize(AccountServiceType_System);
     if (R_FAILED(rc)) diagAbortWithResult(rc);
 
     smExit();
 }
 
 void __appExit(void) {
-    accountExit();
-    pmdmntExit();
     fsExit();
 }
 
@@ -73,6 +70,17 @@ constexpr const char *DEFAULT_DETECTORS =
 
 FsFileSystem g_sd;
 bool g_sdReady = false;
+
+bool g_accountReady = false;
+bool g_accountTried = false;
+
+// Account is opened only after boot has settled, never from __appInit.
+void ensureAccount() {
+    if (g_accountReady || g_accountTried) return;
+    g_accountTried = true;
+    if (R_FAILED(accountInitialize(AccountServiceType_System))) return;
+    g_accountReady = true;
+}
 
 struct Detector {
     u64 titleId = 0;
@@ -522,6 +530,9 @@ int evaluateDetector(const AccountUid &uid, const Detector &detector) {
 }
 
 int readDetector(const Detector &detector) {
+    ensureAccount();
+    if (!g_accountReady) return -1;
+
     AccountUid lastUser{};
     std::vector<AccountUid> candidates;
     if (R_SUCCEEDED(accountGetLastOpenedUser(&lastUser))) candidates.push_back(lastUser);
@@ -543,14 +554,6 @@ int readDetector(const Detector &detector) {
         if (count >= 0) return count;
     }
     return -1;
-}
-
-u64 currentTitleId() {
-    u64 pid = 0;
-    u64 titleId = 0;
-    if (R_FAILED(pmdmntGetApplicationProcessId(&pid))) return 0;
-    if (R_FAILED(pmdmntGetProgramId(&titleId, pid))) return 0;
-    return titleId;
 }
 
 ProgressState loadProgress() {
@@ -632,11 +635,10 @@ void sendIncrement(u64 titleId, const Detector &detector, int previous, int curr
          oldValue, target, newValue, target);
 }
 
-std::vector<DetectorState> statesForTitle(const std::vector<Detector> &detectors, u64 titleId) {
+std::vector<DetectorState> statesFrom(const std::vector<Detector> &detectors) {
     std::vector<DetectorState> states;
-    for (const Detector &detector : detectors) {
-        if (detector.titleId == titleId) states.push_back({detector, false, false, 0});
-    }
+    for (const Detector &detector : detectors)
+        states.push_back({detector, false, false, 0});
     return states;
 }
 
@@ -648,27 +650,15 @@ int main() {
         ensureDirectories();
     }
 
-    logMessage("NX-Achievements watcher v0.2.0 started\n");
+    logMessage("NX-Achievements watcher v0.3.0 started\n");
     const std::vector<Detector> detectors = loadDetectors();
+    std::vector<DetectorState> states = statesFrom(detectors);
+    logf("loaded %zu detector rule(s)\n", states.size());
 
-    u64 activeTitleId = 0;
-    std::vector<DetectorState> states;
+    // Give boot2/Atmosphère time to finish before opening account services.
+    svcSleepThread(10ULL * 1000 * 1000 * 1000ULL);
 
     while (true) {
-        const u64 titleId = currentTitleId();
-        if (titleId != activeTitleId) {
-            activeTitleId = titleId;
-            states = statesForTitle(detectors, titleId);
-            if (titleId != 0)
-                logf("title %s: %zu detector rule(s)\n", formatTitleId(titleId).c_str(),
-                     states.size());
-        }
-
-        if (titleId == 0 || states.empty()) {
-            svcSleepThread(2 * 1000 * 1000 * 1000ULL);
-            continue;
-        }
-
         ProgressState progress = loadProgress();
         bool progressChanged = false;
 
@@ -702,7 +692,7 @@ int main() {
             if (detected > state.value) {
                 const int current = std::min(detected, state.detector.target);
                 for (int value = state.value + 1; value <= current; ++value)
-                    sendIncrement(titleId, state.detector, value - 1, value);
+                    sendIncrement(state.detector.titleId, state.detector, value - 1, value);
                 if (current > stored) {
                     progress.counts[state.detector.id] = current;
                     progressChanged = true;
@@ -712,6 +702,6 @@ int main() {
         }
 
         if (progressChanged) storeProgress(progress);
-        svcSleepThread(5 * 1000 * 1000 * 1000ULL);
+        svcSleepThread(5ULL * 1000 * 1000 * 1000ULL);
     }
 }
