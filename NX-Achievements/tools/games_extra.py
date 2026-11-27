@@ -592,3 +592,10 @@ STEAM_EXTRA = [
     ('SONICOR', 'Sonic Origins / Origins Plus', '01009FB016286000', 1794960),
     ('SONICCW', 'Sonic Racing CrossWorlds', '01006E001823C000', 2486820),
 ]
+
+# Approved batch 9 additions. Kept in a separate module so the large original
+# catalog stays easy to audit; the validator imports this file and sees them.
+from new_games_batch9 import NEW_EXTRA_GAMES, NEW_STEAM_EXTRA
+
+EXTRA_GAMES.extend(NEW_EXTRA_GAMES)
+STEAM_EXTRA.extend(NEW_STEAM_EXTRA)

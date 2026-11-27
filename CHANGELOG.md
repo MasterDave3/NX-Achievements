@@ -3,6 +3,15 @@
 All notable changes to NX-Achievements. The version shown in the overlay matches
 the tags below.
 
+## [Unreleased]
+
+- Expanded the catalog by 170 approved games after verifying each title ID in
+  blawar/titledb. Steam ports with at least 20 achievements are mirrored only;
+  all other games use IGN-style completion checklists. Catalog is now
+  **406 games / 16,826 achievements**.
+- Added batch 9 checklist modules and `tools/new_games_batch9.py` so the large
+  catalog expansion stays auditable. Data-only change: no `.ovl` rebuild needed.
+
 ## [v0.6.0] - 2026-11-26
 
 - Added a **Detected games** menu. The overlay now enumerates installed

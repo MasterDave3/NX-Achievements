@@ -3,9 +3,19 @@
 import re
 from pathlib import Path
 
+from games_extra import EXTRA_GAMES, STEAM_APPIDS, STEAM_EXTRA
+from generate_achievements import GAMES
+
 ROOT = Path(__file__).resolve().parent.parent.parent
 DATA = ROOT / 'NX-Achievements' / 'data' / 'achievements.txt'
 OUTPUT = ROOT / 'SUPPORTED_GAMES.md'
+
+
+def non_steam_count():
+    steam = {s for s, _, _, _ in STEAM_EXTRA} | set(STEAM_APPIDS)
+    games = {s for s, _, _, appid, _ in GAMES if not appid}
+    games |= {s for s, _, _, _ in EXTRA_GAMES if s not in steam}
+    return len(games)
 
 
 def main():
@@ -40,7 +50,7 @@ def main():
         f'**{len(games)} games · {sum(g[2] for g in games):,} achievements** '
         '(plus one global `FIRST_BOOT` goal)',
         '',
-        'IGN-style checklist goals cover all 133 non-Steam games, using IGN '
+        f'IGN-style checklist goals cover all {non_steam_count()} non-Steam games, using IGN '
         'where available',
         'and other reputable checklists otherwise. '
         f'{countable} goals across the catalog are countable',

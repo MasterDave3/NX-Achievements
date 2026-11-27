@@ -32,7 +32,7 @@ README.template.md      Source template for this README
 - Saves unlock state and counters to `sdmc:/switch/achievements/progress.txt`.
 - Countable goals show `current/target`; **A** adds 1, **X** subtracts 1, **Y** resets.
 - Shows `old  +1  ->  new` on every counter step, e.g. `1/10  +1  ->  2/10`.
-- 10,212 achievements across 236 games: IGN-style checklists for all 135 non-Steam
+- 16,826 achievements across 406 games: IGN-style checklists for all 209 non-Steam
   games, plus mirrored Steam names/descriptions for PC games ported to Switch.
 
 ## Build
@@ -108,6 +108,15 @@ goal names, descriptions, targets, or title IDs may still need correction.
 All notable changes to NX-Achievements. The version shown in the overlay matches
 the tags below.
 
+### [Unreleased]
+
+- Expanded the catalog by 170 approved games after verifying each title ID in
+  blawar/titledb. Steam ports with at least 20 achievements are mirrored only;
+  all other games use IGN-style completion checklists. Catalog is now
+  **406 games / 16,826 achievements**.
+- Added batch 9 checklist modules and `tools/new_games_batch9.py` so the large
+  catalog expansion stays auditable. Data-only change: no `.ovl` rebuild needed.
+
 ### [v0.6.0] - 2026-11-26
 
 - Added a **Detected games** menu. The overlay now enumerates installed
@@ -180,10 +189,10 @@ Switch title IDs come from [blawar/titledb](https://github.com/blawar/titledb);
 Steam achievement names/descriptions are mirrored from public Steam community pages.
 Non-Steam games use IGN-style checklist goals; sources are listed in `CHECKLIST_SOURCES.md`.
 
-**236 games · 10,212 achievements** (plus one global `FIRST_BOOT` goal)
+**406 games · 16,826 achievements** (plus one global `FIRST_BOOT` goal)
 
-IGN-style checklist goals cover all 133 non-Steam games, using IGN where available
-and other reputable checklists otherwise. 680 goals across the catalog are countable
+IGN-style checklist goals cover all 209 non-Steam games, using IGN where available
+and other reputable checklists otherwise. 1366 goals across the catalog are countable
 (`current/target`) and advance with A/X/Y on the overlay.
 
 | # | Game | Title ID | Achievements |
@@ -410,20 +419,190 @@ and other reputable checklists otherwise. 680 goals across the catalog are count
 | 220 | Life is Strange: True Colors | `0100500012AB4000` | 40 |
 | 221 | Cat Quest III | `010088501B8F2000` | 30 |
 | 222 | Minecraft Dungeons | `01006C100EC08000` | 104 |
-| 223 | Cooking Simulator | `01001E400FD58000` | 20 |
-| 224 | This War of Mine: Complete Edition | `0100A8700BC2A000` | 59 |
-| 225 | Plague Inc: Evolved | `01000CE00CBB8000` | 250 |
-| 226 | Overcooked! 2 | `01006FD0080B2000` | 54 |
-| 227 | ARK: Survival Evolved | `0100D4A00B284000` | 32 |
-| 228 | Don't Starve: Nintendo Switch Edition | `0100751007ADA000` | 113 |
-| 229 | Until Dawn | `01001E1025697001` | 29 |
-| 230 | 20 Minutes Till Dawn | `0100212019FB6000` | 34 |
-| 231 | Hollow Knight: Silksong | `010013C00E930000` | 52 |
-| 232 | Sonic X Shadow Generations | `01005EA01C0FC000` | 40 |
-| 233 | Sonic Forces | `01001270012B6000` | 48 |
-| 234 | Team Sonic Racing | `010092B0091D0000` | 51 |
-| 235 | Sonic Origins / Origins Plus | `01009FB016286000` | 36 |
-| 236 | Sonic Racing CrossWorlds | `01006E001823C000` | 44 |
+| 223 | Mario & Luigi: Brothership | `01006D0017F7A000` | 26 |
+| 224 | Princess Peach: Showtime! | `01007A3009184000` | 26 |
+| 225 | Paper Mario: The Thousand-Year Door | `0100ECD018EBE000` | 26 |
+| 226 | Paper Mario: The Origami King | `0100A3900C3E2000` | 26 |
+| 227 | Miitopia | `01003DA010E8A000` | 26 |
+| 228 | Pokemon Brilliant Diamond | `0100000011D90000` | 26 |
+| 229 | Pokemon Shining Pearl | `010018E011D92000` | 26 |
+| 230 | New Pokemon Snap | `0100F4300BF2C000` | 26 |
+| 231 | Pokemon Mystery Dungeon: Rescue Team DX | `01003D200BAA2000` | 26 |
+| 232 | Pokemon Champions | `01005B7008C52000` | 26 |
+| 233 | Kirbys Dream Buffet | `0100A8E016236000` | 26 |
+| 234 | Super Kirby Clash | `01003FB00C5A8000` | 26 |
+| 235 | Fitness Boxing 3: Your Personal Trainer | `010020101F804000` | 26 |
+| 236 | Fitness Boxing Fist of the North Star | `01008DA01A400000` | 26 |
+| 237 | Fitness Boxing feat. HATSUNE MIKU | `01000C201FCDA000` | 26 |
+| 238 | Nintendo Labo Toy-Con 01 Variety Kit | `0100C4B0034B2000` | 26 |
+| 239 | Nintendo Labo Toy-Con 02 Robot Kit | `01009AB0034E0000` | 26 |
+| 240 | Nintendo Labo Toy-Con 03 Vehicle Kit | `01001E9003502000` | 26 |
+| 241 | Nintendo Labo Toy-Con 04 VR Kit | `0100165003504000` | 26 |
+| 242 | Pokemon Cafe ReMix | `010072400E04A000` | 26 |
+| 243 | THEATRHYTHM FINAL BAR LINE | `010081B01777C000` | 26 |
+| 244 | WORLD OF FINAL FANTASY MAXIMA | `010072000BD32000` | 26 |
+| 245 | Dragon Quest Monsters: The Dark Prince | `0100A77018EA0000` | 26 |
+| 246 | Kingdom Hearts HD 1.5+2.5 ReMIX Cloud Version | `01000E6016A22000` | 26 |
+| 247 | Kingdom Hearts HD 2.8 Final Chapter Prologue Cloud Version | `0100806016A24000` | 26 |
+| 248 | Kingdom Hearts III + Re Mind Cloud Version | `0100479016834000` | 26 |
+| 249 | Kingdom Hearts Melody of Memory | `01005D2011EA8000` | 26 |
+| 250 | Brigandine The Legend of Runersia | `010011000EA7A000` | 26 |
+| 251 | Disgaea 1 Complete | `01004B100AF18000` | 26 |
+| 252 | Disgaea 6 Defiance of Destiny | `0100ABC013136000` | 26 |
+| 253 | Monster Hunter Generations Ultimate | `0100770008DD8000` | 26 |
+| 254 | Star Ocean First Departure R | `0100EBF00E702000` | 26 |
+| 255 | Triangle Strategy | `0100CC80140F8000` | 26 |
+| 256 | Baldur Gate and Baldur Gate II Enhanced Editions | `010010A00DA48000` | 26 |
+| 257 | Baldurs Gate Dark Alliance | `0100FD1014726000` | 26 |
+| 258 | Just Dance 2017 | `0100BCE000598000` | 26 |
+| 259 | Just Dance 2018 | `0100A0500348A000` | 26 |
+| 260 | Just Dance 2019 | `010075600AE96000` | 26 |
+| 261 | Just Dance 2021 | `0100BF9011B52000` | 26 |
+| 262 | Just Dance 2022 | `0100EA6014BB8000` | 26 |
+| 263 | EA SPORTS FIFA 23 Legacy Edition | `01001C8016B4E000` | 26 |
+| 264 | NBA 2K21 | `0100E24011D1E000` | 26 |
+| 265 | NBA 2K22 | `0100B94014F8E000` | 26 |
+| 266 | NBA 2K23 | `0100ACA017E4E000` | 26 |
+| 267 | NBA 2K24 | `010006501A8D8000` | 26 |
+| 268 | NBA 2K25 | `0100DFF01ED44000` | 26 |
+| 269 | PGA TOUR 2K21 | `010053401147C000` | 26 |
+| 270 | Overwatch 2 | `0100F8600E21E000` | 26 |
+| 271 | Assassins Creed The Ezio Collection | `0100670014482000` | 26 |
+| 272 | Street Fighter 30th Anniversary Collection | `0100024008310000` | 26 |
+| 273 | SIGNALIS | `0100307018934000` | 26 |
+| 274 | GRIS | `0100E1700C31C000` | 26 |
+| 275 | A Short Hike | `01004890117B2000` | 26 |
+| 276 | The Stanley Parable Ultra Deluxe | `010029300E5C4000` | 26 |
+| 277 | Braid Anniversary Edition | `010089C00B026000` | 26 |
+| 278 | The Case of the Golden Idol | `0100D1C01B5B6000` | 26 |
+| 279 | Return of the Obra Dinn | `010032E00E6E2000` | 26 |
+| 280 | Griftlands | `0100E49013514000` | 26 |
+| 281 | PICROSS S | `0100BA0003EEA000` | 26 |
+| 282 | PICROSS S+ | `0100D7B01AE58000` | 26 |
+| 283 | PICROSS S2 | `0100C9600A88E000` | 26 |
+| 284 | PICROSS S3 | `010079200D330000` | 26 |
+| 285 | PICROSS S4 | `0100C250115DC000` | 26 |
+| 286 | PICROSS S5 | `0100AC30133EC000` | 26 |
+| 287 | PICROSS S6 | `010025901432A000` | 26 |
+| 288 | PICROSS S7 | `01009B2016104000` | 26 |
+| 289 | PICROSS S8 | `01002CE017D26000` | 26 |
+| 290 | PICROSS S9 | `010021A0197BA000` | 26 |
+| 291 | PICROSS S Capcom Classics Edition | `01009AD023F90000` | 26 |
+| 292 | PICROSS S Doraemon Edition | `01002B901FA74000` | 26 |
+| 293 | PICROSS S Genesis and Master System Edition | `010089701567A000` | 26 |
+| 294 | PICROSS S Konami Antiques Edition | `0100D730260E4000` | 26 |
+| 295 | PICROSS S Namco Legendary Edition | `010015101DEF8000` | 26 |
+| 296 | PICROSS S SNK Classics and NeoGeo Edition | `0100122023706000` | 26 |
+| 297 | Cooking Simulator | `01001E400FD58000` | 20 |
+| 298 | This War of Mine: Complete Edition | `0100A8700BC2A000` | 59 |
+| 299 | Plague Inc: Evolved | `01000CE00CBB8000` | 250 |
+| 300 | Overcooked! 2 | `01006FD0080B2000` | 54 |
+| 301 | ARK: Survival Evolved | `0100D4A00B284000` | 32 |
+| 302 | Don't Starve: Nintendo Switch Edition | `0100751007ADA000` | 113 |
+| 303 | Until Dawn | `01001E1025697001` | 29 |
+| 304 | 20 Minutes Till Dawn | `0100212019FB6000` | 34 |
+| 305 | Hollow Knight: Silksong | `010013C00E930000` | 52 |
+| 306 | Sonic X Shadow Generations | `01005EA01C0FC000` | 40 |
+| 307 | Sonic Forces | `01001270012B6000` | 48 |
+| 308 | Team Sonic Racing | `010092B0091D0000` | 51 |
+| 309 | Sonic Origins / Origins Plus | `01009FB016286000` | 36 |
+| 310 | Sonic Racing CrossWorlds | `01006E001823C000` | 44 |
+| 311 | FINAL FANTASY (Pixel Remaster) | `01000EA014150000` | 24 |
+| 312 | FINAL FANTASY II (Pixel Remaster) | `01006B7014156000` | 28 |
+| 313 | FINAL FANTASY III (Pixel Remaster) | `01002E2014158000` | 31 |
+| 314 | FINAL FANTASY IV (Pixel Remaster) | `01004B301415A000` | 30 |
+| 315 | FINAL FANTASY V (Pixel Remaster) | `0100AA201415C000` | 39 |
+| 316 | FINAL FANTASY VI (Pixel Remaster) | `0100AA001415E000` | 37 |
+| 317 | FINAL FANTASY IX | `01007EF00B094000` | 85 |
+| 318 | Dragon Quest Builders | `010008900705C000` | 20 |
+| 319 | Dragon Quest Treasures | `010049B017774000` | 50 |
+| 320 | Dragon Quest III HD-2D Remake | `01003E601E324000` | 42 |
+| 321 | NieR Automata The End of YoRHa Edition | `010056B015FE8000` | 47 |
+| 322 | Persona 4 Arena Ultimax | `010075A016A3A000` | 51 |
+| 323 | Ys VIII Lacrimosa of Dana | `01007F200B0C0000` | 54 |
+| 324 | Ys IX Monstrum Nox | `0100E390124D8000` | 54 |
+| 325 | Ys Origin | `0100F90010882000` | 46 |
+| 326 | Trails of Cold Steel III | `01005420101DA000` | 53 |
+| 327 | Trails of Cold Steel IV | `0100D3C010DE8000` | 53 |
+| 328 | Trails in the Sky 1st Chapter | `01002C9022770000` | 43 |
+| 329 | Trails in the Sky 2nd Chapter | `01007A2027548000` | 49 |
+| 330 | Trails from Zero | `01001920156C2000` | 49 |
+| 331 | Trails to Azure | `0100FBE015910000` | 57 |
+| 332 | Trails through Daybreak | `010040C01D248000` | 53 |
+| 333 | Trails through Daybreak II | `0100F6701FED4000` | 53 |
+| 334 | Trails into Reverie | `01008CB0156BC000` | 53 |
+| 335 | Romancing SaGa 2 | `01001F600829A000` | 42 |
+| 336 | Romancing SaGa 2 Revenge of the Seven | `010045301B86C000` | 51 |
+| 337 | SaGa SCARLET GRACE AMBITIONS | `010003A00D0B4000` | 56 |
+| 338 | Disgaea 4 Complete+ | `0100A9800E9B4000` | 51 |
+| 339 | Disgaea 5 Complete | `01005700031AE000` | 51 |
+| 340 | Disgaea 7 Vows of the Virtueless | `0100A7801A530000` | 50 |
+| 341 | Rune Factory 3 Special | `0100E000191B4000` | 38 |
+| 342 | Rune Factory 4 Special | `010051D00E3A4000` | 38 |
+| 343 | Rune Factory 5 | `01002F7013224000` | 47 |
+| 344 | Rune Factory Guardians of Azuma | `010022A02008C000` | 81 |
+| 345 | Wizardry Proving Grounds of the Mad Overlord | `010033F01AD2E000` | 28 |
+| 346 | Labyrinth of Refrain Coven of Dusk | `010058500B3E0000` | 57 |
+| 347 | Fairy Fencer F Advent Dark Force | `010002300C632000` | 30 |
+| 348 | Fairy Fencer F Refrain Chord | `0100F760195F2000` | 47 |
+| 349 | Suikoden I&II HD Remaster | `01004BD017080000` | 56 |
+| 350 | Star Ocean Second Story R | `010065301A2E0000` | 51 |
+| 351 | Sea of Stars | `01008C0016544000` | 54 |
+| 352 | The Last Spell | `0100F7101906A000` | 94 |
+| 353 | Baldurs Gate Dark Alliance II | `0100A61018680000` | 26 |
+| 354 | Hogwarts Legacy | `0100F7E00C70E000` | 45 |
+| 355 | Prince of Persia The Lost Crown | `0100210019428000` | 40 |
+| 356 | Dark Souls Remastered | `01004AB00A260000` | 41 |
+| 357 | Resident Evil | `010050F00BC1A000` | 44 |
+| 358 | Resident Evil 0 | `010097000BC10000` | 47 |
+| 359 | Resident Evil 5 | `010018100CD46000` | 70 |
+| 360 | Resident Evil 6 | `01002A000CD48000` | 70 |
+| 361 | Resident Evil Revelations | `0100643002136000` | 50 |
+| 362 | Resident Evil Revelations 2 | `010095300212A000` | 43 |
+| 363 | Resident Evil 3 Cloud | `0100FCE0185B4000` | 32 |
+| 364 | Resident Evil 7 biohazard Cloud | `0100E890185B6000` | 58 |
+| 365 | Borderlands The Pre-Sequel | `010007400FF24000` | 63 |
+| 366 | BioShock Infinite The Complete Edition | `0100D560102C8000` | 80 |
+| 367 | Yakuza Kiwami | `0100C9801FEE6000` | 55 |
+| 368 | Phoenix Wright Ace Attorney Trilogy | `0100CB000A142000` | 30 |
+| 369 | The Great Ace Attorney Chronicles | `010036E00FB20000` | 30 |
+| 370 | Mega Man 11 | `0100B0C0086B0000` | 50 |
+| 371 | Mega Man Legacy Collection | `01002D4007AE0000` | 24 |
+| 372 | Mega Man Legacy Collection 2 | `0100842008EC4000` | 21 |
+| 373 | Mega Man X Legacy Collection | `01005C60086BE000` | 52 |
+| 374 | Mega Man X Legacy Collection 2 | `01005250086C4000` | 52 |
+| 375 | Mega Man Zero/ZX Legacy Collection | `010025C00D410000` | 37 |
+| 376 | Grand Theft Auto III Definitive Edition | `0100C3C012718000` | 29 |
+| 377 | Grand Theft Auto Vice City Definitive Edition | `0100182014022000` | 34 |
+| 378 | Grand Theft Auto San Andreas Definitive Edition | `010065A014024000` | 35 |
+| 379 | LEGO Horizon Adventures | `010073C01AF34000` | 23 |
+| 380 | Inscryption | `010027F017B12000` | 40 |
+| 381 | TUNIC | `0100DA801624E000` | 36 |
+| 382 | ANIMAL WELL | `010020D01AD24000` | 20 |
+| 383 | Lorelei and the Laser Eyes | `01009F701688E000` | 20 |
+| 384 | Outer Wilds | `01003DC0144B6000` | 31 |
+| 385 | Spiritfarer | `0100BD400DC52000` | 39 |
+| 386 | Unpacking | `0100701015846000` | 25 |
+| 387 | Hyper Light Drifter Special Edition | `01003B200B372000` | 23 |
+| 388 | Into the Breach | `010057D00B612000` | 70 |
+| 389 | Wargroove | `01000F0002BB6000` | 23 |
+| 390 | Wargroove 2 | `0100AD401A2F0000` | 23 |
+| 391 | Puyo Puyo Tetris 2 | `010038E011940000` | 43 |
+| 392 | Human Fall Flat | `01000CA004DCA000` | 155 |
+| 393 | Yooka-Laylee | `0100F110029C8000` | 35 |
+| 394 | Yooka-Laylee and the Impossible Lair | `010022F00DA66000` | 47 |
+| 395 | Skul The Hero Slayer | `0100ACF013E9A000` | 101 |
+| 396 | Brotato | `01002EF01A316000` | 200 |
+| 397 | Cassette Beasts | `010066F01A0E0000` | 123 |
+| 398 | Coromon | `010048D014322000` | 80 |
+| 399 | Nexomon Extinction | `01005A5011A44000` | 56 |
+| 400 | Monster Crown | `0100E0600C78E000` | 33 |
+| 401 | Hades II | `0100A00019DE0000` | 50 |
+| 402 | Cris Tales | `0100B0400EBC4000` | 46 |
+| 403 | WRC 9 | `01001A0011798000` | 43 |
+| 404 | WRC 10 | `01003E3014AFE000` | 46 |
+| 405 | WRC Generations | `0100041018810000` | 44 |
+| 406 | VA-11 Hall-A | `010086500D3C8000` | 34 |
 
 ## Checklist sources
 
@@ -433,11 +612,15 @@ are deliberately omitted because they mirror real Steam achievements.
 | Game | Slug | Source |
 |---|---|---|
 | 1-2-Switch | `12SWITCH` | https://www.ign.com/wikis/1-2switch |
+| A Short Hike | `SHORT` | https://steamcommunity.com/stats/1055540/achievements/?l=english |
 | ARMS | `ARMS` | https://www.ign.com/wikis/arms |
 | Advance Wars 1+2 Re-Boot Camp | `ADVANCEWARS` | https://www.ign.com/wikis/advance-wars-reboot-camp |
 | Animal Crossing New Horizons | `ACNH` | https://www.ign.com/games/animal-crossing-new-horizons/checklists |
 | Assassin's Creed III Remastered | `AC3` | https://mapgenie.io/assassins-creed-3/checklist |
 | Assassin's Creed: The Rebel Collection | `ACREBEL` | https://www.ign.com/wikis/assassins-creed-4-black-flag |
+| Assassins Creed The Ezio Collection | `ACEZIO` | https://gamefaqs.gamespot.com/xboxone/196141-assassins-creed-the-ezio-collection/achievements |
+| Baldur Gate and Baldur Gate II Enhanced Editions | `BGE` | https://www.ign.com/wikis/baldur-gate-enhanced-edition |
+| Baldurs Gate Dark Alliance | `BGD` | https://www.ign.com/wikis/baldurs-gate-dark-alliance |
 | Bayonetta | `BAYONETTA` | https://www.ign.com/wikis/bayonetta/Achievements_and_Trophies |
 | Bayonetta 2 | `BAYONETTA2` | https://www.ign.com/wikis/bayonetta-2/Walkthrough |
 | Bayonetta 3 | `BAYONETTA3` | https://www.ign.com/wikis/bayonetta-3/Collectibles |
@@ -445,7 +628,9 @@ are deliberately omitted because they mirror real Steam achievements.
 | Big Brain Academy: Brain vs. Brain | `BRAIN` | https://www.ign.com/games/big-brain-academy-brain-vs-brain |
 | Bloodstained: Ritual of the Night | `BLOODSTAINED` | https://www.ign.com/wikis/bloodstained-ritual-of-the-night/Achievements_and_Trophies |
 | Borderlands: Game of the Year Edition | `BORDERLANDS` | https://steamcommunity.com/stats/729040/achievements/?l=english |
+| Braid Anniversary Edition | `BRAID` | https://steamcommunity.com/stats/499180/achievements/?l=english |
 | Bravely Default II | `BRAVELY` | https://www.ign.com/wikis/bravely-default-2 |
+| Brigandine The Legend of Runersia | `BRIG` | https://www.ign.com/games/brigandine-the-legend-of-runersia |
 | Burnout Paradise Remastered | `BURNOUT` | https://www.ign.com/wikis/burnout-paradise/Smashes_Locations_and_Maps |
 | Captain Toad Treasure Tracker | `TOAD` | https://www.ign.com/wikis/captain-toad-treasure-tracker/Super_Gems |
 | Castlevania Advance Collection | `CASTLEVANIA` | https://www.ign.com/wikis/castlevania-advance-collection-collection |
@@ -456,12 +641,16 @@ are deliberately omitted because they mirror real Steam achievements.
 | Demon Slayer: The Hinokami Chronicles | `DSLAYER` | https://www.ign.com/wikis/demon-slayer-the-hinokami-chronicles/Achievements_and_Trophies |
 | Detective Pikachu Returns | `DETECTIVE` | https://www.ign.com/wikis/detective-pikachu-returns |
 | Diablo III Eternal Collection | `DIABLO3` | https://www.ign.com/wikis/diablo-3/Achievements_and_Trophies |
+| Disgaea 1 Complete | `DISGAEA1` | https://www.ign.com/search?q=Disgaea%201%20Complete |
+| Disgaea 6 Defiance of Destiny | `DISGAEA6` | https://www.ign.com/search?q=Disgaea%206%20Defiance%20of%20Destiny |
 | Don't Starve Together | `DST` | https://dontstarve.wiki.gg/wiki/Don%27t_Starve_Together |
 | Donkey Kong Country Returns HD | `DKCR` | https://www.ign.com/wikis/donkey-kong-country-returns/100_Percent_Completion_Checklist |
 | Donkey Kong Country Tropical Freeze | `DKC` | https://www.ign.com/wikis/donkey-kong-country-tropical-freeze/100_Percent_Completion_Checklist |
 | Dragon Quest Builders 2 | `DQB2` | https://en.wikipedia.org/wiki/Dragon_Quest_Builders_2 |
+| Dragon Quest Monsters: The Dark Prince | `DQM` | https://www.ign.com/search?q=Dragon%20Quest%20Monsters%20The%20Dark%20Prince |
 | Dragon Quest XI S: Echoes of an Elusive Age | `DQ11S` | https://www.ign.com/wikis/dragon-quest-xi |
 | EA SPORTS FC 24 | `FC24` | https://www.ign.com/wikis/ea-sports-fc-24 |
+| EA SPORTS FIFA 23 Legacy Edition | `FIFA23` | https://gamefaqs.gamespot.com/xboxone/373102-fifa-23/achievements |
 | Final Fantasy VII | `FF7` | https://www.ign.com/wikis/final-fantasy-vii |
 | Final Fantasy X/X-2 HD Remaster | `FFX` | https://www.ign.com/wikis/final-fantasy-x |
 | Final Fantasy XII: The Zodiac Age | `FF12` | https://www.ign.com/wikis/final-fantasy-xii |
@@ -472,24 +661,40 @@ are deliberately omitted because they mirror real Steam achievements.
 | Fire Emblem Warriors: Three Hopes | `FE3HOPES` | https://www.ign.com/wikis/fire-emblem-three-hopes |
 | Fitness Boxing | `FITBOX` | https://en.wikipedia.org/wiki/Fitness_Boxing |
 | Fitness Boxing 2: Rhythm & Exercise | `FITBOX2` | https://www.nintendo.com/en-gb/Games/Nintendo-Switch-games/Fitness-Boxing-2-Rhythm-Exercise-1843189.html |
+| Fitness Boxing 3: Your Personal Trainer | `FITBOX3` | https://www.nintendo.com/us/store/products/fitness-boxing-3-your-personal-trainer-switch/ |
+| Fitness Boxing Fist of the North Star | `FITBOX_FN` | https://www.ign.com/games/fitness-boxing-fist-of-the-north-star |
+| Fitness Boxing feat. HATSUNE MIKU | `FITBOX_MIKU` | https://www.ign.com/games/fitness-boxing-feat-hatsune-miku |
 | GRID Autosport | `GRID` | https://www.ign.com/articles/2014/06/24/grid-autosport-review |
+| GRIS | `GRIS` | https://steamcommunity.com/stats/683320/achievements/?l=english |
 | Game Builder Garage | `GBG` | https://www.nintendo.com/ph/switch/awux/lesson/index.html |
 | Go Vacation | `GOVACATION` | https://es.ign.com/go-vacation-nintendo-switch/136959/review/analisis-de-go-vacation-para-nintendo-switch |
+| Griftlands | `GRIFT` | https://steamcommunity.com/stats/601840/achievements/?l=english |
 | Hello Kitty Island Adventure | `HELLOKITTY` | https://steamcommunity.com/stats/2495100/achievements/?l=english |
 | Hyrule Warriors Age of Calamity | `AOC` | https://zeldacentral.com/games/hyrule-warriors-age-of-calamity/100-completion-checklist/ |
 | Hyrule Warriors: Definitive Edition | `HRW` | https://www.ign.com/wikis/hyrule-warriors |
 | Jujutsu Kaisen Cursed Clash | `JJK` | https://www.playstationtrophies.org/game/jujustu-kaisen-cursed-clash/trophies |
+| Just Dance 2017 | `JD2017` | https://www.ign.com/search?q=Just%20Dance%202017 |
+| Just Dance 2018 | `JD2018` | https://www.ign.com/search?q=Just%20Dance%202018 |
+| Just Dance 2019 | `JD2019` | https://www.ign.com/search?q=Just%20Dance%202019 |
 | Just Dance 2020 | `JUSTDANCE` | https://en.wikipedia.org/wiki/Just_Dance_2020 |
+| Just Dance 2021 | `JD2021` | https://www.ign.com/search?q=Just%20Dance%202021 |
+| Just Dance 2022 | `JD2022` | https://www.ign.com/search?q=Just%20Dance%202022 |
+| Kingdom Hearts HD 1.5+2.5 ReMIX Cloud Version | `KH15` | https://www.ign.com/wikis/kingdom-hearts-hd-15-remix |
+| Kingdom Hearts HD 2.8 Final Chapter Prologue Cloud Version | `KH28` | https://www.ign.com/wikis/kingdom-hearts-hd-2-8-final-chapter-prologue |
+| Kingdom Hearts III + Re Mind Cloud Version | `KH3` | https://www.ign.com/wikis/kingdom-hearts-3 |
+| Kingdom Hearts Melody of Memory | `KHMEL` | https://www.ign.com/games/kingdom-hearts-melody-of-memory |
 | Kirby Fighters 2 | `KIRBYFIGHT` | https://wikirby.com/wiki/100%25_completion |
 | Kirby Return to Dream Land Deluxe | `KIRBY_RTDL` | https://www.ign.com/wikis/kirbys-return-to-dream-land/Energy_Spheres |
 | Kirby Star Allies | `KIRBY_SA` | https://www.ign.com/wikis/kirby-switch |
 | Kirby and the Forgotten Land | `KIRBY_FL` | https://www.ign.com/wikis/kirby-and-the-forgotten-land/How_to_Unlock_Everything |
+| Kirbys Dream Buffet | `KIRBY_BUFFET` | https://www.ign.com/games/kirbys-dream-buffet |
 | LEGO CITY Undercover | `LEGOCITY` | https://www.ign.com/wikis/lego-city-undercover/Gold_Bricks |
 | LIVE A LIVE | `LIVEALIVE` | https://www.ign.com/wikis/live-a-live |
 | Life is Strange Remastered | `LIS` | https://steamcommunity.com/stats/1265920/achievements/?l=english |
 | Luigi's Mansion 2 HD | `LM2HD` | https://www.ign.com/wikis/luigis-mansion-2/100%25_Completion_Tracker |
 | Luigis Mansion 3 | `LM3` | https://www.ign.com/wikis/luigis-mansion-3 |
 | MLB The Show 23 | `MLB23` | https://primagames.com/tips/mlb-the-show-23-trophies-and-achievements-listed |
+| Mario & Luigi: Brothership | `MARIOLUIGI` | https://www.ign.com/wikis/mario-and-luigi-brothership/Walkthrough |
 | Mario & Sonic at the Olympic Games Tokyo 2020 | `MARIOSONIC` | https://www.nintendolife.com/news/2019/10/guide_mario_and_sonic_at_the_olympic_games_tokyo_2020_all_events_story_mode_minigames_and_characters |
 | Mario + Rabbids Kingdom Battle | `RABBIDS_KB` | https://www.ign.com/wikis/mario-rabbids-kingdom-battle/Collectible_Chests |
 | Mario + Rabbids Sparks of Hope | `RABBIDS_H` | https://www.ign.com/wikis/mario-rabbids-sparks-of-hope/Mario%2BRabbids_Sparks_of_Hope_Sparks_List_and_Where_to_Find_All_Sparks |
@@ -503,46 +708,89 @@ are deliberately omitted because they mirror real Steam achievements.
 | Metroid Dread | `DREAD` | https://www.ign.com/wikis/metroid-dread |
 | Metroid Prime 4: Beyond | `METROID4` | https://www.ign.com/wikis/metroid-prime-4-beyond/100%25_Completion_Guide |
 | Metroid Prime Remastered | `PRIME` | https://www.ign.com/wikis/metroid-prime |
+| Miitopia | `MIITOPIA` | https://www.ign.com/wikis/miitopia/Walkthrough |
 | Minecraft | `MINECRAFT` | https://www.ign.com/wikis/minecraft/Achievements |
+| Monster Hunter Generations Ultimate | `MHGU` | https://www.ign.com/wikis/monster-hunter-generations |
 | MotoGP 24 | `MOTOGP24` | https://racinggames.gg/article/motogp-24-trophies-and-achievements-complete-guide |
 | My Hero One's Justice 2 | `MHA2` | https://www.playstationtrophies.org/game/my-hero-ones-justice-2/trophies |
 | NBA 2K20 | `NBA2K` | https://www.ign.com/wikis/nba-2k20 |
+| NBA 2K21 | `NBA21` | https://steamcommunity.com/stats/1225330/achievements/?l=english |
+| NBA 2K22 | `NBA22` | https://steamcommunity.com/stats/1644960/achievements/?l=english |
+| NBA 2K23 | `NBA23` | https://steamcommunity.com/stats/1919590/achievements/?l=english |
+| NBA 2K24 | `NBA24` | https://steamcommunity.com/stats/2338770/achievements/?l=english |
+| NBA 2K25 | `NBA25` | https://steamcommunity.com/stats/2878980/achievements/?l=english |
 | Naruto Shippuden: Ultimate Ninja Storm 4 | `NARUTO4` | https://www.ign.com/wikis/naruto-shippuden-ultimate-ninja-storm-4/Memory_Fragments |
+| New Pokemon Snap | `POKESNAP` | https://www.ign.com/wikis/new-pokemon-snap/Walkthrough_-_Course_Guides |
 | New Super Mario Bros U Deluxe | `NSMBU` | https://www.ign.com/wikis/new-super-mario-bros-u |
 | Ni no Kuni II: Revenant Kingdom | `NINO2` | https://en.wikipedia.org/wiki/Ni_no_Kuni_II:_Revenant_Kingdom |
 | Ni no Kuni: Wrath of the White Witch | `NINO1` | https://www.ign.com/wikis/ni-no-kuni-wrath-of-the-white-witch |
+| Nintendo Labo Toy-Con 01 Variety Kit | `LABO01` | https://www.ign.com/wikis/nintendo-labo/Variety_Kit_01 |
+| Nintendo Labo Toy-Con 02 Robot Kit | `LABO02` | https://www.ign.com/wikis/nintendo-labo/Robot_Kit_02 |
+| Nintendo Labo Toy-Con 03 Vehicle Kit | `LABO03` | https://www.ign.com/search?q=Nintendo%20Labo%20Toy-Con%2003%20Vehicle%20Kit |
+| Nintendo Labo Toy-Con 04 VR Kit | `LABO04` | https://www.ign.com/search?q=Nintendo%20Labo%20Toy-Con%2004%20VR%20Kit |
 | Nintendo Switch Sports | `NSSPORTS` | https://www.ign.com/wikis/nintendo-switch-sports |
 | Octopath Traveler | `OCTOPATH` | https://www.ign.com/wikis/octopath-traveler |
 | Octopath Traveler II | `OCTOPATH2` | https://www.ign.com/wikis/octopath-traveler-2 |
 | Okami HD | `OKAMI` | https://www.ign.com/wikis/okami/Trophies |
 | One Piece Odyssey | `ONEPIECE` | https://steamcommunity.com/stats/814000/achievements/?l=english |
+| Overwatch 2 | `OW2` | https://steamcommunity.com/stats/2357570/achievements/?l=english |
+| PGA TOUR 2K21 | `PGA21` | https://steamcommunity.com/stats/1016120/achievements/?l=english |
 | PICO PARK | `PICOPARK` | https://www.nintendo.com/us/store/products/pico-park-switch/ |
+| PICROSS S | `PICROSS_S` | https://www.nintendo.com/us/store/products/picross-s-switch/ |
+| PICROSS S Capcom Classics Edition | `PICROSS_CAPCOM` | https://nintendo.com/us/store/products/picross-s-capcom-classics-edition-switch |
+| PICROSS S Doraemon Edition | `PICROSS_DORA` | https://nintendo.com/us/store/products/picross-s-doraemon-and-f-characters-edition-switch |
+| PICROSS S Genesis and Master System Edition | `PICROSS_GENESIS` | https://www.nintendo.com/us/store/products/picross-s-genesis-and-master-system-edition-switch |
+| PICROSS S Konami Antiques Edition | `PICROSS_KONAMI` | https://www.jupiter.co.jp/e/switch/picrosssknm/ |
+| PICROSS S Namco Legendary Edition | `PICROSS_NAMCO` | https://www.jupiter.co.jp/e/switch/picrosssnle |
+| PICROSS S SNK Classics and NeoGeo Edition | `PICROSS_SNK` | https://www.nintendo.com/us/store/products/picross-s-snk-classics-and-neogeo-edition-switch |
+| PICROSS S+ | `PICROSS_SP` | https://www.nintendo.com/us/store/products/picross-s-plus-switch/ |
+| PICROSS S2 | `PICROSS_S2` | https://www.nintendo.com/us/store/products/picross-s2-switch |
+| PICROSS S3 | `PICROSS_S3` | https://www.nintendo.com/us/store/products/picross-s3-switch |
+| PICROSS S4 | `PICROSS_S4` | https://www.nintendo.com/us/store/products/picross-s4-switch |
+| PICROSS S5 | `PICROSS_S5` | https://www.nintendo.com/us/store/products/picross-s5-switch |
+| PICROSS S6 | `PICROSS_S6` | https://www.nintendo.com/us/store/products/picross-s6-switch |
+| PICROSS S7 | `PICROSS_S7` | https://nintendo.com/us/store/products/picross-s7-switch |
+| PICROSS S8 | `PICROSS_S8` | https://www.nintendo.com/us/store/products/picross-s8-switch/ |
+| PICROSS S9 | `PICROSS_S9` | https://nintendo.com/us/store/products/picross-s9-switch |
+| Paper Mario: The Origami King | `PAPER_OK` | https://www.ign.com/wikis/paper-mario-origami-king/Walkthrough |
+| Paper Mario: The Thousand-Year Door | `PAPER_TYD` | https://www.ign.com/wikis/paper-mario-the-thousand-year-door/Walkthrough_and_Collectibles_Guide |
 | Persona 3 Portable | `P3P` | https://www.ign.com/wikis/persona-3-portable |
 | Persona 4 Golden | `P4G` | https://www.ign.com/wikis/shin-megami-tensei-persona-4-golden |
 | Pikmin 1 | `PIKMIN1` | https://www.ign.com/wikis/pikmin/Ship_Parts_Locations |
 | Pikmin 2 | `PIKMIN2` | https://www.ign.com/wikis/pikmin-2/Treasure_Locations |
 | Pikmin 3 Deluxe | `PIKMIN3` | https://www.ign.com/wikis/pikmin-3/Fruit_Locations |
 | Pikmin 4 | `PIKMIN4` | https://www.ign.com/wikis/pikmin-4 |
+| Pokemon Brilliant Diamond | `POKEMON_BD` | https://www.ign.com/wikis/pokemon-diamond-pearl-platinum-version/Brilliant_Diamond_and_Shining_Pearl_Walkthrough |
+| Pokemon Cafe ReMix | `POKECAFE` | https://www.ign.com/games/pokemon-cafe-remix |
+| Pokemon Champions | `POKECHAMP` | https://www.ign.com/wikis/pokemon-champions |
 | Pokemon Legends Arceus | `ARCEUS` | https://www.ign.com/wikis/pokemon-legends-arceus/Pokedex_(List_of_Pokemon) |
 | Pokemon Legends Z-A | `ZA` | https://www.ign.com/games/pokemon-legends-z-a/checklists |
 | Pokemon Lets Go Eevee | `LETSGO_E` | https://www.ign.com/wikis/pokemon-lets-go-pikachu-eevee/List_of_Pokemon_in_Let%27s_Go_%28Pokedex%29 |
 | Pokemon Lets Go Pikachu | `LETSGO_P` | https://www.ign.com/wikis/pokemon-lets-go-pikachu-eevee/List_of_Pokemon_in_Let%27s_Go_%28Pokedex%29 |
+| Pokemon Mystery Dungeon: Rescue Team DX | `PMD_RTX` | https://www.ign.com/wikis/pokemon-mystery-dungeon-rescue-team-dx/Walkthrough |
 | Pokemon Scarlet | `SCARLET` | https://www.ign.com/wikis/pokemon-scarlet-violet/Pokedex_-_All_Pokemon_in_Scarlet_and_Violet |
 | Pokemon Shield | `SHIELD` | https://www.ign.com/wikis/pokemon-sword-shield/Post_Game%3A_Things_to_Do_After_You_Become_Champion |
+| Pokemon Shining Pearl | `POKEMON_SP` | https://www.ign.com/wikis/pokemon-diamond-pearl-platinum-version/New_Features_and_Changes_in_Brilliant_Diamond_and_Shining_Pearl |
 | Pokemon Sword | `SWORD` | https://www.ign.com/wikis/pokemon-sword-shield/Post_Game%3A_Things_to_Do_After_You_Become_Champion |
 | Pokemon UNITE | `UNITE` | https://www.ign.com/wikis/pokemon-unite |
 | Pokemon Violet | `VIOLET` | https://www.ign.com/wikis/pokemon-scarlet-violet/Pokedex_-_All_Pokemon_in_Scarlet_and_Violet |
 | Power Rangers: Battle for the Grid | `POWERR` | https://steamcommunity.com/stats/1110100/achievements/?l=english |
+| Princess Peach: Showtime! | `PEACH` | https://www.ign.com/wikis/princess-peach-showtime/Princess_Peach:_Showtime_Walkthrough |
+| Return of the Obra Dinn | `OBRA` | https://www.ign.com/wikis/return-of-the-obra-dinn/Crewmembers_and_Fates |
 | Ring Fit Adventure | `RINGFIT` | https://www.ign.com/wikis/ring-fit-adventure |
 | River City Girls 2 | `RCG2` | https://steamcommunity.com/stats/1920480/achievements/?l=english |
 | SEGA AGES Sonic The Hedgehog | `SAGES1` | https://gamefaqs.gamespot.com/switch/237014-sega-ages-sonic-the-hedgehog/cheats |
 | SEGA AGES Sonic The Hedgehog 2 | `SAGES2` | https://gamefaqs.gamespot.com/switch/247860-sega-ages-sonic-the-hedgehog-2/cheats |
+| SIGNALIS | `SIGNALIS` | https://steamcommunity.com/stats/1262350/achievements/?l=english |
 | Scott Pilgrim vs. The World: The Game - Complete Edition | `SCOTT` | https://steamcommunity.com/stats/2215260/achievements/?l=english |
 | Shin Megami Tensei III Nocturne HD Remaster | `SMT3` | https://www.ign.com/wikis/shin-megami-tensei-iii-nocturne-hd-remaster |
 | Shin Megami Tensei V | `SMTV` | https://en.wikipedia.org/wiki/Shin_Megami_Tensei_V |
 | Shin Megami Tensei V: Vengeance | `SMTVV` | https://en.wikipedia.org/wiki/Shin_Megami_Tensei_V |
 | Splatoon 2 | `SPLATOON2` | https://www.ign.com/wikis/splatoon-2/Sunken_Scroll_Locations |
 | Splatoon 3 | `SPLATOON3` | https://www.ign.com/wikis/splatoon-3/Sunken_Sea_Scroll_Locations |
+| Star Ocean First Departure R | `SO1` | https://www.ign.com/wikis/psp-cheats/Star_Ocean:_First_Departure_Cheats |
+| Street Fighter 30th Anniversary Collection | `SF30` | https://steamcommunity.com/stats/586200/achievements/?l=english |
+| Super Kirby Clash | `KIRBY_CLAN` | https://www.ign.com/games/super-kirby-clash |
 | Super Mario 3D World Bowsers Fury | `S3DW` | https://www.ign.com/wikis/super-mario-3d-world-and-bowsers-fury |
 | Super Mario Bros Wonder | `WONDER` | https://www.ign.com/wikis/super-mario-bros-wonder/List_of_Medals_and_100%25_Completion_Guide |
 | Super Mario Maker 2 | `SMM2` | https://www.ign.com/wikis/super-mario-maker-2 |
@@ -550,15 +798,20 @@ are deliberately omitted because they mirror real Steam achievements.
 | Super Mario Party | `SMP` | https://www.ign.com/wikis/super-mario-party/How_to_Unlock_Characters,_Boards,_and_Gems |
 | Super Mario Party Jamboree | `JAMBOREE` | https://www.ign.com/wikis/super-mario-party-jamboree/How_to_Unlock_All_Characters,_Boards,_and_Modes |
 | Super Smash Bros. Ultimate | `SSBU` | https://www.ign.com/wikis/super-smash-bros-ultimate/Primary_Spirits:_Rank,_Traits,_Power,_and_Slots |
+| THEATRHYTHM FINAL BAR LINE | `THEATRHYTHM` | https://www.ign.com/search?q=Theatrhythm%20Final%20Bar%20Line |
+| The Case of the Golden Idol | `GOLD` | https://steamcommunity.com/stats/1677770/achievements/?l=english |
 | The Legend of Zelda: Breath of the Wild | `BOTW` | https://www.ign.com/wikis/the-legend-of-zelda-breath-of-the-wild/100_Percent_Completion_Checklist |
 | The Legend of Zelda: Echoes of Wisdom | `ECHOES` | https://www.ign.com/wikis/the-legend-of-zelda-echoes-of-wisdom |
 | The Legend of Zelda: Skyward Sword HD | `SKYSWORD` | https://www.ign.com/wikis/the-legend-of-zelda-skyward-sword/100%_Completion_Checklist |
 | The Legend of Zelda: Tears of the Kingdom | `TOTK` | https://www.ign.com/wikis/the-legend-of-zelda-tears-of-the-kingdom/100_Percent_Completion_Checklist |
+| The Stanley Parable Ultra Deluxe | `STANLEY` | https://steamcommunity.com/stats/1703340/achievements/?l=english |
 | The Wonderful 101: Remastered | `W101` | https://www.ign.com/wikis/the-wonderful-101 |
 | Tokyo Mirage Sessions #FE Encore | `TMS` | https://www.ign.com/wikis/tokyo-mirage-sessions-fe |
 | Tony Hawk's Pro Skater 1 + 2 | `THPS` | https://www.ign.com/wikis/tony-hawks-pro-skater-1-and-2 |
 | Transformers: Battlegrounds | `TRANSFORMERS` | https://www.exophase.com/game/transformers-battlegrounds-xbox/achievements/ |
+| Triangle Strategy | `TRIANGLE` | https://www.ign.com/wikis/triangle-strategy |
 | Undertale | `UNDERTALE` | https://www.ign.com/wikis/undertale |
+| WORLD OF FINAL FANTASY MAXIMA | `WOFF` | https://www.ign.com/wikis/world-of-final-fantasy |
 | WarioWare: Move It! | `WARIOWARE_MOVE` | https://www.ign.com/wikis/warioware-move-it/Cheats,_Secrets,_and_Unlockables |
 | Warioware Get it Together | `WARIOWARE` | https://www.ign.com/wikis/warioware-get-it-together |
 | Xenoblade Chronicles 2 | `XC2` | https://www.ign.com/wikis/xenoblade-chronicles-2 |
