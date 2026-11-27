@@ -170,6 +170,11 @@ the tags below.
 
 ### [Unreleased]
 
+- Disabled the experimental watcher on the SD card after repeated Atmosphère
+  crashes: both `boot2.flag` and `exefs.nsp` are renamed with `.disabled`, so the
+  module cannot start automatically or manually. Automatic in-game notifications
+  are unavailable until a stable replacement is validated; the safe overlay
+  remains installed.
 - Replaced the overlay UI with a minimal safe build. Opening it no longer parses
   the full 21,643-entry catalog, enumerates installed titles, or calls
   `nsInitialize()`, so it cannot crash Atmosphère from heap exhaustion or
