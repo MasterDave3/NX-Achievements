@@ -4,6 +4,7 @@
 #include <switch/services/acc.h>
 #include <switch/services/fs.h>
 #include <switch/services/pm.h>
+#include <switch/services/sm.h>
 
 #include "za_save.hpp"
 
@@ -15,6 +16,45 @@
 #include <map>
 #include <string>
 #include <vector>
+
+// Sysmodule runtime setup. Without these, libnx uses the application applet
+// type and a large heap, which exhausts Atmosphere's small sysmodule memory
+// pool and makes ams_mitm abort with 0xffe.
+extern "C" {
+
+#define INNER_HEAP_SIZE 0x400000
+
+u32 __nx_applet_type = AppletType_None;
+u32 __nx_fs_num_sessions = 1;
+
+void __libnx_initheap(void) {
+    static u8 inner_heap[INNER_HEAP_SIZE];
+    extern void *fake_heap_start;
+    extern void *fake_heap_end;
+    fake_heap_start = inner_heap;
+    fake_heap_end = inner_heap + sizeof(inner_heap);
+}
+
+void __appInit(void) {
+    if (R_FAILED(smInitialize())) diagAbortWithResult(MAKERESULT(Module_Libnx, LibnxError_InitFail_SM));
+
+    Result rc = fsInitialize();
+    if (R_FAILED(rc)) diagAbortWithResult(rc);
+    rc = pmdmntInitialize();
+    if (R_FAILED(rc)) diagAbortWithResult(rc);
+    rc = accountInitialize(AccountServiceType_System);
+    if (R_FAILED(rc)) diagAbortWithResult(rc);
+
+    smExit();
+}
+
+void __appExit(void) {
+    accountExit();
+    pmdmntExit();
+    fsExit();
+}
+
+}  // extern "C"
 
 namespace {
 
@@ -162,7 +202,7 @@ bool writeSdFile(const char *path, const void *data, std::size_t size) {
 std::vector<Detector> loadDetectors() {
     std::vector<u8> raw;
     std::string content;
-    if (readSdFile(DETECTOR_FILE, raw, 4 * 1024 * 1024)) {
+    if (readSdFile(DETECTOR_FILE, raw, 64 * 1024)) {
         content.assign(reinterpret_cast<const char *>(raw.data()), raw.size());
     } else {
         content = DEFAULT_DETECTORS;
@@ -198,33 +238,74 @@ std::vector<Detector> loadDetectors() {
     return detectors;
 }
 
+class SdLineReader {
+public:
+    explicit SdLineReader(const char *path) {
+        if (R_SUCCEEDED(fsFsOpenFile(&g_sd, path, FsOpenMode_Read, &file_))) valid_ = true;
+    }
+
+    ~SdLineReader() {
+        if (valid_) fsFileClose(&file_);
+    }
+
+    SdLineReader(const SdLineReader &) = delete;
+    SdLineReader &operator=(const SdLineReader &) = delete;
+
+    bool next(std::string &line) {
+        if (!valid_ || eof_) return false;
+        line.clear();
+        while (true) {
+            const std::size_t newline = buffer_.find('\n');
+            if (newline != std::string::npos) {
+                line.assign(buffer_, 0, newline);
+                buffer_.erase(0, newline + 1);
+                return true;
+            }
+
+            char chunk[1024];
+            u64 bytesRead = 0;
+            const Result result = fsFileRead(&file_, offset_, chunk, sizeof(chunk),
+                                             FsReadOption_None, &bytesRead);
+            if (R_FAILED(result) || bytesRead == 0) {
+                eof_ = true;
+                if (!buffer_.empty()) {
+                    line.swap(buffer_);
+                    return true;
+                }
+                return false;
+            }
+            offset_ += bytesRead;
+            buffer_.append(chunk, static_cast<std::size_t>(bytesRead));
+        }
+    }
+
+private:
+    FsFile file_{};
+    bool valid_ = false;
+    bool eof_ = false;
+    u64 offset_ = 0;
+    std::string buffer_;
+};
+
 AchievementMeta loadAchievementMeta(u64 titleId, const std::string &achievementId) {
     AchievementMeta meta;
     meta.name = achievementId;
     meta.description = achievementId;
 
-    std::vector<u8> raw;
-    if (!readSdFile(ACHIEVEMENT_FILE, raw, 16 * 1024 * 1024)) return meta;
-
-    const std::string content(reinterpret_cast<const char *>(raw.data()), raw.size());
     const std::string wantedTitle = formatTitleId(titleId);
-    std::size_t start = 0;
-    while (start <= content.size()) {
-        std::size_t end = content.find('\n', start);
-        if (end == std::string::npos) end = content.size();
-        std::string line = trim(content.substr(start, end - start));
-        if (!line.empty() && line[0] != '#') {
-            auto parts = splitFields(line);
-            if (parts.size() >= 4 && parts[1] == achievementId &&
-                (parts[0] == wantedTitle || parts[0] == "*")) {
-                meta.name = parts[2];
-                meta.description = parts[3];
-                if (parts.size() >= 5) meta.target = std::atoi(parts[4].c_str());
-                return meta;
-            }
+    SdLineReader reader(ACHIEVEMENT_FILE);
+    std::string line;
+    while (reader.next(line)) {
+        line = trim(line);
+        if (line.empty() || line[0] == '#') continue;
+        auto parts = splitFields(line);
+        if (parts.size() >= 4 && parts[1] == achievementId &&
+            (parts[0] == wantedTitle || parts[0] == "*")) {
+            meta.name = parts[2];
+            meta.description = parts[3];
+            if (parts.size() >= 5) meta.target = std::atoi(parts[4].c_str());
+            return meta;
         }
-        if (end == content.size()) break;
-        start = end + 1;
     }
     return meta;
 }
@@ -417,10 +498,6 @@ std::vector<DetectorState> statesForTitle(const std::vector<Detector> &detectors
 }  // namespace
 
 int main() {
-    fsInitialize();
-    pmdmntInitialize();
-    accountInitialize(AccountServiceType_System);
-
     if (R_SUCCEEDED(fsOpenSdCardFileSystem(&g_sd))) {
         g_sdReady = true;
         ensureDirectories();

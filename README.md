@@ -170,6 +170,11 @@ the tags below.
 
 ### [Unreleased]
 
+- Fixed an Atmosphère boot crash (`ams_mitm`, `std::abort() 0xffe`) caused by
+  the watcher being built as a normal application: it now uses
+  `AppletType_None`, a bounded 4 MiB sysmodule heap, a 16 KiB main-thread
+  stack, and streams `achievements.txt` instead of loading the whole catalog
+  into memory.
 - Refactored the watcher into a **generic detector framework**. Rules live in
   `sdmc:/switch/achievements/detectors.txt` as
   `title_id|achievement_id|kind|target|save_path|block_key|dex_list`, so any
