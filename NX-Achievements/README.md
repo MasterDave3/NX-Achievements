@@ -77,7 +77,13 @@ Regenerate the file after editing any of the tools files:
 python3 tools/generate_achievements.py /tmp/titledb-US.json
 python3 tools/validate_achievements.py
 python3 tools/generate_supported_games.py
+python3 tools/generate_readme.py
 ```
+
+## Testing status
+
+Not all achievements have been tested in game. Some goal names, descriptions,
+targets, or title IDs may still need correction.
 
 ## Current limitations
 

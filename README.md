@@ -86,6 +86,11 @@ Steam achievement names/descriptions are mirrored from public Steam community
 achievement pages. Non-Steam games use IGN-style checklist goals where available;
 see `CHECKLIST_SOURCES.md` for the per-game sources.
 
+## Testing status
+
+Not all achievements have been tested in game. The catalog is data-driven, so some
+goal names, descriptions, targets, or title IDs may still need correction.
+
 ## Limitations
 
 - Achievements are tracked manually: A toggles or counts up, X counts down, Y resets.
