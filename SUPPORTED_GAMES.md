@@ -5,10 +5,10 @@ Switch title IDs come from [blawar/titledb](https://github.com/blawar/titledb);
 Steam achievement names/descriptions are mirrored from public Steam community pages.
 Non-Steam games use IGN-style checklist goals; sources are listed in `CHECKLIST_SOURCES.md`.
 
-**229 games · 9,935 achievements** (plus one global `FIRST_BOOT` goal)
+**236 games · 10,212 achievements** (plus one global `FIRST_BOOT` goal)
 
 IGN-style checklist goals cover all 133 non-Steam games, using IGN where available
-and other reputable checklists otherwise. 670 goals across the catalog are countable
+and other reputable checklists otherwise. 680 goals across the catalog are countable
 (`current/target`) and advance with A/X/Y on the overlay.
 
 | # | Game | Title ID | Achievements |
@@ -176,69 +176,76 @@ and other reputable checklists otherwise. 670 goals across the catalog are count
 | 161 | Crash Bandicoot N. Sane Trilogy | `0100D1B006744000` | 74 |
 | 162 | Sonic Colors: Ultimate | `010040E0116B8000` | 47 |
 | 163 | Sonic Superstars | `01008F701C074000` | 38 |
-| 164 | Demon Slayer: The Hinokami Chronicles | `0100309016E7A000` | 24 |
-| 165 | Jujutsu Kaisen Cursed Clash | `010000B01A452000` | 24 |
-| 166 | Naruto Shippuden: Ultimate Ninja Storm 4 | `010084D00CF5E000` | 22 |
-| 167 | My Hero One's Justice 2 | `01007E700DBF6000` | 22 |
-| 168 | One Piece Odyssey | `0100D9601A994000` | 27 |
-| 169 | Guilty Gear -Strive- | `0100AB401F136000` | 39 |
-| 170 | Samurai Shodown | `01002DF00F76C000` | 45 |
-| 171 | Power Rangers: Battle for the Grid | `0100E1E00CF1A000` | 24 |
-| 172 | Transformers: Battlegrounds | `01005E500E528000` | 30 |
-| 173 | Hello Kitty Island Adventure | `010027901C89C000` | 32 |
-| 174 | Moving Out | `0100C4C00E73E000` | 38 |
-| 175 | Moving Out 2 | `010065D018172000` | 28 |
-| 176 | Untitled Goose Game | `010082400BCC6000` | 25 |
-| 177 | Baba Is You | `01002CD00A51C000` | 26 |
-| 178 | Risk of Rain 2 | `010076D00E4BA000` | 205 |
-| 179 | Spelunky 2 | `01007EC013ABC000` | 32 |
-| 180 | Slay the Spire | `010026300BA4A000` | 46 |
-| 181 | Vampire Survivors | `010089A0197E4000` | 243 |
-| 182 | Balatro | `0100CD801CE5E000` | 31 |
-| 183 | Dave the Diver | `010097F018538000` | 56 |
-| 184 | Katana ZERO | `010029600D56A000` | 22 |
-| 185 | Bloodstained: Ritual of the Night | `0100BF500207C000` | 30 |
-| 186 | Castlevania Advance Collection | `0100B33014710000` | 33 |
-| 187 | River City Girls 2 | `0100026016320000` | 28 |
-| 188 | Scott Pilgrim vs. The World: The Game - Complete Edition | `0100394011C30000` | 27 |
-| 189 | Okami HD | `0100276009872000` | 30 |
-| 190 | Red Dead Redemption | `01007820196A6000` | 51 |
-| 191 | Tomb Raider I-III Remastered | `010024601BB16000` | 284 |
-| 192 | Borderlands: Game of the Year Edition | `010064800F66A000` | 31 |
-| 193 | Wolfenstein II: The New Colossus | `01009040091E0000` | 80 |
-| 194 | Metro 2033 Redux | `0100D4900E82C000` | 49 |
-| 195 | Metro: Last Light Redux | `0100F0400E850000` | 49 |
-| 196 | BioShock Remastered | `0100AD10102B2000` | 65 |
-| 197 | Portal Knights | `0100437004170000` | 40 |
-| 198 | Bridge Constructor Portal | `010016E004796000` | 20 |
-| 199 | House Flipper | `0100CAE00EB02000` | 96 |
-| 200 | PowerWash Simulator | `0100926016012000` | 100 |
-| 201 | PICO PARK | `01004EA00DF70000` | 21 |
-| 202 | Duck Game | `0100750001C70000` | 38 |
-| 203 | Don't Starve Together | `010090100E334000` | 29 |
-| 204 | Grounded | `01006F301AE9C000` | 45 |
-| 205 | Subnautica | `0100429011144000` | 20 |
-| 206 | Astroneer | `0100E63013E60000` | 116 |
-| 207 | Slime Rancher: Plortable Edition | `0100B9C0148D0000` | 57 |
-| 208 | Green Hell | `0100453012FEA000` | 68 |
-| 209 | Dead by Daylight | `01004C400CF96000` | 318 |
-| 210 | Outlast 2 | `0100DE70085E8000` | 24 |
-| 211 | Little Nightmares Complete Edition | `01002FC00412C000` | 22 |
-| 212 | Little Nightmares II | `010097100EDD6000` | 35 |
-| 213 | Little Nightmares III | `010066101A55A000` | 44 |
-| 214 | INSIDE | `0100D2D009028000` | 20 |
-| 215 | LIMBO | `01009C8009026000` | 20 |
-| 216 | Firewatch | `0100AC300919A000` | 20 |
-| 217 | Life is Strange Remastered | `0100DC301186A000` | 22 |
-| 218 | Life is Strange: True Colors | `0100500012AB4000` | 40 |
-| 219 | Cat Quest III | `010088501B8F2000` | 30 |
-| 220 | Minecraft Dungeons | `01006C100EC08000` | 104 |
-| 221 | Cooking Simulator | `01001E400FD58000` | 20 |
-| 222 | This War of Mine: Complete Edition | `0100A8700BC2A000` | 59 |
-| 223 | Plague Inc: Evolved | `01000CE00CBB8000` | 250 |
-| 224 | Overcooked! 2 | `01006FD0080B2000` | 54 |
-| 225 | ARK: Survival Evolved | `0100D4A00B284000` | 32 |
-| 226 | Don't Starve: Nintendo Switch Edition | `0100751007ADA000` | 113 |
-| 227 | Until Dawn | `01001E1025697001` | 29 |
-| 228 | 20 Minutes Till Dawn | `0100212019FB6000` | 34 |
-| 229 | Hollow Knight: Silksong | `010013C00E930000` | 52 |
+| 164 | SEGA AGES Sonic The Hedgehog | `010051F00AC5E000` | 28 |
+| 165 | SEGA AGES Sonic The Hedgehog 2 | `01000D200C614000` | 30 |
+| 166 | Demon Slayer: The Hinokami Chronicles | `0100309016E7A000` | 24 |
+| 167 | Jujutsu Kaisen Cursed Clash | `010000B01A452000` | 24 |
+| 168 | Naruto Shippuden: Ultimate Ninja Storm 4 | `010084D00CF5E000` | 22 |
+| 169 | My Hero One's Justice 2 | `01007E700DBF6000` | 22 |
+| 170 | One Piece Odyssey | `0100D9601A994000` | 27 |
+| 171 | Guilty Gear -Strive- | `0100AB401F136000` | 39 |
+| 172 | Samurai Shodown | `01002DF00F76C000` | 45 |
+| 173 | Power Rangers: Battle for the Grid | `0100E1E00CF1A000` | 24 |
+| 174 | Transformers: Battlegrounds | `01005E500E528000` | 30 |
+| 175 | Hello Kitty Island Adventure | `010027901C89C000` | 32 |
+| 176 | Moving Out | `0100C4C00E73E000` | 38 |
+| 177 | Moving Out 2 | `010065D018172000` | 28 |
+| 178 | Untitled Goose Game | `010082400BCC6000` | 25 |
+| 179 | Baba Is You | `01002CD00A51C000` | 26 |
+| 180 | Risk of Rain 2 | `010076D00E4BA000` | 205 |
+| 181 | Spelunky 2 | `01007EC013ABC000` | 32 |
+| 182 | Slay the Spire | `010026300BA4A000` | 46 |
+| 183 | Vampire Survivors | `010089A0197E4000` | 243 |
+| 184 | Balatro | `0100CD801CE5E000` | 31 |
+| 185 | Dave the Diver | `010097F018538000` | 56 |
+| 186 | Katana ZERO | `010029600D56A000` | 22 |
+| 187 | Bloodstained: Ritual of the Night | `0100BF500207C000` | 30 |
+| 188 | Castlevania Advance Collection | `0100B33014710000` | 33 |
+| 189 | River City Girls 2 | `0100026016320000` | 28 |
+| 190 | Scott Pilgrim vs. The World: The Game - Complete Edition | `0100394011C30000` | 27 |
+| 191 | Okami HD | `0100276009872000` | 30 |
+| 192 | Red Dead Redemption | `01007820196A6000` | 51 |
+| 193 | Tomb Raider I-III Remastered | `010024601BB16000` | 284 |
+| 194 | Borderlands: Game of the Year Edition | `010064800F66A000` | 31 |
+| 195 | Wolfenstein II: The New Colossus | `01009040091E0000` | 80 |
+| 196 | Metro 2033 Redux | `0100D4900E82C000` | 49 |
+| 197 | Metro: Last Light Redux | `0100F0400E850000` | 49 |
+| 198 | BioShock Remastered | `0100AD10102B2000` | 65 |
+| 199 | Portal Knights | `0100437004170000` | 40 |
+| 200 | Bridge Constructor Portal | `010016E004796000` | 20 |
+| 201 | House Flipper | `0100CAE00EB02000` | 96 |
+| 202 | PowerWash Simulator | `0100926016012000` | 100 |
+| 203 | PICO PARK | `01004EA00DF70000` | 21 |
+| 204 | Duck Game | `0100750001C70000` | 38 |
+| 205 | Don't Starve Together | `010090100E334000` | 29 |
+| 206 | Grounded | `01006F301AE9C000` | 45 |
+| 207 | Subnautica | `0100429011144000` | 20 |
+| 208 | Astroneer | `0100E63013E60000` | 116 |
+| 209 | Slime Rancher: Plortable Edition | `0100B9C0148D0000` | 57 |
+| 210 | Green Hell | `0100453012FEA000` | 68 |
+| 211 | Dead by Daylight | `01004C400CF96000` | 318 |
+| 212 | Outlast 2 | `0100DE70085E8000` | 24 |
+| 213 | Little Nightmares Complete Edition | `01002FC00412C000` | 22 |
+| 214 | Little Nightmares II | `010097100EDD6000` | 35 |
+| 215 | Little Nightmares III | `010066101A55A000` | 44 |
+| 216 | INSIDE | `0100D2D009028000` | 20 |
+| 217 | LIMBO | `01009C8009026000` | 20 |
+| 218 | Firewatch | `0100AC300919A000` | 20 |
+| 219 | Life is Strange Remastered | `0100DC301186A000` | 22 |
+| 220 | Life is Strange: True Colors | `0100500012AB4000` | 40 |
+| 221 | Cat Quest III | `010088501B8F2000` | 30 |
+| 222 | Minecraft Dungeons | `01006C100EC08000` | 104 |
+| 223 | Cooking Simulator | `01001E400FD58000` | 20 |
+| 224 | This War of Mine: Complete Edition | `0100A8700BC2A000` | 59 |
+| 225 | Plague Inc: Evolved | `01000CE00CBB8000` | 250 |
+| 226 | Overcooked! 2 | `01006FD0080B2000` | 54 |
+| 227 | ARK: Survival Evolved | `0100D4A00B284000` | 32 |
+| 228 | Don't Starve: Nintendo Switch Edition | `0100751007ADA000` | 113 |
+| 229 | Until Dawn | `01001E1025697001` | 29 |
+| 230 | 20 Minutes Till Dawn | `0100212019FB6000` | 34 |
+| 231 | Hollow Knight: Silksong | `010013C00E930000` | 52 |
+| 232 | Sonic X Shadow Generations | `01005EA01C0FC000` | 40 |
+| 233 | Sonic Forces | `01001270012B6000` | 48 |
+| 234 | Team Sonic Racing | `010092B0091D0000` | 51 |
+| 235 | Sonic Origins / Origins Plus | `01009FB016286000` | 36 |
+| 236 | Sonic Racing CrossWorlds | `01006E001823C000` | 44 |

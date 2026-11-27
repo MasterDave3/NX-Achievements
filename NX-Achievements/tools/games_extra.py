@@ -309,6 +309,14 @@ EXTRA_GAMES = [
         ('SS_FIRST', 'First Zone', 'Clear the first zone'),
         ('SS_ALL', 'Superstar', 'Clear every zone'),
     ]),
+    ('SAGES1', 'SEGA AGES Sonic The Hedgehog', '010051F00AC5E000', [
+        ('SAGES1_FIRST', 'First Zone', 'Clear your first zone'),
+        ('SAGES1_ALL', 'Classic Champion', 'Clear every zone'),
+    ]),
+    ('SAGES2', 'SEGA AGES Sonic The Hedgehog 2', '01000D200C614000', [
+        ('SAGES2_FIRST', 'First Zone', 'Clear your first zone'),
+        ('SAGES2_ALL', 'Classic Champion', 'Clear every zone'),
+    ]),
     # Dragon Ball FighterZ is already in generate_achievements.py.
 
     # ---- Anime games ----
@@ -578,4 +586,9 @@ STEAM_EXTRA = [
     ('UNTILDAWN', 'Until Dawn', '01001E1025697001', 2172010),
     ('20MTD', '20 Minutes Till Dawn', '0100212019FB6000', 1966900),
     ('SILKSONG', 'Hollow Knight: Silksong', '010013C00E930000', 1030300),
+    ('SONICXS', 'Sonic X Shadow Generations', '01005EA01C0FC000', 2513280),
+    ('SONICFR', 'Sonic Forces', '01001270012B6000', 637100),
+    ('TSR', 'Team Sonic Racing', '010092B0091D0000', 785260),
+    ('SONICOR', 'Sonic Origins / Origins Plus', '01009FB016286000', 1794960),
+    ('SONICCW', 'Sonic Racing CrossWorlds', '01006E001823C000', 2486820),
 ]

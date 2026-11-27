@@ -108,6 +108,8 @@ are deliberately omitted because they mirror real Steam achievements.
 | Power Rangers: Battle for the Grid | `POWERR` | https://steamcommunity.com/stats/1110100/achievements/?l=english |
 | Ring Fit Adventure | `RINGFIT` | https://www.ign.com/wikis/ring-fit-adventure |
 | River City Girls 2 | `RCG2` | https://steamcommunity.com/stats/1920480/achievements/?l=english |
+| SEGA AGES Sonic The Hedgehog | `SAGES1` | https://gamefaqs.gamespot.com/switch/237014-sega-ages-sonic-the-hedgehog/cheats |
+| SEGA AGES Sonic The Hedgehog 2 | `SAGES2` | https://gamefaqs.gamespot.com/switch/247860-sega-ages-sonic-the-hedgehog-2/cheats |
 | Scott Pilgrim vs. The World: The Game - Complete Edition | `SCOTT` | https://steamcommunity.com/stats/2215260/achievements/?l=english |
 | Shin Megami Tensei III Nocturne HD Remaster | `SMT3` | https://www.ign.com/wikis/shin-megami-tensei-iii-nocturne-hd-remaster |
 | Shin Megami Tensei V | `SMTV` | https://en.wikipedia.org/wiki/Shin_Megami_Tensei_V |

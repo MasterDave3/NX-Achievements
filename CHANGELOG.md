@@ -14,8 +14,12 @@ the tags below.
   returning to the game list.
 - Bumped Makefile app version and overlay subtitle to `v0.6.0`.
 - Added **Little Nightmares III** with 44 Steam-mirrored achievements (Switch
-  Title ID `010066101A55A000`, Steam appid `1392860`). Catalog is now
-  **229 games / 9,935 achievements**.
+  Title ID `010066101A55A000`, Steam appid `1392860`).
+- Added the remaining Sonic games available on Switch: **Sonic X Shadow
+  Generations**, **Sonic Forces**, **Team Sonic Racing**, **Sonic Origins /
+  Origins Plus**, **Sonic Racing CrossWorlds**, plus checklist-based goals for
+  **SEGA AGES Sonic The Hedgehog** and **SEGA AGES Sonic The Hedgehog 2**.
+  Catalog is now **236 games / 10,212 achievements**.
 
 ## [v0.5.0] - 2026-11-26
 

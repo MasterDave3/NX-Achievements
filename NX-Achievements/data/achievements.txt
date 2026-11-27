@@ -6478,6 +6478,68 @@
 01008F701C074000|S2022670_DEFEAT_TOTAL1000ENEMY|All in a Day's Work|Defeated 1,000 enemies.
 01008F701C074000|S2022670_DEFEAT_ALL_BONUSENEMY|Gold Enemy Hunter|Defeated the gold enemies in all Stages.
 
+# SEGA AGES Sonic The Hedgehog (010051F00AC5E000)
+010051F00AC5E000|CSAGES1_01|Beat The Clock|Complete Time Attack mode in less than 45 minutes
+010051F00AC5E000|CSAGES1_02|Blast Processing|Clear Green Hill Zone Act 1 in under 30 seconds
+010051F00AC5E000|CSAGES1_03|Block Buster|Break 16 blocks in a row without stopping|16
+010051F00AC5E000|CSAGES1_04|Bombs Away|Defeat the Star Light Zone boss using only the see-saw bombs
+010051F00AC5E000|CSAGES1_05|Chaos Connoisseur|Collect all six Chaos Emeralds|6
+010051F00AC5E000|CSAGES1_06|Flawless Pursuit|Clear the Labyrinth Zone boss without getting hurt
+010051F00AC5E000|CSAGES1_07|Hidden Transporter|Keep 50 rings and take the hidden transporter in Scrap Brain Act 2|50
+010051F00AC5E000|CSAGES1_08|One For the Road|Land the final hit on the escaping Egg Mobile
+010051F00AC5E000|CSAGES1_09|Ramp Ring Acrobatics|Collect every trapezoid ring in Green Hill Act 1 without touching the ground
+010051F00AC5E000|CSAGES1_10|Ring King|Collect 200 rings in one run|200
+010051F00AC5E000|CSAGES1_11|Secret of Labyrinth|Activate and ride the hidden platform in Labyrinth Zone Act 1
+010051F00AC5E000|CSAGES1_12|Secret of Marble|Travel through the secret room in Marble Zone Act 3
+010051F00AC5E000|CSAGES1_13|Tails Unlocked|Complete the game as Sonic
+010051F00AC5E000|CSAGES1_14|Knuckles Unlocked|Complete the game with all Chaos Emeralds
+010051F00AC5E000|CSAGES1_15|Good Ending|Beat the game with all six Chaos Emeralds
+010051F00AC5E000|CSAGES1_16|Level Select|Beat the game once to unlock the Special menu
+010051F00AC5E000|CSAGES1_17|Special Stage Time Attack|Beat the game to unlock Special Stage in Time Attack
+010051F00AC5E000|CSAGES1_18|Juke Box|Beat the Final Zone
+010051F00AC5E000|CSAGES1_19|Sound Effects|Beat the game with the Chaos Emeralds
+010051F00AC5E000|CSAGES1_20|Background Music|Beat the game without the Chaos Emeralds
+010051F00AC5E000|CSAGES1_21|Green Hill Waterfall|Find the five ring monitors behind the Green Hill Act 3 waterfall|5
+010051F00AC5E000|CSAGES1_22|Marble Hidden Room 1|Find the hidden room in Marble Zone Act 1
+010051F00AC5E000|CSAGES1_23|Marble Hidden Room 2|Find the hidden room below the lava block in Marble Zone Act 2
+010051F00AC5E000|CSAGES1_24|Marble Hidden Room 3|Find the hidden room in Marble Zone Act 3
+010051F00AC5E000|CSAGES1_25|Labyrinth Shortcut|Use the hidden platform shortcut in Labyrinth Zone Act 1
+010051F00AC5E000|CSAGES1_26|Spring Yard Tunnel|Use the fenced-off tunnel in Spring Yard Zone Act 2
+010051F00AC5E000|CSAGES1_27|Scrap Brain Shortcut|Skip part of Scrap Brain Zone Act 3 with the opening switch
+010051F00AC5E000|CSAGES1_28|Mega Play|Clear the Mega Play stages added in the SEGA AGES version
+
+# SEGA AGES Sonic The Hedgehog 2 (01000D200C614000)
+01000D200C614000|CSAGES2_01|100% Chemical Free|Complete Chemical Plant without going underwater
+01000D200C614000|CSAGES2_02|A Secret Revealed|Find and complete Hidden Palace Zone
+01000D200C614000|CSAGES2_03|Beat the Clock|Complete Time Attack mode in less than 45 minutes
+01000D200C614000|CSAGES2_04|Bop Non-stop|Defeat any boss with eight consecutive hits without touching the ground|8
+01000D200C614000|CSAGES2_05|Early Bird Special|Collect all seven Chaos Emeralds before Chemical Plant|7
+01000D200C614000|CSAGES2_06|Head 2 Head|Win a two-player Versus race against a friend
+01000D200C614000|CSAGES2_07|Hit it Big|Get a jackpot on the Casino Night slot machines
+01000D200C614000|CSAGES2_08|Metropolis Master|Complete any Metropolis Zone Act without getting hurt
+01000D200C614000|CSAGES2_09|Perfectionist|Get a Perfect Bonus by collecting every Ring in an Act
+01000D200C614000|CSAGES2_10|Quick Run|Clear Emerald Hill Zone Act 1 in under 35 seconds
+01000D200C614000|CSAGES2_11|Scrambled Egg|Defeat Dr. Eggman in Boss Attack mode in under seven minutes
+01000D200C614000|CSAGES2_12|Superstar|Complete any Act as Super Sonic
+01000D200C614000|CSAGES2_13|Tails Ending|Beat the Death Egg with Tails
+01000D200C614000|CSAGES2_14|Super Sonic Mode|Beat the main game to unlock Super Sonic Mode
+01000D200C614000|CSAGES2_15|Super Knuckles Mode|Beat Knuckles in Sonic 2 once to unlock Super Knuckles Mode
+01000D200C614000|CSAGES2_16|Knuckles in Sonic 2|Complete the game as Knuckles
+01000D200C614000|CSAGES2_17|Chaos Master|Collect all seven Chaos Emeralds|7
+01000D200C614000|CSAGES2_18|Miles|Change Tails name to Miles with the SEGA code
+01000D200C614000|CSAGES2_19|Proto Palace|Play the leaked prototype Hidden Palace Zone
+01000D200C614000|CSAGES2_20|Eighth Special Stage|Play the hidden eighth special stage from the sound test
+01000D200C614000|CSAGES2_21|Level Select|Unlock the level select screen
+01000D200C614000|CSAGES2_22|Debug Mode|Enter debug mode from the sound test
+01000D200C614000|CSAGES2_23|Challenge Mode|Reach the goal with 100 rings in Challenge Mode|100
+01000D200C614000|CSAGES2_24|Ring Keep Clear|Complete the game in Ring Keep Mode
+01000D200C614000|CSAGES2_25|Super Sonic Clear|Complete the game in Super Sonic Mode
+01000D200C614000|CSAGES2_26|Boss Attack Zone|Complete Boss Attack Zone
+01000D200C614000|CSAGES2_27|Egg Gauntlet Zone|Complete Egg Gauntlet Zone
+01000D200C614000|CSAGES2_28|Multiplayer Zones|Play all four multiplayer zones|4
+01000D200C614000|CSAGES2_29|Conquering Time|Beat the game in under one hour
+01000D200C614000|CSAGES2_30|Extended Super|Stay in Super Sonic form for one minute
+
 # Demon Slayer: The Hinokami Chronicles (0100309016E7A000)
 0100309016E7A000|CDSLAYER_01|Prologue|Complete the Prologue
 0100309016E7A000|CDSLAYER_02|Chapters|Complete all 8 chapters|8
@@ -10399,3 +10461,232 @@
 010013C00E930000|S1030300_SPEED_COMPLETION|Speed Completion|Achieve 100% game completion and finish the game in under 30 hours
 010013C00E930000|S1030300_STEEL_SOUL|Steel Soul|Finish the game in Steel Soul mode
 010013C00E930000|S1030300_STEEL_SOUL_FULL|Steel Heart|Achieve 100% game completion and finish the game in Steel Soul mode
+
+# Sonic X Shadow Generations (01005EA01C0FC000)
+01005EA01C0FC000|S2513280_ACHIEVEMENT_01|GREEN HILL Restored!|Restore the GREEN HILL Stage Gate.
+01005EA01C0FC000|S2513280_ACHIEVEMENT_02|CHEMICAL PLANT Restored!|Restore the CHEMICAL PLANT Stage Gate.
+01005EA01C0FC000|S2513280_ACHIEVEMENT_03|SKY SANCTUARY Restored!|Restore the SKY SANCTUARY Stage Gate.
+01005EA01C0FC000|S2513280_ACHIEVEMENT_04|SPEED HIGHWAY Restored!|Restore the SPEED HIGHWAY Stage Gate.
+01005EA01C0FC000|S2513280_ACHIEVEMENT_05|CITY ESCAPE Restored!|Restore the CITY ESCAPE Stage Gate.
+01005EA01C0FC000|S2513280_ACHIEVEMENT_06|SEASIDE HILL Restored!|Restore the SEASIDE HILL Stage Gate.
+01005EA01C0FC000|S2513280_ACHIEVEMENT_07|CRISIS CITY Restored!|Restore the CRISIS CITY Stage Gate.
+01005EA01C0FC000|S2513280_ACHIEVEMENT_08|ROOFTOP RUN Restored!|Restore the ROOFTOP RUN Stage Gate.
+01005EA01C0FC000|S2513280_ACHIEVEMENT_09|PLANET WISP Restored!|Restore the PLANET WISP Stage Gate.
+01005EA01C0FC000|S2513280_ACHIEVEMENT_10|Sunny Side Up|Defeat Death Egg Robot.
+01005EA01C0FC000|S2513280_ACHIEVEMENT_11|Perfect Punisher|Defeat Perfect Chaos.
+01005EA01C0FC000|S2513280_ACHIEVEMENT_12|Boom Boom Dragoon|Defeat Egg Dragoon.
+01005EA01C0FC000|S2513280_ACHIEVEMENT_13|Scrap Metal|Defeat Metal Sonic.
+01005EA01C0FC000|S2513280_ACHIEVEMENT_14|Shadow Boxing|Defeat Shadow.
+01005EA01C0FC000|S2513280_ACHIEVEMENT_15|Silver Got Served|Defeat Silver.
+01005EA01C0FC000|S2513280_ACHIEVEMENT_16|Treasure Hunter|Collect all the Chaos Emeralds.
+01005EA01C0FC000|S2513280_ACHIEVEMENT_17|Sonic Generations: All Stages Cleared!|Clear Sonic Generations.
+01005EA01C0FC000|S2513280_ACHIEVEMENT_18|Can't Touch This|Take no damage from the final boss and clear the stage in Sonic Generations.
+01005EA01C0FC000|S2513280_ACHIEVEMENT_19|Big Bang|Get Rank S in all Acts in Sonic Generations.
+01005EA01C0FC000|S2513280_ACHIEVEMENT_20|Sonic Generations: Mission Accomplished!|Clear all the Challenge Acts in Sonic Generations.
+01005EA01C0FC000|S2513280_ACHIEVEMENT_21|Mad Skillz|Get all Skills.
+01005EA01C0FC000|S2513280_ACHIEVEMENT_22|Rescue Professional|Rescue all Chao.
+01005EA01C0FC000|S2513280_ACHIEVEMENT_23|Red Ring Collector|Get all Red Star Rings.
+01005EA01C0FC000|S2513280_ACHIEVEMENT_24|Sonic Generations: (Hedge)Hogging It All Up!|Get all collectibles in Sonic Generations.
+01005EA01C0FC000|S2513280_ACHIEVEMENT_25|SPACE COLONY ARK Restored!|Restore the SPACE COLONY ARK Stage Gate.
+01005EA01C0FC000|S2513280_ACHIEVEMENT_26|RAIL CANYON Restored!|Restore the RAIL CANYON Stage Gate.
+01005EA01C0FC000|S2513280_ACHIEVEMENT_27|KINGDOM VALLEY Restored!|Restore the KINGDOM VALLEY Stage Gate.
+01005EA01C0FC000|S2513280_ACHIEVEMENT_28|SUNSET HEIGHTS Restored!|Restore the SUNSET HEIGHTS Stage Gate.
+01005EA01C0FC000|S2513280_ACHIEVEMENT_29|CHAOS ISLAND Restored!|Restore the CHAOS ISLAND Stage Gate.
+01005EA01C0FC000|S2513280_ACHIEVEMENT_30|RADICAL HIGHWAY Act 2 Cleared!|Clear RADICAL HIGHWAY Act 2.
+01005EA01C0FC000|S2513280_ACHIEVEMENT_31|Vanquished Biolizard|Defeat Biolizard.
+01005EA01C0FC000|S2513280_ACHIEVEMENT_32|Vanquished Metal Overlord|Defeat Metal Overlord.
+01005EA01C0FC000|S2513280_ACHIEVEMENT_33|Vanquished Mephiles|Defeat Mephiles.
+01005EA01C0FC000|S2513280_ACHIEVEMENT_34|Shadow Generations: All Stages Cleared!|Clear Shadow Generations.
+01005EA01C0FC000|S2513280_ACHIEVEMENT_35|Untouchable|Take no damage from the final boss and clear the stage in Shadow Generations.
+01005EA01C0FC000|S2513280_ACHIEVEMENT_36|Ultimate Life Form|Get Rank S in all Acts in Shadow Generations.
+01005EA01C0FC000|S2513280_ACHIEVEMENT_37|Shadow Generations: Mission Accomplished!|Clear all the Challenge Acts in Shadow Generations.
+01005EA01C0FC000|S2513280_ACHIEVEMENT_38|Rocket has been completed...?|Deliver all the rocket parts to Orbot and Cubot.
+01005EA01C0FC000|S2513280_ACHIEVEMENT_39|All Collection Boxes Collected!|Open all Collection Boxes in White Space.
+01005EA01C0FC000|S2513280_ACHIEVEMENT_40|Shadow Generations: (Hedge)Hogging It All Up|Get all collectibles in Shadow Generations.
+
+# Sonic Forces (01001270012B6000)
+01001270012B6000|S637100_CLEAR_STAGE1|A New Story Begins|Cleared Stage 1
+01001270012B6000|S637100_CREATED_AVATOR|Your Own Story|Created an Avatar
+01001270012B6000|S637100_DEFEAT_ZAVOK|Sextuple Trouble|Defeated Zavok
+01001270012B6000|S637100_DEFEAT_INFINITE1|Infinite Possibilites|Drove off Infinite
+01001270012B6000|S637100_DEFEAT_EGGMAN|Mean Egg Machine|Drove off Eggman
+01001270012B6000|S637100_REGAIN_A_WORLD|For the Future|Liberated a world
+01001270012B6000|S637100_DEFEAT_INFINITE2|Courage in Hand|Drove off Infinite again
+01001270012B6000|S637100_ADVERSE_CHANGE|Hope|Turned the tide of the conflict
+01001270012B6000|S637100_DEFEAT_INFINITE3|Bonds of Friendship|Defeated Infinite
+01001270012B6000|S637100_CLEARED_STORY|Saved the World|Restored peace to the world
+01001270012B6000|S637100_CLEARED_SPECIALS|Sonic and the Secret Stages|Cleared all Secret Stages
+01001270012B6000|S637100_CLEARED_EXTRAS|Sonic EXtreme|Cleared all EX Stages
+01001270012B6000|S637100_CORRECT_REDSTARRINGS|Reach for the Red Stars|Collected all Red Star Rings
+01001270012B6000|S637100_CORRECT_NUMBERRINGS_LV1|Sonic Teaches Numbers|Collected Number Rings three times
+01001270012B6000|S637100_CORRECT_NUMBERRINGS_LV2|Don't Lose Count|Collected all Number Rings
+01001270012B6000|S637100_CORRECT_YELLOWMOONRINGS_LV1|Silver Moon Mania|Collected Silver Moon Rings three times
+01001270012B6000|S637100_CORRECT_YELLOWMOONRINGS_LV2|Our Rings are Your Rings|Collected all Silver Moon Rings
+01001270012B6000|S637100_CORRECT_RINGS_LV1|Ring Enthusiast|Collected a total of 10,000 rings. (All Rings held at the end of the stage will be counted.)
+01001270012B6000|S637100_CORRECT_RINGS_LV2|Ring Collector|Collected a total of 50,000 rings. (All Rings held at the end of the stage will be counted.)
+01001270012B6000|S637100_CORRECT_RINGS_LV3|Ring King|Collected a total of 100,000 rings. (All Rings held at the end of the stage will be counted.)
+01001270012B6000|S637100_DEFEAT_ENEMY_LV1|Fighter|Defeated 1,000 enemies
+01001270012B6000|S637100_DEFEAT_ENEMY_LV2|Warrior|Defeated 5,000 enemies
+01001270012B6000|S637100_DEFEAT_ENEMY_LV3|General|Defeated 10,000 enemies
+01001270012B6000|S637100_CHANGE_WISPON|Hooked on Wispons|Changed Wispons for the first time
+01001270012B6000|S637100_EQUIP_ALL_PARTS|Way Past Cool|Equipped a part in every slot
+01001270012B6000|S637100_USE_CLOSET|Running in Style|Used the Closet
+01001270012B6000|S637100_MAX_LEVEL|On a Roll|Achieved a soldier's highest honor
+01001270012B6000|S637100_MAX_LEVEL_ALL|Honor Roll|Achieved highest honors with all races
+01001270012B6000|S637100_USE_RENTAL_FRIEND|Global Allies|Utilized the Rental Avatar function
+01001270012B6000|S637100_MADE_RANKIN|Rivalry Begins|Made it into the rankings
+01001270012B6000|S637100_CREATED_SECOND_AVATOR|A New Beginning|Created your second Avatar
+01001270012B6000|S637100_GET_WISPONS_LV1|Sonic Blaster|Collected 10 Wispons
+01001270012B6000|S637100_GET_WISPONS_LV2|Sonic Jammer|Collected 30 Wispons
+01001270012B6000|S637100_GET_WISPONS_LV3|Sonic Battler|Collected all Wispons
+01001270012B6000|S637100_GET_PARTS_LV1|Outfitter|Collected 50 parts
+01001270012B6000|S637100_GET_PARTS_LV2|Style Hog|Collected 100 parts
+01001270012B6000|S637100_GET_PARTS_LV3|Fashion Unleashed|Collected 500 parts
+01001270012B6000|S637100_GET_PARTS_LV4|You Got Them All|Collected all parts
+01001270012B6000|S637100_CLEARED_DAILY_MISSIONS_LV1|Everyday Enthusiast|Completed 3 Daily Missions
+01001270012B6000|S637100_CLEARED_DAILY_MISSIONS_LV2|Daily Devotee|Completed 5 Daily Missions
+01001270012B6000|S637100_CLEARED_DAILY_MISSIONS_LV3|Constant Connoisseur|Completed 10 Daily Missions
+01001270012B6000|S637100_CLEARED_SOS_MISSIONS_LV1|Super Sonic Rescue|Completed your first SOS Mission
+01001270012B6000|S637100_CLEARED_SOS_MISSIONS_LV2|Freedom Fighter|Completed 5 SOS Missions
+01001270012B6000|S637100_CLEARED_SOS_MISSIONS_LV3|Nameless Hero|Completed 10 SOS Missions
+01001270012B6000|S637100_CLEARED_CHALLENGE_MISSIONS|Up for Any Challenge|Completed all Challenge Missions
+01001270012B6000|S637100_DLC01_ACHIEVEMENT_CORRECT_REDSTARRINGS|Chaos Spear!|Collected all Red Star Rings in Shadow's Story.
+01001270012B6000|S637100_DLC01_ACHIEVEMENT_CORRECT_NUMBERRINGS|Chaos Blast!|Collected all Number Rings in Shadow's Story.
+01001270012B6000|S637100_DLC01_ACHIEVEMENT_CORRECT_YELLOWMOONRING|The One and Only Ultimate Life Form|Collected all Silver Moon Rings in Shadow's Story.
+
+# Team Sonic Racing (010092B0091D0000)
+010092B0091D0000|S785260_PerformMaximumBoostStart|Quick Off The Mark|Perform a maximum Start Line Boost.
+010092B0091D0000|S785260_FinishOnlineRace|Let Me Introduce Myself|Finish an online race.
+010092B0091D0000|S785260_CompleteChapter1|The Taunting Tanuki|Complete Chapter 1 of Team Adventure Mode.
+010092B0091D0000|S785260_CompleteChapter2|Dimensional Rift|Complete Chapter 2 of Team Adventure Mode.
+010092B0091D0000|S785260_CompleteChapter3|Dark Arrival|Complete Chapter 3 of Team Adventure Mode.
+010092B0091D0000|S785260_CompleteChapter4|Cheaters Never Win|Complete Chapter 4 of Team Adventure Mode.
+010092B0091D0000|S785260_CompleteChapter5|Between Zavok And A Hard Place|Complete Chapter 5 of Team Adventure Mode.
+010092B0091D0000|S785260_CompleteChapter6|Kidnapped!|Complete Chapter 6 of Team Adventure Mode.
+010092B0091D0000|S785260_CompleteChapter7|The Final Showdown|Complete Chapter 7 of Team Adventure Mode.
+010092B0091D0000|S785260_PerformSkimBoost|Roadside Assistance|Perform a Skimboost on a slow-moving Teammate.
+010092B0091D0000|S785260_CompleteAllStagesInAChapterOnHard|Go Hard Or Go Home|Complete all possible events on hard in any Team Adventure Mode chapter.
+010092B0091D0000|S785260_CompleteAllStagesInEveryChapterOnHard|Well, That Wasn't So Hard|Complete all Team Adventure chapters on Hard difficulty.
+010092B0091D0000|S785260_EarnEveryStarChapter1|Twinkle Twinkle|Earn every star in Team Adventure Mode Chapter 1.
+010092B0091D0000|S785260_EarnEveryStarChapter2|Starry-eyed|Earn every star in Team Adventure Mode Chapter 2.
+010092B0091D0000|S785260_EarnEveryStarChapter3|Reach For the Stars|Earn every star in Team Adventure Mode Chapter 3.
+010092B0091D0000|S785260_EarnEveryStarChapter4|Starlight, Star Bright|Earn every star in Team Adventure Mode Chapter 4.
+010092B0091D0000|S785260_EarnEveryStarChapter5|Star Power|Earn every star in Team Adventure Mode Chapter 5.
+010092B0091D0000|S785260_EarnEveryStarChapter6|Celestial|Earn every star in Team Adventure Mode Chapter 6.
+010092B0091D0000|S785260_EarnEveryStarChapter7|Supernova|Earn every star in Team Adventure Mode Chapter 7.
+010092B0091D0000|S785260_EarnEveryStar|Can You Feel The Sunshine?|Earn every star in Team Adventure Mode.
+010092B0091D0000|S785260_CollectNRings|Ringmaster|Collect 20,000 Rings.
+010092B0091D0000|S785260_CollectAllKeys|Cagophilist|Collect all of the Team Adventure Mode Keys.
+010092B0091D0000|S785260_SpendNCoins|A Prize Every Time|Spend 5,000 Credits.
+010092B0091D0000|S785260_UnlockAllPerformanceMods|Performance Enhancing Mods|Unlock all of the Performance Mods (Except Legendary Mods).
+010092B0091D0000|S785260_FinishFirstFullyCustomised|The Customizer Is Always Right|Achieve 1st place in a race with a fully customized Vehicle.
+010092B0091D0000|S785260_UnlockAllVehiclePalettes|Speed Painter|Unlock all of the Vehicle Paint Kits.
+010092B0091D0000|S785260_ModifyAVehicle|This Time It's Personal|Modify a vehicle in the Garage.
+010092B0091D0000|S785260_ActivateNTeamUltimates|Ad Ultimatum|Perform a Team Ultimate 3 times in a single Race.
+010092B0091D0000|S785260_PerformNSlingshotsEver|Slingshot Pro|Perform 100 Team Slingshots. (Across all Game Modes).
+010092B0091D0000|S785260_PerformNSlingshotsInARace|Fire The Catapult!|Perform 10 Team Slingshots in a single Race.
+010092B0091D0000|S785260_PerformAllTeamMechanicsInARace|There Is No "I" In Team...|Perform Team Item Transfer, Skimboost, Team Slingshot and Team Ultimate in a single Race.
+010092B0091D0000|S785260_PerformItemTransfer|What's Mine Is Yours|Send an Item Box to a Teammate 5 times during a Race.
+010092B0091D0000|S785260_PerformTripleStunt|Whoa! I'm Getting Dizzy!|Perform a triple Stunt.
+010092B0091D0000|S785260_PerformLongDrift|On The Skids|Stay in a single Drift for over a minute.
+010092B0091D0000|S785260_TripleOrangeWispThreeHits|Target Practice|Land a hit on enemy racers with each use of a x3 Orange Rocket.
+010092B0091D0000|S785260_WhiteWispEscapeProjectile|Threat Neutralized|Use the White Boost to destroy a projectile.
+010092B0091D0000|S785260_WhiteWispCutCorner|Cutting Corners|Use the White Boost to avoid being slowed down by terrain.
+010092B0091D0000|S785260_VioletWispAbsorbAndHitAttacker|Violent Void|Use the Violet Void to absorb a projectile and hit the racer who fired it.
+010092B0091D0000|S785260_RedWispCauseSpinOut|You're Fired|Cause an opponent to spin-out using a Red Burst.
+010092B0091D0000|S785260_BlueWispBlockProjectile|Road Block|Block an incoming projectile with a Blue Cube.
+010092B0091D0000|S785260_AvoidIvoryLightning|Shockproof|Avoid the effect of being hit by an Ivory Lightning.
+010092B0091D0000|S785260_DodgeGreyQuake|Artful Dodging|Avoid every hazard created by a Gray Quake.
+010092B0091D0000|S785260_YellowDrillGainNPositions|Wisp You Were Here|Gain 6 positions by using a single Yellow Drill.
+010092B0091D0000|S785260_PinkWispSpinOutNRacers|Thorn In Their Sides|Cause 3 opponents to spin-out by shunting them with a Pink Spikes active.
+010092B0091D0000|S785260_CyanWispHitNRacers|Cyan Of The Times|Spin out 2 racers with Cyan Laser.
+010092B0091D0000|S785260_JadeWispIgnoreSlowDownSurface|So Far So Jaded|Travel 200 meters over slow-down surfaces with a single use of a Jade Ghost.
+010092B0091D0000|S785260_PerfectRaceOnTrickyTrack|Freezy Peasy|Finish Frozen Junkyard without hitting any hazards or respawning.
+010092B0091D0000|S785260_FirstInOnlineRace|But There Is A Me...|Come first in an online race.
+010092B0091D0000|S785260_BeatAFriendInTimeTrial|A Friend In Speed Is A Friend Indeed|Beat a friend's leaderboard time in Time Trial mode on any track.
+010092B0091D0000|S785260_EggmanSpinsOutSonicThreeTimes|Villainy 101|While playing as Eggman, spin out Sonic 3 times in the same Race.
+010092B0091D0000|S785260_CompleteTeamRaceWithFriends|Sonic Heroes|Complete a Team Race with 2 additional local players on your Team.
+
+# Sonic Origins / Origins Plus (01009FB016286000)
+01009FB016286000|S1794960_ID_00_All_COMPLETE|Complete Clear!|Unlock all Achievements
+01009FB016286000|S1794960_ID_01_SONIC1_WATCH_OPENING|Welcome to Sonic the Hedgehog|Watch the opening for Sonic the Hedgehog
+01009FB016286000|S1794960_ID_02_SONICCD_WATCH_OPENING|Welcome to Sonic CD|Watch the opening for Sonic CD
+01009FB016286000|S1794960_ID_03_SONIC2_WATCH_OPENING|Welcome to Sonic the Hedgehog 2|Watch the opening for Sonic the Hedgehog 2
+01009FB016286000|S1794960_ID_04_SONIC3K_WATCH_OPENING|Welcome to Sonic 3 & Knuckles|Watch the opening for Sonic the Hedgehog 3 & Knuckles
+01009FB016286000|S1794960_ID_05_SONIC1_DEFEAT_MOTORA|Beware Moto Bugs!|Defeat 10 Moto Bugs in Sonic the Hedgehog
+01009FB016286000|S1794960_ID_06_SONIC1_BREATHING_COUNT|Bubbly Breath|Use Air Bubbles in Sonic the Hedgehog
+01009FB016286000|S1794960_ID_07_SONICCD_TIME_WARP|Time Traveler|Travel to the past or future in Sonic CD
+01009FB016286000|S1794960_ID_08_SONICCD_WIN_METAL_SONIC|Shut Down Metal Sonic|Win a race against Metal Sonic in Sonic CD
+01009FB016286000|S1794960_ID_09_SONIC2_DEFEAT_STINGER|Beware Stingers!|Defeat 10 Stingers in Sonic the Hedgehog 2
+01009FB016286000|S1794960_ID_10_SONIC2_WIN_THE_JACKPOT|Lucky Hedgehog|Get the jackpot in Sonic the Hedgehog 2's Casino Night Zone
+01009FB016286000|S1794960_ID_11_SONIC3K_DEFEAT_RHINOBOT|Beware Rhinobots!|Defeat 10 Rhinobots in Sonic the Hedgehog 3 & Knuckles
+01009FB016286000|S1794960_ID_12_SONIC3K_GET_ALL_BARRIERS|Easy Peasy with Shields|Collect 3 types of Shields in Sonic the Hedgehog 3 & Knuckles
+01009FB016286000|S1794960_ID_13_RING_COLLECTOR|Ring Collector|Collect a total of 1000 Rings
+01009FB016286000|S1794960_ID_14_DEFEAT_ENEMY_BY_SPIN_DASH|Gallant Spin Dash|Defeat 30 enemies with the Spin Dash
+01009FB016286000|S1794960_ID_15_NOVICE_HERO|Newbie Hero|Defeat a total of 50 enemies
+01009FB016286000|S1794960_ID_16_WATCH_AT_MUSEUM|Museum Time|View the Museum Premium Content 1 time
+01009FB016286000|S1794960_ID_17_CLEAR_FIRST_MISSION|Very First Mission Clear!|Clear 1 Mission
+01009FB016286000|S1794960_ID_18_KNUCKLES_GLIDING|Knuckles the Echidna|Glide as Knuckles
+01009FB016286000|S1794960_ID_19_TAILS_FLYING|Miles "Tails" Prower|Fly as Tails
+01009FB016286000|S1794960_ID_20_CHALLENGE_BOSSRUSH|Boss Rush Attempt|Try the Boss Rush from any of the titles
+01009FB016286000|S1794960_ID_21_SONIC1_CLEAR_S_RANK_MISSION|Sonic the Hedgehog Mission Master|Clear 10 Sonic the Hedgehog Missions with an S rank
+01009FB016286000|S1794960_ID_22_SONICCD_CLEAR_S_RANK_MISSION|Sonic CD Mission Master|Clear 10 Sonic CD Missions with an S rank
+01009FB016286000|S1794960_ID_23_SONIC2_CLEAR_S_RANK_MISSION|Sonic the Hedgehog 2 Mission Master|Clear 10 Sonic the Hedgehog 2 Missions with an S rank
+01009FB016286000|S1794960_ID_24_SONIC3K_CLEAR_S_RANK_MISSION|S3 & K Mission Master|Clear 10 Sonic the Hedgehog 3 & Knuckles Missions with an S rank
+01009FB016286000|S1794960_ID_25_PLAY_MIRRORING|To the Mirror World|Clear 1 Stage in Mirror Mode
+01009FB016286000|S1794960_ID_26_MOVIE_MANIA|Movie Maniac|Unlock 6 movie collection items with Coins
+01009FB016286000|S1794960_ID_27_SOUND_MANIA|Sound Savant|Unlock 10 sound collection items with Coins
+01009FB016286000|S1794960_ID_28_ART_MANIA|Art Appreciator|Unlock 30 art collection items with Coins
+01009FB016286000|S1794960_ID_29_HERO_FOR_ALL|Everyone's Hero|Defeat a total of 200 enemies
+01009FB016286000|S1794960_ID_30_TRANSFORM_SUPER_SONIC|Super Sonic|Turn into Super Sonic
+01009FB016286000|S1794960_ID_31_SONIC1_CLEAR_ALL_STAGE|Cleared Sonic the Hedgehog|Clear Sonic the Hedgehog in either Anniversary or Classic Mode
+01009FB016286000|S1794960_ID_32_SONICCD_CLEAR_ALL_STAGE|Cleared Sonic CD|Clear Sonic CD in either Anniversary or Classic Mode
+01009FB016286000|S1794960_ID_33_SONIC2_CLEAR_ALL_STAGE|Cleared Sonic the Hedgehog 2|Clear Sonic the Hedgehog 2 in either Anniversary or Classic Mode
+01009FB016286000|S1794960_ID_34_SONIC3K_CLEAR_ALL_STAGE|Cleared Sonic the Hedgehog 3 & Knuckles|Clear Sonic the Hedgehog 3 & Knuckles in either Anniversary or Classic Mode
+01009FB016286000|S1794960_ID_35_CLEAR_ALL_TITLE|All Clear!|Clear all 4 titles
+
+# Sonic Racing CrossWorlds (01006E001823C000)
+01006E001823C000|S2486820_ACH_TERRA_011|Grand Prix Champion|Win any Grand Prix
+01006E001823C000|S2486820_ACH_TERRA_012|Rival Buster|Defeat a rival 5 times
+01006E001823C000|S2486820_ACH_TERRA_013|CrossWorlds Traveler|Race through every CrossWorld in Grand Prix
+01006E001823C000|S2486820_ACH_TERRA_014|Star Seeker|Get all Red Star Rings in any course
+01006E001823C000|S2486820_ACH_TERRA_015|Super Sonic Racing!|Win any Grand Prix on Super Sonic Speed
+01006E001823C000|S2486820_ACH_TERRA_016|Flawless Racing|Achieve a perfect win in any Grand Prix
+01006E001823C000|S2486820_ACH_TERRA_017|New Horizons|Unlock the Secret Grand Prix
+01006E001823C000|S2486820_ACH_TERRA_018|Grand Slam|Win in all Grand Prix
+01006E001823C000|S2486820_ACH_TERRA_019|malS dnarG|Win in all Grand Prix on Mirror Class
+01006E001823C000|S2486820_ACH_TERRA_020|Ultimate Racer|Defeat all rivals
+01006E001823C000|S2486820_ACH_TERRA_021|AI Outrunner|Win against a Rival Team
+01006E001823C000|S2486820_ACH_TERRA_022|Turn the Tables|Win in a group match by using a race bonus
+01006E001823C000|S2486820_ACH_TERRA_023|Sharpshooter|Win 10 times with Double Team Shoot-Out rules
+01006E001823C000|S2486820_ACH_TERRA_024|Skirmisher|Get 1st place in Quick Match 10 times
+01006E001823C000|S2486820_ACH_TERRA_025|Ring Fanatic|Win 10 times with Triple Team Ring Grab rules
+01006E001823C000|S2486820_ACH_TERRA_026|Relay Racer|Win 10 times with Triple Team Tap Boost rules
+01006E001823C000|S2486820_ACH_TERRA_027|Daredevil|Get 1st place with Extreme Match rules 10 times
+01006E001823C000|S2486820_ACH_TERRA_028|Ultimate Park Racer|Defeat all Rival Teams
+01006E001823C000|S2486820_ACH_TERRA_029|Top of the Line|Win against any max level Rival Team
+01006E001823C000|S2486820_ACH_TERRA_030|Data Breach|Defeat all Rival Teams a second time
+01006E001823C000|S2486820_ACH_TERRA_031|Medalist|Obtain A Rank or higher medals on any course
+01006E001823C000|S2486820_ACH_TERRA_032|Raising the Bar|Achieve a new registered personal record on any course
+01006E001823C000|S2486820_ACH_TERRA_033|Safe Driver|Finish a Time Trial without touching a wall once
+01006E001823C000|S2486820_ACH_TERRA_034|Resourceful Racer|Obtain 5 item boxes during a Time Trial race
+01006E001823C000|S2486820_ACH_TERRA_035|Course Navigator|Get A Rank or higher on Sonic Speed in all main courses
+01006E001823C000|S2486820_ACH_TERRA_036|CrossWorld Navigator|Get A Rank or higher on Sonic Speed in all CrossWorlds
+01006E001823C000|S2486820_ACH_TERRA_037|Course Conqueror|Get A Rank or higher on Super Sonic Speed in all main courses
+01006E001823C000|S2486820_ACH_TERRA_038|CrossWorld Conqueror|Get A Rank or higher on Super Sonic Speed in all CrossWorlds
+01006E001823C000|S2486820_ACH_TERRA_039|Jack-of-All-Courses|Get A Rank or higher on Sonic Speed in all courses
+01006E001823C000|S2486820_ACH_TERRA_040|Elite Course Conqueror|Get A Rank or higher on Super Sonic Speed in all courses
+01006E001823C000|S2486820_ACH_TERRA_041|Loyal Customer|Use Donpa Tickets to buy an item
+01006E001823C000|S2486820_ACH_TERRA_042|Decal Connoisseur|Collect all course icon decals
+01006E001823C000|S2486820_ACH_TERRA_043|Speed Demon|Collect all Speed Type parts
+01006E001823C000|S2486820_ACH_TERRA_044|Acceleration Ace|Collect all Acceleration Type parts
+01006E001823C000|S2486820_ACH_TERRA_045|Too Hot to Handle|Collect all Handling Type parts
+01006E001823C000|S2486820_ACH_TERRA_046|Power Trip|Collect all Power Type parts
+01006E001823C000|S2486820_ACH_TERRA_047|Boost Baron|Collect all Boost Type parts
+01006E001823C000|S2486820_ACH_TERRA_048|Horn Connoisseur|Collect all horns
+01006E001823C000|S2486820_ACH_TERRA_049|Chameleon|Obtain a racer skin of any AI racer
+01006E001823C000|S2486820_ACH_TERRA_050|Full Garage|Obtain all Machine parts
+01006E001823C000|S2486820_ACH_TERRA_058|Tinkerer|Rank up the Gadget Plate
+01006E001823C000|S2486820_ACH_TERRA_059|Fully Licensed|Rank up the Gadget Plate until 6 slots are unlocked
+01006E001823C000|S2486820_ACH_TERRA_060|Gearhead|Obtain all rewards granted by race count
+01006E001823C000|S2486820_ACH_TERRA_000|CrossWorld|Unlocked all Achievements

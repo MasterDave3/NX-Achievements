@@ -1,0 +1,76 @@
+"""IGN-style completion lists for the SEGA AGES Sonic ports.
+
+IGN does not publish 100% checklists for these two Switch eShop ports, so the
+goals below come from the Game FAQs achievement/unlockable lists for the same
+games. Target 0 is a one-time toggle; positive targets are countable totals.
+"""
+
+SOURCES = {
+    'SAGES1': 'https://gamefaqs.gamespot.com/switch/237014-sega-ages-sonic-the-hedgehog/cheats',
+    'SAGES2': 'https://gamefaqs.gamespot.com/switch/247860-sega-ages-sonic-the-hedgehog-2/cheats',
+}
+
+GAMES = {
+    'SAGES1': [
+        ('CSAGES1_01', 'Beat The Clock', 'Complete Time Attack mode in less than 45 minutes', 0),
+        ('CSAGES1_02', 'Blast Processing', 'Clear Green Hill Zone Act 1 in under 30 seconds', 0),
+        ('CSAGES1_03', 'Block Buster', 'Break 16 blocks in a row without stopping', 16),
+        ('CSAGES1_04', 'Bombs Away', 'Defeat the Star Light Zone boss using only the see-saw bombs', 0),
+        ('CSAGES1_05', 'Chaos Connoisseur', 'Collect all six Chaos Emeralds', 6),
+        ('CSAGES1_06', 'Flawless Pursuit', 'Clear the Labyrinth Zone boss without getting hurt', 0),
+        ('CSAGES1_07', 'Hidden Transporter', 'Keep 50 rings and take the hidden transporter in Scrap Brain Act 2', 50),
+        ('CSAGES1_08', 'One For the Road', 'Land the final hit on the escaping Egg Mobile', 0),
+        ('CSAGES1_09', 'Ramp Ring Acrobatics', 'Collect every trapezoid ring in Green Hill Act 1 without touching the ground', 0),
+        ('CSAGES1_10', 'Ring King', 'Collect 200 rings in one run', 200),
+        ('CSAGES1_11', 'Secret of Labyrinth', 'Activate and ride the hidden platform in Labyrinth Zone Act 1', 0),
+        ('CSAGES1_12', 'Secret of Marble', 'Travel through the secret room in Marble Zone Act 3', 0),
+        ('CSAGES1_13', 'Tails Unlocked', 'Complete the game as Sonic', 0),
+        ('CSAGES1_14', 'Knuckles Unlocked', 'Complete the game with all Chaos Emeralds', 0),
+        ('CSAGES1_15', 'Good Ending', 'Beat the game with all six Chaos Emeralds', 0),
+        ('CSAGES1_16', 'Level Select', 'Beat the game once to unlock the Special menu', 0),
+        ('CSAGES1_17', 'Special Stage Time Attack', 'Beat the game to unlock Special Stage in Time Attack', 0),
+        ('CSAGES1_18', 'Juke Box', 'Beat the Final Zone', 0),
+        ('CSAGES1_19', 'Sound Effects', 'Beat the game with the Chaos Emeralds', 0),
+        ('CSAGES1_20', 'Background Music', 'Beat the game without the Chaos Emeralds', 0),
+        ('CSAGES1_21', 'Green Hill Waterfall', 'Find the five ring monitors behind the Green Hill Act 3 waterfall', 5),
+        ('CSAGES1_22', 'Marble Hidden Room 1', 'Find the hidden room in Marble Zone Act 1', 0),
+        ('CSAGES1_23', 'Marble Hidden Room 2', 'Find the hidden room below the lava block in Marble Zone Act 2', 0),
+        ('CSAGES1_24', 'Marble Hidden Room 3', 'Find the hidden room in Marble Zone Act 3', 0),
+        ('CSAGES1_25', 'Labyrinth Shortcut', 'Use the hidden platform shortcut in Labyrinth Zone Act 1', 0),
+        ('CSAGES1_26', 'Spring Yard Tunnel', 'Use the fenced-off tunnel in Spring Yard Zone Act 2', 0),
+        ('CSAGES1_27', 'Scrap Brain Shortcut', 'Skip part of Scrap Brain Zone Act 3 with the opening switch', 0),
+        ('CSAGES1_28', 'Mega Play', 'Clear the Mega Play stages added in the SEGA AGES version', 0),
+    ],
+    'SAGES2': [
+        ('CSAGES2_01', '100% Chemical Free', 'Complete Chemical Plant without going underwater', 0),
+        ('CSAGES2_02', 'A Secret Revealed', 'Find and complete Hidden Palace Zone', 0),
+        ('CSAGES2_03', 'Beat the Clock', 'Complete Time Attack mode in less than 45 minutes', 0),
+        ('CSAGES2_04', 'Bop Non-stop', 'Defeat any boss with eight consecutive hits without touching the ground', 8),
+        ('CSAGES2_05', 'Early Bird Special', 'Collect all seven Chaos Emeralds before Chemical Plant', 7),
+        ('CSAGES2_06', 'Head 2 Head', 'Win a two-player Versus race against a friend', 0),
+        ('CSAGES2_07', 'Hit it Big', 'Get a jackpot on the Casino Night slot machines', 0),
+        ('CSAGES2_08', 'Metropolis Master', 'Complete any Metropolis Zone Act without getting hurt', 0),
+        ('CSAGES2_09', 'Perfectionist', 'Get a Perfect Bonus by collecting every Ring in an Act', 0),
+        ('CSAGES2_10', 'Quick Run', 'Clear Emerald Hill Zone Act 1 in under 35 seconds', 0),
+        ('CSAGES2_11', 'Scrambled Egg', 'Defeat Dr. Eggman in Boss Attack mode in under seven minutes', 0),
+        ('CSAGES2_12', 'Superstar', 'Complete any Act as Super Sonic', 0),
+        ('CSAGES2_13', 'Tails Ending', 'Beat the Death Egg with Tails', 0),
+        ('CSAGES2_14', 'Super Sonic Mode', 'Beat the main game to unlock Super Sonic Mode', 0),
+        ('CSAGES2_15', 'Super Knuckles Mode', 'Beat Knuckles in Sonic 2 once to unlock Super Knuckles Mode', 0),
+        ('CSAGES2_16', 'Knuckles in Sonic 2', 'Complete the game as Knuckles', 0),
+        ('CSAGES2_17', 'Chaos Master', 'Collect all seven Chaos Emeralds', 7),
+        ('CSAGES2_18', 'Miles', 'Change Tails name to Miles with the SEGA code', 0),
+        ('CSAGES2_19', 'Proto Palace', 'Play the leaked prototype Hidden Palace Zone', 0),
+        ('CSAGES2_20', 'Eighth Special Stage', 'Play the hidden eighth special stage from the sound test', 0),
+        ('CSAGES2_21', 'Level Select', 'Unlock the level select screen', 0),
+        ('CSAGES2_22', 'Debug Mode', 'Enter debug mode from the sound test', 0),
+        ('CSAGES2_23', 'Challenge Mode', 'Reach the goal with 100 rings in Challenge Mode', 100),
+        ('CSAGES2_24', 'Ring Keep Clear', 'Complete the game in Ring Keep Mode', 0),
+        ('CSAGES2_25', 'Super Sonic Clear', 'Complete the game in Super Sonic Mode', 0),
+        ('CSAGES2_26', 'Boss Attack Zone', 'Complete Boss Attack Zone', 0),
+        ('CSAGES2_27', 'Egg Gauntlet Zone', 'Complete Egg Gauntlet Zone', 0),
+        ('CSAGES2_28', 'Multiplayer Zones', 'Play all four multiplayer zones', 4),
+        ('CSAGES2_29', 'Conquering Time', 'Beat the game in under one hour', 0),
+        ('CSAGES2_30', 'Extended Super', 'Stay in Super Sonic form for one minute', 0),
+    ],
+}
