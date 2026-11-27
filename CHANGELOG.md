@@ -5,6 +5,19 @@ the tags below.
 
 ## [Unreleased]
 
+- Added an experimental **NX-Achievements Watcher** sysmodule for Pokémon Legends
+  Z-A. It reads the live account save with `fsOpenReadOnlySaveDataFileSystem`,
+  decrypts SwishCrypto blocks in C, and counts registered Lumiose Pokedex entries
+  (`CZA_01`).
+- On each new registered Pokémon the watcher writes an Ultrahand external
+  notification JSON under `/config/ultrahand/notifications/` with the same
+  `old/target  +1  ->  new/target` text as the overlay, then updates
+  `progress.txt`. The first successful save read after launch sets a silent
+  baseline so no fake unlock is emitted.
+- Added `NX-Achievements/watcher/source/za_save.hpp`, a host parser test
+  (`tools/za_parse_test.cpp`), and a verified Python prototype
+  (`tools/za_save_probe.py`). The C parser matches PKHeX byte-for-byte on the
+  available Z-A saves and uses the PKHeX-derived 230-species Lumiose dex list.
 - Expanded the catalog by 170 approved games after verifying each title ID in
   blawar/titledb. Steam ports with at least 20 achievements are mirrored only;
   all other games use IGN-style completion checklists. Catalog is now

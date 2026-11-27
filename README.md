@@ -15,6 +15,7 @@ libultrahand, so the same overlay works in both. Open your overlay menu, select
 
 ```
 NX-Achievements/        Overlay source, Makefile, achievement data, generator
+NX-Achievements/watcher/ Automatic-detection sysmodule proof of concept
 libtesla/               Vendored libtesla (GPLv2, see libtesla/LICENSE)
 SUPPORTED_GAMES.md      Full list of supported games and their achievement counts
 CHECKLIST_SOURCES.md    Sources for the non-Steam checklist goals
@@ -34,6 +35,8 @@ README.template.md      Source template for this README
 - Shows `old  +1  ->  new` on every counter step, e.g. `1/10  +1  ->  2/10`.
 - 21,643 achievements across 503 games: IGN-style checklists for all 227 non-Steam
   games, plus mirrored Steam names/descriptions for PC games ported to Switch.
+- Experimental automatic detection for **Pokémon Legends Z-A** through a sysmodule
+  that reads the live save and writes Ultrahand notification JSON files.
 
 ## Build
 
@@ -48,6 +51,15 @@ make -j2
 
 Output: `NX-Achievements/NX-Achievements.ovl`
 
+Build the Z-A watcher sysmodule:
+
+```bash
+cd NX-Achievements/watcher
+make -j2
+```
+
+Output: `NX-Achievements/watcher/NXAchievementsWatcher.nsp`
+
 ## Install
 
 Copy these files to the Switch SD card:
@@ -60,6 +72,28 @@ sd:/switch/achievements/achievements.txt
 Then run **hekate → Tools → Fix Archive Bit** if you wrote from a computer.
 Boot CFW and open Ultrahand (default **ZL + ZR + D-Pad Down**) or Tesla.
 The first screen lists detected games; press **A** on one to open its achievements.
+
+### Automatic detection (Z-A proof of concept)
+
+The watcher is a separate Atmosphère sysmodule. Install it like this:
+
+```
+sd:/atmosphere/contents/6900000000000A01/exefs.nsp        <- NXAchievementsWatcher.nsp
+sd:/atmosphere/contents/6900000000000A01/toolbox.json     <- watcher/toolbox.json
+sd:/atmosphere/contents/6900000000000A01/flags/boot2.flag  <- empty file
+```
+
+Reboot CFW, then launch Pokémon Legends Z-A. The watcher reads the live
+`0100F43008C44000` account save while the game is running. On its first
+successful read it records the current Pokedex count silently so launching the
+game does not fire a fake unlock. Each later registered Pokémon writes one
+Ultrahand toast and increments `CZA_01` in `progress.txt`. Diagnostics are
+appended to `sd:/switch/achievements/watcher.log`.
+
+Only `CZA_01` (Lumiose Pokedex) has automatic detection right now. The other 23
+Z-A goals and every other game still use the manual A/X/Y controls. Ultrahand
+must be active for the external `.notify` toasts to appear; Tesla-only users
+still get the progress file updates but not the automatic popup.
 
 ## Achievement format
 
@@ -98,10 +132,12 @@ goal names, descriptions, targets, or title IDs may still need correction.
 
 - Achievements are tracked manually: A toggles or counts up, X counts down, Y resets.
   A normal Ultrahand/Tesla overlay cannot draw automatic popups over arbitrary
-  games; that requires a game-specific plugin.
+  games. The Z-A watcher is the first game-specific exception.
 - Steam entries are names/descriptions only — the overlay cannot read a Steam
   account or unlock Steam achievements.
-- Automatic checks from save data or memory can be added later per game.
+- Automatic checks from save data or memory are game-specific. Only `CZA_01` is
+  implemented in this proof of concept; the remaining goals need save/memory
+  mappings before they can notify automatically.
 
 ## Changelog
 
@@ -110,6 +146,19 @@ the tags below.
 
 ### [Unreleased]
 
+- Added an experimental **NX-Achievements Watcher** sysmodule for Pokémon Legends
+  Z-A. It reads the live account save with `fsOpenReadOnlySaveDataFileSystem`,
+  decrypts SwishCrypto blocks in C, and counts registered Lumiose Pokedex entries
+  (`CZA_01`).
+- On each new registered Pokémon the watcher writes an Ultrahand external
+  notification JSON under `/config/ultrahand/notifications/` with the same
+  `old/target  +1  ->  new/target` text as the overlay, then updates
+  `progress.txt`. The first successful save read after launch sets a silent
+  baseline so no fake unlock is emitted.
+- Added `NX-Achievements/watcher/source/za_save.hpp`, a host parser test
+  (`tools/za_parse_test.cpp`), and a verified Python prototype
+  (`tools/za_save_probe.py`). The C parser matches PKHeX byte-for-byte on the
+  available Z-A saves and uses the PKHeX-derived 230-species Lumiose dex list.
 - Expanded the catalog by 170 approved games after verifying each title ID in
   blawar/titledb. Steam ports with at least 20 achievements are mirrored only;
   all other games use IGN-style completion checklists. Catalog is now

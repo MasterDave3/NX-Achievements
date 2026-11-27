@@ -6,6 +6,9 @@ build/
 *.nacp
 *.nro
 *.ovl
+*.nso
+*.npdm
+*.nsp
 *.map
 *.lst
 
