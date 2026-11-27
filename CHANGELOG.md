@@ -11,6 +11,12 @@ the tags below.
   **406 games / 16,826 achievements**.
 - Added batch 9 checklist modules and `tools/new_games_batch9.py` so the large
   catalog expansion stays auditable. Data-only change: no `.ovl` rebuild needed.
+- Added 59 more approved games after verifying each title ID in blawar/titledb.
+  Steam ports with at least 20 achievements are mirrored only; the rest use
+  IGN-style completion checklists. Catalog is now
+  **465 games / 19,457 achievements**.
+- Added batch 10 checklist modules and `tools/new_games_batch10.py`, keeping the
+  same data-only release workflow.
 
 ## [v0.6.0] - 2026-11-26
 

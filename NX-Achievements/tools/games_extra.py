@@ -599,3 +599,12 @@ from new_games_batch9 import NEW_EXTRA_GAMES, NEW_STEAM_EXTRA
 
 EXTRA_GAMES.extend(NEW_EXTRA_GAMES)
 STEAM_EXTRA.extend(NEW_STEAM_EXTRA)
+
+# Approved batch 10 additions, kept separate for the same audit reason.
+from new_games_batch10 import (
+    NEW_EXTRA_GAMES as NEW_EXTRA_GAMES_10,
+    NEW_STEAM_EXTRA as NEW_STEAM_EXTRA_10,
+)
+
+EXTRA_GAMES.extend(NEW_EXTRA_GAMES_10)
+STEAM_EXTRA.extend(NEW_STEAM_EXTRA_10)

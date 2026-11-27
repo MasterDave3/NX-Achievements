@@ -8,8 +8,10 @@ are deliberately omitted because they mirror real Steam achievements.
 | 1-2-Switch | `12SWITCH` | https://www.ign.com/wikis/1-2switch |
 | A Short Hike | `SHORT` | https://steamcommunity.com/stats/1055540/achievements/?l=english |
 | ARMS | `ARMS` | https://www.ign.com/wikis/arms |
+| ASTRAL CHAIN | `ASTRAL` | https://www.ign.com/wikis/astral-chain/Walkthrough |
 | Advance Wars 1+2 Re-Boot Camp | `ADVANCEWARS` | https://www.ign.com/wikis/advance-wars-reboot-camp |
 | Animal Crossing New Horizons | `ACNH` | https://www.ign.com/games/animal-crossing-new-horizons/checklists |
+| Apex Legends | `APEX` | https://www.ign.com/wikis/apex-legends |
 | Assassin's Creed III Remastered | `AC3` | https://mapgenie.io/assassins-creed-3/checklist |
 | Assassin's Creed: The Rebel Collection | `ACREBEL` | https://www.ign.com/wikis/assassins-creed-4-black-flag |
 | Assassins Creed The Ezio Collection | `ACEZIO` | https://gamefaqs.gamespot.com/xboxone/196141-assassins-creed-the-ezio-collection/achievements |
@@ -20,6 +22,8 @@ are deliberately omitted because they mirror real Steam achievements.
 | Bayonetta 3 | `BAYONETTA3` | https://www.ign.com/wikis/bayonetta-3/Collectibles |
 | Bayonetta Origins: Cereza and the Lost Demon | `BAYORIGINS` | https://samurai-gamers.com/bayonetta-origins-cereza-and-the-lost-demon/all-collectibles-list-and-guides/ |
 | Big Brain Academy: Brain vs. Brain | `BRAIN` | https://www.ign.com/games/big-brain-academy-brain-vs-brain |
+| Bloodstained: Curse of the Moon | `CURSE1` | https://steamcommunity.com/stats/838310/achievements |
+| Bloodstained: Curse of the Moon 2 | `CURSE2` | https://steamcommunity.com/stats/1257360/achievements |
 | Bloodstained: Ritual of the Night | `BLOODSTAINED` | https://www.ign.com/wikis/bloodstained-ritual-of-the-night/Achievements_and_Trophies |
 | Borderlands: Game of the Year Edition | `BORDERLANDS` | https://steamcommunity.com/stats/729040/achievements/?l=english |
 | Braid Anniversary Edition | `BRAID` | https://steamcommunity.com/stats/499180/achievements/?l=english |
@@ -31,6 +35,7 @@ are deliberately omitted because they mirror real Steam achievements.
 | Clubhouse Games: 51 Worldwide Classics | `CLUBHOUSE` | https://www.nintendo.com/my/switch/as7t/index.html |
 | Crash Team Racing Nitro-Fueled | `CTR` | https://www.ign.com/wikis/crash-team-racing-nitro-fueled/Adventure_Mode_Explained |
 | Crisis Core -Final Fantasy VII- Reunion | `CRISISCORE` | https://www.ign.com/wikis/crisis-core-final-fantasy-vii |
+| Dauntless | `DAUNTLESS` | https://www.ign.com/wikis/dauntless |
 | Deltarune | `DELTARUNE` | https://www.ign.com/wikis/deltarune |
 | Demon Slayer: The Hinokami Chronicles | `DSLAYER` | https://www.ign.com/wikis/demon-slayer-the-hinokami-chronicles/Achievements_and_Trophies |
 | Detective Pikachu Returns | `DETECTIVE` | https://www.ign.com/wikis/detective-pikachu-returns |
@@ -63,6 +68,7 @@ are deliberately omitted because they mirror real Steam achievements.
 | Game Builder Garage | `GBG` | https://www.nintendo.com/ph/switch/awux/lesson/index.html |
 | Go Vacation | `GOVACATION` | https://es.ign.com/go-vacation-nintendo-switch/136959/review/analisis-de-go-vacation-para-nintendo-switch |
 | Griftlands | `GRIFT` | https://steamcommunity.com/stats/601840/achievements/?l=english |
+| GrimGrimoire OnceMore | `GRIM` | https://gamefaqs.gamespot.com/switch/364622-grimgrimoire-oncemore/faqs |
 | Hello Kitty Island Adventure | `HELLOKITTY` | https://steamcommunity.com/stats/2495100/achievements/?l=english |
 | Hyrule Warriors Age of Calamity | `AOC` | https://zeldacentral.com/games/hyrule-warriors-age-of-calamity/100-completion-checklist/ |
 | Hyrule Warriors: Definitive Edition | `HRW` | https://www.ign.com/wikis/hyrule-warriors |
@@ -82,6 +88,7 @@ are deliberately omitted because they mirror real Steam achievements.
 | Kirby Star Allies | `KIRBY_SA` | https://www.ign.com/wikis/kirby-switch |
 | Kirby and the Forgotten Land | `KIRBY_FL` | https://www.ign.com/wikis/kirby-and-the-forgotten-land/How_to_Unlock_Everything |
 | Kirbys Dream Buffet | `KIRBY_BUFFET` | https://www.ign.com/games/kirbys-dream-buffet |
+| LEGO 2K Drive | `LEGO2K` | https://www.ign.com/wikis/lego-2k-drive |
 | LEGO CITY Undercover | `LEGOCITY` | https://www.ign.com/wikis/lego-city-undercover/Gold_Bricks |
 | LIVE A LIVE | `LIVEALIVE` | https://www.ign.com/wikis/live-a-live |
 | Life is Strange Remastered | `LIS` | https://steamcommunity.com/stats/1265920/achievements/?l=english |
@@ -125,11 +132,13 @@ are deliberately omitted because they mirror real Steam achievements.
 | Nintendo Switch Sports | `NSSPORTS` | https://www.ign.com/wikis/nintendo-switch-sports |
 | Octopath Traveler | `OCTOPATH` | https://www.ign.com/wikis/octopath-traveler |
 | Octopath Traveler II | `OCTOPATH2` | https://www.ign.com/wikis/octopath-traveler-2 |
+| Oddmar | `ODDMAR` | https://www.exophase.com/game/oddmar-android/achievements |
 | Okami HD | `OKAMI` | https://www.ign.com/wikis/okami/Trophies |
 | One Piece Odyssey | `ONEPIECE` | https://steamcommunity.com/stats/814000/achievements/?l=english |
 | Overwatch 2 | `OW2` | https://steamcommunity.com/stats/2357570/achievements/?l=english |
 | PGA TOUR 2K21 | `PGA21` | https://steamcommunity.com/stats/1016120/achievements/?l=english |
 | PICO PARK | `PICOPARK` | https://www.nintendo.com/us/store/products/pico-park-switch/ |
+| PICROSS LORD OF THE NAZARICK | `PICROSSLORD` | https://www.nintendo.com/us/store/products/picross-lord-of-the-nazarick-switch |
 | PICROSS S | `PICROSS_S` | https://www.nintendo.com/us/store/products/picross-s-switch/ |
 | PICROSS S Capcom Classics Edition | `PICROSS_CAPCOM` | https://nintendo.com/us/store/products/picross-s-capcom-classics-edition-switch |
 | PICROSS S Doraemon Edition | `PICROSS_DORA` | https://nintendo.com/us/store/products/picross-s-doraemon-and-f-characters-edition-switch |
@@ -177,6 +186,7 @@ are deliberately omitted because they mirror real Steam achievements.
 | SEGA AGES Sonic The Hedgehog 2 | `SAGES2` | https://gamefaqs.gamespot.com/switch/247860-sega-ages-sonic-the-hedgehog-2/cheats |
 | SIGNALIS | `SIGNALIS` | https://steamcommunity.com/stats/1262350/achievements/?l=english |
 | Scott Pilgrim vs. The World: The Game - Complete Edition | `SCOTT` | https://steamcommunity.com/stats/2215260/achievements/?l=english |
+| Shantae | `SHANTAE1` | https://www.ign.com/wikis/shantae |
 | Shin Megami Tensei III Nocturne HD Remaster | `SMT3` | https://www.ign.com/wikis/shin-megami-tensei-iii-nocturne-hd-remaster |
 | Shin Megami Tensei V | `SMTV` | https://en.wikipedia.org/wiki/Shin_Megami_Tensei_V |
 | Shin Megami Tensei V: Vengeance | `SMTVV` | https://en.wikipedia.org/wiki/Shin_Megami_Tensei_V |
@@ -184,6 +194,7 @@ are deliberately omitted because they mirror real Steam achievements.
 | Splatoon 3 | `SPLATOON3` | https://www.ign.com/wikis/splatoon-3/Sunken_Sea_Scroll_Locations |
 | Star Ocean First Departure R | `SO1` | https://www.ign.com/wikis/psp-cheats/Star_Ocean:_First_Departure_Cheats |
 | Street Fighter 30th Anniversary Collection | `SF30` | https://steamcommunity.com/stats/586200/achievements/?l=english |
+| Subnautica: Below Zero | `SUBBELOW` | https://www.ign.com/wikis/subnautica-below-zero |
 | Super Kirby Clash | `KIRBY_CLAN` | https://www.ign.com/games/super-kirby-clash |
 | Super Mario 3D World Bowsers Fury | `S3DW` | https://www.ign.com/wikis/super-mario-3d-world-and-bowsers-fury |
 | Super Mario Bros Wonder | `WONDER` | https://www.ign.com/wikis/super-mario-bros-wonder/List_of_Medals_and_100%25_Completion_Guide |
@@ -199,6 +210,7 @@ are deliberately omitted because they mirror real Steam achievements.
 | The Legend of Zelda: Skyward Sword HD | `SKYSWORD` | https://www.ign.com/wikis/the-legend-of-zelda-skyward-sword/100%_Completion_Checklist |
 | The Legend of Zelda: Tears of the Kingdom | `TOTK` | https://www.ign.com/wikis/the-legend-of-zelda-tears-of-the-kingdom/100_Percent_Completion_Checklist |
 | The Stanley Parable Ultra Deluxe | `STANLEY` | https://steamcommunity.com/stats/1703340/achievements/?l=english |
+| The Turing Test | `TURING` | https://www.gamepressure.com/theturingtest |
 | The Wonderful 101: Remastered | `W101` | https://www.ign.com/wikis/the-wonderful-101 |
 | Tokyo Mirage Sessions #FE Encore | `TMS` | https://www.ign.com/wikis/tokyo-mirage-sessions-fe |
 | Tony Hawk's Pro Skater 1 + 2 | `THPS` | https://www.ign.com/wikis/tony-hawks-pro-skater-1-and-2 |
