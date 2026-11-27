@@ -12,25 +12,91 @@
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>
+#include <map>
 #include <string>
 #include <vector>
 
 namespace {
 
-constexpr u64 ZA_TITLE_ID = 0x0100F43008C44000ULL;
-constexpr const char *ACH_ID = "CZA_01";
-constexpr const char *ACH_NAME = "Lumiose Pokedex";
-constexpr const char *ACH_DESCRIPTION = "Register all 230 unique Pokemon";
-constexpr int ACH_TARGET = 230;
-constexpr const char *NOTIFY_APP_ID = "nxach";
-constexpr const char *NOTIFY_DIR = "/config/ultrahand/notifications";
-constexpr const char *PROGRESS_DIR = "/switch/achievements";
+constexpr const char *DETECTOR_FILE = "/switch/achievements/detectors.txt";
+constexpr const char *ACHIEVEMENT_FILE = "/switch/achievements/achievements.txt";
 constexpr const char *PROGRESS_FILE = "/switch/achievements/progress.txt";
 constexpr const char *PROGRESS_TMP = "/switch/achievements/progress.tmp";
 constexpr const char *LOG_FILE = "/switch/achievements/watcher.log";
+constexpr const char *NOTIFY_DIR = "/config/ultrahand/notifications";
+constexpr const char *NOTIFY_APP_ID = "nxach";
+
+constexpr const char *DEFAULT_DETECTORS =
+    "# NX-Achievements detector rules.\n"
+    "# title_id|achievement_id|kind|target|save_path|block_key|dex_list\n"
+    "0100F43008C44000|CZA_01|swish_pokedex_caught|230|/main|2D87BE5C|lumio_se_230\n";
 
 FsFileSystem g_sd;
 bool g_sdReady = false;
+
+struct Detector {
+    u64 titleId = 0;
+    std::string id;
+    std::string kind;
+    int target = 0;
+    std::string savePath = "/main";
+    u32 blockKey = 0;
+    std::string dexList;
+};
+
+struct AchievementMeta {
+    std::string name;
+    std::string description;
+    int target = 0;
+};
+
+struct DetectorState {
+    Detector detector;
+    bool ready = false;
+    bool warned = false;
+    int value = 0;
+};
+
+struct ProgressState {
+    std::vector<std::string> otherLines;
+    std::map<std::string, int> counts;
+};
+
+std::vector<std::string> splitFields(const std::string &line) {
+    std::vector<std::string> parts;
+    std::size_t start = 0;
+    while (true) {
+        const std::size_t bar = line.find('|', start);
+        if (bar == std::string::npos) {
+            parts.push_back(line.substr(start));
+            break;
+        }
+        parts.push_back(line.substr(start, bar - start));
+        start = bar + 1;
+    }
+    return parts;
+}
+
+std::string trim(const std::string &text) {
+    const std::size_t begin = text.find_first_not_of(" \t\r\n");
+    if (begin == std::string::npos) return "";
+    const std::size_t end = text.find_last_not_of(" \t\r\n");
+    return text.substr(begin, end - begin + 1);
+}
+
+std::string formatTitleId(u64 titleId) {
+    char buffer[32];
+    std::snprintf(buffer, sizeof(buffer), "%016llX", static_cast<unsigned long long>(titleId));
+    return buffer;
+}
+
+u64 parseHex64(const std::string &text) {
+    return static_cast<u64>(std::strtoull(text.c_str(), nullptr, 16));
+}
+
+u32 parseHex32(const std::string &text) {
+    return static_cast<u32>(std::strtoul(text.c_str(), nullptr, 16));
+}
 
 void logMessage(const char *message) {
     if (!g_sdReady) return;
@@ -56,7 +122,7 @@ void ensureDirectories() {
     fsFsCreateDirectory(&g_sd, "/config/ultrahand");
     fsFsCreateDirectory(&g_sd, NOTIFY_DIR);
     fsFsCreateDirectory(&g_sd, "/switch");
-    fsFsCreateDirectory(&g_sd, PROGRESS_DIR);
+    fsFsCreateDirectory(&g_sd, "/switch/achievements");
 }
 
 bool readSdFile(const char *path, std::vector<u8> &out, std::size_t maxSize) {
@@ -93,6 +159,76 @@ bool writeSdFile(const char *path, const void *data, std::size_t size) {
     return R_SUCCEEDED(fsFsCommit(&g_sd));
 }
 
+std::vector<Detector> loadDetectors() {
+    std::vector<u8> raw;
+    std::string content;
+    if (readSdFile(DETECTOR_FILE, raw, 4 * 1024 * 1024)) {
+        content.assign(reinterpret_cast<const char *>(raw.data()), raw.size());
+    } else {
+        content = DEFAULT_DETECTORS;
+        writeSdFile(DETECTOR_FILE, DEFAULT_DETECTORS, std::strlen(DEFAULT_DETECTORS));
+        logMessage("wrote default detectors.txt\n");
+    }
+
+    std::vector<Detector> detectors;
+    std::size_t start = 0;
+    while (start <= content.size()) {
+        std::size_t end = content.find('\n', start);
+        if (end == std::string::npos) end = content.size();
+        std::string line = trim(content.substr(start, end - start));
+        if (!line.empty() && line[0] != '#') {
+            auto parts = splitFields(line);
+            if (parts.size() >= 4) {
+                Detector detector;
+                detector.titleId = parseHex64(parts[0]);
+                detector.id = parts[1];
+                detector.kind = parts[2];
+                detector.target = std::atoi(parts[3].c_str());
+                if (parts.size() > 4) detector.savePath = parts[4];
+                if (parts.size() > 5) detector.blockKey = parseHex32(parts[5]);
+                if (parts.size() > 6) detector.dexList = parts[6];
+                if (detector.titleId != 0 && !detector.id.empty() && detector.target > 0)
+                    detectors.push_back(detector);
+            }
+        }
+        if (end == content.size()) break;
+        start = end + 1;
+    }
+    logf("loaded %zu detector rule(s)\n", detectors.size());
+    return detectors;
+}
+
+AchievementMeta loadAchievementMeta(u64 titleId, const std::string &achievementId) {
+    AchievementMeta meta;
+    meta.name = achievementId;
+    meta.description = achievementId;
+
+    std::vector<u8> raw;
+    if (!readSdFile(ACHIEVEMENT_FILE, raw, 16 * 1024 * 1024)) return meta;
+
+    const std::string content(reinterpret_cast<const char *>(raw.data()), raw.size());
+    const std::string wantedTitle = formatTitleId(titleId);
+    std::size_t start = 0;
+    while (start <= content.size()) {
+        std::size_t end = content.find('\n', start);
+        if (end == std::string::npos) end = content.size();
+        std::string line = trim(content.substr(start, end - start));
+        if (!line.empty() && line[0] != '#') {
+            auto parts = splitFields(line);
+            if (parts.size() >= 4 && parts[1] == achievementId &&
+                (parts[0] == wantedTitle || parts[0] == "*")) {
+                meta.name = parts[2];
+                meta.description = parts[3];
+                if (parts.size() >= 5) meta.target = std::atoi(parts[4].c_str());
+                return meta;
+            }
+        }
+        if (end == content.size()) break;
+        start = end + 1;
+    }
+    return meta;
+}
+
 bool hashValid(const std::vector<u8> &save) {
     if (save.size() <= 0x20) return false;
     Sha256Context context;
@@ -106,9 +242,12 @@ bool hashValid(const std::vector<u8> &save) {
     return std::memcmp(digest, save.data() + save.size() - 0x20, sizeof(digest)) == 0;
 }
 
-bool readDexCountFromFile(FsFileSystem &saveFs, int &count) {
+bool readSwishDexCount(FsFileSystem &saveFs, const std::string &savePath, u32 blockKey,
+                       const std::string &dexList, int &count) {
+    if (dexList != "lumio_se_230") return false;
+
     FsFile file;
-    if (R_FAILED(fsFsOpenFile(&saveFs, "/main", FsOpenMode_Read, &file))) return false;
+    if (R_FAILED(fsFsOpenFile(&saveFs, savePath.c_str(), FsOpenMode_Read, &file))) return false;
 
     s64 fileSize = 0;
     if (R_FAILED(fsFileGetSize(&file, &fileSize)) || fileSize < 0 ||
@@ -127,15 +266,36 @@ bool readDexCountFromFile(FsFileSystem &saveFs, int &count) {
     raw.resize(raw.size() - 0x20);
     nxach::za::cryptStaticXorpad(raw);
 
-    nxach::za::BlockView dex;
-    if (!nxach::za::parseBlocks(raw, nxach::za::KPOKEDEX, dex)) return false;
-    const int detected = nxach::za::countLumiosePokedex(dex);
+    nxach::za::BlockView block;
+    if (!nxach::za::parseBlocks(raw, blockKey, block)) return false;
+    const int detected = nxach::za::countLumiosePokedex(block);
     if (detected < 0) return false;
-    count = std::min(detected, ACH_TARGET);
+    count = detected;
     return true;
 }
 
-int readDexCount() {
+int evaluateDetector(const AccountUid &uid, const Detector &detector) {
+    FsSaveDataAttribute attr{};
+    attr.application_id = detector.titleId;
+    attr.uid = uid;
+    attr.system_save_data_id = 0;
+    attr.save_data_type = FsSaveDataType_Account;
+    attr.save_data_rank = FsSaveDataRank_Primary;
+    attr.save_data_index = 0;
+
+    FsFileSystem saveFs;
+    if (R_FAILED(fsOpenReadOnlySaveDataFileSystem(&saveFs, FsSaveDataSpaceId_User, &attr)))
+        return -1;
+
+    int count = -1;
+    if (detector.kind == "swish_pokedex_caught") {
+        readSwishDexCount(saveFs, detector.savePath, detector.blockKey, detector.dexList, count);
+    }
+    fsFsClose(&saveFs);
+    return count;
+}
+
+int readDetector(const Detector &detector) {
     AccountUid lastUser{};
     std::vector<AccountUid> candidates;
     if (R_SUCCEEDED(accountGetLastOpenedUser(&lastUser))) candidates.push_back(lastUser);
@@ -153,22 +313,8 @@ int readDexCount() {
     }
 
     for (const AccountUid &uid : candidates) {
-        FsSaveDataAttribute attr{};
-        attr.application_id = ZA_TITLE_ID;
-        attr.uid = uid;
-        attr.system_save_data_id = 0;
-        attr.save_data_type = FsSaveDataType_Account;
-        attr.save_data_rank = FsSaveDataRank_Primary;
-        attr.save_data_index = 0;
-
-        FsFileSystem saveFs;
-        if (R_FAILED(fsOpenReadOnlySaveDataFileSystem(&saveFs, FsSaveDataSpaceId_User, &attr)))
-            continue;
-
-        int count = 0;
-        const bool ok = readDexCountFromFile(saveFs, count);
-        fsFsClose(&saveFs);
-        if (ok) return count;
+        const int count = evaluateDetector(uid, detector);
+        if (count >= 0) return count;
     }
     return -1;
 }
@@ -181,17 +327,12 @@ u64 currentTitleId() {
     return titleId;
 }
 
-struct ProgressState {
-    std::vector<std::string> lines;
-    int count = 0;
-};
-
 ProgressState loadProgress() {
     ProgressState state;
     std::vector<u8> raw;
     if (!readSdFile(PROGRESS_FILE, raw, 1024 * 1024)) return state;
 
-    std::string content(reinterpret_cast<const char *>(raw.data()), raw.size());
+    const std::string content(reinterpret_cast<const char *>(raw.data()), raw.size());
     std::size_t start = 0;
     while (start <= content.size()) {
         std::size_t end = content.find('\n', start);
@@ -200,10 +341,11 @@ ProgressState loadProgress() {
         while (!line.empty() && line.back() == '\r') line.pop_back();
 
         const std::size_t bar = line.find('|');
-        if (bar != std::string::npos && line.substr(0, bar) == ACH_ID) {
-            state.count = std::max(0, std::atoi(line.substr(bar + 1).c_str()));
+        if (bar != std::string::npos) {
+            const int value = std::atoi(line.substr(bar + 1).c_str());
+            if (value > 0) state.counts[line.substr(0, bar)] = value;
         } else if (!line.empty()) {
-            state.lines.push_back(line);
+            state.otherLines.push_back(line);
         }
         if (end == content.size()) break;
         start = end + 1;
@@ -211,16 +353,17 @@ ProgressState loadProgress() {
     return state;
 }
 
-void storeProgress(const ProgressState &state, int value) {
+void storeProgress(const ProgressState &state) {
     std::string output;
-    for (const std::string &line : state.lines) {
+    for (const std::string &line : state.otherLines) {
         output += line;
         output += '\n';
     }
-    if (value > 0) {
-        output += ACH_ID;
+    for (const auto &entry : state.counts) {
+        if (entry.second <= 0) continue;
+        output += entry.first;
         output += '|';
-        output += std::to_string(value);
+        output += std::to_string(entry.second);
         output += '\n';
     }
     writeSdFile(PROGRESS_TMP, output.data(), output.size());
@@ -229,11 +372,16 @@ void storeProgress(const ProgressState &state, int value) {
     fsFsCommit(&g_sd);
 }
 
-void sendIncrement(int previous, int current) {
+void sendIncrement(u64 titleId, const Detector &detector, int previous, int current) {
+    const AchievementMeta meta = loadAchievementMeta(titleId, detector.id);
+    const int target = meta.target > 0 ? meta.target : detector.target;
+    const int oldValue = std::min(previous, target);
+    const int newValue = std::min(current, target);
+
     char notificationText[512];
     std::snprintf(notificationText, sizeof(notificationText),
                   "★ %s - %s  %d/%d  +1  ->  %d/%d",
-                  ACH_NAME, ACH_DESCRIPTION, previous, ACH_TARGET, current, ACH_TARGET);
+                  meta.name.c_str(), meta.description.c_str(), oldValue, target, newValue, target);
 
     char json[1024];
     std::snprintf(json, sizeof(json),
@@ -250,10 +398,20 @@ void sendIncrement(int previous, int current) {
                   notificationText);
 
     char path[160];
-    std::snprintf(path, sizeof(path), "%s/%s-%016llX.notify", NOTIFY_DIR, NOTIFY_APP_ID,
+    std::snprintf(path, sizeof(path), "%s/%s-%016llX-%llu.notify", NOTIFY_DIR, NOTIFY_APP_ID,
+                  static_cast<unsigned long long>(titleId),
                   static_cast<unsigned long long>(svcGetSystemTick()));
     writeSdFile(path, json, std::strlen(json));
-    logf("notify %s %d/%d -> %d/%d\n", ACH_ID, previous, ACH_TARGET, current, ACH_TARGET);
+    logf("notify %s %s %d/%d -> %d/%d\n", formatTitleId(titleId).c_str(), detector.id.c_str(),
+         oldValue, target, newValue, target);
+}
+
+std::vector<DetectorState> statesForTitle(const std::vector<Detector> &detectors, u64 titleId) {
+    std::vector<DetectorState> states;
+    for (const Detector &detector : detectors) {
+        if (detector.titleId == titleId) states.push_back({detector, false, false, 0});
+    }
+    return states;
 }
 
 }  // namespace
@@ -268,47 +426,70 @@ int main() {
         ensureDirectories();
     }
 
-    logMessage("NX-Achievements watcher v0.1.0 started\n");
+    logMessage("NX-Achievements watcher v0.2.0 started\n");
+    const std::vector<Detector> detectors = loadDetectors();
 
-    bool wasActive = false;
-    bool baselineReady = false;
-    int baselineCount = 0;
+    u64 activeTitleId = 0;
+    std::vector<DetectorState> states;
 
     while (true) {
-        if (currentTitleId() != ZA_TITLE_ID) {
-            if (wasActive) logMessage("Z-A closed; waiting for next launch\n");
-            wasActive = false;
-            baselineReady = false;
+        const u64 titleId = currentTitleId();
+        if (titleId != activeTitleId) {
+            activeTitleId = titleId;
+            states = statesForTitle(detectors, titleId);
+            if (titleId != 0)
+                logf("title %s: %zu detector rule(s)\n", formatTitleId(titleId).c_str(),
+                     states.size());
+        }
+
+        if (titleId == 0 || states.empty()) {
             svcSleepThread(2 * 1000 * 1000 * 1000ULL);
             continue;
         }
 
-        if (!wasActive) {
-            wasActive = true;
-            baselineReady = false;
-            logMessage("Z-A running; reading save baseline\n");
-        }
+        ProgressState progress = loadProgress();
+        bool progressChanged = false;
 
-        const int detected = readDexCount();
-        if (detected >= 0) {
-            ProgressState progress = loadProgress();
-            const int stored = progress.count;
+        for (DetectorState &state : states) {
+            const int detected = readDetector(state.detector);
+            if (detected < 0) {
+                if (!state.warned) {
+                    logf("detector %s unavailable\n", state.detector.id.c_str());
+                    state.warned = true;
+                }
+                continue;
+            }
+            state.warned = false;
 
-            if (!baselineReady) {
-                baselineCount = std::max(stored, detected);
-                if (baselineCount != stored) storeProgress(progress, baselineCount);
-                logf("baseline %s=%d/%d (save=%d stored=%d)\n", ACH_ID, baselineCount,
-                     ACH_TARGET, detected, stored);
-                baselineReady = true;
-            } else if (detected > baselineCount) {
-                const int current = std::min(detected, ACH_TARGET);
-                for (int value = baselineCount + 1; value <= current; ++value)
-                    sendIncrement(value - 1, value);
-                if (current > stored) storeProgress(progress, current);
-                baselineCount = current;
+            const int stored = progress.counts.count(state.detector.id)
+                                   ? progress.counts[state.detector.id]
+                                   : 0;
+
+            if (!state.ready) {
+                state.value = std::max(stored, detected);
+                if (state.value != stored) {
+                    progress.counts[state.detector.id] = state.value;
+                    progressChanged = true;
+                }
+                logf("baseline %s=%d/%d (save=%d stored=%d)\n", state.detector.id.c_str(),
+                     state.value, state.detector.target, detected, stored);
+                state.ready = true;
+                continue;
+            }
+
+            if (detected > state.value) {
+                const int current = std::min(detected, state.detector.target);
+                for (int value = state.value + 1; value <= current; ++value)
+                    sendIncrement(titleId, state.detector, value - 1, value);
+                if (current > stored) {
+                    progress.counts[state.detector.id] = current;
+                    progressChanged = true;
+                }
+                state.value = current;
             }
         }
 
+        if (progressChanged) storeProgress(progress);
         svcSleepThread(5 * 1000 * 1000 * 1000ULL);
     }
 }

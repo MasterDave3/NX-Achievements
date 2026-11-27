@@ -5,6 +5,13 @@ the tags below.
 
 ## [Unreleased]
 
+- Refactored the watcher into a **generic detector framework**. Rules live in
+  `sdmc:/switch/achievements/detectors.txt` as
+  `title_id|achievement_id|kind|target|save_path|block_key|dex_list`, so any
+  supported game can be added without rebuilding the sysmodule.
+- The watcher now loads achievement name/description/target from the normal
+  `achievements.txt` catalog, keeps silent baselines per active title, and emits
+  the same `old/target  +1  ->  new/target` toast for every new rule.
 - Added an experimental **NX-Achievements Watcher** sysmodule for Pokémon Legends
   Z-A. It reads the live account save with `fsOpenReadOnlySaveDataFileSystem`,
   decrypts SwishCrypto blocks in C, and counts registered Lumiose Pokedex entries

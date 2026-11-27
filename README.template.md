@@ -35,8 +35,11 @@ README.template.md      Source template for this README
 - Shows `old  +1  ->  new` on every counter step, e.g. `1/10  +1  ->  2/10`.
 - 21,643 achievements across 503 games: IGN-style checklists for all 227 non-Steam
   games, plus mirrored Steam names/descriptions for PC games ported to Switch.
-- Experimental automatic detection for **Pokémon Legends Z-A** through a sysmodule
-  that reads the live save and writes Ultrahand notification JSON files.
+- Experimental automatic detection through a generic sysmodule that reads
+  per-game rules from `sdmc:/switch/achievements/detectors.txt`, reads the live
+  save, and writes Ultrahand notification JSON files. New games can be added by
+  editing that data file without rebuilding the sysmodule.
+- First implemented detector: **Pokémon Legends Z-A** Lumiose Pokedex (`CZA_01`).
 
 ## Build
 
@@ -67,6 +70,7 @@ Copy these files to the Switch SD card:
 ```
 sd:/switch/.overlays/NX-Achievements.ovl
 sd:/switch/achievements/achievements.txt
+sd:/switch/achievements/detectors.txt
 ```
 
 Then run **hekate → Tools → Fix Archive Bit** if you wrote from a computer.
@@ -83,17 +87,37 @@ sd:/atmosphere/contents/6900000000000A01/toolbox.json     <- watcher/toolbox.jso
 sd:/atmosphere/contents/6900000000000A01/flags/boot2.flag  <- empty file
 ```
 
-Reboot CFW, then launch Pokémon Legends Z-A. The watcher reads the live
-`0100F43008C44000` account save while the game is running. On its first
-successful read it records the current Pokedex count silently so launching the
-game does not fire a fake unlock. Each later registered Pokémon writes one
-Ultrahand toast and increments `CZA_01` in `progress.txt`. Diagnostics are
-appended to `sd:/switch/achievements/watcher.log`.
+Reboot CFW, then launch a game that has a rule in `detectors.txt`. The watcher
+reads that game's live account save only while the game is running. On its first
+successful read it records the current value silently so launching the game
+does not fire a fake unlock. Every later increment writes one Ultrahand toast
+and updates the matching line in `progress.txt`. Diagnostics are appended to
+`sd:/switch/achievements/watcher.log`.
 
-Only `CZA_01` (Lumiose Pokedex) has automatic detection right now. The other 23
-Z-A goals and every other game still use the manual A/X/Y controls. Ultrahand
-must be active for the external `.notify` toasts to appear; Tesla-only users
-still get the progress file updates but not the automatic popup.
+Only Z-A `CZA_01` has a real detector right now. Every other goal and game still
+uses the manual A/X/Y controls until a verified save/memory rule is added.
+Ultrahand must be active for the external `.notify` toasts to appear; Tesla-only
+users still get the progress file updates but not the automatic popup.
+
+### Detector format
+
+```
+title_id|achievement_id|kind|target|save_path|block_key|dex_list
+```
+
+Current kind:
+
+- `swish_pokedex_caught` — count caught Pokémon in a SwishCrypto Pokédex block.
+  `dex_list` currently supports `lumio_se_230`.
+
+The shipped rule is:
+
+```
+0100F43008C44000|CZA_01|swish_pokedex_caught|230|/main|2D87BE5C|lumio_se_230
+```
+
+Adding a new game is a data-only change: edit `detectors.txt` on the SD card and
+restart CFW. No `.ovl` rebuild is required.
 
 ## Achievement format
 
@@ -135,9 +159,9 @@ goal names, descriptions, targets, or title IDs may still need correction.
   games. The Z-A watcher is the first game-specific exception.
 - Steam entries are names/descriptions only — the overlay cannot read a Steam
   account or unlock Steam achievements.
-- Automatic checks from save data or memory are game-specific. Only `CZA_01` is
-  implemented in this proof of concept; the remaining goals need save/memory
-  mappings before they can notify automatically.
+- Automatic checks from save data or memory are game-specific. The watcher is
+  generic, but only `CZA_01` has a verified detector; the remaining goals need
+  save/memory mappings before they can notify automatically.
 
 <!-- INCLUDE:CHANGELOG.md -->
 

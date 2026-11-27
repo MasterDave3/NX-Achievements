@@ -1,0 +1,16 @@
+# NX-Achievements detector rules.
+# Copy to sd:/switch/achievements/detectors.txt
+#
+# Format:
+# title_id|achievement_id|kind|target|save_path|block_key|dex_list
+#
+# Supported kinds:
+#   swish_pokedex_caught  Count caught Pokemon in a SwishCrypto Pokedex block.
+#                         save_path is relative to the save mount.
+#                         block_key is the SCBlock key in hex.
+#                         dex_list currently supports: lumio_se_230
+#
+# Add one line per automatic achievement. Games with no line stay manual.
+# No rebuild is needed after editing this file on the SD card.
+
+0100F43008C44000|CZA_01|swish_pokedex_caught|230|/main|2D87BE5C|lumio_se_230
