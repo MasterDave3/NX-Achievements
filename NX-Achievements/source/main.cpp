@@ -137,12 +137,14 @@ private:
     std::string m_name;
     std::string m_description;
     std::string m_status;
+    std::string m_progress;
 
 public:
     GuiUnlock(std::string name, std::string description,
-              std::string status = "Achievement unlocked!")
+              std::string status = "Achievement unlocked!",
+              std::string progress = "")
         : m_name(std::move(name)), m_description(std::move(description)),
-          m_status(std::move(status)) {}
+          m_status(std::move(status)), m_progress(std::move(progress)) {}
 
     tsl::elm::Element *createUI() override {
         auto *frame = new tsl::elm::OverlayFrame("NX-Achievements", m_status);
@@ -152,6 +154,10 @@ public:
 
         auto *item = new tsl::elm::ListItem(m_name, m_description);
         list->addItem(item);
+
+        if (!m_progress.empty()) {
+            list->addItem(new tsl::elm::ListItem("Progress", m_progress));
+        }
 
         auto *cont = new tsl::elm::ListItem("Continue", "Press A");
         cont->setClickListener([](u64 keys) {
@@ -180,7 +186,7 @@ public:
     }
 
     tsl::elm::Element *createUI() override {
-        auto *frame = new tsl::elm::OverlayFrame("NX-Achievements", "v0.3.0 - " + m_titleIdText);
+        auto *frame = new tsl::elm::OverlayFrame("NX-Achievements", "v0.4.0 - " + m_titleIdText);
         auto *list = new tsl::elm::List();
 
         const auto achievements = loadAchievements();
@@ -224,7 +230,8 @@ public:
                 auto state = loadProgress();
 
                 if (counted) {
-                    int value = state.count(id);
+                    const int previous = state.count(id);
+                    int value = previous;
                     bool changed = false;
                     bool progressed = false;
                     bool justCompleted = false;
@@ -255,11 +262,15 @@ public:
                     saveProgress(state);
 
                     if (progressed) {
+                        const std::string progress =
+                            std::to_string(std::min(previous, target)) + "/" +
+                            std::to_string(target) + "  +1  ->  " +
+                            std::to_string(std::min(value, target)) + "/" +
+                            std::to_string(target);
                         tsl::changeTo<GuiUnlock>(
-                            name,
-                            description + " (" + std::to_string(std::min(value, target)) +
-                                "/" + std::to_string(target) + ")",
-                            justCompleted ? "Achievement unlocked!" : "Achievement progress");
+                            name, description,
+                            justCompleted ? "Achievement unlocked!" : "Achievement progress",
+                            progress);
                     } else {
                         tsl::changeTo<GuiMain>();
                     }
