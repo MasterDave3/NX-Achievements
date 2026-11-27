@@ -32,7 +32,7 @@ README.template.md      Source template for this README
 - Saves unlock state and counters to `sdmc:/switch/achievements/progress.txt`.
 - Countable goals show `current/target`; **A** adds 1, **X** subtracts 1, **Y** resets.
 - Shows `old  +1  ->  new` on every counter step, e.g. `1/10  +1  ->  2/10`.
-- 19,457 achievements across 465 games: IGN-style checklists for all 221 non-Steam
+- 21,643 achievements across 503 games: IGN-style checklists for all 227 non-Steam
   games, plus mirrored Steam names/descriptions for PC games ported to Switch.
 
 ## Build
@@ -122,6 +122,11 @@ the tags below.
   **465 games / 19,457 achievements**.
 - Added batch 10 checklist modules and `tools/new_games_batch10.py`, keeping the
   same data-only release workflow.
+- Added 38 more approved indie games after verifying each title ID in
+  blawar/titledb. Steam ports with at least 20 achievements are mirrored only;
+  the rest use IGN-style completion checklists. Catalog is now
+  **503 games / 21,643 achievements**.
+- Added the batch 11 checklist module and `tools/new_games_batch11.py`.
 
 ### [v0.6.0] - 2026-11-26
 
@@ -195,10 +200,10 @@ Switch title IDs come from [blawar/titledb](https://github.com/blawar/titledb);
 Steam achievement names/descriptions are mirrored from public Steam community pages.
 Non-Steam games use IGN-style checklist goals; sources are listed in `CHECKLIST_SOURCES.md`.
 
-**465 games · 19,457 achievements** (plus one global `FIRST_BOOT` goal)
+**503 games · 21,643 achievements** (plus one global `FIRST_BOOT` goal)
 
-IGN-style checklist goals cover all 221 non-Steam games, using IGN where available
-and other reputable checklists otherwise. 1473 goals across the catalog are countable
+IGN-style checklist goals cover all 227 non-Steam games, using IGN where available
+and other reputable checklists otherwise. 1529 goals across the catalog are countable
 (`current/target`) and advance with A/X/Y on the overlay.
 
 | # | Game | Title ID | Achievements |
@@ -511,163 +516,201 @@ and other reputable checklists otherwise. 1473 goals across the catalog are coun
 | 306 | ASTRAL CHAIN | `01007300020FA000` | 26 |
 | 307 | Oddmar | `01001F100FA04000` | 26 |
 | 308 | PICROSS LORD OF THE NAZARICK | `010012100E8DC000` | 26 |
-| 309 | Cooking Simulator | `01001E400FD58000` | 20 |
-| 310 | This War of Mine: Complete Edition | `0100A8700BC2A000` | 59 |
-| 311 | Plague Inc: Evolved | `01000CE00CBB8000` | 250 |
-| 312 | Overcooked! 2 | `01006FD0080B2000` | 54 |
-| 313 | ARK: Survival Evolved | `0100D4A00B284000` | 32 |
-| 314 | Don't Starve: Nintendo Switch Edition | `0100751007ADA000` | 113 |
-| 315 | Until Dawn | `01001E1025697001` | 29 |
-| 316 | 20 Minutes Till Dawn | `0100212019FB6000` | 34 |
-| 317 | Hollow Knight: Silksong | `010013C00E930000` | 52 |
-| 318 | Sonic X Shadow Generations | `01005EA01C0FC000` | 40 |
-| 319 | Sonic Forces | `01001270012B6000` | 48 |
-| 320 | Team Sonic Racing | `010092B0091D0000` | 51 |
-| 321 | Sonic Origins / Origins Plus | `01009FB016286000` | 36 |
-| 322 | Sonic Racing CrossWorlds | `01006E001823C000` | 44 |
-| 323 | FINAL FANTASY (Pixel Remaster) | `01000EA014150000` | 24 |
-| 324 | FINAL FANTASY II (Pixel Remaster) | `01006B7014156000` | 28 |
-| 325 | FINAL FANTASY III (Pixel Remaster) | `01002E2014158000` | 31 |
-| 326 | FINAL FANTASY IV (Pixel Remaster) | `01004B301415A000` | 30 |
-| 327 | FINAL FANTASY V (Pixel Remaster) | `0100AA201415C000` | 39 |
-| 328 | FINAL FANTASY VI (Pixel Remaster) | `0100AA001415E000` | 37 |
-| 329 | FINAL FANTASY IX | `01007EF00B094000` | 85 |
-| 330 | Dragon Quest Builders | `010008900705C000` | 20 |
-| 331 | Dragon Quest Treasures | `010049B017774000` | 50 |
-| 332 | Dragon Quest III HD-2D Remake | `01003E601E324000` | 42 |
-| 333 | NieR Automata The End of YoRHa Edition | `010056B015FE8000` | 47 |
-| 334 | Persona 4 Arena Ultimax | `010075A016A3A000` | 51 |
-| 335 | Ys VIII Lacrimosa of Dana | `01007F200B0C0000` | 54 |
-| 336 | Ys IX Monstrum Nox | `0100E390124D8000` | 54 |
-| 337 | Ys Origin | `0100F90010882000` | 46 |
-| 338 | Trails of Cold Steel III | `01005420101DA000` | 53 |
-| 339 | Trails of Cold Steel IV | `0100D3C010DE8000` | 53 |
-| 340 | Trails in the Sky 1st Chapter | `01002C9022770000` | 43 |
-| 341 | Trails in the Sky 2nd Chapter | `01007A2027548000` | 49 |
-| 342 | Trails from Zero | `01001920156C2000` | 49 |
-| 343 | Trails to Azure | `0100FBE015910000` | 57 |
-| 344 | Trails through Daybreak | `010040C01D248000` | 53 |
-| 345 | Trails through Daybreak II | `0100F6701FED4000` | 53 |
-| 346 | Trails into Reverie | `01008CB0156BC000` | 53 |
-| 347 | Romancing SaGa 2 | `01001F600829A000` | 42 |
-| 348 | Romancing SaGa 2 Revenge of the Seven | `010045301B86C000` | 51 |
-| 349 | SaGa SCARLET GRACE AMBITIONS | `010003A00D0B4000` | 56 |
-| 350 | Disgaea 4 Complete+ | `0100A9800E9B4000` | 51 |
-| 351 | Disgaea 5 Complete | `01005700031AE000` | 51 |
-| 352 | Disgaea 7 Vows of the Virtueless | `0100A7801A530000` | 50 |
-| 353 | Rune Factory 3 Special | `0100E000191B4000` | 38 |
-| 354 | Rune Factory 4 Special | `010051D00E3A4000` | 38 |
-| 355 | Rune Factory 5 | `01002F7013224000` | 47 |
-| 356 | Rune Factory Guardians of Azuma | `010022A02008C000` | 81 |
-| 357 | Wizardry Proving Grounds of the Mad Overlord | `010033F01AD2E000` | 28 |
-| 358 | Labyrinth of Refrain Coven of Dusk | `010058500B3E0000` | 57 |
-| 359 | Fairy Fencer F Advent Dark Force | `010002300C632000` | 30 |
-| 360 | Fairy Fencer F Refrain Chord | `0100F760195F2000` | 47 |
-| 361 | Suikoden I&II HD Remaster | `01004BD017080000` | 56 |
-| 362 | Star Ocean Second Story R | `010065301A2E0000` | 51 |
-| 363 | Sea of Stars | `01008C0016544000` | 54 |
-| 364 | The Last Spell | `0100F7101906A000` | 94 |
-| 365 | Baldurs Gate Dark Alliance II | `0100A61018680000` | 26 |
-| 366 | Hogwarts Legacy | `0100F7E00C70E000` | 45 |
-| 367 | Prince of Persia The Lost Crown | `0100210019428000` | 40 |
-| 368 | Dark Souls Remastered | `01004AB00A260000` | 41 |
-| 369 | Resident Evil | `010050F00BC1A000` | 44 |
-| 370 | Resident Evil 0 | `010097000BC10000` | 47 |
-| 371 | Resident Evil 5 | `010018100CD46000` | 70 |
-| 372 | Resident Evil 6 | `01002A000CD48000` | 70 |
-| 373 | Resident Evil Revelations | `0100643002136000` | 50 |
-| 374 | Resident Evil Revelations 2 | `010095300212A000` | 43 |
-| 375 | Resident Evil 3 Cloud | `0100FCE0185B4000` | 32 |
-| 376 | Resident Evil 7 biohazard Cloud | `0100E890185B6000` | 58 |
-| 377 | Borderlands The Pre-Sequel | `010007400FF24000` | 63 |
-| 378 | BioShock Infinite The Complete Edition | `0100D560102C8000` | 80 |
-| 379 | Yakuza Kiwami | `0100C9801FEE6000` | 55 |
-| 380 | Phoenix Wright Ace Attorney Trilogy | `0100CB000A142000` | 30 |
-| 381 | The Great Ace Attorney Chronicles | `010036E00FB20000` | 30 |
-| 382 | Mega Man 11 | `0100B0C0086B0000` | 50 |
-| 383 | Mega Man Legacy Collection | `01002D4007AE0000` | 24 |
-| 384 | Mega Man Legacy Collection 2 | `0100842008EC4000` | 21 |
-| 385 | Mega Man X Legacy Collection | `01005C60086BE000` | 52 |
-| 386 | Mega Man X Legacy Collection 2 | `01005250086C4000` | 52 |
-| 387 | Mega Man Zero/ZX Legacy Collection | `010025C00D410000` | 37 |
-| 388 | Grand Theft Auto III Definitive Edition | `0100C3C012718000` | 29 |
-| 389 | Grand Theft Auto Vice City Definitive Edition | `0100182014022000` | 34 |
-| 390 | Grand Theft Auto San Andreas Definitive Edition | `010065A014024000` | 35 |
-| 391 | LEGO Horizon Adventures | `010073C01AF34000` | 23 |
-| 392 | Inscryption | `010027F017B12000` | 40 |
-| 393 | TUNIC | `0100DA801624E000` | 36 |
-| 394 | ANIMAL WELL | `010020D01AD24000` | 20 |
-| 395 | Lorelei and the Laser Eyes | `01009F701688E000` | 20 |
-| 396 | Outer Wilds | `01003DC0144B6000` | 31 |
-| 397 | Spiritfarer | `0100BD400DC52000` | 39 |
-| 398 | Unpacking | `0100701015846000` | 25 |
-| 399 | Hyper Light Drifter Special Edition | `01003B200B372000` | 23 |
-| 400 | Into the Breach | `010057D00B612000` | 70 |
-| 401 | Wargroove | `01000F0002BB6000` | 23 |
-| 402 | Wargroove 2 | `0100AD401A2F0000` | 23 |
-| 403 | Puyo Puyo Tetris 2 | `010038E011940000` | 43 |
-| 404 | Human Fall Flat | `01000CA004DCA000` | 155 |
-| 405 | Yooka-Laylee | `0100F110029C8000` | 35 |
-| 406 | Yooka-Laylee and the Impossible Lair | `010022F00DA66000` | 47 |
-| 407 | Skul The Hero Slayer | `0100ACF013E9A000` | 101 |
-| 408 | Brotato | `01002EF01A316000` | 200 |
-| 409 | Cassette Beasts | `010066F01A0E0000` | 123 |
-| 410 | Coromon | `010048D014322000` | 80 |
-| 411 | Nexomon Extinction | `01005A5011A44000` | 56 |
-| 412 | Monster Crown | `0100E0600C78E000` | 33 |
-| 413 | Hades II | `0100A00019DE0000` | 50 |
-| 414 | Cris Tales | `0100B0400EBC4000` | 46 |
-| 415 | WRC 9 | `01001A0011798000` | 43 |
-| 416 | WRC 10 | `01003E3014AFE000` | 46 |
-| 417 | WRC Generations | `0100041018810000` | 44 |
-| 418 | VA-11 Hall-A | `010086500D3C8000` | 34 |
-| 419 | Monster Hunter Stories | `010069301B1D4000` | 50 |
-| 420 | Tactics Ogre: Reborn | `0100E12013C1A000` | 34 |
-| 421 | OCTOPATH TRAVELER 0 | `01005270232F2000` | 37 |
-| 422 | Valkyria Chronicles | `0100CAF00B744000` | 20 |
-| 423 | Valkyria Chronicles 4 | `01005C600AC68000` | 36 |
-| 424 | LOST SPHEAR | `010077B0038B2000` | 50 |
-| 425 | Romancing SaGa 3 | `0100D0400D27A000` | 41 |
-| 426 | Romancing SaGa -Minstrel Song- Remastered | `01004A6017E8A000` | 46 |
-| 427 | Trials of Mana | `0100D7800E9E0000` | 44 |
-| 428 | SaGa Frontier Remastered | `0100A51013530000` | 46 |
-| 429 | SaGa Frontier 2 Remastered | `0100F2301BD98000` | 44 |
-| 430 | FINAL FANTASY TACTICS - The Ivalice Chronicles | `010038B015560000` | 50 |
-| 431 | BioShock 2 Remastered | `01002620102C6000` | 53 |
-| 432 | EA SPORTS FC 25 | `010054E01D878000` | 39 |
-| 433 | Mortal Kombat 1 | `01006560184E6000` | 50 |
-| 434 | Batman: Arkham Asylum | `0100E870163CA000` | 47 |
-| 435 | Batman: Arkham City | `01003F00163CE000` | 64 |
-| 436 | Batman: Arkham Knight | `0100ACD0163D0000` | 113 |
-| 437 | Ghostbusters: The Video Game Remastered | `0100EAE00D9EC000` | 40 |
-| 438 | Ghostbusters: Spirits Unleashed Ecto Edition | `01005D2016934000` | 51 |
-| 439 | LEGO Bricktales | `0100B12017F0A000` | 21 |
-| 440 | Kingdom Come Deliverance: Royal Edition | `0100650018FE0000` | 82 |
-| 441 | The Outer Worlds | `0100626011656000` | 68 |
-| 442 | Fallout Shelter | `010043500A17A000` | 35 |
-| 443 | Minecraft Legends | `01007C6012CC8000` | 40 |
-| 444 | No Man's Sky | `0100853015E86000` | 27 |
-| 445 | Warframe | `0100FEE00A64E000` | 193 |
-| 446 | The Talos Principle: Deluxe Edition | `010092A00D43C000` | 40 |
-| 447 | Portal 2 | `0100ABD01785C000` | 51 |
-| 448 | Tetris Effect: Connected | `0100DE501433A000` | 43 |
-| 449 | SUPER BOMBERMAN R 2 | `0100B87017D94000` | 39 |
-| 450 | Neon White | `0100B9201406A000` | 63 |
-| 451 | The Pathless | `0100D5501522C000` | 43 |
-| 452 | Ary and the Secret of Seasons | `0100C2500CAB6000` | 38 |
-| 453 | Trine 4: The Nightmare Prince | `010055E00CA68000` | 39 |
-| 454 | Puyo Puyo Tetris | `010073C001D5E000` | 42 |
-| 455 | Shantae: Half-Genie Hero | `0100AE0003424000` | 65 |
-| 456 | Shantae and the Seven Sirens | `0100EB901040A000` | 40 |
-| 457 | Shantae and the Pirate's Curse | `0100EFD00A4FA000` | 44 |
-| 458 | Shantae Advance: Risky Revolution | `010031101D400000` | 33 |
-| 459 | Shantae: Risky's Revenge - Director's Cut | `0100ADA012370000` | 26 |
-| 460 | Victor Vran Overkill Edition | `0100E81007A06000` | 90 |
-| 461 | Warhammer 40,000: Boltgun | `01005FD017E60000` | 21 |
-| 462 | Warhammer 40,000: Mechanicus | `0100C6000EEA8000` | 34 |
-| 463 | DAEMON X MACHINA | `0100B6400CA56000` | 61 |
-| 464 | Raji: An Ancient Epic | `010010B00DDA2000` | 21 |
-| 465 | Defense Grid 2 | `010061300BBF8000` | 65 |
+| 309 | Risk of Rain | `0100AAA00ACBE000` | 26 |
+| 310 | Owlboy | `0100BC2004FF4000` | 26 |
+| 311 | Wonder Boy: The Dragon's Trap | `0100A6300150C000` | 26 |
+| 312 | Venba | `01002F20193C6000` | 26 |
+| 313 | Keep Talking and Nobody Explodes | `01008D400A584000` | 26 |
+| 314 | Bad North | `0100E98006F22000` | 26 |
+| 315 | Cooking Simulator | `01001E400FD58000` | 20 |
+| 316 | This War of Mine: Complete Edition | `0100A8700BC2A000` | 59 |
+| 317 | Plague Inc: Evolved | `01000CE00CBB8000` | 250 |
+| 318 | Overcooked! 2 | `01006FD0080B2000` | 54 |
+| 319 | ARK: Survival Evolved | `0100D4A00B284000` | 32 |
+| 320 | Don't Starve: Nintendo Switch Edition | `0100751007ADA000` | 113 |
+| 321 | Until Dawn | `01001E1025697001` | 29 |
+| 322 | 20 Minutes Till Dawn | `0100212019FB6000` | 34 |
+| 323 | Hollow Knight: Silksong | `010013C00E930000` | 52 |
+| 324 | Sonic X Shadow Generations | `01005EA01C0FC000` | 40 |
+| 325 | Sonic Forces | `01001270012B6000` | 48 |
+| 326 | Team Sonic Racing | `010092B0091D0000` | 51 |
+| 327 | Sonic Origins / Origins Plus | `01009FB016286000` | 36 |
+| 328 | Sonic Racing CrossWorlds | `01006E001823C000` | 44 |
+| 329 | FINAL FANTASY (Pixel Remaster) | `01000EA014150000` | 24 |
+| 330 | FINAL FANTASY II (Pixel Remaster) | `01006B7014156000` | 28 |
+| 331 | FINAL FANTASY III (Pixel Remaster) | `01002E2014158000` | 31 |
+| 332 | FINAL FANTASY IV (Pixel Remaster) | `01004B301415A000` | 30 |
+| 333 | FINAL FANTASY V (Pixel Remaster) | `0100AA201415C000` | 39 |
+| 334 | FINAL FANTASY VI (Pixel Remaster) | `0100AA001415E000` | 37 |
+| 335 | FINAL FANTASY IX | `01007EF00B094000` | 85 |
+| 336 | Dragon Quest Builders | `010008900705C000` | 20 |
+| 337 | Dragon Quest Treasures | `010049B017774000` | 50 |
+| 338 | Dragon Quest III HD-2D Remake | `01003E601E324000` | 42 |
+| 339 | NieR Automata The End of YoRHa Edition | `010056B015FE8000` | 47 |
+| 340 | Persona 4 Arena Ultimax | `010075A016A3A000` | 51 |
+| 341 | Ys VIII Lacrimosa of Dana | `01007F200B0C0000` | 54 |
+| 342 | Ys IX Monstrum Nox | `0100E390124D8000` | 54 |
+| 343 | Ys Origin | `0100F90010882000` | 46 |
+| 344 | Trails of Cold Steel III | `01005420101DA000` | 53 |
+| 345 | Trails of Cold Steel IV | `0100D3C010DE8000` | 53 |
+| 346 | Trails in the Sky 1st Chapter | `01002C9022770000` | 43 |
+| 347 | Trails in the Sky 2nd Chapter | `01007A2027548000` | 49 |
+| 348 | Trails from Zero | `01001920156C2000` | 49 |
+| 349 | Trails to Azure | `0100FBE015910000` | 57 |
+| 350 | Trails through Daybreak | `010040C01D248000` | 53 |
+| 351 | Trails through Daybreak II | `0100F6701FED4000` | 53 |
+| 352 | Trails into Reverie | `01008CB0156BC000` | 53 |
+| 353 | Romancing SaGa 2 | `01001F600829A000` | 42 |
+| 354 | Romancing SaGa 2 Revenge of the Seven | `010045301B86C000` | 51 |
+| 355 | SaGa SCARLET GRACE AMBITIONS | `010003A00D0B4000` | 56 |
+| 356 | Disgaea 4 Complete+ | `0100A9800E9B4000` | 51 |
+| 357 | Disgaea 5 Complete | `01005700031AE000` | 51 |
+| 358 | Disgaea 7 Vows of the Virtueless | `0100A7801A530000` | 50 |
+| 359 | Rune Factory 3 Special | `0100E000191B4000` | 38 |
+| 360 | Rune Factory 4 Special | `010051D00E3A4000` | 38 |
+| 361 | Rune Factory 5 | `01002F7013224000` | 47 |
+| 362 | Rune Factory Guardians of Azuma | `010022A02008C000` | 81 |
+| 363 | Wizardry Proving Grounds of the Mad Overlord | `010033F01AD2E000` | 28 |
+| 364 | Labyrinth of Refrain Coven of Dusk | `010058500B3E0000` | 57 |
+| 365 | Fairy Fencer F Advent Dark Force | `010002300C632000` | 30 |
+| 366 | Fairy Fencer F Refrain Chord | `0100F760195F2000` | 47 |
+| 367 | Suikoden I&II HD Remaster | `01004BD017080000` | 56 |
+| 368 | Star Ocean Second Story R | `010065301A2E0000` | 51 |
+| 369 | Sea of Stars | `01008C0016544000` | 54 |
+| 370 | The Last Spell | `0100F7101906A000` | 94 |
+| 371 | Baldurs Gate Dark Alliance II | `0100A61018680000` | 26 |
+| 372 | Hogwarts Legacy | `0100F7E00C70E000` | 45 |
+| 373 | Prince of Persia The Lost Crown | `0100210019428000` | 40 |
+| 374 | Dark Souls Remastered | `01004AB00A260000` | 41 |
+| 375 | Resident Evil | `010050F00BC1A000` | 44 |
+| 376 | Resident Evil 0 | `010097000BC10000` | 47 |
+| 377 | Resident Evil 5 | `010018100CD46000` | 70 |
+| 378 | Resident Evil 6 | `01002A000CD48000` | 70 |
+| 379 | Resident Evil Revelations | `0100643002136000` | 50 |
+| 380 | Resident Evil Revelations 2 | `010095300212A000` | 43 |
+| 381 | Resident Evil 3 Cloud | `0100FCE0185B4000` | 32 |
+| 382 | Resident Evil 7 biohazard Cloud | `0100E890185B6000` | 58 |
+| 383 | Borderlands The Pre-Sequel | `010007400FF24000` | 63 |
+| 384 | BioShock Infinite The Complete Edition | `0100D560102C8000` | 80 |
+| 385 | Yakuza Kiwami | `0100C9801FEE6000` | 55 |
+| 386 | Phoenix Wright Ace Attorney Trilogy | `0100CB000A142000` | 30 |
+| 387 | The Great Ace Attorney Chronicles | `010036E00FB20000` | 30 |
+| 388 | Mega Man 11 | `0100B0C0086B0000` | 50 |
+| 389 | Mega Man Legacy Collection | `01002D4007AE0000` | 24 |
+| 390 | Mega Man Legacy Collection 2 | `0100842008EC4000` | 21 |
+| 391 | Mega Man X Legacy Collection | `01005C60086BE000` | 52 |
+| 392 | Mega Man X Legacy Collection 2 | `01005250086C4000` | 52 |
+| 393 | Mega Man Zero/ZX Legacy Collection | `010025C00D410000` | 37 |
+| 394 | Grand Theft Auto III Definitive Edition | `0100C3C012718000` | 29 |
+| 395 | Grand Theft Auto Vice City Definitive Edition | `0100182014022000` | 34 |
+| 396 | Grand Theft Auto San Andreas Definitive Edition | `010065A014024000` | 35 |
+| 397 | LEGO Horizon Adventures | `010073C01AF34000` | 23 |
+| 398 | Inscryption | `010027F017B12000` | 40 |
+| 399 | TUNIC | `0100DA801624E000` | 36 |
+| 400 | ANIMAL WELL | `010020D01AD24000` | 20 |
+| 401 | Lorelei and the Laser Eyes | `01009F701688E000` | 20 |
+| 402 | Outer Wilds | `01003DC0144B6000` | 31 |
+| 403 | Spiritfarer | `0100BD400DC52000` | 39 |
+| 404 | Unpacking | `0100701015846000` | 25 |
+| 405 | Hyper Light Drifter Special Edition | `01003B200B372000` | 23 |
+| 406 | Into the Breach | `010057D00B612000` | 70 |
+| 407 | Wargroove | `01000F0002BB6000` | 23 |
+| 408 | Wargroove 2 | `0100AD401A2F0000` | 23 |
+| 409 | Puyo Puyo Tetris 2 | `010038E011940000` | 43 |
+| 410 | Human Fall Flat | `01000CA004DCA000` | 155 |
+| 411 | Yooka-Laylee | `0100F110029C8000` | 35 |
+| 412 | Yooka-Laylee and the Impossible Lair | `010022F00DA66000` | 47 |
+| 413 | Skul The Hero Slayer | `0100ACF013E9A000` | 101 |
+| 414 | Brotato | `01002EF01A316000` | 200 |
+| 415 | Cassette Beasts | `010066F01A0E0000` | 123 |
+| 416 | Coromon | `010048D014322000` | 80 |
+| 417 | Nexomon Extinction | `01005A5011A44000` | 56 |
+| 418 | Monster Crown | `0100E0600C78E000` | 33 |
+| 419 | Hades II | `0100A00019DE0000` | 50 |
+| 420 | Cris Tales | `0100B0400EBC4000` | 46 |
+| 421 | WRC 9 | `01001A0011798000` | 43 |
+| 422 | WRC 10 | `01003E3014AFE000` | 46 |
+| 423 | WRC Generations | `0100041018810000` | 44 |
+| 424 | VA-11 Hall-A | `010086500D3C8000` | 34 |
+| 425 | Monster Hunter Stories | `010069301B1D4000` | 50 |
+| 426 | Tactics Ogre: Reborn | `0100E12013C1A000` | 34 |
+| 427 | OCTOPATH TRAVELER 0 | `01005270232F2000` | 37 |
+| 428 | Valkyria Chronicles | `0100CAF00B744000` | 20 |
+| 429 | Valkyria Chronicles 4 | `01005C600AC68000` | 36 |
+| 430 | LOST SPHEAR | `010077B0038B2000` | 50 |
+| 431 | Romancing SaGa 3 | `0100D0400D27A000` | 41 |
+| 432 | Romancing SaGa -Minstrel Song- Remastered | `01004A6017E8A000` | 46 |
+| 433 | Trials of Mana | `0100D7800E9E0000` | 44 |
+| 434 | SaGa Frontier Remastered | `0100A51013530000` | 46 |
+| 435 | SaGa Frontier 2 Remastered | `0100F2301BD98000` | 44 |
+| 436 | FINAL FANTASY TACTICS - The Ivalice Chronicles | `010038B015560000` | 50 |
+| 437 | BioShock 2 Remastered | `01002620102C6000` | 53 |
+| 438 | EA SPORTS FC 25 | `010054E01D878000` | 39 |
+| 439 | Mortal Kombat 1 | `01006560184E6000` | 50 |
+| 440 | Batman: Arkham Asylum | `0100E870163CA000` | 47 |
+| 441 | Batman: Arkham City | `01003F00163CE000` | 64 |
+| 442 | Batman: Arkham Knight | `0100ACD0163D0000` | 113 |
+| 443 | Ghostbusters: The Video Game Remastered | `0100EAE00D9EC000` | 40 |
+| 444 | Ghostbusters: Spirits Unleashed Ecto Edition | `01005D2016934000` | 51 |
+| 445 | LEGO Bricktales | `0100B12017F0A000` | 21 |
+| 446 | Kingdom Come Deliverance: Royal Edition | `0100650018FE0000` | 82 |
+| 447 | The Outer Worlds | `0100626011656000` | 68 |
+| 448 | Fallout Shelter | `010043500A17A000` | 35 |
+| 449 | Minecraft Legends | `01007C6012CC8000` | 40 |
+| 450 | No Man's Sky | `0100853015E86000` | 27 |
+| 451 | Warframe | `0100FEE00A64E000` | 193 |
+| 452 | The Talos Principle: Deluxe Edition | `010092A00D43C000` | 40 |
+| 453 | Portal 2 | `0100ABD01785C000` | 51 |
+| 454 | Tetris Effect: Connected | `0100DE501433A000` | 43 |
+| 455 | SUPER BOMBERMAN R 2 | `0100B87017D94000` | 39 |
+| 456 | Neon White | `0100B9201406A000` | 63 |
+| 457 | The Pathless | `0100D5501522C000` | 43 |
+| 458 | Ary and the Secret of Seasons | `0100C2500CAB6000` | 38 |
+| 459 | Trine 4: The Nightmare Prince | `010055E00CA68000` | 39 |
+| 460 | Puyo Puyo Tetris | `010073C001D5E000` | 42 |
+| 461 | Shantae: Half-Genie Hero | `0100AE0003424000` | 65 |
+| 462 | Shantae and the Seven Sirens | `0100EB901040A000` | 40 |
+| 463 | Shantae and the Pirate's Curse | `0100EFD00A4FA000` | 44 |
+| 464 | Shantae Advance: Risky Revolution | `010031101D400000` | 33 |
+| 465 | Shantae: Risky's Revenge - Director's Cut | `0100ADA012370000` | 26 |
+| 466 | Victor Vran Overkill Edition | `0100E81007A06000` | 90 |
+| 467 | Warhammer 40,000: Boltgun | `01005FD017E60000` | 21 |
+| 468 | Warhammer 40,000: Mechanicus | `0100C6000EEA8000` | 34 |
+| 469 | DAEMON X MACHINA | `0100B6400CA56000` | 61 |
+| 470 | Raji: An Ancient Epic | `010010B00DDA2000` | 21 |
+| 471 | Defense Grid 2 | `010061300BBF8000` | 65 |
+| 472 | DUSK | `01007740160D4000` | 30 |
+| 473 | Rogue Legacy 2 | `01007DA0134C0000` | 39 |
+| 474 | Dead Estate | `01009DC017B4E000` | 200 |
+| 475 | Void Bastards | `0100D010113A8000` | 24 |
+| 476 | Dungreed | `0100FAD00C2AA000` | 24 |
+| 477 | Backpack Hero | `0100B6301ABD6000` | 35 |
+| 478 | Shogun Showdown | `010096F01B4D8000` | 36 |
+| 479 | Bastion | `010038600B27E000` | 24 |
+| 480 | Transistor | `0100BE500BEA2000` | 33 |
+| 481 | The Messenger | `0100DC300AC78000` | 48 |
+| 482 | Axiom Verge | `0100052004384000` | 29 |
+| 483 | Axiom Verge 2 | `01002FC010240000` | 28 |
+| 484 | RUINER | `01006EC00F2CC000` | 33 |
+| 485 | Furi | `01009D3008D20000` | 33 |
+| 486 | Salt and Sanctuary | `0100D250083B4000` | 37 |
+| 487 | Blasphemous | `0100698009C6E000` | 45 |
+| 488 | Blasphemous 2 | `010040801A4C8000` | 60 |
+| 489 | Greak: Memories of Azur | `010045E012ECE000` | 24 |
+| 490 | The Swords of Ditto: Mormo's Curse | `010037D00D568000` | 20 |
+| 491 | Eastward | `010071B00F63A000` | 30 |
+| 492 | Dinkum | `0100A5A020D5E000` | 25 |
+| 493 | Garden Story | `0100B4D012490000` | 21 |
+| 494 | Lil Gator Game | `0100100016FB0000` | 41 |
+| 495 | Monster Sanctuary | `0100A0F00DA68000` | 41 |
+| 496 | Siralim Ultimate | `0100AC1019560000` | 320 |
+| 497 | Wobbly Life | `010039501F11C000` | 68 |
+| 498 | Q.U.B.E. 2 | `010023600AA34000` | 29 |
+| 499 | Mini Metro | `0100091008272000` | 73 |
+| 500 | Mini Motorways | `01000D3015088000` | 170 |
+| 501 | Dorfromantik | `01007F2019132000` | 85 |
+| 502 | Stacklands | `01008B701BEE8000` | 36 |
+| 503 | Northgard | `0100A9E00D97A000` | 289 |
 
 ## Checklist sources
 
@@ -686,6 +729,7 @@ are deliberately omitted because they mirror real Steam achievements.
 | Assassin's Creed III Remastered | `AC3` | https://mapgenie.io/assassins-creed-3/checklist |
 | Assassin's Creed: The Rebel Collection | `ACREBEL` | https://www.ign.com/wikis/assassins-creed-4-black-flag |
 | Assassins Creed The Ezio Collection | `ACEZIO` | https://gamefaqs.gamespot.com/xboxone/196141-assassins-creed-the-ezio-collection/achievements |
+| Bad North | `BADNORTH` | https://steamcommunity.com/stats/688420/achievements |
 | Baldur Gate and Baldur Gate II Enhanced Editions | `BGE` | https://www.ign.com/wikis/baldur-gate-enhanced-edition |
 | Baldurs Gate Dark Alliance | `BGD` | https://www.ign.com/wikis/baldurs-gate-dark-alliance |
 | Bayonetta | `BAYONETTA` | https://www.ign.com/wikis/bayonetta/Achievements_and_Trophies |
@@ -750,6 +794,7 @@ are deliberately omitted because they mirror real Steam achievements.
 | Just Dance 2020 | `JUSTDANCE` | https://en.wikipedia.org/wiki/Just_Dance_2020 |
 | Just Dance 2021 | `JD2021` | https://www.ign.com/search?q=Just%20Dance%202021 |
 | Just Dance 2022 | `JD2022` | https://www.ign.com/search?q=Just%20Dance%202022 |
+| Keep Talking and Nobody Explodes | `KTANE` | https://steamcommunity.com/stats/341800/achievements |
 | Kingdom Hearts HD 1.5+2.5 ReMIX Cloud Version | `KH15` | https://www.ign.com/wikis/kingdom-hearts-hd-15-remix |
 | Kingdom Hearts HD 2.8 Final Chapter Prologue Cloud Version | `KH28` | https://www.ign.com/wikis/kingdom-hearts-hd-2-8-final-chapter-prologue |
 | Kingdom Hearts III + Re Mind Cloud Version | `KH3` | https://www.ign.com/wikis/kingdom-hearts-3 |
@@ -807,6 +852,7 @@ are deliberately omitted because they mirror real Steam achievements.
 | Okami HD | `OKAMI` | https://www.ign.com/wikis/okami/Trophies |
 | One Piece Odyssey | `ONEPIECE` | https://steamcommunity.com/stats/814000/achievements/?l=english |
 | Overwatch 2 | `OW2` | https://steamcommunity.com/stats/2357570/achievements/?l=english |
+| Owlboy | `OWLBOY` | https://steamcommunity.com/stats/115800/achievements |
 | PGA TOUR 2K21 | `PGA21` | https://steamcommunity.com/stats/1016120/achievements/?l=english |
 | PICO PARK | `PICOPARK` | https://www.nintendo.com/us/store/products/pico-park-switch/ |
 | PICROSS LORD OF THE NAZARICK | `PICROSSLORD` | https://www.nintendo.com/us/store/products/picross-lord-of-the-nazarick-switch |
@@ -852,6 +898,7 @@ are deliberately omitted because they mirror real Steam achievements.
 | Princess Peach: Showtime! | `PEACH` | https://www.ign.com/wikis/princess-peach-showtime/Princess_Peach:_Showtime_Walkthrough |
 | Return of the Obra Dinn | `OBRA` | https://www.ign.com/wikis/return-of-the-obra-dinn/Crewmembers_and_Fates |
 | Ring Fit Adventure | `RINGFIT` | https://www.ign.com/wikis/ring-fit-adventure |
+| Risk of Rain | `RISKOFRAIN` | https://steamcommunity.com/stats/248820/achievements |
 | River City Girls 2 | `RCG2` | https://steamcommunity.com/stats/1920480/achievements/?l=english |
 | SEGA AGES Sonic The Hedgehog | `SAGES1` | https://gamefaqs.gamespot.com/switch/237014-sega-ages-sonic-the-hedgehog/cheats |
 | SEGA AGES Sonic The Hedgehog 2 | `SAGES2` | https://gamefaqs.gamespot.com/switch/247860-sega-ages-sonic-the-hedgehog-2/cheats |
@@ -888,9 +935,11 @@ are deliberately omitted because they mirror real Steam achievements.
 | Transformers: Battlegrounds | `TRANSFORMERS` | https://www.exophase.com/game/transformers-battlegrounds-xbox/achievements/ |
 | Triangle Strategy | `TRIANGLE` | https://www.ign.com/wikis/triangle-strategy |
 | Undertale | `UNDERTALE` | https://www.ign.com/wikis/undertale |
+| Venba | `VENBA` | https://steamcommunity.com/stats/1491670/achievements |
 | WORLD OF FINAL FANTASY MAXIMA | `WOFF` | https://www.ign.com/wikis/world-of-final-fantasy |
 | WarioWare: Move It! | `WARIOWARE_MOVE` | https://www.ign.com/wikis/warioware-move-it/Cheats,_Secrets,_and_Unlockables |
 | Warioware Get it Together | `WARIOWARE` | https://www.ign.com/wikis/warioware-get-it-together |
+| Wonder Boy: The Dragon's Trap | `WONDERBOYTRAP` | https://steamcommunity.com/stats/543260/achievements |
 | Xenoblade Chronicles 2 | `XC2` | https://www.ign.com/wikis/xenoblade-chronicles-2 |
 | Xenoblade Chronicles 3 | `XC3` | https://www.ign.com/wikis/xenoblade-chronicles-3 |
 | Xenoblade Chronicles Definitive Edition | `XC1` | https://www.ign.com/wikis/xenoblade-chronicles |

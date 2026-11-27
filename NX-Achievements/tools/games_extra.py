@@ -608,3 +608,12 @@ from new_games_batch10 import (
 
 EXTRA_GAMES.extend(NEW_EXTRA_GAMES_10)
 STEAM_EXTRA.extend(NEW_STEAM_EXTRA_10)
+
+# Approved indie batch 11, kept separate for the same audit reason.
+from new_games_batch11 import (
+    NEW_EXTRA_GAMES as NEW_EXTRA_GAMES_11,
+    NEW_STEAM_EXTRA as NEW_STEAM_EXTRA_11,
+)
+
+EXTRA_GAMES.extend(NEW_EXTRA_GAMES_11)
+STEAM_EXTRA.extend(NEW_STEAM_EXTRA_11)

@@ -15,6 +15,7 @@ are deliberately omitted because they mirror real Steam achievements.
 | Assassin's Creed III Remastered | `AC3` | https://mapgenie.io/assassins-creed-3/checklist |
 | Assassin's Creed: The Rebel Collection | `ACREBEL` | https://www.ign.com/wikis/assassins-creed-4-black-flag |
 | Assassins Creed The Ezio Collection | `ACEZIO` | https://gamefaqs.gamespot.com/xboxone/196141-assassins-creed-the-ezio-collection/achievements |
+| Bad North | `BADNORTH` | https://steamcommunity.com/stats/688420/achievements |
 | Baldur Gate and Baldur Gate II Enhanced Editions | `BGE` | https://www.ign.com/wikis/baldur-gate-enhanced-edition |
 | Baldurs Gate Dark Alliance | `BGD` | https://www.ign.com/wikis/baldurs-gate-dark-alliance |
 | Bayonetta | `BAYONETTA` | https://www.ign.com/wikis/bayonetta/Achievements_and_Trophies |
@@ -79,6 +80,7 @@ are deliberately omitted because they mirror real Steam achievements.
 | Just Dance 2020 | `JUSTDANCE` | https://en.wikipedia.org/wiki/Just_Dance_2020 |
 | Just Dance 2021 | `JD2021` | https://www.ign.com/search?q=Just%20Dance%202021 |
 | Just Dance 2022 | `JD2022` | https://www.ign.com/search?q=Just%20Dance%202022 |
+| Keep Talking and Nobody Explodes | `KTANE` | https://steamcommunity.com/stats/341800/achievements |
 | Kingdom Hearts HD 1.5+2.5 ReMIX Cloud Version | `KH15` | https://www.ign.com/wikis/kingdom-hearts-hd-15-remix |
 | Kingdom Hearts HD 2.8 Final Chapter Prologue Cloud Version | `KH28` | https://www.ign.com/wikis/kingdom-hearts-hd-2-8-final-chapter-prologue |
 | Kingdom Hearts III + Re Mind Cloud Version | `KH3` | https://www.ign.com/wikis/kingdom-hearts-3 |
@@ -136,6 +138,7 @@ are deliberately omitted because they mirror real Steam achievements.
 | Okami HD | `OKAMI` | https://www.ign.com/wikis/okami/Trophies |
 | One Piece Odyssey | `ONEPIECE` | https://steamcommunity.com/stats/814000/achievements/?l=english |
 | Overwatch 2 | `OW2` | https://steamcommunity.com/stats/2357570/achievements/?l=english |
+| Owlboy | `OWLBOY` | https://steamcommunity.com/stats/115800/achievements |
 | PGA TOUR 2K21 | `PGA21` | https://steamcommunity.com/stats/1016120/achievements/?l=english |
 | PICO PARK | `PICOPARK` | https://www.nintendo.com/us/store/products/pico-park-switch/ |
 | PICROSS LORD OF THE NAZARICK | `PICROSSLORD` | https://www.nintendo.com/us/store/products/picross-lord-of-the-nazarick-switch |
@@ -181,6 +184,7 @@ are deliberately omitted because they mirror real Steam achievements.
 | Princess Peach: Showtime! | `PEACH` | https://www.ign.com/wikis/princess-peach-showtime/Princess_Peach:_Showtime_Walkthrough |
 | Return of the Obra Dinn | `OBRA` | https://www.ign.com/wikis/return-of-the-obra-dinn/Crewmembers_and_Fates |
 | Ring Fit Adventure | `RINGFIT` | https://www.ign.com/wikis/ring-fit-adventure |
+| Risk of Rain | `RISKOFRAIN` | https://steamcommunity.com/stats/248820/achievements |
 | River City Girls 2 | `RCG2` | https://steamcommunity.com/stats/1920480/achievements/?l=english |
 | SEGA AGES Sonic The Hedgehog | `SAGES1` | https://gamefaqs.gamespot.com/switch/237014-sega-ages-sonic-the-hedgehog/cheats |
 | SEGA AGES Sonic The Hedgehog 2 | `SAGES2` | https://gamefaqs.gamespot.com/switch/247860-sega-ages-sonic-the-hedgehog-2/cheats |
@@ -217,9 +221,11 @@ are deliberately omitted because they mirror real Steam achievements.
 | Transformers: Battlegrounds | `TRANSFORMERS` | https://www.exophase.com/game/transformers-battlegrounds-xbox/achievements/ |
 | Triangle Strategy | `TRIANGLE` | https://www.ign.com/wikis/triangle-strategy |
 | Undertale | `UNDERTALE` | https://www.ign.com/wikis/undertale |
+| Venba | `VENBA` | https://steamcommunity.com/stats/1491670/achievements |
 | WORLD OF FINAL FANTASY MAXIMA | `WOFF` | https://www.ign.com/wikis/world-of-final-fantasy |
 | WarioWare: Move It! | `WARIOWARE_MOVE` | https://www.ign.com/wikis/warioware-move-it/Cheats,_Secrets,_and_Unlockables |
 | Warioware Get it Together | `WARIOWARE` | https://www.ign.com/wikis/warioware-get-it-together |
+| Wonder Boy: The Dragon's Trap | `WONDERBOYTRAP` | https://steamcommunity.com/stats/543260/achievements |
 | Xenoblade Chronicles 2 | `XC2` | https://www.ign.com/wikis/xenoblade-chronicles-2 |
 | Xenoblade Chronicles 3 | `XC3` | https://www.ign.com/wikis/xenoblade-chronicles-3 |
 | Xenoblade Chronicles Definitive Edition | `XC1` | https://www.ign.com/wikis/xenoblade-chronicles |

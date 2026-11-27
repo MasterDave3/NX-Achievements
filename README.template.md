@@ -32,7 +32,7 @@ README.template.md      Source template for this README
 - Saves unlock state and counters to `sdmc:/switch/achievements/progress.txt`.
 - Countable goals show `current/target`; **A** adds 1, **X** subtracts 1, **Y** resets.
 - Shows `old  +1  ->  new` on every counter step, e.g. `1/10  +1  ->  2/10`.
-- 19,457 achievements across 465 games: IGN-style checklists for all 221 non-Steam
+- 21,643 achievements across 503 games: IGN-style checklists for all 227 non-Steam
   games, plus mirrored Steam names/descriptions for PC games ported to Switch.
 
 ## Build

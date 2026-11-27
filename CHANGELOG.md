@@ -17,6 +17,11 @@ the tags below.
   **465 games / 19,457 achievements**.
 - Added batch 10 checklist modules and `tools/new_games_batch10.py`, keeping the
   same data-only release workflow.
+- Added 38 more approved indie games after verifying each title ID in
+  blawar/titledb. Steam ports with at least 20 achievements are mirrored only;
+  the rest use IGN-style completion checklists. Catalog is now
+  **503 games / 21,643 achievements**.
+- Added the batch 11 checklist module and `tools/new_games_batch11.py`.
 
 ## [v0.6.0] - 2026-11-26
 
