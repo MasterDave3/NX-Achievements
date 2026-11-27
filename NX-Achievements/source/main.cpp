@@ -136,16 +136,19 @@ class GuiUnlock : public tsl::Gui {
 private:
     std::string m_name;
     std::string m_description;
+    std::string m_status;
 
 public:
-    GuiUnlock(std::string name, std::string description)
-        : m_name(std::move(name)), m_description(std::move(description)) {}
+    GuiUnlock(std::string name, std::string description,
+              std::string status = "Achievement unlocked!")
+        : m_name(std::move(name)), m_description(std::move(description)),
+          m_status(std::move(status)) {}
 
     tsl::elm::Element *createUI() override {
-        auto *frame = new tsl::elm::OverlayFrame("NX-Achievements", "Achievement unlocked!");
+        auto *frame = new tsl::elm::OverlayFrame("NX-Achievements", m_status);
         auto *list = new tsl::elm::List();
 
-        list->addItem(new tsl::elm::CategoryHeader("\u2605 Achievement unlocked"));
+        list->addItem(new tsl::elm::CategoryHeader("\u2605 " + m_status));
 
         auto *item = new tsl::elm::ListItem(m_name, m_description);
         list->addItem(item);
@@ -177,7 +180,7 @@ public:
     }
 
     tsl::elm::Element *createUI() override {
-        auto *frame = new tsl::elm::OverlayFrame("NX-Achievements", "v0.2.0 - " + m_titleIdText);
+        auto *frame = new tsl::elm::OverlayFrame("NX-Achievements", "v0.3.0 - " + m_titleIdText);
         auto *list = new tsl::elm::List();
 
         const auto achievements = loadAchievements();
@@ -223,12 +226,14 @@ public:
                 if (counted) {
                     int value = state.count(id);
                     bool changed = false;
+                    bool progressed = false;
                     bool justCompleted = false;
 
                     if (keys & HidNpadButton_A) {
                         if (value < target) {
                             ++value;
                             changed = true;
+                            progressed = true;
                         }
                         justCompleted = value >= target;
                     } else if (keys & HidNpadButton_X) {
@@ -249,10 +254,12 @@ public:
                     state.unlocked.erase(id);
                     saveProgress(state);
 
-                    if (justCompleted) {
+                    if (progressed) {
                         tsl::changeTo<GuiUnlock>(
-                            name, description + " (" + std::to_string(target) + "/" +
-                                      std::to_string(target) + ")");
+                            name,
+                            description + " (" + std::to_string(std::min(value, target)) +
+                                "/" + std::to_string(target) + ")",
+                            justCompleted ? "Achievement unlocked!" : "Achievement progress");
                     } else {
                         tsl::changeTo<GuiMain>();
                     }
@@ -283,7 +290,7 @@ public:
         list->addItem(new tsl::elm::CategoryHeader("Info"));
         list->addItem(new tsl::elm::ListItem("Current Title ID", m_titleIdText));
         list->addItem(new tsl::elm::ListItem("Config", CONFIG_FILE));
-        list->addItem(new tsl::elm::ListItem("A", "Toggle unlock / +1 on counters"));
+        list->addItem(new tsl::elm::ListItem("A", "Toggle unlock / +1 with popup"));
         list->addItem(new tsl::elm::ListItem("X", "Counter -1"));
         list->addItem(new tsl::elm::ListItem("Y", "Reset counter"));
 

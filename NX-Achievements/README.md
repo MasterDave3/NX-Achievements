@@ -25,7 +25,8 @@ sd:/switch/achievements/achievements.txt   (from data/achievements.txt)
 Launch Tesla with its hotkey (default: L + D-Pad Down) and select **NX-Achievements**.
 Normal achievements use **A** to toggle lock/unlock. Countable achievements show
 `current/target`: **A** adds 1, **X** subtracts 1, and **Y** resets the count.
-Completing an achievement shows a popup with its name.
+Every counter step shows a progress popup (1/10, 2/10, ...); reaching the target
+shows an unlock popup.
 
 Progress is saved to `sd:/switch/achievements/progress.txt`.
 
