@@ -5,7 +5,7 @@ Switch title IDs come from [blawar/titledb](https://github.com/blawar/titledb);
 Steam achievement names/descriptions are mirrored from public Steam community pages.
 Non-Steam games use IGN-style checklist goals; sources are listed in `CHECKLIST_SOURCES.md`.
 
-**227 games · 9,839 achievements** (plus one global `FIRST_BOOT` goal)
+**228 games · 9,891 achievements** (plus one global `FIRST_BOOT` goal)
 
 IGN-style checklist goals cover all 133 non-Steam games, using IGN where available
 and other reputable checklists otherwise. 670 goals across the catalog are countable
@@ -240,3 +240,4 @@ and other reputable checklists otherwise. 670 goals across the catalog are count
 | 225 | Don't Starve: Nintendo Switch Edition | `0100751007ADA000` | 113 |
 | 226 | Until Dawn | `01001E1025697001` | 29 |
 | 227 | 20 Minutes Till Dawn | `0100212019FB6000` | 34 |
+| 228 | Hollow Knight: Silksong | `010013C00E930000` | 52 |

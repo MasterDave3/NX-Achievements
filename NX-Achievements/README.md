@@ -42,14 +42,14 @@ TitleID|AchievementID|Name|Description[|Target]
 
 ## Achievement data
 
-`data/achievements.txt` currently contains **9,839 achievements for 227 games**:
+`data/achievements.txt` currently contains **9,891 achievements for 228 games**:
 
 - All 133 non-Steam games use IGN-style checklist goals (IGN where available,
   other reputable checklists otherwise). Sources are in `CHECKLIST_SOURCES.md`.
 - PC games ported to Switch mirror their Steam achievement names and descriptions
-  (for example Stardew Valley, Terraria, Hollow Knight, Hades, Skyrim, DOOM,
-  Balatro, Vampire Survivors, Dead by Daylight, Civilization VI, and 20 Minutes
-  Till Dawn).
+  (for example Stardew Valley, Terraria, Hollow Knight, Silksong, Hades, Skyrim,
+  DOOM, Balatro, Vampire Survivors, Dead by Daylight, Civilization VI, and 20
+  Minutes Till Dawn).
 - Switch title IDs come from `blawar/titledb` (`US.en.json`); none are guessed.
 - Steam data comes from the public Steam community achievement pages.
 

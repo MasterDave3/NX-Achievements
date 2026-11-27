@@ -573,4 +573,5 @@ STEAM_EXTRA = [
     ('DONTS', "Don't Starve: Nintendo Switch Edition", '0100751007ADA000', 328080),
     ('UNTILDAWN', 'Until Dawn', '01001E1025697001', 2172010),
     ('20MTD', '20 Minutes Till Dawn', '0100212019FB6000', 1966900),
+    ('SILKSONG', 'Hollow Knight: Silksong', '010013C00E930000', 1030300),
 ]

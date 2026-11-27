@@ -10299,3 +10299,57 @@
 0100212019FB6000|S1966900_ACH_SALVO_KNIVES|Salvo Knives Mastery|Use the Salvo Knives to survive Darkness 15.
 0100212019FB6000|S1966900_ACH_WATERING_GUN|Watering Gun Mastery|Use the Watering Gun to survive Darkness 15.
 0100212019FB6000|S1966900_ACH_KATANA|Master of the Blade|Use Katana to survive Darkness 15.
+
+# Hollow Knight: Silksong (010013C00E930000)
+010013C00E930000|S1030300_FIRST_TOOL|Equipped|Acquire your first Tool
+010013C00E930000|S1030300_ALL_TOOLS|Arsenal|Acquire all Tools
+010013C00E930000|S1030300_FIRST_SILK_SKILL|Bound|Bind your first Silk Skill
+010013C00E930000|S1030300_ALL_SILK_SKILLS|Woven|Bind all Silk Skills
+010013C00E930000|S1030300_FIRST_CREST|Claimed|Claim your first Crest
+010013C00E930000|S1030300_ALL_CRESTS|Consumed|Claim all Crests
+010013C00E930000|S1030300_FIRST_MASK|Protected|Acquire 4 Mask Shards
+010013C00E930000|S1030300_ALL_MASKS|Masked|Acquire all Mask Shards
+010013C00E930000|S1030300_FIRST_SILK_SPOOL|Restored|Acquire 2 Spool Fragments
+010013C00E930000|S1030300_ALL_SILK_SPOOLS|Extended|Acquire all Spool Fragments
+010013C00E930000|S1030300_ALL_SILK_HEARTS|Regenerated|Acquire all Silk Hearts
+010013C00E930000|S1030300_ALL_MAPS|Cartographer|Acquire a map of each area
+010013C00E930000|S1030300_BELLWAYS_FULL|Connected|Open all of Pharloom's Bellways
+010013C00E930000|S1030300_BELLWAY_MELODY|Bonded|Learn the Beastling Call
+010013C00E930000|S1030300_TUBES_FULL|Transported|Open all of the Citadel's Ventrica Stations
+010013C00E930000|S1030300_JOURNAL_HALF|Keen Hunter|Grant Nuu's wish
+010013C00E930000|S1030300_JOURNAL_FULL|True Hunter|Receive the Hunter's Memento
+010013C00E930000|S1030300_FLEAS_HALF|Flea Finder|Rescue half of Pharloom's lost fleas
+010013C00E930000|S1030300_FLEAS_ALL|Fleafriend|Rescue all of Pharloom's lost fleas and receive their final gift
+010013C00E930000|S1030300_DEFEATED_BELLBEAST|Liberated|Defeat the Bell Beast
+010013C00E930000|S1030300_DEFEATED_LACE_1|Pharloom's Welcome|Defeat Lace in Deep Docks
+010013C00E930000|S1030300_DEFEATED_SONG_GOLEM|Servant|Defeat Fourth Chorus
+010013C00E930000|S1030300_DEFEATED_WIDOW|Fanatic|Defeat Widow
+010013C00E930000|S1030300_DEFEATED_LAST_JUDGE_1|Judge|Defeat the Last Judge
+010013C00E930000|S1030300_DEFEATED_COGWORK_DANCERS|Last Dance|Defeat the Cogwork Dancers
+010013C00E930000|S1030300_DEFEATED_TROBBIO|Tragedian|Defeat Trobbio
+010013C00E930000|S1030300_DEFEATED_LACE_2|White Knight|Defeat Lace in the Cradle
+010013C00E930000|S1030300_DEFEATED_PHANTOM_1|Grey Ghost|Defeat Phantom
+010013C00E930000|S1030300_DEFEATED_FIRST_SINNER|Heretic|Defeat First Sinner
+010013C00E930000|S1030300_DEFEATED_CORAL_KING|Tyrant|Defeat Crust King Khann
+010013C00E930000|S1030300_DEFEATED_FLOWER_QUEEN|Seed|Defeat Nyleth
+010013C00E930000|S1030300_DEFEATED_HUNTER_QUEEN|Diva|Defeat Skarrsinger Karmelita
+010013C00E930000|S1030300_DEFEATED_GREEN_PRINCE|Lamenter|Defeat the Clover Dancers
+010013C00E930000|S1030300_FIRST_WISH|Granted|Grant your first wish
+010013C00E930000|S1030300_GOURMAND_WISH|Glutton|Satiate the Grand Gourmand
+010013C00E930000|S1030300_SHAKRA_FINAL_QUEST|Trail's End|Grant Shakra's wish
+010013C00E930000|S1030300_GARMOND_FINAL_QUEST|Hero's Call|Defeat Lost Garmond
+010013C00E930000|S1030300_PINSTRESS_WISH|Fatal Resolve|Defeat Pinstress
+010013C00E930000|S1030300_EVA_FINAL_QUEST|Entwined|Bind Eva
+010013C00E930000|S1030300_BELLHOME|Resident|Acquire your own Bellhome
+010013C00E930000|S1030300_CITADEL_SONG|Harmonious|Learn the Citadel's Threefold song
+010013C00E930000|S1030300_WHITE_FLOWER_GAINED|Remembrance|Claim the Everbloom from within a distant memory
+010013C00E930000|S1030300_ENDING_A|Weaver Queen|Defeat Grand Mother Silk and bind her power
+010013C00E930000|S1030300_ENDING_C|Snared Silk|Defeat Grand Mother Silk and entrap her with the Soul Snare
+010013C00E930000|S1030300_ENDING_D|Twisted Child|Defeat Grand Mother Silk while cursed
+010013C00E930000|S1030300_ENDING_E|Sister of the Void|Defeat Lost Lace and free Pharloom
+010013C00E930000|S1030300_HERALD_WISH|Passing of the Age|Grant the Herald's wish and finish the game
+010013C00E930000|S1030300_COMPLETION|Completion|Achieve 100% game completion and finish the game
+010013C00E930000|S1030300_SPEEDRUN_1|Speedrunner|Complete the game in under 5 hours
+010013C00E930000|S1030300_SPEED_COMPLETION|Speed Completion|Achieve 100% game completion and finish the game in under 30 hours
+010013C00E930000|S1030300_STEEL_SOUL|Steel Soul|Finish the game in Steel Soul mode
+010013C00E930000|S1030300_STEEL_SOUL_FULL|Steel Heart|Achieve 100% game completion and finish the game in Steel Soul mode

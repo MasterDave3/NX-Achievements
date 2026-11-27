@@ -21,7 +21,7 @@ SUPPORTED_GAMES.md      Full list of supported games and their achievement count
 - Saves unlock state and counters to `sdmc:/switch/achievements/progress.txt`.
 - Countable goals show `current/target`; **A** adds 1, **X** subtracts 1, **Y** resets.
 - Shows an unlock popup when an achievement is completed.
-- 9,839 achievements across 227 games: IGN-style checklists for all 133 non-Steam
+- 9,891 achievements across 228 games: IGN-style checklists for all 133 non-Steam
   games, plus mirrored Steam names/descriptions for PC games ported to Switch.
 
 ## Build
