@@ -5,6 +5,12 @@ the tags below.
 
 ## [Unreleased]
 
+- Replaced the overlay UI with a minimal safe build. Opening it no longer parses
+  the full 21,643-entry catalog, enumerates installed titles, or calls
+  `nsInitialize()`, so it cannot crash Atmosphère from heap exhaustion or
+  service-session conflicts. The previous full UI is preserved at
+  `NX-Achievements/tools/full_overlay_main.cpp.txt` and will be restored in
+  bounded stages after hardware stability is confirmed.
 - Fixed the overlay not appearing in Tesla/Ultrahand's Overlays list. The build
   now embeds `control.nacp` with `elf2nro --nacp`, so the loader can read the
   `NX-Achievements` display name instead of skipping the `.ovl`.
