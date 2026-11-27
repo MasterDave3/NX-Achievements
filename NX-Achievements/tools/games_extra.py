@@ -510,6 +510,10 @@ EXTRA_GAMES = [
         ('LN2_FIRST', 'First Chapter', 'Complete the first chapter'),
         ('LN2_FINAL', 'Final Chapter', 'Complete the final chapter'),
     ]),
+    ('LN3', 'Little Nightmares III', '010066101A55A000', [
+        ('LN3_FIRST', 'First Chapter', 'Complete the first chapter'),
+        ('LN3_FINAL', 'Final Chapter', 'Complete the final chapter'),
+    ]),
     ('INSIDE', 'INSIDE', '0100D2D009028000', [
         ('IN_START', 'The Journey Begins', 'Begin your journey'),
         ('IN_END', 'Escape', 'Complete the final sequence'),
@@ -557,7 +561,7 @@ STEAM_APPIDS = {
     'LEGOMARVEL': 647830, 'LEGOJUR': 352400, 'WRC8': 1070330,
     'NFSHP': 1238300, 'CRASHNSANE': 731490, 'SONICC': 2055290,
     'SONICS': 2022670, 'MCDUNGEONS': 1672970, 'CATQUEST': 2305840,
-    'SPLUNKY2': 418530, 'LN1': 424840, 'LN2': 860510,
+    'SPLUNKY2': 418530, 'LN1': 424840, 'LN2': 860510, 'LN3': 1392860,
     'LISTC': 936790, 'GGST': 1384160, 'SAMURAI': 1342260,
     'OUTLAST2': 414700, 'DUCKGAME': 312450,
 }

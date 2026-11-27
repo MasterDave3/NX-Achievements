@@ -13,6 +13,9 @@ the tags below.
 - Achievements now stay on the selected game after a counter change instead of
   returning to the game list.
 - Bumped Makefile app version and overlay subtitle to `v0.6.0`.
+- Added **Little Nightmares III** with 44 Steam-mirrored achievements (Switch
+  Title ID `010066101A55A000`, Steam appid `1392860`). Catalog is now
+  **229 games / 9,935 achievements**.
 
 ## [v0.5.0] - 2026-11-26
 

@@ -9423,6 +9423,52 @@
 010097100EDD6000|S860510_Fridge|What's in the box?!|What did you expect to see in there?
 010097100EDD6000|S860510_Detention|Merciful feat|Tempting, so tempting...
 
+# Little Nightmares III (010066101A55A000)
+010066101A55A000|S1392860_0000|Mastery of The Spiral|Keep on turning
+010066101A55A000|S1392860_0001|Child's Play|You're not rattled that easily
+010066101A55A000|S1392860_0002|Unsupervised|Survived the most pressing of situations
+010066101A55A000|S1392860_0003|Showstoppers|The show cannot go on
+010066101A55A000|S1392860_0004|Spiral Out|A twisted mind unraveled
+010066101A55A000|S1392860_0005|Low-Spirited|The real memories are the friend you made along the way
+010066101A55A000|S1392860_0006|From Nowhere, With Love|...But to be is to have been
+010066101A55A000|S1392860_0007|Special Connection|There is no bond as strong as this
+010066101A55A000|S1392860_0008|Toybox|Playtime's over now
+010066101A55A000|S1392860_0009|Candy Shop|Sweets for my sweet
+010066101A55A000|S1392860_0010|Token Gestures|You hit the jackpot
+010066101A55A000|S1392860_0011|Filed Away|Nothing left in the medicine cabinet
+010066101A55A000|S1392860_0012|Loose Threads|Little shapes of big things to come
+010066101A55A000|S1392860_0013|Hello?|You can always call on me
+010066101A55A000|S1392860_0014|Guiding Hands|We're connected, you and I
+010066101A55A000|S1392860_0015|Spanner in the Works|I can be quite handy when I want to be
+010066101A55A000|S1392860_0016|Bullseye|You gotta aim high
+010066101A55A000|S1392860_0017|Peekaboo|There's a twinkle in that eye
+010066101A55A000|S1392860_0018|The Windy City|Just don't open it indoors
+010066101A55A000|S1392860_0019|Birdbrained|Always ruffling feathers
+010066101A55A000|S1392860_0020|Capital Punishment|You're heading for a shock
+010066101A55A000|S1392860_0021|Home Sweet Nome|Ready or not, here I come
+010066101A55A000|S1392860_0022|Stay Tuned|Are you taking notes?
+010066101A55A000|S1392860_0023|Light or Flight|Look on the bright side
+010066101A55A000|S1392860_0024|Another One in the Bag|Nothing but net (profits)
+010066101A55A000|S1392860_0025|Unsavory Delicacies|Rotting from the inside, delicious on the outside
+010066101A55A000|S1392860_0026|Omnipresence|Far or near, she can make us fear
+010066101A55A000|S1392860_0027|Delivery Feed|From store to (cage) door
+010066101A55A000|S1392860_0028|Aim Low (and Alone)|Win a prize every time
+010066101A55A000|S1392860_0029|Illuminating Experiences|The gift of second sight
+010066101A55A000|S1392860_0030|Institutionalized|The Kids Aren't Alright
+010066101A55A000|S1392860_0031|Hand-Eye Coordination|You've stayed at arm's length
+010066101A55A000|S1392860_0032|Exit Stage Fright|Survive until the curtain call
+010066101A55A000|S1392860_0033|Picture Perfect|A revealing experience
+010066101A55A000|S1392860_0034|Just the Ticket|Keep your eye on the prize
+010066101A55A000|S1392860_0035|Puppet Master|You didn't break a leg
+010066101A55A000|S1392860_0036|Clean Up Your Act|You may need a raincoat
+010066101A55A000|S1392860_0037|Shadow Puppets|Flash the mob
+010066101A55A000|S1392860_0038|Wave Goodbye|An ocean of tears
+010066101A55A000|S1392860_0039|Shipshape|Whatever floats your boat
+010066101A55A000|S1392860_0040|Service!|That rings a bell
+010066101A55A000|S1392860_0041|Battering Ram|An empire built on sand
+010066101A55A000|S1392860_0042|See Ya, Suckers|Staying out of leech
+010066101A55A000|S1392860_0043|3-Pointer|Just dropping in
+
 # INSIDE (0100D2D009028000)
 0100D2D009028000|S304430_ACHIEVEMENT_1|Murky Waters|Something’s not right down here
 0100D2D009028000|S304430_ACHIEVEMENT_2|Field Research|Unearthing secrets

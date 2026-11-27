@@ -32,7 +32,7 @@ README.template.md      Source template for this README
 - Saves unlock state and counters to `sdmc:/switch/achievements/progress.txt`.
 - Countable goals show `current/target`; **A** adds 1, **X** subtracts 1, **Y** resets.
 - Shows `old  +1  ->  new` on every counter step, e.g. `1/10  +1  ->  2/10`.
-- 9,891 achievements across 228 games: IGN-style checklists for all 133 non-Steam
+- 9,935 achievements across 229 games: IGN-style checklists for all 133 non-Steam
   games, plus mirrored Steam names/descriptions for PC games ported to Switch.
 
 ## Build
@@ -118,6 +118,9 @@ the tags below.
 - Achievements now stay on the selected game after a counter change instead of
   returning to the game list.
 - Bumped Makefile app version and overlay subtitle to `v0.6.0`.
+- Added **Little Nightmares III** with 44 Steam-mirrored achievements (Switch
+  Title ID `010066101A55A000`, Steam appid `1392860`). Catalog is now
+  **229 games / 9,935 achievements**.
 
 ### [v0.5.0] - 2026-11-26
 
@@ -173,7 +176,7 @@ Switch title IDs come from [blawar/titledb](https://github.com/blawar/titledb);
 Steam achievement names/descriptions are mirrored from public Steam community pages.
 Non-Steam games use IGN-style checklist goals; sources are listed in `CHECKLIST_SOURCES.md`.
 
-**228 games · 9,891 achievements** (plus one global `FIRST_BOOT` goal)
+**229 games · 9,935 achievements** (plus one global `FIRST_BOOT` goal)
 
 IGN-style checklist goals cover all 133 non-Steam games, using IGN where available
 and other reputable checklists otherwise. 670 goals across the catalog are countable
@@ -393,22 +396,23 @@ and other reputable checklists otherwise. 670 goals across the catalog are count
 | 210 | Outlast 2 | `0100DE70085E8000` | 24 |
 | 211 | Little Nightmares Complete Edition | `01002FC00412C000` | 22 |
 | 212 | Little Nightmares II | `010097100EDD6000` | 35 |
-| 213 | INSIDE | `0100D2D009028000` | 20 |
-| 214 | LIMBO | `01009C8009026000` | 20 |
-| 215 | Firewatch | `0100AC300919A000` | 20 |
-| 216 | Life is Strange Remastered | `0100DC301186A000` | 22 |
-| 217 | Life is Strange: True Colors | `0100500012AB4000` | 40 |
-| 218 | Cat Quest III | `010088501B8F2000` | 30 |
-| 219 | Minecraft Dungeons | `01006C100EC08000` | 104 |
-| 220 | Cooking Simulator | `01001E400FD58000` | 20 |
-| 221 | This War of Mine: Complete Edition | `0100A8700BC2A000` | 59 |
-| 222 | Plague Inc: Evolved | `01000CE00CBB8000` | 250 |
-| 223 | Overcooked! 2 | `01006FD0080B2000` | 54 |
-| 224 | ARK: Survival Evolved | `0100D4A00B284000` | 32 |
-| 225 | Don't Starve: Nintendo Switch Edition | `0100751007ADA000` | 113 |
-| 226 | Until Dawn | `01001E1025697001` | 29 |
-| 227 | 20 Minutes Till Dawn | `0100212019FB6000` | 34 |
-| 228 | Hollow Knight: Silksong | `010013C00E930000` | 52 |
+| 213 | Little Nightmares III | `010066101A55A000` | 44 |
+| 214 | INSIDE | `0100D2D009028000` | 20 |
+| 215 | LIMBO | `01009C8009026000` | 20 |
+| 216 | Firewatch | `0100AC300919A000` | 20 |
+| 217 | Life is Strange Remastered | `0100DC301186A000` | 22 |
+| 218 | Life is Strange: True Colors | `0100500012AB4000` | 40 |
+| 219 | Cat Quest III | `010088501B8F2000` | 30 |
+| 220 | Minecraft Dungeons | `01006C100EC08000` | 104 |
+| 221 | Cooking Simulator | `01001E400FD58000` | 20 |
+| 222 | This War of Mine: Complete Edition | `0100A8700BC2A000` | 59 |
+| 223 | Plague Inc: Evolved | `01000CE00CBB8000` | 250 |
+| 224 | Overcooked! 2 | `01006FD0080B2000` | 54 |
+| 225 | ARK: Survival Evolved | `0100D4A00B284000` | 32 |
+| 226 | Don't Starve: Nintendo Switch Edition | `0100751007ADA000` | 113 |
+| 227 | Until Dawn | `01001E1025697001` | 29 |
+| 228 | 20 Minutes Till Dawn | `0100212019FB6000` | 34 |
+| 229 | Hollow Knight: Silksong | `010013C00E930000` | 52 |
 
 ## Checklist sources
 
