@@ -1,9 +1,11 @@
 # NX-Achievements
 
-A Nintendo Switch [Tesla](https://github.com/WerWolv/Tesla) overlay that shows
-achievement goals for the game currently running. It works over any title:
-open Tesla with the hotkey, select **NX-Achievements**, and press **A** to
-unlock or lock an achievement.
+A Nintendo Switch overlay (`.ovl`) for
+[Ultrahand](https://github.com/ppkantorski/Ultrahand-Overlay) or
+[Tesla](https://github.com/WerWolv/Tesla) that shows achievement goals for the
+game currently running. Ultrahand is a drop-in Tesla replacement built on
+libultrahand, so the same overlay works in both. Open your overlay menu, select
+**NX-Achievements**, and press **A** to unlock or lock an achievement.
 
 ## Repository layout
 
@@ -47,7 +49,7 @@ sd:/switch/achievements/achievements.txt
 ```
 
 Then run **hekate → Tools → Fix Archive Bit** if you wrote from a computer.
-Boot CFW and open Tesla (default **L + D-Pad Down**).
+Boot CFW and open Ultrahand (default **ZL + ZR + D-Pad Down**) or Tesla.
 
 ## Achievement format
 
@@ -79,8 +81,8 @@ see `CHECKLIST_SOURCES.md` for the per-game sources.
 ## Limitations
 
 - Achievements are tracked manually: A toggles or counts up, X counts down, Y resets.
-  A normal Tesla overlay cannot draw automatic popups over arbitrary games; that
-  requires a game-specific plugin.
+  A normal Ultrahand/Tesla overlay cannot draw automatic popups over arbitrary
+  games; that requires a game-specific plugin.
 - Steam entries are names/descriptions only — the overlay cannot read a Steam
   account or unlock Steam achievements.
 - Automatic checks from save data or memory can be added later per game.

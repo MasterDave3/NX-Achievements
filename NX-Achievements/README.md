@@ -1,6 +1,6 @@
 # NX-Achievements
 
-A Tesla overlay for Nintendo Switch that shows achievement goals for the currently running game.
+An Ultrahand/Tesla overlay for Nintendo Switch that shows achievement goals for the currently running game.
 
 ## Build
 
@@ -22,7 +22,7 @@ sd:/switch/.overlays/NX-Achievements.ovl
 sd:/switch/achievements/achievements.txt   (from data/achievements.txt)
 ```
 
-Launch Tesla with its hotkey (default: L + D-Pad Down) and select **NX-Achievements**.
+Open Ultrahand with its hotkey (default: ZL + ZR + D-Pad Down) or Tesla, then select **NX-Achievements**.
 Normal achievements use **A** to toggle lock/unlock. Countable achievements show
 `current/target`: **A** adds 1, **X** subtracts 1, and **Y** resets the count.
 Every counter step shows a progress popup like `1/10  +1  ->  2/10`; reaching the
@@ -80,7 +80,7 @@ python3 tools/generate_supported_games.py
 ## Current limitations
 
 - Achievements are tracked manually: A toggles or counts up, X counts down, Y resets.
-  Tesla overlays cannot draw automatic popups over arbitrary games.
+  Ultrahand/Tesla overlays cannot draw automatic popups over arbitrary games.
 - Steam achievements are mirrored names/descriptions only; the Switch overlay cannot
   read a Steam account or unlock Steam achievements automatically.
 - Save-data-based automatic checks can be added later with per-game parsers.
