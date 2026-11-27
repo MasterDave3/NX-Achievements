@@ -25,8 +25,8 @@ sd:/switch/achievements/achievements.txt   (from data/achievements.txt)
 Open Ultrahand with its hotkey (default: ZL + ZR + D-Pad Down) or Tesla, then select **NX-Achievements**.
 Normal achievements use **A** to toggle lock/unlock. Countable achievements show
 `current/target`: **A** adds 1, **X** subtracts 1, and **Y** resets the count.
-Every counter step shows a progress popup like `1/10  +1  ->  2/10`; reaching the
-target shows an unlock popup.
+Every counter step shows a one-row popup with the name/description on the left
+and `1/10  +1  ->  2/10` on the right; reaching the target shows an unlock popup.
 
 Progress is saved to `sd:/switch/achievements/progress.txt`.
 

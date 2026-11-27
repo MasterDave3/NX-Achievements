@@ -150,24 +150,17 @@ public:
         auto *frame = new tsl::elm::OverlayFrame("NX-Achievements", m_status);
         auto *list = new tsl::elm::List();
 
-        list->addItem(new tsl::elm::CategoryHeader("\u2605 " + m_status));
-
-        auto *item = new tsl::elm::ListItem(m_name, m_description);
-        list->addItem(item);
-
-        if (!m_progress.empty()) {
-            list->addItem(new tsl::elm::ListItem("Progress", m_progress));
-        }
-
-        auto *cont = new tsl::elm::ListItem("Continue", "Press A");
-        cont->setClickListener([](u64 keys) {
+        const std::string title = "\u2605 " + m_name + " - " + m_description;
+        const std::string value = m_progress.empty() ? "Unlocked!" : m_progress;
+        auto *item = new tsl::elm::ListItem(title, value);
+        item->setClickListener([](u64 keys) {
             if (keys & HidNpadButton_A) {
                 tsl::goBack();
                 return true;
             }
             return false;
         });
-        list->addItem(cont);
+        list->addItem(item);
 
         frame->setContent(list);
         return frame;
@@ -186,7 +179,7 @@ public:
     }
 
     tsl::elm::Element *createUI() override {
-        auto *frame = new tsl::elm::OverlayFrame("NX-Achievements", "v0.4.0 - " + m_titleIdText);
+        auto *frame = new tsl::elm::OverlayFrame("NX-Achievements", "v0.5.0 - " + m_titleIdText);
         auto *list = new tsl::elm::List();
 
         const auto achievements = loadAchievements();
