@@ -12,7 +12,7 @@ include $(DEVKITPRO)/libnx/switch_rules
 #---------------------------------------------------------------------------------
 APP_TITLE		:=	NX-Achievements
 APP_AUTHOR		:=	MasterDave326
-APP_VERSION		:=	0.1.0
+APP_VERSION		:=	0.6.0
 
 TARGET			:=	NX-Achievements
 BUILD			:=	build

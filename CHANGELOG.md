@@ -3,6 +3,17 @@
 All notable changes to NX-Achievements. The version shown in the overlay matches
 the tags below.
 
+## [v0.6.0] - 2026-11-26
+
+- Added a **Detected games** menu. The overlay now enumerates installed
+  applications from NAND, the SD card, and an inserted game card through the
+  `ns` service, then lists the matching achievement count for each game.
+- Selecting any detected game opens its achievement list. The currently running
+  game is marked with a star and stays available at the top of the list.
+- Achievements now stay on the selected game after a counter change instead of
+  returning to the game list.
+- Bumped Makefile app version and overlay subtitle to `v0.6.0`.
+
 ## [v0.5.0] - 2026-11-26
 
 - Notification is now a single row: name and description on the left, progress on

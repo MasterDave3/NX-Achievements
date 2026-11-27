@@ -1,6 +1,7 @@
 # NX-Achievements
 
-An Ultrahand/Tesla overlay for Nintendo Switch that shows achievement goals for the currently running game.
+An Ultrahand/Tesla overlay for Nintendo Switch that detects installed games on NAND,
+the SD card, and game cards, then shows achievement goals for the game you select.
 
 See `../CHANGELOG.md` for the version history.
 
@@ -25,6 +26,7 @@ sd:/switch/achievements/achievements.txt   (from data/achievements.txt)
 ```
 
 Open Ultrahand with its hotkey (default: ZL + ZR + D-Pad Down) or Tesla, then select **NX-Achievements**.
+The first screen lists detected games. Press **A** on one to open its achievements.
 Normal achievements use **A** to toggle lock/unlock. Countable achievements show
 `current/target`: **A** adds 1, **X** subtracts 1, and **Y** resets the count.
 Every counter step shows a one-row popup with the name/description on the left

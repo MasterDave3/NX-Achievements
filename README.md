@@ -25,6 +25,8 @@ README.template.md      Source template for this README
 ## Features
 
 - Reads the current application Title ID with `pmdmnt`.
+- Detects installed games on NAND, the SD card, and an inserted game card with
+  the `ns` service, then shows the matching achievements for any game you open.
 - Loads achievements from `sdmc:/switch/achievements/achievements.txt`.
 - Data-driven: adding games needs no rebuild of the `.ovl`.
 - Saves unlock state and counters to `sdmc:/switch/achievements/progress.txt`.
@@ -57,6 +59,7 @@ sd:/switch/achievements/achievements.txt
 
 Then run **hekate → Tools → Fix Archive Bit** if you wrote from a computer.
 Boot CFW and open Ultrahand (default **ZL + ZR + D-Pad Down**) or Tesla.
+The first screen lists detected games; press **A** on one to open its achievements.
 
 ## Achievement format
 
@@ -104,6 +107,17 @@ goal names, descriptions, targets, or title IDs may still need correction.
 
 All notable changes to NX-Achievements. The version shown in the overlay matches
 the tags below.
+
+### [v0.6.0] - 2026-11-26
+
+- Added a **Detected games** menu. The overlay now enumerates installed
+  applications from NAND, the SD card, and an inserted game card through the
+  `ns` service, then lists the matching achievement count for each game.
+- Selecting any detected game opens its achievement list. The currently running
+  game is marked with a star and stays available at the top of the list.
+- Achievements now stay on the selected game after a counter change instead of
+  returning to the game list.
+- Bumped Makefile app version and overlay subtitle to `v0.6.0`.
 
 ### [v0.5.0] - 2026-11-26
 
