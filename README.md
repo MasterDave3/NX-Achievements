@@ -13,6 +13,7 @@ libultrahand, so the same overlay works in both. Open your overlay menu, select
 NX-Achievements/        Overlay source, Makefile, achievement data, generator
 libtesla/               Vendored libtesla (GPLv2, see libtesla/LICENSE)
 SUPPORTED_GAMES.md      Full list of supported games and their achievement counts
+CHANGELOG.md            Version history and what changed in each version
 ```
 
 ## Features

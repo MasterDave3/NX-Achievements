@@ -2,6 +2,8 @@
 
 An Ultrahand/Tesla overlay for Nintendo Switch that shows achievement goals for the currently running game.
 
+See `../CHANGELOG.md` for the version history.
+
 ## Build
 
 ```bash
