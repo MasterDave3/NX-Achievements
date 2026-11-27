@@ -22,7 +22,7 @@
 // pool and makes ams_mitm abort with 0xffe.
 extern "C" {
 
-#define INNER_HEAP_SIZE 0x400000
+#define INNER_HEAP_SIZE 0x80000
 
 u32 __nx_applet_type = AppletType_None;
 u32 __nx_fs_num_sessions = 1;
@@ -310,17 +310,166 @@ AchievementMeta loadAchievementMeta(u64 titleId, const std::string &achievementI
     return meta;
 }
 
-bool hashValid(const std::vector<u8> &save) {
-    if (save.size() <= 0x20) return false;
+constexpr std::size_t SAVE_CACHE_SIZE = 4096;
+constexpr std::size_t XOR_STEP = 0x7f;
+
+bool hashValid(FsFile &file, s64 fileSize) {
+    if (fileSize <= 0x20) return false;
+
     Sha256Context context;
     sha256ContextCreate(&context);
     sha256ContextUpdate(&context, nxach::za::INTRO_HASH, sizeof(nxach::za::INTRO_HASH));
-    sha256ContextUpdate(&context, save.data(), save.size() - 0x20);
+
+    u8 buffer[4096];
+    s64 remaining = fileSize - 0x20;
+    s64 offset = 0;
+    while (remaining > 0) {
+        const u64 chunk = std::min<u64>(sizeof(buffer), static_cast<u64>(remaining));
+        u64 bytesRead = 0;
+        if (R_FAILED(fsFileRead(&file, offset, buffer, chunk, FsReadOption_None, &bytesRead)) ||
+            bytesRead == 0)
+            return false;
+        sha256ContextUpdate(&context, buffer, static_cast<std::size_t>(bytesRead));
+        offset += bytesRead;
+        remaining -= bytesRead;
+    }
     sha256ContextUpdate(&context, nxach::za::OUTRO_HASH, sizeof(nxach::za::OUTRO_HASH));
 
     u8 digest[0x20];
     sha256ContextGetHash(&context, digest);
-    return std::memcmp(digest, save.data() + save.size() - 0x20, sizeof(digest)) == 0;
+    u8 stored[0x20];
+    u64 bytesRead = 0;
+    if (R_FAILED(fsFileRead(&file, fileSize - 0x20, stored, sizeof(stored), FsReadOption_None,
+                            &bytesRead)) ||
+        bytesRead != sizeof(stored))
+        return false;
+    return std::memcmp(digest, stored, sizeof(digest)) == 0;
+}
+
+// Decrypts SwishCrypto's static XOR pad on demand, so the ~3 MiB save does not
+// need to be held in the sysmodule's small heap.
+class DecryptedSaveReader {
+public:
+    DecryptedSaveReader(FsFile &file, std::size_t size) : file_(file), size_(size) {}
+
+    std::size_t size() const { return size_; }
+
+    u8 get(std::size_t offset) {
+        if (offset >= size_) return 0;
+        if (offset < cacheBase_ || offset >= cacheBase_ + cacheLen_) load(offset);
+        if (offset >= cacheBase_ + cacheLen_) return 0;
+        return cache_[offset - cacheBase_];
+    }
+
+    u32 getU32(std::size_t offset) {
+        return static_cast<u32>(get(offset)) |
+               (static_cast<u32>(get(offset + 1)) << 8) |
+               (static_cast<u32>(get(offset + 2)) << 16) |
+               (static_cast<u32>(get(offset + 3)) << 24);
+    }
+
+private:
+    void load(std::size_t offset) {
+        cacheBase_ = (offset / XOR_STEP) * XOR_STEP;
+        cacheLen_ = 0;
+        if (cacheBase_ >= size_) return;
+
+        const u64 wanted = static_cast<u64>(
+            std::min<std::size_t>(sizeof(cache_), size_ - cacheBase_));
+        u64 bytesRead = 0;
+        if (R_FAILED(fsFileRead(&file_, cacheBase_, cache_, wanted, FsReadOption_None,
+                                &bytesRead)))
+            return;
+        cacheLen_ = static_cast<std::size_t>(bytesRead);
+
+        for (std::size_t i = 0; i < cacheLen_; ++i) {
+            const std::size_t position = cacheBase_ + i;
+            const std::size_t modulus = position % XOR_STEP;
+            u8 pad = nxach::za::STATIC_XORPAD[modulus];
+            if (modulus == 0 && position != 0) pad ^= nxach::za::STATIC_XORPAD[0x7f];
+            cache_[i] ^= pad;
+        }
+    }
+
+    FsFile &file_;
+    std::size_t size_;
+    std::size_t cacheBase_ = static_cast<std::size_t>(-1);
+    std::size_t cacheLen_ = 0;
+    u8 cache_[SAVE_CACHE_SIZE]{};
+};
+
+bool countLumioseDexStream(DecryptedSaveReader &reader, u32 wantedKey, int &count) {
+    count = -1;
+    std::size_t offset = 0;
+    while (offset + 5 <= reader.size()) {
+        const u32 key = reader.getU32(offset);
+        offset += 4;
+        nxach::za::SCXorShift32 rng(key);
+        const u8 type = static_cast<u8>(reader.get(offset) ^ rng.next());
+        ++offset;
+        if (type == 1 || type == 2) continue;  // boolean blocks have no payload
+
+        s32 length = 0;
+        if (type == 4) {
+            if (offset + 4 > reader.size()) return false;
+            length = static_cast<s32>(reader.getU32(offset) ^ rng.next32());
+            offset += 4;
+        } else if (type == 5) {
+            if (offset + 5 > reader.size()) return false;
+            const s32 entries = static_cast<s32>(reader.getU32(offset) ^ rng.next32());
+            offset += 4;
+            const u8 subtype = static_cast<u8>(reader.get(offset) ^ rng.next());
+            ++offset;
+            const s32 subSize = nxach::za::typeSize(subtype);
+            if (entries < 0 || subSize <= 0) return false;
+            if (static_cast<std::size_t>(entries) >
+                reader.size() / static_cast<std::size_t>(subSize))
+                return false;
+            length = entries * subSize;
+        } else {
+            length = nxach::za::typeSize(type);
+            if (length < 0) return false;
+        }
+        if (length < 0 || static_cast<std::size_t>(length) > reader.size() - offset)
+            return false;
+
+        const bool wanted = key == wantedKey;
+        if (wanted && type != 4) return false;
+
+        const std::size_t payload = static_cast<std::size_t>(length);
+        std::size_t dexPos = 0;
+        std::size_t nextTarget = wanted
+                                     ? static_cast<std::size_t>(
+                                           nxach::za::LUMIOSE_DEX_INTERNAL[0]) *
+                                           nxach::za::POKEDEX_ENTRY_SIZE
+                                     : 0;
+        int detected = 0;
+
+        for (std::size_t i = 0; i < payload; ++i) {
+            if (wanted && i == nextTarget) {
+                if (i + 4 > payload) return false;
+                u32 flag = 0;
+                for (std::size_t j = 0; j < 4; ++j)
+                    flag |= static_cast<u32>(reader.get(offset + i + j) ^ rng.next())
+                            << (8 * j);
+                if (flag != 0) ++detected;
+                i += 3;
+                ++dexPos;
+                if (dexPos < 230)
+                    nextTarget = static_cast<std::size_t>(
+                                     nxach::za::LUMIOSE_DEX_INTERNAL[dexPos]) *
+                                 nxach::za::POKEDEX_ENTRY_SIZE;
+                continue;
+            }
+            (void)(reader.get(offset + i) ^ rng.next());
+        }
+        if (wanted) {
+            if (dexPos != 230) return false;
+            count = detected;
+        }
+        offset += payload;
+    }
+    return offset == reader.size();
 }
 
 bool readSwishDexCount(FsFileSystem &saveFs, const std::string &savePath, u32 blockKey,
@@ -331,26 +480,22 @@ bool readSwishDexCount(FsFileSystem &saveFs, const std::string &savePath, u32 bl
     if (R_FAILED(fsFsOpenFile(&saveFs, savePath.c_str(), FsOpenMode_Read, &file))) return false;
 
     s64 fileSize = 0;
-    if (R_FAILED(fsFileGetSize(&file, &fileSize)) || fileSize < 0 ||
+    if (R_FAILED(fsFileGetSize(&file, &fileSize)) || fileSize <= 0x20 ||
         fileSize > 16 * 1024 * 1024) {
         fsFileClose(&file);
         return false;
     }
 
-    std::vector<u8> raw(static_cast<std::size_t>(fileSize));
-    u64 bytesRead = 0;
-    const Result readResult = fsFileRead(&file, 0, raw.data(), static_cast<u64>(raw.size()),
-                                         FsReadOption_None, &bytesRead);
+    if (!hashValid(file, fileSize)) {
+        fsFileClose(&file);
+        return false;
+    }
+
+    DecryptedSaveReader reader(file, static_cast<std::size_t>(fileSize - 0x20));
+    int detected = -1;
+    const bool parsed = countLumioseDexStream(reader, blockKey, detected);
     fsFileClose(&file);
-    if (R_FAILED(readResult) || bytesRead != raw.size() || !hashValid(raw)) return false;
-
-    raw.resize(raw.size() - 0x20);
-    nxach::za::cryptStaticXorpad(raw);
-
-    nxach::za::BlockView block;
-    if (!nxach::za::parseBlocks(raw, blockKey, block)) return false;
-    const int detected = nxach::za::countLumiosePokedex(block);
-    if (detected < 0) return false;
+    if (!parsed || detected < 0) return false;
     count = detected;
     return true;
 }
