@@ -127,7 +127,7 @@ DEPENDS	:=	$(OFILES:.o=.d)
 all	:	 $(OUTPUT).ovl
 
 $(OUTPUT).ovl		:	$(OUTPUT).elf $(OUTPUT).nacp
-	@elf2nro $< $@ $(NROFLAGS)
+	@elf2nro $< $@ $(NROFLAGS) --nacp=$(OUTPUT).nacp
 	@echo "built ... $(notdir $(OUTPUT).ovl)"
 
 $(OUTPUT).elf	:	$(OFILES)

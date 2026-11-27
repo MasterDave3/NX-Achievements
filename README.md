@@ -170,6 +170,9 @@ the tags below.
 
 ### [Unreleased]
 
+- Fixed the overlay not appearing in Tesla/Ultrahand's Overlays list. The build
+  now embeds `control.nacp` with `elf2nro --nacp`, so the loader can read the
+  `NX-Achievements` display name instead of skipping the `.ovl`.
 - Fixed an Atmosphère boot crash (`ams_mitm`, `std::abort() 0xffe`) caused by
   the watcher being built as a normal application: it now uses
   `AppletType_None`, a bounded 512 KiB sysmodule heap, a 16 KiB main-thread
