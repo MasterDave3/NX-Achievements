@@ -3,6 +3,7 @@
 #include <switch/kernel/svc.h>
 #include <switch/services/acc.h>
 #include <switch/services/fs.h>
+#include <switch/runtime/devices/fs_dev.h>
 #include <switch/services/sm.h>
 
 #include "za_save.hpp"
@@ -24,7 +25,22 @@ extern "C" {
 #define INNER_HEAP_SIZE 0x80000
 
 u32 __nx_applet_type = AppletType_None;
-u32 __nx_fs_num_sessions = 1;
+u32 __nx_fs_num_sessions = 4;
+
+// Independent boot marker: uses fsdev/std::FILE instead of the raw FS handle
+// used by the watcher, so we can tell "module started" from "SD FS failed".
+bool g_bootMarkerMounted = false;
+
+void writeBootMarker(const char *line) {
+    if (!g_bootMarkerMounted) {
+        if (R_FAILED(fsdevMountSdmc())) return;
+        g_bootMarkerMounted = true;
+    }
+    FILE *file = std::fopen("/sdmc:/switch/achievements/watcher.boot", "a");
+    if (file == nullptr) return;
+    std::fprintf(file, "%s", line);
+    std::fclose(file);
+}
 
 void __libnx_initheap(void) {
     static u8 inner_heap[INNER_HEAP_SIZE];
@@ -35,6 +51,7 @@ void __libnx_initheap(void) {
 }
 
 void __appInit(void) {
+    writeBootMarker("__appInit\n");
     // Keep boot-time initialization minimal. pmdmnt/account are intentionally
     // NOT opened here: connecting to them as a boot2 sysmodule raced system
     // services and made dmnt abort with 0xffe. Account is initialized lazily
@@ -645,12 +662,18 @@ std::vector<DetectorState> statesFrom(const std::vector<Detector> &detectors) {
 }  // namespace
 
 int main() {
-    if (R_SUCCEEDED(fsOpenSdCardFileSystem(&g_sd))) {
+    writeBootMarker("main\n");
+    const Result sdResult = fsOpenSdCardFileSystem(&g_sd);
+    char marker[128];
+    std::snprintf(marker, sizeof(marker), "fsOpenSdCardFileSystem=0x%08x\n",
+                  static_cast<unsigned>(sdResult));
+    writeBootMarker(marker);
+    if (R_SUCCEEDED(sdResult)) {
         g_sdReady = true;
         ensureDirectories();
     }
 
-    logMessage("NX-Achievements watcher v0.3.0 started\n");
+    logMessage("NX-Achievements watcher v0.3.1 started\n");
     const std::vector<Detector> detectors = loadDetectors();
     std::vector<DetectorState> states = statesFrom(detectors);
     logf("loaded %zu detector rule(s)\n", states.size());

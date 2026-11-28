@@ -5,6 +5,10 @@ the tags below.
 
 ## [Unreleased]
 
+- Added an independent boot marker to the watcher using `fsdevMountSdmc()` and
+  `sd:/switch/achievements/watcher.boot`, so a launch can be confirmed even when
+  the raw `fsOpenSdCardFileSystem()` path fails. Also raised
+  `__nx_fs_num_sessions` from 1 to 4. Build is now v0.3.1.
 - Reworked the watcher to remove the boot-time `pmdmnt`/account service race:
   `__appInit` now opens only `sm` and `fs`, the process waits 10 seconds, then
   account services are initialized lazily. `pmdmnt` is no longer used at all;
