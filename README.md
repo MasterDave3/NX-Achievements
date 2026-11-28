@@ -170,6 +170,11 @@ the tags below.
 
 ### [Unreleased]
 
+- Stopped the boot2 watcher approach after the v0.3.1 marker build also failed
+  to launch: `watcher.boot` was never created, so Atmosphere was not starting
+  the sysmodule at all. The watcher is fully disabled on the SD again
+  (`boot2.flag.disabled-v031`, `exefs.nsp.disabled-v031`). Automatic in-game
+  notifications remain unavailable; the safe overlay remains installed.
 - Added an independent boot marker to the watcher using `fsdevMountSdmc()` and
   `sd:/switch/achievements/watcher.boot`, so a launch can be confirmed even when
   the raw `fsOpenSdCardFileSystem()` path fails. Also raised
